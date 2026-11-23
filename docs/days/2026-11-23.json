@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T19:00:00Z",
+  "generated_at": "2026-11-23T19:05:14Z",
   "headline": "Recent AI research highlights advancements in memory efficiency, spatial reasoning for agents, and video world models. New developments include MemOnce for handling long language model contexts, ReSpaceBench for evaluating spatial memory in embodied agents, and NoPeWorld for correcting physics violations in video models.",
   "headline_status": "done",
   "items": [
@@ -11,10 +11,10 @@
       "url": "https://z.ai/blog/glm-5.4",
       "source": "hn",
       "category": "Industry",
-      "score": 6.188,
+      "score": 6.189,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 860,
+        "hn_points": 863,
         "github_stars": 0
       },
       "published_at": "2026-11-23T10:06:43Z",
@@ -29,7 +29,7 @@
       "url": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/",
       "source": "hn",
       "category": "Industry",
-      "score": 5.929,
+      "score": 5.928,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 1017,
@@ -47,7 +47,7 @@
       "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
       "source": "hn",
       "category": "Industry",
-      "score": 5.785,
+      "score": 5.784,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 700,
@@ -65,10 +65,10 @@
       "url": "https://github.com/gulivan/worker755",
       "source": "hn",
       "category": "Tool / Open source",
-      "score": 5.146,
+      "score": 5.147,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 355,
+        "hn_points": 356,
         "github_stars": 0
       },
       "published_at": "2026-11-22T13:56:58Z",
@@ -87,7 +87,7 @@
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 3017
+        "github_stars": 3021
       },
       "published_at": "2026-11-21T14:40:27Z",
       "summary": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with your coding agent, prove they behave the same.. Don't rewrite it in Rust. Rewrite the 5% that's slow. Rewriting a whole app in Rust costs months, minute-long compiles and gigabytes of target/. Most of…",
@@ -101,7 +101,7 @@
       "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
       "source": "hn",
       "category": "Industry",
-      "score": 4.864,
+      "score": 4.863,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 291,
@@ -137,7 +137,7 @@
       "url": "https://huggingface.co/papers/2611.24636",
       "source": "hf_papers",
       "category": "Model release",
-      "score": 4.201,
+      "score": 4.199,
       "signals": {
         "hf_upvotes": 36,
         "hn_points": 0,
@@ -155,7 +155,7 @@
       "url": "https://huggingface.co/papers/2611.27963",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.142,
+      "score": 4.141,
       "signals": {
         "hf_upvotes": 54,
         "hn_points": 0,
@@ -173,11 +173,11 @@
       "url": "https://github.com/erkamyaman/safe-anything",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 4.111,
+      "score": 4.112,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 422
+        "github_stars": 424
       },
       "published_at": "2026-11-22T16:44:10Z",
       "summary": "Find the holes before someone else does. A fast, 100% Rust vulnerability scanner: XSS, SQL injection, leaked secrets, dependency CVEs and AI agent setups.. safe-anything Find the holes before someone else does. One command finds XSS, SQL injection and other vulnerabilities in your code, leaked secrets, risky mobile…",
@@ -191,7 +191,7 @@
       "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
       "source": "blog:google_research",
       "category": "Research",
-      "score": 3.955,
+      "score": 3.953,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
@@ -209,7 +209,7 @@
       "url": "https://huggingface.co/blog/allenai/robotrack",
       "source": "blog:huggingface",
       "category": "Industry",
-      "score": 3.955,
+      "score": 3.953,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
@@ -227,7 +227,7 @@
       "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
       "source": "blog:deepmind",
       "category": "Research",
-      "score": 3.946,
+      "score": 3.944,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
@@ -263,7 +263,7 @@
       "url": "https://huggingface.co/papers/2611.15449",
       "source": "hf_papers",
       "category": "Research",
-      "score": 3.681,
+      "score": 3.68,
       "signals": {
         "hf_upvotes": 21,
         "hn_points": 0,
@@ -320,16 +320,16 @@
       "category": "Research"
     },
     {
-      "id": "web:d7b15f2f905fd0d1",
-      "title": "0rwx – A simple model of AI usage, inspired by Unix permissions",
-      "url": "https://0rwx.com/",
+      "id": "web:770a34dc0c64f4e8",
+      "title": "Harvard CS 2881R AI Safety",
+      "url": "https://boazbk.github.io/mltheoryseminar/",
       "source": "hn",
       "category": "Industry"
     },
     {
-      "id": "web:770a34dc0c64f4e8",
-      "title": "Harvard CS 2881R AI Safety",
-      "url": "https://boazbk.github.io/mltheoryseminar/",
+      "id": "web:d7b15f2f905fd0d1",
+      "title": "0rwx – A simple model of AI usage, inspired by Unix permissions",
+      "url": "https://0rwx.com/",
       "source": "hn",
       "category": "Industry"
     },
