@@ -1,0 +1,561 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T18:42:58Z",
+  "headline": "15 notable AI items today, led by “cmHC: Balancing Stream Mixing in Hyper-Connections via Geometric Contraction”.",
+  "headline_status": "pending",
+  "items": [
+    {
+      "id": "arxiv:2611.27193",
+      "title": "cmHC: Balancing Stream Mixing in Hyper-Connections via Geometric Contraction",
+      "url": "https://huggingface.co/papers/2611.27193",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 4.539,
+      "signals": {
+        "hf_upvotes": 84,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-20T06:26:11Z",
+      "summary": "Manifold-constrained Hyper-Connections (mHC) extends residual connections to multiple streams and stabilizes residual propagation by constraining stream-mixing residual matrices to the Birkhoff polytope, the set of doubly stochastic matrices. In this work, we investigate how to effectively mix residual streams within…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "arxiv:2611.24636",
+      "title": "Clover-35B-A3B-Preview Technical Report",
+      "url": "https://huggingface.co/papers/2611.24636",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 4.178,
+      "signals": {
+        "hf_upvotes": 35,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T00:00:00Z",
+      "summary": "We introduce Clover-35B-A3B-Preview (Clover), a mixture-of-experts diffusion language model with 35 billion total parameters and 3 billion activated parameters, supporting thinking-mode generation. Clover adapts Gated Delta Networks to block diffusion by combining recurrent memory of previously generated context with…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "arxiv:2611.27963",
+      "title": "Non-penetrating World Models",
+      "url": "https://huggingface.co/papers/2611.27963",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 4.124,
+      "signals": {
+        "hf_upvotes": 53,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-20T18:44:57Z",
+      "summary": "We study a new problem of preventing object penetration in interactive video world models. To understand how existing models handle this, we introduce NoPeBench, a benchmark that evaluates how world models respond to physical obstacles. Our evaluation reveals that none of the open-source models can reliably prevent…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "arxiv:2611.15449",
+      "title": "Reading the Unreadable: Text-Aware Image Super-Resolution Needs Reasoning",
+      "url": "https://huggingface.co/papers/2611.15449",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 3.686,
+      "signals": {
+        "hf_upvotes": 21,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T00:00:00Z",
+      "summary": "Text-aware image super-resolution (TAISR) aims to recover high-resolution images from low-resolution inputs while preserving textual content. Existing methods treat this as a visual restoration problem, yet severely degraded text often cannot be read from local visual evidence alone. Humans instead read it by…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "arxiv:2611.25773",
+      "title": "Duopra: From Full-Duplex Conversation to Full-Duplex Agency",
+      "url": "https://huggingface.co/papers/2611.25773",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 3.079,
+      "signals": {
+        "hf_upvotes": 11,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T00:00:00Z",
+      "summary": "Full-duplex interaction models exhibit strong conversational agency, enabling natural, low-latency turn-taking, backchannels, and interruptions. However, completing tasks further requires task agency: timely tool invocation and argument revision following user corrections. Frontend-backend agents separate initiation…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "arxiv:2611.27973",
+      "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
+      "url": "https://huggingface.co/papers/2611.27973",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 3.026,
+      "signals": {
+        "hf_upvotes": 17,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-20T18:51:29Z",
+      "summary": "Deploying large language models (LLMs) in long-horizon and continual interactions requires maintaining reusable memory states for future inference, posing challenges for existing architectures. Standard Transformers accumulate layer-wise, token-level KV caches, incurring linear GPU memory growth and quadratic…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "arxiv:2611.21485",
+      "title": "Lost in the Hallway: Benchmarking Persistent Spatial Memory Across Revisits",
+      "url": "https://huggingface.co/papers/2611.21485",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 2.897,
+      "signals": {
+        "hf_upvotes": 9,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T00:00:00Z",
+      "summary": "Persistent spatial understanding is essential for embodied agents to operate reliably in environments they repeatedly encounter. It requires recognizing revisited places despite viewpoint changes, distinguishing them from similar-looking rooms, and updating memories as environments change. Yet existing evaluations…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "arxiv:2611.24077",
+      "title": "AeroRSI: Recursive Self-Improvement for Aerial Vision-Language Navigation",
+      "url": "https://huggingface.co/papers/2611.24077",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 2.386,
+      "signals": {
+        "hf_upvotes": 5,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T00:00:00Z",
+      "summary": "Vision-language-action (VLA) models enable unmanned aerial vehicles (UAVs) to follow natural-language instructions, yet still fail frequently in closed-loop flight. Correcting these failures requires repairs, i.e., actions that avoid them at the states the policy itself reaches, which human pilots cannot label at…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "arxiv:2611.25252",
+      "title": "Moving Generality from Model to Modeler: LLM Agents for PHM on a Deployment-Style Benchmark",
+      "url": "https://huggingface.co/papers/2611.25252",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 2.204,
+      "signals": {
+        "hf_upvotes": 4,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T00:00:00Z",
+      "summary": "Coding agents built on large language models (LLMs) now help develop many models published as general solutions. Should generality instead reside in the agent that builds a model for each new task? We examine this question in prognostics and health management (PHM), where every model must work on unseen equipment. Our…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "arxiv:2611.24025",
+      "title": "Intent Contracts: Taking Tools Away from Agents",
+      "url": "https://huggingface.co/papers/2611.24025",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 2.204,
+      "signals": {
+        "hf_upvotes": 4,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T00:00:00Z",
+      "summary": "Intent contracts are an authorization interface for tool-using LLM agents in which the planning model holds no tools. For each step it submits a short logged contract: a goal, a verbatim quotation of the user, and scope fields. Code validates the contract, and a small trusted model checks it against the user's words…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "arxiv:2611.22343",
+      "title": "PURE: A Diagnostic Benchmark for Multi-Granularity Multimodal Identity Matching",
+      "url": "https://huggingface.co/papers/2611.22343",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 2.204,
+      "signals": {
+        "hf_upvotes": 4,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T00:00:00Z",
+      "summary": "Identity matching asks whether two records denote the same identity, yet the answer depends on the target granularity. Two records may match at the base level but not at the variant level: they share an underlying design while differing in attributes such as color or size. Final matching accuracy does not separately…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "arxiv:2611.27915",
+      "title": "StereoVLM: Binocular Vision-Language Models for Metric 3D Spatial Reasoning",
+      "url": "https://huggingface.co/papers/2611.27915",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 2.078,
+      "signals": {
+        "hf_upvotes": 6,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-20T17:52:02Z",
+      "summary": "Vision-language models (VLMs) exhibit strong semantic understanding but remain limited in their ability to reason about metric 3D space in the physical world. Existing VLMs typically infer 3D scene structure from one or more images without known camera calibration or cross-view geometric constraints. This makes metric…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "arxiv:2611.26613",
+      "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+      "url": "https://huggingface.co/papers/2611.26613",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 2.016,
+      "signals": {
+        "hf_upvotes": 6,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-19T18:57:25Z",
+      "summary": "Frontier multimodal language agents such as GPT-6 Astra have demonstrated strong capabilities in controlling robots directly via low-level numerical actions without high-level primitives. However, existing benchmarks report only episode-level success rates, which show neither how these agents succeed nor where they…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "arxiv:2611.22479",
+      "title": "Exploited Before It Was Fixed? Vulnerability Timelines from Open, Machine-Readable Evidence",
+      "url": "https://huggingface.co/papers/2611.22479",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 1.981,
+      "signals": {
+        "hf_upvotes": 3,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T00:00:00Z",
+      "summary": "-05-X-03), Known Exploited Vulnerabilities (KEV) catalogs, and exploitation sightings. We introduce an evidence model implemented in Vulnerability-Lookup that selects the earliest evidence for each lifecycle event, distinguishes vulnerability-specific records, preserves date precision, and ensures traceability to…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "arxiv:2611.27229",
+      "title": "Prune to Expand: Training Prompt Enhancers with Less to Imitate",
+      "url": "https://huggingface.co/papers/2611.27229",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 1.485,
+      "signals": {
+        "hf_upvotes": 3,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-20T07:28:45Z",
+      "summary": "Prompt enhancement (PE) refines concise user prompts into detailed descriptions to improve the compositional aesthetics of generated images while preserving user intent. A common practice constructs supervised fine-tuning (SFT) pairs by deriving short, user-like prompts from dense captions, implicitly assuming that…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    }
+  ],
+  "more": [
+    {
+      "id": "arxiv:2611.19247",
+      "title": "GameWM: Toward Next-Generation Video Games with Interaction-Centric World Models",
+      "url": "https://huggingface.co/papers/2611.19247",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.22495",
+      "title": "Motion-Aware Reward Modeling for Instruction-Guided Video Editing",
+      "url": "https://huggingface.co/papers/2611.22495",
+      "source": "hf_papers",
+      "category": "Training method"
+    },
+    {
+      "id": "arxiv:2611.27398",
+      "title": "Taking Apart and Putting Together: Tracking Objects Through Physical Transformations",
+      "url": "https://huggingface.co/papers/2611.27398",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27211",
+      "title": "Explicit Style Extraction for Personalized Long-Form Text Generation",
+      "url": "https://huggingface.co/papers/2611.27211",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.26954",
+      "title": "Learning Video Foresight Reasoning from Unlabeled Videos via On-Policy Self-Distillation",
+      "url": "https://huggingface.co/papers/2611.26954",
+      "source": "hf_papers",
+      "category": "Training method"
+    },
+    {
+      "id": "arxiv:2611.26809",
+      "title": "Search From the Start: Search-Native Pretraining for Language Models",
+      "url": "https://huggingface.co/papers/2611.26809",
+      "source": "hf_papers",
+      "category": "Training method"
+    },
+    {
+      "id": "arxiv:2611.23417",
+      "title": "Autoregressive View Model",
+      "url": "https://huggingface.co/papers/2611.23417",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27983",
+      "title": "Optimal Linear Regression Without a Variance",
+      "url": "https://arxiv.org/abs/2611.27983",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27978",
+      "title": "A Methodologically Rigorous Benchmark of Linear Regression,RNN, and LSTM for S&P 500 Forecasting:Identifying Sources of Performance Inflation in Financial DeepLearning",
+      "url": "https://arxiv.org/abs/2611.27978",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27970",
+      "title": "On the Complete Feature Set for ADHD Classification in Children and Adolescents Based on EEG Signals",
+      "url": "https://arxiv.org/abs/2611.27970",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27962",
+      "title": "Model Carving: Training Transformers That Optimize Their Own Topology",
+      "url": "https://arxiv.org/abs/2611.27962",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27959",
+      "title": "Ranking-Preserving Coreset Selection for Efficient Evolutionary Hyperparameter Optimization",
+      "url": "https://arxiv.org/abs/2611.27959",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27951",
+      "title": "Topology Hub Optimal Transport: Eliminating Long Context Dilution at Flash Speed",
+      "url": "https://arxiv.org/abs/2611.27951",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27946",
+      "title": "The Optimal Sample Complexity of Agnostic PAC Learning for Partial Concept Classes",
+      "url": "https://arxiv.org/abs/2611.27946",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27931",
+      "title": "DiTraR: Diverse Scorers and Transcript-Guided Re-ranking for Video Corpus Moment Retrieval",
+      "url": "https://arxiv.org/abs/2611.27931",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27924",
+      "title": "BioEmu2: Scalable Emulation of Biomolecular Dynamics",
+      "url": "https://arxiv.org/abs/2611.27924",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27921",
+      "title": "ESSI: Computationally Efficient Semantic Search for Sparse Autoencoder Concepts",
+      "url": "https://arxiv.org/abs/2611.27921",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27919",
+      "title": "SUAF: Spectral Universal Advantage Features for Zero-Shot Policy Improvement",
+      "url": "https://arxiv.org/abs/2611.27919",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27917",
+      "title": "Augmentation of cardiovascular flow measurements with generative diffusion models",
+      "url": "https://arxiv.org/abs/2611.27917",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27913",
+      "title": "Star Panoptic Quality: Selectively Evaluating Split and Merged Instances",
+      "url": "https://arxiv.org/abs/2611.27913",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27911",
+      "title": "Functional Depth Is Learned: Isolating the Computation That Layers Produce Only Together",
+      "url": "https://arxiv.org/abs/2611.27911",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27910",
+      "title": "Decision Columns as an Index: Interpretable Embeddings for Explainable Entity Matching and Search",
+      "url": "https://arxiv.org/abs/2611.27910",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27905",
+      "title": "AnimalFarm: Auditing the Generation and Detection of Hateful Images Featuring Anthropomorphic Characters",
+      "url": "https://arxiv.org/abs/2611.27905",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27901",
+      "title": "QuantStream3D: Geometry-Aligned Low-Bit KV Cache Quantization for Streaming Visual Geometry Transformers",
+      "url": "https://arxiv.org/abs/2611.27901",
+      "source": "arxiv",
+      "category": "Training method"
+    },
+    {
+      "id": "arxiv:2611.27900",
+      "title": "Communication-Efficient Federated Learning of Latent Patient Representations from Multi-Institutional EHRs",
+      "url": "https://arxiv.org/abs/2611.27900",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27899",
+      "title": "The Dual-Tier Sentiment Framework: Scalable Multimodal UX Attribution in Web Search",
+      "url": "https://arxiv.org/abs/2611.27899",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27895",
+      "title": "TEA-Bench-BR: Can Coding Agents Turn a Branching Clinical Specification into Correct Code?",
+      "url": "https://arxiv.org/abs/2611.27895",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27894",
+      "title": "FairITR: Fairness-Aware Learning of Multicategory Individualized Treatment Rules",
+      "url": "https://arxiv.org/abs/2611.27894",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27891",
+      "title": "Speculative Decoding Is Less Speculative Than You Think",
+      "url": "https://arxiv.org/abs/2611.27891",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27889",
+      "title": "Renormalized Entropy from Symmetries: Simplicity Bias and Neural Heat Death",
+      "url": "https://arxiv.org/abs/2611.27889",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27881",
+      "title": "Interpretable Tissue Architecture Complements Pathology Foundation Models",
+      "url": "https://arxiv.org/abs/2611.27881",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27876",
+      "title": "LesionAgent: Training-Free Agentic Tumor Tracking and Response Assessment in Longitudinal CT",
+      "url": "https://arxiv.org/abs/2611.27876",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27875",
+      "title": "From Gist to Verbatim: The Controllable Path of One Image Through a Diffusion Prior",
+      "url": "https://arxiv.org/abs/2611.27875",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27870",
+      "title": "Beyond Visual Fidelity: Comparing Categorical and Continuous World Models",
+      "url": "https://arxiv.org/abs/2611.27870",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27868",
+      "title": "Integrating Generative Artificial Intelligence with Learning Style Models: Opportunities, Challenges, and Future Directions",
+      "url": "https://arxiv.org/abs/2611.27868",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27865",
+      "title": "SLICR: Strategy Logic-Guided Multi-Agent Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2611.27865",
+      "source": "arxiv",
+      "category": "Training method"
+    },
+    {
+      "id": "arxiv:2611.27862",
+      "title": "OpenAHBU: Open-sourced Automatic Human Behaviour Understanding Toolkit Through Facial Behaviour Analysis",
+      "url": "https://arxiv.org/abs/2611.27862",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27860",
+      "title": "Who Grades the Agent? Privilege Separation for Coding-Agent Benchmarks",
+      "url": "https://arxiv.org/abs/2611.27860",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27858",
+      "title": "ENC-QA: A Diagnostic Benchmark for Vision-Language Models on Electronic Navigational Charts",
+      "url": "https://arxiv.org/abs/2611.27858",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27855",
+      "title": "Anchors That Move Without Collapsing: Exclusive-Region Anchor Routing for Vision Transformers",
+      "url": "https://arxiv.org/abs/2611.27855",
+      "source": "arxiv",
+      "category": "Research"
+    }
+  ]
+}
