@@ -1,0 +1,49 @@
+# AI Pulse collector configuration. Everything tunable lives here.
+
+http:
+  timeout_seconds: 30
+  user_agent: "AIPulse/0.1 (+https://github.com/ai-pulse; daily AI digest bot)"
+
+output:
+  docs_dir: docs            # published by GitHub Pages
+  state_dir: state          # run state + caches (committed, not published)
+  top_n: 15                 # summarized items per day
+  more_n: 40                # lighter "more" items per day
+  first_run_lookback_hours: 24
+
+sources:
+  arxiv:
+    enabled: true
+    categories: [cs.LG, cs.CL, cs.AI, cs.CV, stat.ML]
+    page_size: 200
+    max_results: 600        # cap per run; arXiv gets ~1k+/day across these
+    window_days: 4          # API lags submission by 1-3 days (announcement schedule)
+    delay_seconds: 3        # arXiv API etiquette: >= 3s between requests
+  hf_papers:
+    enabled: true
+    url: https://huggingface.co/api/daily_papers
+
+ranking:
+  # score = hf * log1p(upvotes) + hn * log1p(points) + gh * log1p(stars)
+  #       + lab_bonus (if from a major lab) + multi_source * (extra sources)
+  #       + recency * exp(-age_hours / recency_half_life_hours)
+  weights:
+    hf_upvotes: 1.0
+    hn_points: 0.8
+    github_stars: 0.6
+    lab_bonus: 2.0
+    multi_source: 1.0
+    recency: 1.0
+  recency_half_life_hours: 36
+
+llm:
+  batch_size: 5             # items per summarization request
+  max_input_chars: 2500     # per item text sent to the model
+  temperature: 0.2
+  # Ordered fallback chain. Providers whose key env var is missing are skipped.
+  providers:
+    - name: gemini
+      base_url: https://generativelanguage.googleapis.com/v1beta/openai
+      model: gemini-3.5-flash-lite
+      key_env: GEMINI_API_KEY
+      timeout_seconds: 60
