@@ -46,7 +46,7 @@ def merge(a: RawItem, b: RawItem) -> RawItem:
     for k, v in b.signals.items():
         signals[k] = max(signals.get(k, 0), v)
     a.signals = signals
-    if len(b.text) > len(a.text):
+    if len(a.text) < 200 and len(b.text) > len(a.text):  # keep the primary's own text if it has any
         a.text = b.text
     a.published_at = min(a.published_at, b.published_at)
     a.lab = a.lab or b.lab
@@ -67,7 +67,7 @@ def dedupe(items: list[RawItem], fuzzy: float = 0.9) -> tuple[list[RawItem], dic
         target = it.id if it.id in by_id else url_to_id.get(nu)
         if target is None:
             target = next((k for k, o in by_id.items()
-                           if not (it.arxiv_id and o.arxiv_id) and same_title(it.title, o.title, fuzzy)), None)
+                           if not (it.arxiv_id or o.arxiv_id) and same_title(it.title, o.title, fuzzy)), None)
         if target is None:
             by_id[it.id] = it
             url_to_id[nu] = it.id

@@ -58,7 +58,9 @@ class GitHubSource(Source):
                 if not repo.get("fork") and not repo.get("archived"):
                     found[repo["full_name"].lower()] = repo
 
-        labs = {x.lower() for x in self.cfg.get("labs", [])}
+        # GitHub owner names are first-come-first-served, so lab status uses its own
+        # list of verified org accounts, and it never skips the star-farming check.
+        labs = {x.lower() for x in self.cfg.get("lab_orgs", [])}
         candidates = sorted(found.values(), key=lambda r: r["stargazers_count"], reverse=True)
         out: list[RawItem] = []
         for repo in candidates[: self.cfg.get("max_checked", 20)]:
@@ -66,7 +68,7 @@ class GitHubSource(Source):
                 break
             owner = repo["owner"]["login"]
             try:
-                if owner.lower() not in labs and not self.looks_legit(repo, now):
+                if not self.looks_legit(repo, now):
                     log.info("github: skipping %s (looks star-farmed)", repo["full_name"])
                     continue
             except Exception as e:
@@ -82,7 +84,7 @@ class GitHubSource(Source):
                     published_at=parse_iso(repo["created_at"]),
                     text=clean(f"{desc}. {self.readme(repo['full_name'])}"),
                     signals={"github_stars": int(repo["stargazers_count"])},
-                    lab=owner,
+                    lab=owner if owner.lower() in labs and repo["owner"].get("type") == "Organization" else None,
                     category_hint="Tool / Open source",
                 )
             )

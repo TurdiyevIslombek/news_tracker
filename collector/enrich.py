@@ -9,7 +9,7 @@ from __future__ import annotations
 import ipaddress
 import logging
 import socket
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import urljoin, urlsplit, urlunsplit
 from urllib.robotparser import RobotFileParser
 
 import httpx
@@ -23,42 +23,67 @@ MAX_BYTES = 3_000_000
 MAX_REDIRECTS = 5
 
 
-def is_public_url(url: str) -> bool:
-    """Only http(s) to hosts whose every resolved address is public (SSRF guard:
-    HN links are user-submitted and we fetch them from a CI runner)."""
+def resolve_public(url: str) -> str | None:
+    """SSRF guard (HN links are user-submitted and fetched from a CI runner).
+    Returns one IP to connect to, only if the URL is http(s) and *every* address the
+    host resolves to is public. The caller connects to that IP, so the name is never
+    resolved a second time (no DNS-rebinding window)."""
     parts = urlsplit(url)
     if parts.scheme not in ("http", "https") or not parts.hostname:
-        return False
+        return None
     try:
-        infos = socket.getaddrinfo(parts.hostname, parts.port or (443 if parts.scheme == "https" else 80),
-                                   type=socket.SOCK_STREAM)
+        port = parts.port or (443 if parts.scheme == "https" else 80)
+        infos = socket.getaddrinfo(parts.hostname, port, type=socket.SOCK_STREAM)
     except (socket.gaierror, UnicodeError, ValueError):
-        return False
-    return bool(infos) and all(ipaddress.ip_address(i[4][0].split("%")[0]).is_global for i in infos)
+        return None
+    ips = [i[4][0].split("%")[0] for i in infos]
+    if not ips or not all(ipaddress.ip_address(ip).is_global for ip in ips):
+        return None
+    return ips[0]
+
+
+def is_public_url(url: str) -> bool:
+    return resolve_public(url) is not None
 
 
 class Enricher:
     def __init__(self, http: httpx.Client, cfg: dict, agent: str = "AIPulse",
-                 url_check=is_public_url):
+                 resolver=resolve_public):
         self.http = http
-        self.url_check = url_check
+        self.resolver = resolver
         self.min_chars = cfg.get("min_text_chars", 400)
         self.max_chars = cfg.get("max_article_chars", 4000)
         self.timeout = cfg.get("timeout_seconds", 15)
         self.agent = agent
         self._robots: dict[str, RobotFileParser | None] = {}
 
-    def safe_get(self, url: str) -> httpx.Response | None:
-        """GET that re-validates the target on every redirect hop."""
+    def safe_get(self, url: str, max_bytes: int = MAX_BYTES) -> tuple[int, httpx.Headers, str] | None:
+        """GET that re-validates the target on every redirect hop and stops reading
+        after `max_bytes` (bodies are streamed, so a huge page can't exhaust memory)."""
         for _ in range(MAX_REDIRECTS + 1):
-            if not self.url_check(url):
-                log.info("enrich: refusing non-public URL host %s", urlsplit(url).hostname)
+            parts = urlsplit(url)
+            ip = self.resolver(url)
+            if ip is None:
+                log.info("enrich: refusing non-public URL host %s", parts.hostname)
                 return None
-            r = self.http.get(url, timeout=self.timeout, follow_redirects=False)
-            if r.is_redirect and "location" in r.headers:
-                url = urljoin(url, r.headers["location"])
-                continue
-            return r
+            # Connect to the vetted IP; keep Host + SNI so TLS still verifies the real name.
+            netloc = (f"[{ip}]" if ":" in ip else ip) + (f":{parts.port}" if parts.port else "")
+            pinned = urlunsplit((parts.scheme, netloc, parts.path or "/", parts.query, ""))
+            host_header = parts.hostname + (f":{parts.port}" if parts.port else "")
+            ext = {"sni_hostname": parts.hostname} if parts.scheme == "https" else {}
+            with self.http.stream("GET", pinned, headers={"Host": host_header}, extensions=ext,
+                                  timeout=self.timeout, follow_redirects=False) as r:
+                if r.is_redirect and "location" in r.headers:
+                    url = urljoin(url, r.headers["location"])
+                    continue
+                if int(r.headers.get("content-length") or 0) > max_bytes:
+                    return None
+                buf = bytearray()
+                for chunk in r.iter_bytes():
+                    buf += chunk
+                    if len(buf) > max_bytes:
+                        return None
+                return r.status_code, r.headers, buf.decode(r.encoding or "utf-8", "replace")
         return None
 
     def allowed(self, url: str) -> bool:
@@ -67,13 +92,13 @@ class Enricher:
         if host not in self._robots:
             rp: RobotFileParser | None = RobotFileParser()
             try:
-                r = self.safe_get(host + "/robots.txt")
-                if r is None or r.status_code in (401, 403):
+                r = self.safe_get(host + "/robots.txt", max_bytes=500_000)
+                if r is None or r[0] in (401, 403):
                     rp = None                      # locked down: treat as "no"
-                elif r.status_code >= 400:
+                elif r[0] >= 400:
                     rp.parse([])                   # no robots.txt: allowed
                 else:
-                    rp.parse(r.text.splitlines())
+                    rp.parse(r[2].splitlines())
             except httpx.HTTPError:
                 rp = None                          # can't check: don't fetch
             self._robots[host] = rp
@@ -100,11 +125,9 @@ class Enricher:
             return
         try:
             r = self.safe_get(it.url)
-            if r is None or r.status_code != 200 or "html" not in r.headers.get("content-type", ""):
+            if r is None or r[0] != 200 or "html" not in r[1].get("content-type", ""):
                 return
-            if len(r.content) > MAX_BYTES:
-                return
-            text = article_text(r.text, self.max_chars)
+            text = article_text(r[2], self.max_chars)
             if len(text) > len(it.text):
                 it.text = text
         except httpx.HTTPError as e:

@@ -54,6 +54,9 @@ sources:
     max_repos: 10
     min_owner_age_days: 90  # star-farming filter
     max_watcher_ratio: 0.15 # watchers/stars; organic repos are usually < 0.05
+    lab_orgs: [openai, anthropics, google, google-deepmind, google-research, facebookresearch, meta-llama,
+               mistralai, NVIDIA, microsoft, apple, huggingface, deepseek-ai, QwenLM, MoonshotAI, zai-org,
+               bytedance-seed, allenai, amazon-science, xai-org, Tencent]   # verified GitHub org accounts
 
 ranking:
   # score = hf * log1p(upvotes) + hn * log1p(points) + gh * log1p(stars)
@@ -68,8 +71,8 @@ ranking:
     multi_source: 1.0
     recency: 1.0
   recency_half_life_hours: 36
-  # Orgs that count as a "major lab" (HF paper organization or GitHub owner; blog
-  # feeds above always count). Case-insensitive.
+  # Hugging Face organizations that count as a "major lab" for HF papers (blog feeds
+  # always count; GitHub uses sources.github.lab_orgs). Case-insensitive.
   labs: [openai, anthropic, google, google-deepmind, deepmind, google-research, meta, facebookresearch,
          meta-llama, mistralai, nvidia, microsoft, apple, huggingface, deepseek-ai, qwen, alibaba,
          moonshotai, zai-org, bytedance-seed, allenai, amazonscience, xai-org, tencent]

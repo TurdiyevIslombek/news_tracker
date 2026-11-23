@@ -96,7 +96,7 @@ def test_enrich_respects_robots():
         page = "<html><article><p>" + "Real article text about a model. " * 20 + "</p></article></html>"
         return httpx.Response(200, text=page, headers={"content-type": "text/html"})
 
-    e = Enricher(httpx.Client(transport=httpx.MockTransport(handler)), {}, url_check=lambda u: True)
+    e = Enricher(httpx.Client(transport=httpx.MockTransport(handler)), {}, resolver=lambda u: "93.184.216.34")
     ok = RawItem(id="1", title="t", url="https://site.example/post", source="hn", published_at=NOW)
     no = RawItem(id="2", title="t", url="https://site.example/private/post", source="hn", published_at=NOW)
     e.enrich([ok, no])
@@ -126,6 +126,18 @@ def test_ssrf_guard_rejects_private_and_odd_targets():
     assert is_public_url("https://8.8.8.8/")
 
 
+def test_fetch_connects_to_the_vetted_ip_with_original_host_and_sni():
+    seen = []
+
+    def handler(req: httpx.Request):
+        seen.append((req.url.host, req.headers["host"], req.extensions.get("sni_hostname")))
+        return httpx.Response(404)
+
+    e = Enricher(httpx.Client(transport=httpx.MockTransport(handler)), {}, resolver=lambda u: "93.184.216.34")
+    e.safe_get("https://news.example/post?id=1")
+    assert seen == [("93.184.216.34", "news.example", "news.example")]
+
+
 def test_redirect_into_private_network_is_not_followed():
     hits = []
 
@@ -136,7 +148,7 @@ def test_redirect_into_private_network_is_not_followed():
         return httpx.Response(302, headers={"location": "http://10.0.0.5/admin"})
 
     e = Enricher(httpx.Client(transport=httpx.MockTransport(handler)), {},
-                 url_check=lambda u: "10.0.0.5" not in u)
+                 resolver=lambda u: None if "10.0.0.5" in u else "93.184.216.34")
     it = RawItem(id="1", title="t", url="https://public.example/post", source="hn", published_at=NOW)
     e.enrich([it])
     assert it.text == "" and not any("10.0.0.5" in h for h in hits)

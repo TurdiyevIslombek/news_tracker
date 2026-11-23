@@ -165,8 +165,9 @@ class Pipeline:
             except Exception as e:  # one broken source must never kill the run
                 log.warning("source %s failed: %s: %s", name, type(e).__name__, str(e)[:200])
         for it in items:
-            # Blog feeds are labs by definition; elsewhere only orgs on the list count.
-            if not it.source.startswith("blog:") and (it.lab or "").lower() not in self.labs:
+            # Blog feeds are labs by definition; GitHub checks its own verified org list;
+            # HF papers count when their HF organization is on `labs`.
+            if it.source == "hf_papers" and (it.lab or "").lower() not in self.labs:
                 it.lab = None
         return items
 
@@ -182,9 +183,11 @@ class Pipeline:
             it.id = alias.get(it.id, it.id)
             day = self.store.day_of(it.id)
             if day is None:
+                # Fuzzy-merge only non-paper items: papers already dedupe by arXiv ID, and
+                # a look-alike title must never redirect a paper to someone else's link.
                 match = next(((d, k) for d, k, t, ax in live_titles
-                              if not (ax and it.arxiv_id) and same_title(it.title, t)), None)
-                if match:
+                              if not (ax or it.arxiv_id) and same_title(it.title, t)), None)
+                if match and not it.arxiv_id:
                     day, kept = match
                     alias[it.id] = kept
                     it.id = kept
