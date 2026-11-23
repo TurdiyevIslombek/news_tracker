@@ -70,8 +70,20 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         with:
           path: docs
-      - id: deploy
+      - id: deploy_first
         uses: actions/deploy-pages@v5
+        continue-on-error: true    # transient "artifact not found" errors happen; retry once
+      - name: Wait before retrying deploy
+        if: steps.deploy_first.outcome == 'failure'
+        run: sleep 30
+      - id: deploy_retry
+        if: steps.deploy_first.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+      - id: deploy
+        run: echo "page_url=${URL_FIRST:-$URL_RETRY}" >> "$GITHUB_OUTPUT"
+        env:
+          URL_FIRST: ${{ steps.deploy_first.outputs.page_url }}
+          URL_RETRY: ${{ steps.deploy_retry.outputs.page_url }}
 
       # Scheduled workflows in public repos are disabled after 60 days without
       # activity. Re-enabling is a no-op while enabled and resets that clock.
