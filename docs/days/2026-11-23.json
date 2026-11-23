@@ -1,19 +1,127 @@
 {
   "schema_version": 1,
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T18:47:58Z",
+  "generated_at": "2026-11-23T19:00:00Z",
   "headline": "Recent AI research highlights advancements in memory efficiency, spatial reasoning for agents, and video world models. New developments include MemOnce for handling long language model contexts, ReSpaceBench for evaluating spatial memory in embodied agents, and NoPeWorld for correcting physics violations in video models.",
   "headline_status": "done",
   "items": [
+    {
+      "id": "web:5094532b4e2e63d2",
+      "title": "GLM-5.4: Toward generalized coding with our first loop transformer",
+      "url": "https://z.ai/blog/glm-5.4",
+      "source": "hn",
+      "category": "Industry",
+      "score": 6.188,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 860,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T10:06:43Z",
+      "summary": "No abstract available yet.",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "web:38c61351fe0dc3e7",
+      "title": "87% of the Anthropic power will come from gas and 11% from coal in 2028",
+      "url": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/",
+      "source": "hn",
+      "category": "Industry",
+      "score": 5.929,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 1017,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-22T08:57:34Z",
+      "summary": "In The AI Gas Rush: Risks and Implications of “Bring Your Own Power”, we dug into how data centers are increasingly securing their own dedicated primary power generation rather than relying solely on utilities to procure power (“BYOP”). We identified 177 GW of planned BYOP gas capacity—enough to power 65% of all US…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "web:1ba4d31258de505f",
+      "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+      "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+      "source": "hn",
+      "category": "Industry",
+      "score": 5.785,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 700,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-22T21:01:16Z",
+      "summary": "A beginner's guide to Local AI with Inkling, Qwen, and Unsloth We have AI at home! Set up your own free personal ChatGPT on your PC with Unsloth and Inkling or Qwen. It's private, and the whole house can use it. With the launch of open-weight models like Qwen, cloud-based LLM providers seem like they're more of…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "github:gulivan/worker755",
+      "title": "Show HN: I built a game where you are an LLM's subagent",
+      "url": "https://github.com/gulivan/worker755",
+      "source": "hn",
+      "category": "Tool / Open source",
+      "score": 5.146,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 355,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-22T13:56:58Z",
+      "summary": "A browser game where your manager is an AI agent, and it believes you are its subagent. The manager (a real LLM: Claude, GPT, Gemini, DeepSeek, GLM, Kimi) is set up like any orchestrator. It has a task queue, read-only access to the machine, and a tool that \"spawns a subagent\". The subagent is you. Its instructions…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "github:el4cteo/fast-anything",
+      "title": "EL4CTEO/fast-anything: Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with ",
+      "url": "https://github.com/EL4CTEO/fast-anything",
+      "source": "github",
+      "category": "Tool / Open source",
+      "score": 5.041,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 3017
+      },
+      "published_at": "2026-11-21T14:40:27Z",
+      "summary": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with your coding agent, prove they behave the same.. Don't rewrite it in Rust. Rewrite the 5% that's slow. Rewriting a whole app in Rust costs months, minute-long compiles and gigabytes of target/. Most of…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "web:381628060ea95e20",
+      "title": "Data Processing Incidents on Inference Providers",
+      "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+      "source": "hn",
+      "category": "Industry",
+      "score": 4.864,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 291,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-22T02:14:14Z",
+      "summary": "Data Processing Incidents on Inference Providers Earlier this week, security researchers reported that certain inference providers had data compromised or otherwise shown evidence that their data policies were not being upheld. We have been collaborating closely with the researchers and with providers to understand…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
     {
       "id": "arxiv:2611.27193",
       "title": "cmHC: Balancing Stream Mixing in Hyper-Connections via Geometric Contraction",
       "url": "https://huggingface.co/papers/2611.27193",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.539,
+      "score": 4.55,
       "signals": {
-        "hf_upvotes": 84,
+        "hf_upvotes": 85,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -29,9 +137,9 @@
       "url": "https://huggingface.co/papers/2611.24636",
       "source": "hf_papers",
       "category": "Model release",
-      "score": 4.177,
+      "score": 4.201,
       "signals": {
-        "hf_upvotes": 35,
+        "hf_upvotes": 36,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -47,9 +155,9 @@
       "url": "https://huggingface.co/papers/2611.27963",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.124,
+      "score": 4.142,
       "signals": {
-        "hf_upvotes": 53,
+        "hf_upvotes": 54,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -60,12 +168,102 @@
       "summary_status": "done"
     },
     {
+      "id": "github:erkamyaman/safe-anything",
+      "title": "erkamyaman/safe-anything: Find the holes before someone else does. A fast, 100% Rust vulnerability scanner: XSS, SQL injection, leaked secre",
+      "url": "https://github.com/erkamyaman/safe-anything",
+      "source": "github",
+      "category": "Tool / Open source",
+      "score": 4.111,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 422
+      },
+      "published_at": "2026-11-22T16:44:10Z",
+      "summary": "Find the holes before someone else does. A fast, 100% Rust vulnerability scanner: XSS, SQL injection, leaked secrets, dependency CVEs and AI agent setups.. safe-anything Find the holes before someone else does. One command finds XSS, SQL injection and other vulnerabilities in your code, leaked secrets, risky mobile…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "web:77ab3d65a27896e8",
+      "title": "Supercharging transformer residual connections",
+      "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+      "source": "blog:google_research",
+      "category": "Research",
+      "score": 3.955,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T17:21:12Z",
+      "summary": "Supercharging transformer residual connections Kyriakos Axiotis, Staff Research Scientist, and Thomas Fu, Principal Engineer, Google Research We present DeepCrossAttention (DCA), an architecture that enhances transformer networks by using learnable weights and depth-wise cross-attention to dynamically combine outputs…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "web:ca38829e73128713",
+      "title": "RoboTrack: Point tracking for real-world robotic manipulation",
+      "url": "https://huggingface.co/blog/allenai/robotrack",
+      "source": "blog:huggingface",
+      "category": "Industry",
+      "score": 3.955,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T17:20:37Z",
+      "summary": "RoboTrack: Point tracking for real-world robotic manipulation 🤖 Models | 📄 Tech Report | 📊 Data | 💻 Code | 🌐 Project Page | 📈 Benchmark Deploying robots in real-world settings requires reliable perception throughout an interaction. To pick something up, a robot needs to follow the positions of its gripper and the…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "web:61dcf1169479ac82",
+      "title": "Finding faster quantum algorithms with agents and formal verification",
+      "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+      "source": "blog:deepmind",
+      "category": "Research",
+      "score": 3.946,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T16:59:40Z",
+      "summary": "Finding faster quantum algorithms with agents and formal verification Sergey Shirobokov, Ben Jaderberg and Ryan Babbush How using agent teams and formal verification can improve quantum algorithms for modelling fusion energy, chemistry and enzymes Quantum computers could soon solve problems beyond the reach of…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
+      "id": "github:w01fb0ss/pibot",
+      "title": "w01fb0ss/PiBot: Open-source, local-first AI agent team for your desktop: multi-agent group chats, computer use, browser, MCP, routines and a",
+      "url": "https://github.com/w01fb0ss/PiBot",
+      "source": "github",
+      "category": "Tool / Open source",
+      "score": 3.911,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 494
+      },
+      "published_at": "2026-11-21T06:54:24Z",
+      "summary": "Open-source, local-first AI agent team for your desktop: multi-agent group chats, computer use, browser, MCP, routines and approvals. macOS, Windows, Linux + Android. Built on pi.. Pi Bot An open-source, local-first AI agent team for your desktop. Named AI Bots work on your own computer: chat with one or put several…",
+      "why_it_matters": "",
+      "summarized_by": null,
+      "summary_status": "pending"
+    },
+    {
       "id": "arxiv:2611.15449",
       "title": "Reading the Unreadable: Text-Aware Image Super-Resolution Needs Reasoning",
       "url": "https://huggingface.co/papers/2611.15449",
       "source": "hf_papers",
       "category": "Research",
-      "score": 3.684,
+      "score": 3.681,
       "signals": {
         "hf_upvotes": 21,
         "hn_points": 0,
@@ -76,213 +274,232 @@
       "why_it_matters": "It highlights a major blind spot in current image restoration tools and shows that combining them with language model reasoning drastically improves text recovery.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
+    }
+  ],
+  "more": [
+    {
+      "id": "web:528d6924cf9afd0d",
+      "title": "The Mythology of Conscious AI",
+      "url": "https://www.noemamag.com/the-mythology-of-conscious-ai/",
+      "source": "hn",
+      "category": "Industry"
+    },
+    {
+      "id": "web:315e82c2f910360b",
+      "title": "AI is becoming a disaster for the climate",
+      "url": "https://www.bloodinthemachine.com/p/ai-is-becoming-a-disaster-for-the",
+      "source": "hn",
+      "category": "Industry"
+    },
+    {
+      "id": "web:3d1bee2216f809ad",
+      "title": "Pandex – Official European Law for AI Agents, over MCP",
+      "url": "https://www.pandex.io",
+      "source": "hn",
+      "category": "Industry"
+    },
+    {
+      "id": "web:a05c3134ff4821e1",
+      "title": "Amodei reportedly suggested games could pacify masses after AI took their jobs (2015)",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1039745/dario-amodei-video-games-ai-joblessness",
+      "source": "hn",
+      "category": "Industry"
+    },
+    {
+      "id": "web:ce0bcf2918b4e740",
+      "title": "AI Supply Chain Security: What Canary Tokens Found",
+      "url": "https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens",
+      "source": "hn",
+      "category": "Industry"
+    },
+    {
+      "id": "arxiv:2606.14068",
+      "title": "Harsher on Male? Evaluating LLMs on Gender-Asymmetric Moral Framing in Conflicts",
+      "url": "https://arxiv.org/abs/2606.14068",
+      "source": "hn",
+      "category": "Research"
+    },
+    {
+      "id": "web:d7b15f2f905fd0d1",
+      "title": "0rwx – A simple model of AI usage, inspired by Unix permissions",
+      "url": "https://0rwx.com/",
+      "source": "hn",
+      "category": "Industry"
+    },
+    {
+      "id": "web:770a34dc0c64f4e8",
+      "title": "Harvard CS 2881R AI Safety",
+      "url": "https://boazbk.github.io/mltheoryseminar/",
+      "source": "hn",
+      "category": "Industry"
+    },
+    {
+      "id": "github:mjwsolo/localcode",
+      "title": "Localcode, open source agentic coding on your Mac with one command",
+      "url": "https://github.com/mjwsolo/localcode",
+      "source": "hn",
+      "category": "Tool / Open source"
+    },
+    {
+      "id": "web:21bd1d482ae20679",
+      "title": "Muru – AI-assisted Rust server for Python apps by mod_WSGI's creator",
+      "url": "https://simonwillison.net/2026/Nov/21/muru/",
+      "source": "hn",
+      "category": "Industry"
+    },
+    {
+      "id": "github:praseesh369/youtube-ai-video-editing-system",
+      "title": "praseesh369/youtube-ai-video-editing-system: Storyboard, capture, and animate: an AI editing workflow for YouTube",
+      "url": "https://github.com/praseesh369/youtube-ai-video-editing-system",
+      "source": "github",
+      "category": "Tool / Open source"
+    },
+    {
+      "id": "github:jimliu/open-artifact",
+      "title": "JimLiu/open-artifact: Open, agent- and model-agnostic artifacts, all saved locally as plain files — edit, comment on, and export slides, UI ",
+      "url": "https://github.com/JimLiu/open-artifact",
+      "source": "github",
+      "category": "Tool / Open source"
+    },
+    {
+      "id": "web:6fd4c32fe34a4cba",
+      "title": "How to build and maintain an agentic evaluation",
+      "url": "https://huggingface.co/blog/agentic-evals",
+      "source": "blog:huggingface",
+      "category": "Industry"
+    },
+    {
+      "id": "web:de5cd1a6d51dc917",
+      "title": "Perplexity and Intelligence",
+      "url": "https://openai.com/index/perplexity-and-intelligence",
+      "source": "blog:openai",
+      "category": "Industry"
+    },
+    {
+      "id": "github:nestjs/agent-skills",
+      "title": "nestjs/agent-skills: Agent skills for Nest framework (node.js) 🕵️‍♂️",
+      "url": "https://github.com/nestjs/agent-skills",
+      "source": "github",
+      "category": "Tool / Open source"
+    },
+    {
+      "id": "github:liufelix2004/dsh-workbuddy",
+      "title": "LIUFelix2004/dsh-workbuddy: Import WorkBuddy accounts into DeepSeek Harness as model providers: one route per account, full model list, per-",
+      "url": "https://github.com/LIUFelix2004/dsh-workbuddy",
+      "source": "github",
+      "category": "Tool / Open source"
     },
     {
       "id": "arxiv:2611.25773",
       "title": "Duopra: From Full-Duplex Conversation to Full-Duplex Agency",
       "url": "https://huggingface.co/papers/2611.25773",
       "source": "hf_papers",
-      "category": "Training method",
-      "score": 3.078,
-      "signals": {
-        "hf_upvotes": 11,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-23T00:00:00Z",
-      "summary": "The authors introduce Duopra, an interaction model designed to give full-duplex conversational systems better task execution abilities, such as timely tool use and handling user corrections. By training the model to jointly handle conversational flow and tool delegation, Duopra significantly improves tool-calling success rates. The method bridges the gap between natural speech responsiveness and practical task completion.",
-      "why_it_matters": "It helps voice assistants move beyond basic conversation into reliable, real-time task execution and tool usage.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
+      "category": "Training method"
+    },
+    {
+      "id": "github:ai4xe/ai4ai",
+      "title": "AI4XE/ai4ai: Let AI manage itself — a cross-harness kit for runtime status, context renewal, self-duplication and more",
+      "url": "https://github.com/AI4XE/ai4ai",
+      "source": "github",
+      "category": "Tool / Open source"
     },
     {
       "id": "arxiv:2611.27973",
       "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
       "url": "https://huggingface.co/papers/2611.27973",
       "source": "hf_papers",
-      "category": "Research",
-      "score": 3.026,
-      "signals": {
-        "hf_upvotes": 17,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-20T18:51:29Z",
-      "summary": "Researchers introduce MemOnce, a foundation architecture that learns scalable memory states for large language models to handle long contexts efficiently. It combines a memory encoder-decoder with sparse attention to reduce GPU memory footprint and achieve linear-time complexity. When applied to Qwen3.5-4B, MemOnce significantly decreases memory state cache and prefill latency while improving throughput at a 1M context length.",
-      "why_it_matters": "This architecture drastically reduces memory usage and latency for large language models handling very long text contexts.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
+      "category": "Research"
+    },
+    {
+      "id": "github:ccarter01011/traxagent-claude-plugin",
+      "title": "ccarter01011/traxagent-claude-plugin: Ask Claude, ChatGPT, Claude Code, Cursor or VS Code who spent your AI budget and what to fix. TraxAgen",
+      "url": "https://github.com/ccarter01011/traxagent-claude-plugin",
+      "source": "github",
+      "category": "Tool / Open source"
     },
     {
       "id": "arxiv:2611.21485",
       "title": "Lost in the Hallway: Benchmarking Persistent Spatial Memory Across Revisits",
       "url": "https://huggingface.co/papers/2611.21485",
       "source": "hf_papers",
-      "category": "Research",
-      "score": 2.896,
-      "signals": {
-        "hf_upvotes": 9,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-23T00:00:00Z",
-      "summary": "This paper presents ReSpaceBench, a new benchmark to evaluate persistent spatial memory in embodied agents across repeated visits to environments. Testing 32 models and various agentic frameworks reveals that current zero-height models score far below human performance, struggling with room association and state tracking. Additionally, fine-tuning Qwen3-VL-8B on a separate dataset called RS-30K noticeably raises overall spatial accuracy.",
-      "why_it_matters": "It establishes a rigorous way to measure how well AI agents remember and update spatial understanding across multiple visits to physical spaces.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
+      "category": "Research"
     },
-    {
-      "id": "arxiv:2611.24077",
-      "title": "AeroRSI: Recursive Self-Improvement for Aerial Vision-Language Navigation",
-      "url": "https://huggingface.co/papers/2611.24077",
-      "source": "hf_papers",
-      "category": "Training method",
-      "score": 2.385,
-      "signals": {
-        "hf_upvotes": 5,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-23T00:00:00Z",
-      "summary": "The authors introduce AeroRSI, a recursive self-improvement framework that helps unmanned aerial vehicles learn from their own navigation failures. The system lets a failing policy judge its own repairs by continuing flight, turning its errors into reliable supervision without extra human labels. Applying this method significantly increases success rates and cuts collisions for aerial navigation models.",
-      "why_it_matters": "It allows autonomous aerial drones to reliably improve their flight navigation policies using self-generated failure data instead of expensive human labels.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.25252",
-      "title": "Moving Generality from Model to Modeler: LLM Agents for PHM on a Deployment-Style Benchmark",
-      "url": "https://huggingface.co/papers/2611.25252",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 2.203,
-      "signals": {
-        "hf_upvotes": 4,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-23T00:00:00Z",
-      "summary": "This study examines whether generality should reside in an AI agent that builds models for new tasks rather than in a single general model. Using a deployment-style benchmark called NextUnit-Bench for prognostics and health management, the researchers find that frontier agents outperform traditional AutoML and published methods. Their analysis shows that an agent's strength comes from how effectively it adapts its data-driven designs to each specific machine.",
-      "why_it_matters": "It shifts the focus of AI generality from static pre-trained models to dynamic agents capable of custom-building solutions for unseen tasks.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.24025",
-      "title": "Intent Contracts: Taking Tools Away from Agents",
-      "url": "https://huggingface.co/papers/2611.24025",
-      "source": "hf_papers",
-      "category": "Tool / Open source",
-      "score": 2.203,
-      "signals": {
-        "hf_upvotes": 4,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-23T00:00:00Z",
-      "summary": "Intent contracts introduce an authorization interface for tool-using language model agents where the planning model holds no direct tools. Instead, the planner submits a logged contract containing a goal, user quote, and scope fields, which a small trusted model then validates and executes. The researchers release the plugin and run records alongside evaluations showing how these contracts handle task completion compared to traditional command reviews.",
-      "why_it_matters": "It tests a safer authorization structure that separates tool execution from the main planning model to better align with user intent.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.22343",
-      "title": "PURE: A Diagnostic Benchmark for Multi-Granularity Multimodal Identity Matching",
-      "url": "https://huggingface.co/papers/2611.22343",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 2.203,
-      "signals": {
-        "hf_upvotes": 4,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-23T00:00:00Z",
-      "summary": "Researchers introduce PURE, a diagnostic benchmark for evaluating multi-granularity multimodal identity matching in e-commerce. The benchmark consists of 1,457 multiple-choice questions across 14 tasks to test perception, understanding, reasoning, and evidence-grounded judgment. Testing ten recent multimodal large language models revealed overall scores between 47.1% and 86.0%, with understanding scoring highest and judgment lowest.",
-      "why_it_matters": "The benchmark exposes hidden flaws in how models interpret evidence and apply matching criteria, moving beyond simple aggregate accuracy scores.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.27915",
-      "title": "StereoVLM: Binocular Vision-Language Models for Metric 3D Spatial Reasoning",
-      "url": "https://huggingface.co/papers/2611.27915",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 2.078,
-      "signals": {
-        "hf_upvotes": 6,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-20T17:52:02Z",
-      "summary": "The authors introduce StereoVLM, a geometry-aware binocular vision-language model designed for metric 3D spatial reasoning using calibrated stereo images. They also present Stereo3D-Bench, a new benchmark covering tasks from point-level geometry to object-level spatial reasoning. The StereoVLM-8B model achieved high depth accuracy and strong object-level scores on the new benchmark.",
-      "why_it_matters": "It demonstrates that using calibrated cross-view geometry helps vision-language models reason about physical 3D space much more reliably than relying on semantic guesses alone.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.26613",
-      "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
-      "url": "https://huggingface.co/papers/2611.26613",
-      "source": "hf_papers",
-      "category": "Tool / Open source",
-      "score": 2.016,
-      "signals": {
-        "hf_upvotes": 6,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-19T18:57:25Z",
-      "summary": "This paper presents AgentRoboCritic, an intent-grounded critique framework to analyze action-level performance of multimodal language agents controlling robots directly. The authors release a dataset of 12,844 annotated actions alongside an open-source fine-tuned critic called Muse-Glimmer-30B. The fine-tuned critic successfully increases failure-mode accuracy from 32.58% to 74.24%.",
-      "why_it_matters": "It provides open resources and a systematic framework for tracking how and why direct robot-control agents succeed or fail at the individual action level.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.22479",
-      "title": "Exploited Before It Was Fixed? Vulnerability Timelines from Open, Machine-Readable Evidence",
-      "url": "https://huggingface.co/papers/2611.22479",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 1.98,
-      "signals": {
-        "hf_upvotes": 3,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-23T00:00:00Z",
-      "summary": "This study analyzes software vulnerability timelines using open, machine-readable evidence models to track lifecycle events like exploitation and patching. Among thousands of vulnerability identifiers analyzed, the authors found that only a small percentage have patch evidence and that measuring exploitation-to-patch intervals depends heavily on the precision of available data. The work also highlights systematic measurement errors and data inconsistencies across vulnerability catalogs.",
-      "why_it_matters": "It uncovers data quality flaws in public security databases and shows how difficult it is to accurately measure whether software vulnerabilities are exploited before they are fixed.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.27229",
-      "title": "Prune to Expand: Training Prompt Enhancers with Less to Imitate",
-      "url": "https://huggingface.co/papers/2611.27229",
-      "source": "hf_papers",
-      "category": "Training method",
-      "score": 1.485,
-      "signals": {
-        "hf_upvotes": 3,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-20T07:28:45Z",
-      "summary": "The authors investigate prompt enhancement, a technique that turns short user prompts into detailed descriptions for image generation. They discover that training models on image caption pairs with large generation gains works similarly to training on pairs with marginal gains, meaning dense captions can introduce redundant supervision. To fix this, they introduce 'Prune to Expand' (P2E), a text-only training method that selectively removes redundant sentences while keeping core user requirements.",
-      "why_it_matters": "The P2E method improves human preference alignment and visual generation quality by stripping away unnecessary training noise from detailed captions.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    }
-  ],
-  "more": [
     {
       "id": "arxiv:2611.19247",
       "title": "GameWM: Toward Next-Generation Video Games with Interaction-Centric World Models",
       "url": "https://huggingface.co/papers/2611.19247",
       "source": "hf_papers",
       "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.24077",
+      "title": "AeroRSI: Recursive Self-Improvement for Aerial Vision-Language Navigation",
+      "url": "https://huggingface.co/papers/2611.24077",
+      "source": "hf_papers",
+      "category": "Training method"
+    },
+    {
+      "id": "arxiv:2611.25252",
+      "title": "Moving Generality from Model to Modeler: LLM Agents for PHM on a Deployment-Style Benchmark",
+      "url": "https://huggingface.co/papers/2611.25252",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.24025",
+      "title": "Intent Contracts: Taking Tools Away from Agents",
+      "url": "https://huggingface.co/papers/2611.24025",
+      "source": "hf_papers",
+      "category": "Tool / Open source"
+    },
+    {
+      "id": "arxiv:2611.22343",
+      "title": "PURE: A Diagnostic Benchmark for Multi-Granularity Multimodal Identity Matching",
+      "url": "https://huggingface.co/papers/2611.22343",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27915",
+      "title": "StereoVLM: Binocular Vision-Language Models for Metric 3D Spatial Reasoning",
+      "url": "https://huggingface.co/papers/2611.27915",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.26613",
+      "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+      "url": "https://huggingface.co/papers/2611.26613",
+      "source": "hf_papers",
+      "category": "Tool / Open source"
+    },
+    {
+      "id": "arxiv:2611.22479",
+      "title": "Exploited Before It Was Fixed? Vulnerability Timelines from Open, Machine-Readable Evidence",
+      "url": "https://huggingface.co/papers/2611.22479",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.23417",
+      "title": "Autoregressive View Model",
+      "url": "https://huggingface.co/papers/2611.23417",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27229",
+      "title": "Prune to Expand: Training Prompt Enhancers with Less to Imitate",
+      "url": "https://huggingface.co/papers/2611.27229",
+      "source": "hf_papers",
+      "category": "Training method"
+    },
+    {
+      "id": "arxiv:2611.26954",
+      "title": "Learning Video Foresight Reasoning from Unlabeled Videos via On-Policy Self-Distillation",
+      "url": "https://huggingface.co/papers/2611.26954",
+      "source": "hf_papers",
+      "category": "Training method"
     },
     {
       "id": "arxiv:2611.22495",
@@ -306,25 +523,11 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.26954",
-      "title": "Learning Video Foresight Reasoning from Unlabeled Videos via On-Policy Self-Distillation",
-      "url": "https://huggingface.co/papers/2611.26954",
-      "source": "hf_papers",
-      "category": "Training method"
-    },
-    {
       "id": "arxiv:2611.26809",
       "title": "Search From the Start: Search-Native Pretraining for Language Models",
       "url": "https://huggingface.co/papers/2611.26809",
       "source": "hf_papers",
       "category": "Training method"
-    },
-    {
-      "id": "arxiv:2611.23417",
-      "title": "Autoregressive View Model",
-      "url": "https://huggingface.co/papers/2611.23417",
-      "source": "hf_papers",
-      "category": "Research"
     },
     {
       "id": "arxiv:2611.27983",
@@ -351,209 +554,6 @@
       "id": "arxiv:2611.27962",
       "title": "Model Carving: Training Transformers That Optimize Their Own Topology",
       "url": "https://arxiv.org/abs/2611.27962",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27959",
-      "title": "Ranking-Preserving Coreset Selection for Efficient Evolutionary Hyperparameter Optimization",
-      "url": "https://arxiv.org/abs/2611.27959",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27951",
-      "title": "Topology Hub Optimal Transport: Eliminating Long Context Dilution at Flash Speed",
-      "url": "https://arxiv.org/abs/2611.27951",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27946",
-      "title": "The Optimal Sample Complexity of Agnostic PAC Learning for Partial Concept Classes",
-      "url": "https://arxiv.org/abs/2611.27946",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27931",
-      "title": "DiTraR: Diverse Scorers and Transcript-Guided Re-ranking for Video Corpus Moment Retrieval",
-      "url": "https://arxiv.org/abs/2611.27931",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27924",
-      "title": "BioEmu2: Scalable Emulation of Biomolecular Dynamics",
-      "url": "https://arxiv.org/abs/2611.27924",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27921",
-      "title": "ESSI: Computationally Efficient Semantic Search for Sparse Autoencoder Concepts",
-      "url": "https://arxiv.org/abs/2611.27921",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27919",
-      "title": "SUAF: Spectral Universal Advantage Features for Zero-Shot Policy Improvement",
-      "url": "https://arxiv.org/abs/2611.27919",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27917",
-      "title": "Augmentation of cardiovascular flow measurements with generative diffusion models",
-      "url": "https://arxiv.org/abs/2611.27917",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27913",
-      "title": "Star Panoptic Quality: Selectively Evaluating Split and Merged Instances",
-      "url": "https://arxiv.org/abs/2611.27913",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27911",
-      "title": "Functional Depth Is Learned: Isolating the Computation That Layers Produce Only Together",
-      "url": "https://arxiv.org/abs/2611.27911",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27910",
-      "title": "Decision Columns as an Index: Interpretable Embeddings for Explainable Entity Matching and Search",
-      "url": "https://arxiv.org/abs/2611.27910",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27905",
-      "title": "AnimalFarm: Auditing the Generation and Detection of Hateful Images Featuring Anthropomorphic Characters",
-      "url": "https://arxiv.org/abs/2611.27905",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27901",
-      "title": "QuantStream3D: Geometry-Aligned Low-Bit KV Cache Quantization for Streaming Visual Geometry Transformers",
-      "url": "https://arxiv.org/abs/2611.27901",
-      "source": "arxiv",
-      "category": "Training method"
-    },
-    {
-      "id": "arxiv:2611.27900",
-      "title": "Communication-Efficient Federated Learning of Latent Patient Representations from Multi-Institutional EHRs",
-      "url": "https://arxiv.org/abs/2611.27900",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27899",
-      "title": "The Dual-Tier Sentiment Framework: Scalable Multimodal UX Attribution in Web Search",
-      "url": "https://arxiv.org/abs/2611.27899",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27895",
-      "title": "TEA-Bench-BR: Can Coding Agents Turn a Branching Clinical Specification into Correct Code?",
-      "url": "https://arxiv.org/abs/2611.27895",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27894",
-      "title": "FairITR: Fairness-Aware Learning of Multicategory Individualized Treatment Rules",
-      "url": "https://arxiv.org/abs/2611.27894",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27891",
-      "title": "Speculative Decoding Is Less Speculative Than You Think",
-      "url": "https://arxiv.org/abs/2611.27891",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27889",
-      "title": "Renormalized Entropy from Symmetries: Simplicity Bias and Neural Heat Death",
-      "url": "https://arxiv.org/abs/2611.27889",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27881",
-      "title": "Interpretable Tissue Architecture Complements Pathology Foundation Models",
-      "url": "https://arxiv.org/abs/2611.27881",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27876",
-      "title": "LesionAgent: Training-Free Agentic Tumor Tracking and Response Assessment in Longitudinal CT",
-      "url": "https://arxiv.org/abs/2611.27876",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27875",
-      "title": "From Gist to Verbatim: The Controllable Path of One Image Through a Diffusion Prior",
-      "url": "https://arxiv.org/abs/2611.27875",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27870",
-      "title": "Beyond Visual Fidelity: Comparing Categorical and Continuous World Models",
-      "url": "https://arxiv.org/abs/2611.27870",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27868",
-      "title": "Integrating Generative Artificial Intelligence with Learning Style Models: Opportunities, Challenges, and Future Directions",
-      "url": "https://arxiv.org/abs/2611.27868",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27865",
-      "title": "SLICR: Strategy Logic-Guided Multi-Agent Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2611.27865",
-      "source": "arxiv",
-      "category": "Training method"
-    },
-    {
-      "id": "arxiv:2611.27862",
-      "title": "OpenAHBU: Open-sourced Automatic Human Behaviour Understanding Toolkit Through Facial Behaviour Analysis",
-      "url": "https://arxiv.org/abs/2611.27862",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27860",
-      "title": "Who Grades the Agent? Privilege Separation for Coding-Agent Benchmarks",
-      "url": "https://arxiv.org/abs/2611.27860",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27858",
-      "title": "ENC-QA: A Diagnostic Benchmark for Vision-Language Models on Electronic Navigational Charts",
-      "url": "https://arxiv.org/abs/2611.27858",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.27855",
-      "title": "Anchors That Move Without Collapsing: Exclusive-Region Anchor Routing for Vision Transformers",
-      "url": "https://arxiv.org/abs/2611.27855",
       "source": "arxiv",
       "category": "Research"
     }
