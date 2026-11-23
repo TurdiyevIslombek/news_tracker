@@ -9,8 +9,26 @@ from .store import read_json, write_json
 SCHEMA_VERSION = 1
 
 
+def _strip(d: dict) -> dict:
+    return {k: v for k, v in d.items() if k != "generated_at"}
+
+
 def write_day(docs: Path, day: dict) -> bool:
-    return write_json(docs / "days" / f"{day['date']}.json", day)
+    """Write a day file unless only `generated_at` would change."""
+    path = docs / "days" / f"{day['date']}.json"
+    old = read_json(path, None)
+    if old is not None and _strip(old) == _strip(day):
+        return False
+    return write_json(path, day)
+
+
+def day_has_pending(docs: Path, date: str) -> bool:
+    d = read_json(docs / "days" / f"{date}.json", None)
+    if d is None:
+        return False
+    return d.get("headline_status") == "pending" or any(
+        i.get("summary_status") == "pending" for i in d.get("items", [])
+    )
 
 
 def write_index_and_latest(docs: Path) -> None:

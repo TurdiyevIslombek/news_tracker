@@ -5,7 +5,7 @@ import json
 import logging
 import os
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, fields
 
 import httpx
 
@@ -13,10 +13,11 @@ log = logging.getLogger(__name__)
 
 
 class ProviderError(Exception):
-    def __init__(self, provider: str, status: int | None, message: str):
+    def __init__(self, provider: str, status: int | None, message: str, retry_after: float | None = None):
         super().__init__(f"{provider}: {status} {message}")
         self.provider = provider
         self.status = status
+        self.retry_after = retry_after
 
     @property
     def retryable(self) -> bool:
@@ -33,6 +34,9 @@ class Provider:
     timeout_seconds: float = 60
     json_mode: bool = False
     extra_headers: dict | None = None
+    min_interval_seconds: float = 0       # pacing to stay under RPM / TPM limits
+    max_requests_per_run: int | None = None
+    notes: str = ""
 
     @property
     def label(self) -> str:
@@ -45,8 +49,9 @@ class Provider:
 
 def providers_from_config(cfg: list[dict]) -> list[Provider]:
     out = []
+    known = {f.name for f in fields(Provider)}
     for p in cfg:
-        prov = Provider(**p)
+        prov = Provider(**{k: v for k, v in p.items() if k in known})
         if prov.api_key:
             out.append(prov)
         else:
@@ -70,7 +75,11 @@ def chat(provider: Provider, messages: list[dict], temperature: float, http: htt
         raise ProviderError(provider.name, None, type(e).__name__) from None
     if r.status_code != 200:
         # Error bodies never contain our key, but trim them anyway to keep logs short.
-        raise ProviderError(provider.name, r.status_code, r.text[:200])
+        try:
+            retry_after = float(r.headers.get("retry-after", ""))
+        except ValueError:
+            retry_after = None
+        raise ProviderError(provider.name, r.status_code, r.text[:200], retry_after)
     try:
         return r.json()["choices"][0]["message"]["content"] or ""
     except (KeyError, IndexError, ValueError, TypeError):

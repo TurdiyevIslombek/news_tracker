@@ -2,7 +2,7 @@
 
 http:
   timeout_seconds: 30
-  user_agent: "AIPulse/0.1 (+https://github.com/ai-pulse; daily AI digest bot)"
+  user_agent: "AIPulse/0.1 (+https://github.com/TurdiyevIslombek/news_tracker)"
 
 output:
   docs_dir: docs            # published by GitHub Pages
@@ -10,6 +10,7 @@ output:
   top_n: 15                 # summarized items per day
   more_n: 40                # lighter "more" items per day
   first_run_lookback_hours: 24
+  pool_days: 7              # recent days that can still be re-ranked / re-summarized
 
 sources:
   arxiv:
@@ -37,13 +38,67 @@ ranking:
   recency_half_life_hours: 36
 
 llm:
-  batch_size: 5             # items per summarization request
+  batch_size: 5             # items per summarization request (saves quota)
   max_input_chars: 2500     # per item text sent to the model
   temperature: 0.2
-  # Ordered fallback chain. Providers whose key env var is missing are skipped.
+  retry_backoff_seconds: 8  # wait before the single retry (Retry-After wins, max 30s)
+  max_5xx_strikes: 2        # 5xx/timeouts: drop a provider for the run after this many failed calls
+  run_budget_seconds: 420   # stop calling LLMs after this; leftovers stay "pending"
+
+  # Ordered fallback chain (checked 2026-11-23; free tiers change often, so run
+  # `python -m collector providers` to test yours). Providers whose key env var
+  # is missing are skipped, so the chain works with a single key. Several entries
+  # can share one key: each Gemini model has its own free quota bucket.
   providers:
     - name: gemini
       base_url: https://generativelanguage.googleapis.com/v1beta/openai
       model: gemini-3.5-flash-lite
       key_env: GEMINI_API_KEY
+      timeout_seconds: 90
+      min_interval_seconds: 4
+      notes: Google AI Studio free tier; limits shown per project in AI Studio.
+    - name: gemini
+      base_url: https://generativelanguage.googleapis.com/v1beta/openai
+      model: gemini-3.6-flash
+      key_env: GEMINI_API_KEY
+      timeout_seconds: 90
+      min_interval_seconds: 6
+    - name: gemini
+      base_url: https://generativelanguage.googleapis.com/v1beta/openai
+      model: gemini-3.1-flash-lite
+      key_env: GEMINI_API_KEY
+      timeout_seconds: 90
+      min_interval_seconds: 4
+    - name: groq
+      base_url: https://api.groq.com/openai/v1
+      model: openai/gpt-oss-120b
+      key_env: GROQ_API_KEY
       timeout_seconds: 60
+      min_interval_seconds: 35   # free tier: 30 RPM, 1K RPD, but only 8K TPM
+    - name: cerebras
+      base_url: https://api.cerebras.ai/v1
+      model: gpt-oss-120b
+      key_env: CEREBRAS_API_KEY
+      timeout_seconds: 60
+      min_interval_seconds: 13   # trial: 5 RPM, 1M TPD
+      notes: Free access is a $5 / 30-day trial credit, not a permanent tier.
+    - name: openrouter
+      base_url: https://openrouter.ai/api/v1
+      model: google/gemma-4-31b-it:free
+      key_env: OPENROUTER_API_KEY
+      timeout_seconds: 90
+      min_interval_seconds: 4
+      extra_headers: {X-Title: AI Pulse}
+    - name: mistral
+      base_url: https://api.mistral.ai/v1
+      model: mistral-small-latest
+      key_env: MISTRAL_API_KEY
+      timeout_seconds: 60
+      min_interval_seconds: 2
+    - name: github
+      base_url: https://models.github.ai/inference
+      model: openai/gpt-4.1-mini
+      key_env: GITHUB_TOKEN      # built into Actions; needs `permissions: models: read`
+      timeout_seconds: 60
+      min_interval_seconds: 5
+      max_requests_per_run: 20

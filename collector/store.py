@@ -86,6 +86,8 @@ class Store:
         cutoff = (today - timedelta(days=self.seen_days)).isoformat()
         for key in ("seen", "featured"):
             self.state[key] = {k: v for k, v in self.state[key].items() if v >= cutoff}
+        self.summaries = {k: v for k, v in self.summaries.items() if v.get("day", "9999") >= cutoff}
+        self.headlines = {k: v for k, v in self.headlines.items() if k >= cutoff}
         self.state["last_run"] = iso(now)
         # Keep pools only for days that can still change.
         pool_cutoff = (today - timedelta(days=self.pool_days)).isoformat()
