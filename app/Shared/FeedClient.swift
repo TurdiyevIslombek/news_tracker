@@ -54,6 +54,9 @@ struct FeedClient: Sendable {
 
     /// `version` is the day's generated_at from the index, so unchanged days stay cacheable.
     func day(_ date: String, version: String?) async throws -> DayDigest {
-        try await get("days/\(date).json", bust: version ?? String(Int(Date().timeIntervalSince1970)))
+        guard FeedSafety.isDayKey(date) else { throw FeedError.badURL }
+        let day: DayDigest = try await get("days/\(date).json", bust: version ?? String(Int(Date().timeIntervalSince1970)))
+        guard day.date == date else { throw FeedError.badURL }  // file must describe the day we asked for
+        return day
     }
 }

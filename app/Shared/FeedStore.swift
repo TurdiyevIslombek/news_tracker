@@ -22,7 +22,7 @@ final class FeedStore: ObservableObject {
 
     /// Newest first: every day we know about (from the index or the cache).
     var availableDates: [String] {
-        Set(days.keys).union(index?.days.map(\.date) ?? []).sorted(by: >)
+        Set(days.keys).union(index?.days.map(\.date) ?? []).filter(FeedSafety.isDayKey).sorted(by: >)
     }
 
     var latestDate: String? { availableDates.first }
@@ -42,7 +42,7 @@ final class FeedStore: ObservableObject {
         do {
             let idx = try await client.index()
             var changed = false
-            for entry in idx.days.prefix(FeedConfig.catchUpDays) {
+            for entry in idx.days.filter({ FeedSafety.isDayKey($0.date) }).prefix(FeedConfig.catchUpDays) {
                 let cached = days[entry.date]
                 if let cached, let v = entry.generatedAt, cached.generatedAt == v { continue }
                 do {

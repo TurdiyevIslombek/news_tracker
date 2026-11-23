@@ -81,7 +81,7 @@ struct DigestItem: Codable, Identifiable, Hashable, Sendable {
     var summaryStatus: String
 
     var isPending: Bool { summaryStatus != "done" }
-    var link: URL? { URL(string: url) }
+    var link: URL? { FeedSafety.webURL(url) }
 
     init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
@@ -107,7 +107,7 @@ struct MoreItem: Codable, Identifiable, Hashable, Sendable {
     var category: DigestCategory
     var id: String { url }
 
-    var link: URL? { URL(string: url) }
+    var link: URL? { FeedSafety.webURL(url) }
 }
 
 struct DayDigest: Codable, Identifiable, Hashable, Sendable {
@@ -145,6 +145,21 @@ struct FeedIndex: Codable, Hashable, Sendable {
     var generatedAt: String
     var latest: String
     var days: [IndexDay]
+}
+
+/// The feed URL is user-configurable, so feed contents are untrusted input.
+enum FeedSafety {
+    /// Only http(s) links are ever opened (no file:, app schemes, etc.).
+    static func webURL(_ s: String) -> URL? {
+        guard let u = URL(string: s), let scheme = u.scheme?.lowercased(),
+              scheme == "https" || scheme == "http", u.host != nil else { return nil }
+        return u
+    }
+
+    /// Day keys are used in file paths and URLs: must be exactly YYYY-MM-DD.
+    static func isDayKey(_ s: String) -> Bool {
+        s.utf8.count == 10 && s.wholeMatch(of: /\d{4}-\d{2}-\d{2}/) != nil
+    }
 }
 
 enum FeedJSON {

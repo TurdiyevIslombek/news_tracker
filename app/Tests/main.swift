@@ -38,6 +38,17 @@ check(cache.dates() == [day.date], "dates() lists saved days")
 check(cache.loadIndex() == idx, "index survives save/load")
 try? FileManager.default.removeItem(at: tmp)
 
+print("untrusted feed input")
+check(FeedSafety.isDayKey("2026-11-23"), "valid day key")
+check(!FeedSafety.isDayKey("../../evil") && !FeedSafety.isDayKey("2026-11-23/../x"), "path traversal rejected")
+check(FeedSafety.webURL("https://arxiv.org/abs/1") != nil, "https link allowed")
+check(FeedSafety.webURL("file:///etc/passwd") == nil && FeedSafety.webURL("javascript:alert(1)") == nil
+      && FeedSafety.webURL("x-apple.systempreferences:") == nil, "non-web schemes rejected")
+let evil = #"{"date":"../../x","items":[{"id":"a","title":"T","url":"file:///Applications"}]}"#
+let e = try FeedJSON.decoder().decode(DayDigest.self, from: Data(evil.utf8))
+check(e.items.first?.link == nil, "item with file: URL has no openable link")
+check((try? DayCache(dir: tmp).save(e)) == nil, "cache refuses to write a traversal day key")
+
 print("display")
 check(Display.source("blog:openai") == "OpenAI", "blog source label")
 check(Display.source("hn") == "Hacker News", "hn label")

@@ -18,11 +18,13 @@ struct DayCache: Sendable {
                                                  withIntermediateDirectories: true)
     }
 
-    private func dayURL(_ date: String) -> URL { dir.appendingPathComponent("days/\(date).json") }
+    private func dayURL(_ date: String) -> URL? {
+        FeedSafety.isDayKey(date) ? dir.appendingPathComponent("days/\(date).json") : nil
+    }
     private var indexURL: URL { dir.appendingPathComponent("index.json") }
 
     func load(_ date: String) -> DayDigest? {
-        guard let data = try? Data(contentsOf: dayURL(date)) else { return nil }
+        guard let url = dayURL(date), let data = try? Data(contentsOf: url) else { return nil }
         return try? FeedJSON.decoder().decode(DayDigest.self, from: data)
     }
 
@@ -34,7 +36,8 @@ struct DayCache: Sendable {
 
     func dates() -> [String] {
         let files = (try? FileManager.default.contentsOfDirectory(atPath: dir.appendingPathComponent("days").path)) ?? []
-        return files.filter { $0.hasSuffix(".json") }.map { String($0.dropLast(5)) }.sorted(by: >)
+        return files.filter { $0.hasSuffix(".json") }.map { String($0.dropLast(5)) }
+            .filter(FeedSafety.isDayKey).sorted(by: >)
     }
 
     func loadIndex() -> FeedIndex? {
@@ -43,7 +46,8 @@ struct DayCache: Sendable {
     }
 
     func save(_ day: DayDigest) throws {
-        try FeedJSON.encoder().encode(day).write(to: dayURL(day.date), options: .atomic)
+        guard let url = dayURL(day.date) else { throw CocoaError(.fileWriteInvalidFileName) }
+        try FeedJSON.encoder().encode(day).write(to: url, options: .atomic)
     }
 
     func save(_ index: FeedIndex) throws {
