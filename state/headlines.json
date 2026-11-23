@@ -1,15 +1,15 @@
 {
   "2026-11-23": {
-    "headline": "Recent AI research highlights advancements in memory efficiency, spatial reasoning for agents, and video world models. New developments include MemOnce for handling long language model contexts, ReSpaceBench for evaluating spatial memory in embodied agents, and NoPeWorld for correcting physics violations in video models.",
+    "headline": "AI security and efficiency updates: Data policy enforcement, new model architectures, and research on robotic tracking and quantum algorithms.",
     "basis": [
-      "arxiv:2611.15449",
-      "arxiv:2611.24636",
-      "arxiv:2611.25773",
-      "arxiv:2611.27193",
-      "arxiv:2611.27963",
-      "arxiv:2611.27973"
+      "github:el4cteo/fast-anything",
+      "github:gulivan/worker755",
+      "web:1ba4d31258de505f",
+      "web:381628060ea95e20",
+      "web:38c61351fe0dc3e7",
+      "web:5094532b4e2e63d2"
     ],
-    "by": "gemini/gemini-3.5-flash-lite",
+    "by": "gemini/gemini-3.1-flash-lite",
     "status": "done"
   }
 }

@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-23T19:08:23Z",
+  "generated_at": "2026-11-23T19:12:19Z",
   "latest": "2026-11-23",
   "days": [
     {
       "date": "2026-11-23",
-      "headline": "Recent AI research highlights advancements in memory efficiency, spatial reasoning for agents, and video world models. New developments include MemOnce for handling long language model contexts, ReSpaceBench for evaluating spatial memory in embodied agents, and NoPeWorld for correcting physics violations in video models.",
+      "headline": "AI security and efficiency updates: Data policy enforcement, new model architectures, and research on robotic tracking and quantum algorithms.",
       "item_count": 15,
-      "generated_at": "2026-11-23T19:05:14Z"
+      "generated_at": "2026-11-23T19:10:30Z"
     }
   ]
 }
