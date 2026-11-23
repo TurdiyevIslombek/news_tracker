@@ -24,12 +24,24 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25   # normal runs take < 10 min; headroom for a rare rebuild
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
+    # LLM keys are needed by both Collect and the conflict-retry in Commit data.
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # GitHub search API (higher rate limit)
     steps:
+      # Always build on the newest data, not the commit that triggered the run
+      # (a code push can predate the previous run's data commit).
       - uses: actions/checkout@v7
+        with:
+          ref: main
 
       - uses: actions/setup-python@v7
         with:
@@ -44,25 +56,23 @@ jobs:
         run: python -m pytest collector/tests -q
 
       - name: Collect
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # GitHub search API (higher rate limit)
         run: python -m collector run
 
+      # Generated JSON can't be merged by git. If main moved, start over from the
+      # new data and re-run (cached summaries make the re-run cheap).
       - name: Commit data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs state
-          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
-          git commit -q -m "data: $(date -u +%Y-%m-%dT%H:%MZ)"
-          for i in 1 2 3; do
-            git push && exit 0
-            git pull --rebase -q
+          for attempt in 1 2 3; do
+            git add docs state
+            if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+            git commit -q -m "data: $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push -q origin HEAD:main && exit 0
+            echo "main moved; rebuilding on the latest data (attempt $attempt)"
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            python -m collector run
           done
           exit 1
 
