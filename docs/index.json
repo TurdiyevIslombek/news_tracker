@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-23T18:45:35Z",
+  "generated_at": "2026-11-23T18:50:03Z",
   "latest": "2026-11-23",
   "days": [
     {
       "date": "2026-11-23",
-      "headline": "15 notable AI items today, led by “cmHC: Balancing Stream Mixing in Hyper-Connections via Geometric Contraction”.",
+      "headline": "Recent AI research highlights advancements in memory efficiency, spatial reasoning for agents, and video world models. New developments include MemOnce for handling long language model contexts, ReSpaceBench for evaluating spatial memory in embodied agents, and NoPeWorld for correcting physics violations in video models.",
       "item_count": 15,
-      "generated_at": "2026-11-23T18:45:20Z"
+      "generated_at": "2026-11-23T18:47:58Z"
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T18:45:20Z",
-  "headline": "15 notable AI items today, led by “cmHC: Balancing Stream Mixing in Hyper-Connections via Geometric Contraction”.",
-  "headline_status": "pending",
+  "generated_at": "2026-11-23T18:47:58Z",
+  "headline": "Recent AI research highlights advancements in memory efficiency, spatial reasoning for agents, and video world models. New developments include MemOnce for handling long language model contexts, ReSpaceBench for evaluating spatial memory in embodied agents, and NoPeWorld for correcting physics violations in video models.",
+  "headline_status": "done",
   "items": [
     {
       "id": "arxiv:2611.27193",
@@ -18,17 +18,17 @@
         "github_stars": 0
       },
       "published_at": "2026-11-20T06:26:11Z",
-      "summary": "Manifold-constrained Hyper-Connections (mHC) extends residual connections to multiple streams and stabilizes residual propagation by constraining stream-mixing residual matrices to the Birkhoff polytope, the set of doubly stochastic matrices. In this work, we investigate how to effectively mix residual streams within…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "This paper investigates how to properly mix residual streams in hyper-connection neural network architectures without causing streams to become either completely independent or indistinguishable. The authors propose a geometrical contraction method called cmHC that forces residual matrices to explore deeper into the mixing space while preventing over-mixing in shallow layers. Experiments show that this method improves scalability and reduces execution latency on Ascend NPUs.",
+      "why_it_matters": "It offers a mathematically grounded way to stabilize and speed up the pretraining of very large neural networks.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "arxiv:2611.24636",
       "title": "Clover-35B-A3B-Preview Technical Report",
       "url": "https://huggingface.co/papers/2611.24636",
       "source": "hf_papers",
-      "category": "Research",
+      "category": "Model release",
       "score": 4.177,
       "signals": {
         "hf_upvotes": 35,
@@ -36,10 +36,10 @@
         "github_stars": 0
       },
       "published_at": "2026-11-23T00:00:00Z",
-      "summary": "We introduce Clover-35B-A3B-Preview (Clover), a mixture-of-experts diffusion language model with 35 billion total parameters and 3 billion activated parameters, supporting thinking-mode generation. Clover adapts Gated Delta Networks to block diffusion by combining recurrent memory of previously generated context with…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "The developers introduce Clover-35B-A3B-Preview, a 35-billion-parameter language model using a mixture-of-experts design with 3 billion activated parameters. It supports thinking-mode generation and combines historical memory with bidirectional attention blocks. The model achieves strong performance on coding and agent benchmarks while maintaining high generation speeds.",
+      "why_it_matters": "It demonstrates an efficient mixture-of-experts model architecture capable of fast generation speeds and strong performance on software engineering benchmarks.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "arxiv:2611.27963",
@@ -54,10 +54,10 @@
         "github_stars": 0
       },
       "published_at": "2026-11-20T18:44:57Z",
-      "summary": "We study a new problem of preventing object penetration in interactive video world models. To understand how existing models handle this, we introduce NoPeBench, a benchmark that evaluates how world models respond to physical obstacles. Our evaluation reveals that none of the open-source models can reliably prevent…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "The authors study how to prevent video world models from generating physics violations where objects penetrate obstacles. They introduce NoPeBench to test for this issue and discover that hidden states inside existing diffusion transformers can already predict when a collision will occur. Based on this, they build NoPeWorld, a lightweight prediction framework that intercepts and corrects unsafe actions.",
+      "why_it_matters": "It provides a simple, plug-in method to make video world models behave more physically realistically without retraining the underlying models.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "arxiv:2611.15449",
@@ -65,35 +65,35 @@
       "url": "https://huggingface.co/papers/2611.15449",
       "source": "hf_papers",
       "category": "Research",
-      "score": 3.685,
+      "score": 3.684,
       "signals": {
         "hf_upvotes": 21,
         "hn_points": 0,
         "github_stars": 0
       },
       "published_at": "2026-11-23T00:00:00Z",
-      "summary": "Text-aware image super-resolution (TAISR) aims to recover high-resolution images from low-resolution inputs while preserving textual content. Existing methods treat this as a visual restoration problem, yet severely degraded text often cannot be read from local visual evidence alone. Humans instead read it by…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "This paper explores text-aware image super-resolution, which attempts to recover readable text from low-resolution images. The authors introduce a benchmark and metric showing that existing models struggle significantly when text recovery requires logical reasoning rather than just visual clues. To fix this, they propose a training-free plugin that uses multimodal large language models to infer degraded text and guide the image restoration process.",
+      "why_it_matters": "It highlights a major blind spot in current image restoration tools and shows that combining them with language model reasoning drastically improves text recovery.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "arxiv:2611.25773",
       "title": "Duopra: From Full-Duplex Conversation to Full-Duplex Agency",
       "url": "https://huggingface.co/papers/2611.25773",
       "source": "hf_papers",
-      "category": "Research",
-      "score": 3.079,
+      "category": "Training method",
+      "score": 3.078,
       "signals": {
         "hf_upvotes": 11,
         "hn_points": 0,
         "github_stars": 0
       },
       "published_at": "2026-11-23T00:00:00Z",
-      "summary": "Full-duplex interaction models exhibit strong conversational agency, enabling natural, low-latency turn-taking, backchannels, and interruptions. However, completing tasks further requires task agency: timely tool invocation and argument revision following user corrections. Frontend-backend agents separate initiation…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "The authors introduce Duopra, an interaction model designed to give full-duplex conversational systems better task execution abilities, such as timely tool use and handling user corrections. By training the model to jointly handle conversational flow and tool delegation, Duopra significantly improves tool-calling success rates. The method bridges the gap between natural speech responsiveness and practical task completion.",
+      "why_it_matters": "It helps voice assistants move beyond basic conversation into reliable, real-time task execution and tool usage.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "arxiv:2611.27973",
@@ -108,10 +108,10 @@
         "github_stars": 0
       },
       "published_at": "2026-11-20T18:51:29Z",
-      "summary": "Deploying large language models (LLMs) in long-horizon and continual interactions requires maintaining reusable memory states for future inference, posing challenges for existing architectures. Standard Transformers accumulate layer-wise, token-level KV caches, incurring linear GPU memory growth and quadratic…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "Researchers introduce MemOnce, a foundation architecture that learns scalable memory states for large language models to handle long contexts efficiently. It combines a memory encoder-decoder with sparse attention to reduce GPU memory footprint and achieve linear-time complexity. When applied to Qwen3.5-4B, MemOnce significantly decreases memory state cache and prefill latency while improving throughput at a 1M context length.",
+      "why_it_matters": "This architecture drastically reduces memory usage and latency for large language models handling very long text contexts.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "arxiv:2611.21485",
@@ -119,35 +119,35 @@
       "url": "https://huggingface.co/papers/2611.21485",
       "source": "hf_papers",
       "category": "Research",
-      "score": 2.897,
+      "score": 2.896,
       "signals": {
         "hf_upvotes": 9,
         "hn_points": 0,
         "github_stars": 0
       },
       "published_at": "2026-11-23T00:00:00Z",
-      "summary": "Persistent spatial understanding is essential for embodied agents to operate reliably in environments they repeatedly encounter. It requires recognizing revisited places despite viewpoint changes, distinguishing them from similar-looking rooms, and updating memories as environments change. Yet existing evaluations…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "This paper presents ReSpaceBench, a new benchmark to evaluate persistent spatial memory in embodied agents across repeated visits to environments. Testing 32 models and various agentic frameworks reveals that current zero-height models score far below human performance, struggling with room association and state tracking. Additionally, fine-tuning Qwen3-VL-8B on a separate dataset called RS-30K noticeably raises overall spatial accuracy.",
+      "why_it_matters": "It establishes a rigorous way to measure how well AI agents remember and update spatial understanding across multiple visits to physical spaces.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "arxiv:2611.24077",
       "title": "AeroRSI: Recursive Self-Improvement for Aerial Vision-Language Navigation",
       "url": "https://huggingface.co/papers/2611.24077",
       "source": "hf_papers",
-      "category": "Research",
-      "score": 2.386,
+      "category": "Training method",
+      "score": 2.385,
       "signals": {
         "hf_upvotes": 5,
         "hn_points": 0,
         "github_stars": 0
       },
       "published_at": "2026-11-23T00:00:00Z",
-      "summary": "Vision-language-action (VLA) models enable unmanned aerial vehicles (UAVs) to follow natural-language instructions, yet still fail frequently in closed-loop flight. Correcting these failures requires repairs, i.e., actions that avoid them at the states the policy itself reaches, which human pilots cannot label at…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "The authors introduce AeroRSI, a recursive self-improvement framework that helps unmanned aerial vehicles learn from their own navigation failures. The system lets a failing policy judge its own repairs by continuing flight, turning its errors into reliable supervision without extra human labels. Applying this method significantly increases success rates and cuts collisions for aerial navigation models.",
+      "why_it_matters": "It allows autonomous aerial drones to reliably improve their flight navigation policies using self-generated failure data instead of expensive human labels.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "arxiv:2611.25252",
@@ -162,17 +162,17 @@
         "github_stars": 0
       },
       "published_at": "2026-11-23T00:00:00Z",
-      "summary": "Coding agents built on large language models (LLMs) now help develop many models published as general solutions. Should generality instead reside in the agent that builds a model for each new task? We examine this question in prognostics and health management (PHM), where every model must work on unseen equipment. Our…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "This study examines whether generality should reside in an AI agent that builds models for new tasks rather than in a single general model. Using a deployment-style benchmark called NextUnit-Bench for prognostics and health management, the researchers find that frontier agents outperform traditional AutoML and published methods. Their analysis shows that an agent's strength comes from how effectively it adapts its data-driven designs to each specific machine.",
+      "why_it_matters": "It shifts the focus of AI generality from static pre-trained models to dynamic agents capable of custom-building solutions for unseen tasks.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "arxiv:2611.24025",
       "title": "Intent Contracts: Taking Tools Away from Agents",
       "url": "https://huggingface.co/papers/2611.24025",
       "source": "hf_papers",
-      "category": "Research",
+      "category": "Tool / Open source",
       "score": 2.203,
       "signals": {
         "hf_upvotes": 4,
@@ -180,10 +180,10 @@
         "github_stars": 0
       },
       "published_at": "2026-11-23T00:00:00Z",
-      "summary": "Intent contracts are an authorization interface for tool-using LLM agents in which the planning model holds no tools. For each step it submits a short logged contract: a goal, a verbatim quotation of the user, and scope fields. Code validates the contract, and a small trusted model checks it against the user's words…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "Intent contracts introduce an authorization interface for tool-using language model agents where the planning model holds no direct tools. Instead, the planner submits a logged contract containing a goal, user quote, and scope fields, which a small trusted model then validates and executes. The researchers release the plugin and run records alongside evaluations showing how these contracts handle task completion compared to traditional command reviews.",
+      "why_it_matters": "It tests a safer authorization structure that separates tool execution from the main planning model to better align with user intent.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "arxiv:2611.22343",
@@ -198,10 +198,10 @@
         "github_stars": 0
       },
       "published_at": "2026-11-23T00:00:00Z",
-      "summary": "Identity matching asks whether two records denote the same identity, yet the answer depends on the target granularity. Two records may match at the base level but not at the variant level: they share an underlying design while differing in attributes such as color or size. Final matching accuracy does not separately…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "Researchers introduce PURE, a diagnostic benchmark for evaluating multi-granularity multimodal identity matching in e-commerce. The benchmark consists of 1,457 multiple-choice questions across 14 tasks to test perception, understanding, reasoning, and evidence-grounded judgment. Testing ten recent multimodal large language models revealed overall scores between 47.1% and 86.0%, with understanding scoring highest and judgment lowest.",
+      "why_it_matters": "The benchmark exposes hidden flaws in how models interpret evidence and apply matching criteria, moving beyond simple aggregate accuracy scores.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "arxiv:2611.27915",
@@ -216,17 +216,17 @@
         "github_stars": 0
       },
       "published_at": "2026-11-20T17:52:02Z",
-      "summary": "Vision-language models (VLMs) exhibit strong semantic understanding but remain limited in their ability to reason about metric 3D space in the physical world. Existing VLMs typically infer 3D scene structure from one or more images without known camera calibration or cross-view geometric constraints. This makes metric…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "The authors introduce StereoVLM, a geometry-aware binocular vision-language model designed for metric 3D spatial reasoning using calibrated stereo images. They also present Stereo3D-Bench, a new benchmark covering tasks from point-level geometry to object-level spatial reasoning. The StereoVLM-8B model achieved high depth accuracy and strong object-level scores on the new benchmark.",
+      "why_it_matters": "It demonstrates that using calibrated cross-view geometry helps vision-language models reason about physical 3D space much more reliably than relying on semantic guesses alone.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "arxiv:2611.26613",
       "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
       "url": "https://huggingface.co/papers/2611.26613",
       "source": "hf_papers",
-      "category": "Research",
+      "category": "Tool / Open source",
       "score": 2.016,
       "signals": {
         "hf_upvotes": 6,
@@ -234,10 +234,10 @@
         "github_stars": 0
       },
       "published_at": "2026-11-19T18:57:25Z",
-      "summary": "Frontier multimodal language agents such as GPT-6 Astra have demonstrated strong capabilities in controlling robots directly via low-level numerical actions without high-level primitives. However, existing benchmarks report only episode-level success rates, which show neither how these agents succeed nor where they…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "This paper presents AgentRoboCritic, an intent-grounded critique framework to analyze action-level performance of multimodal language agents controlling robots directly. The authors release a dataset of 12,844 annotated actions alongside an open-source fine-tuned critic called Muse-Glimmer-30B. The fine-tuned critic successfully increases failure-mode accuracy from 32.58% to 74.24%.",
+      "why_it_matters": "It provides open resources and a systematic framework for tracking how and why direct robot-control agents succeed or fail at the individual action level.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "arxiv:2611.22479",
@@ -252,17 +252,17 @@
         "github_stars": 0
       },
       "published_at": "2026-11-23T00:00:00Z",
-      "summary": "-05-X-03), Known Exploited Vulnerabilities (KEV) catalogs, and exploitation sightings. We introduce an evidence model implemented in Vulnerability-Lookup that selects the earliest evidence for each lifecycle event, distinguishes vulnerability-specific records, preserves date precision, and ensures traceability to…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "This study analyzes software vulnerability timelines using open, machine-readable evidence models to track lifecycle events like exploitation and patching. Among thousands of vulnerability identifiers analyzed, the authors found that only a small percentage have patch evidence and that measuring exploitation-to-patch intervals depends heavily on the precision of available data. The work also highlights systematic measurement errors and data inconsistencies across vulnerability catalogs.",
+      "why_it_matters": "It uncovers data quality flaws in public security databases and shows how difficult it is to accurately measure whether software vulnerabilities are exploited before they are fixed.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "arxiv:2611.27229",
       "title": "Prune to Expand: Training Prompt Enhancers with Less to Imitate",
       "url": "https://huggingface.co/papers/2611.27229",
       "source": "hf_papers",
-      "category": "Research",
+      "category": "Training method",
       "score": 1.485,
       "signals": {
         "hf_upvotes": 3,
@@ -270,10 +270,10 @@
         "github_stars": 0
       },
       "published_at": "2026-11-20T07:28:45Z",
-      "summary": "Prompt enhancement (PE) refines concise user prompts into detailed descriptions to improve the compositional aesthetics of generated images while preserving user intent. A common practice constructs supervised fine-tuning (SFT) pairs by deriving short, user-like prompts from dense captions, implicitly assuming that…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "The authors investigate prompt enhancement, a technique that turns short user prompts into detailed descriptions for image generation. They discover that training models on image caption pairs with large generation gains works similarly to training on pairs with marginal gains, meaning dense captions can introduce redundant supervision. To fix this, they introduce 'Prune to Expand' (P2E), a text-only training method that selectively removes redundant sentences while keeping core user requirements.",
+      "why_it_matters": "The P2E method improves human preference alignment and visual generation quality by stripping away unnecessary training noise from detailed captions.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     }
   ],
   "more": [
