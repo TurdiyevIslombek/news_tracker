@@ -6,8 +6,10 @@
 """
 from __future__ import annotations
 
+import ipaddress
 import logging
-from urllib.parse import urlsplit
+import socket
+from urllib.parse import urljoin, urlsplit
 from urllib.robotparser import RobotFileParser
 
 import httpx
@@ -18,16 +20,46 @@ from .textutil import article_text
 
 log = logging.getLogger(__name__)
 MAX_BYTES = 3_000_000
+MAX_REDIRECTS = 5
+
+
+def is_public_url(url: str) -> bool:
+    """Only http(s) to hosts whose every resolved address is public (SSRF guard:
+    HN links are user-submitted and we fetch them from a CI runner)."""
+    parts = urlsplit(url)
+    if parts.scheme not in ("http", "https") or not parts.hostname:
+        return False
+    try:
+        infos = socket.getaddrinfo(parts.hostname, parts.port or (443 if parts.scheme == "https" else 80),
+                                   type=socket.SOCK_STREAM)
+    except (socket.gaierror, UnicodeError, ValueError):
+        return False
+    return bool(infos) and all(ipaddress.ip_address(i[4][0].split("%")[0]).is_global for i in infos)
 
 
 class Enricher:
-    def __init__(self, http: httpx.Client, cfg: dict, agent: str = "AIPulse"):
+    def __init__(self, http: httpx.Client, cfg: dict, agent: str = "AIPulse",
+                 url_check=is_public_url):
         self.http = http
+        self.url_check = url_check
         self.min_chars = cfg.get("min_text_chars", 400)
         self.max_chars = cfg.get("max_article_chars", 4000)
         self.timeout = cfg.get("timeout_seconds", 15)
         self.agent = agent
         self._robots: dict[str, RobotFileParser | None] = {}
+
+    def safe_get(self, url: str) -> httpx.Response | None:
+        """GET that re-validates the target on every redirect hop."""
+        for _ in range(MAX_REDIRECTS + 1):
+            if not self.url_check(url):
+                log.info("enrich: refusing non-public URL host %s", urlsplit(url).hostname)
+                return None
+            r = self.http.get(url, timeout=self.timeout, follow_redirects=False)
+            if r.is_redirect and "location" in r.headers:
+                url = urljoin(url, r.headers["location"])
+                continue
+            return r
+        return None
 
     def allowed(self, url: str) -> bool:
         parts = urlsplit(url)
@@ -35,8 +67,8 @@ class Enricher:
         if host not in self._robots:
             rp: RobotFileParser | None = RobotFileParser()
             try:
-                r = self.http.get(host + "/robots.txt", timeout=self.timeout)
-                if r.status_code in (401, 403):
+                r = self.safe_get(host + "/robots.txt")
+                if r is None or r.status_code in (401, 403):
                     rp = None                      # locked down: treat as "no"
                 elif r.status_code >= 400:
                     rp.parse([])                   # no robots.txt: allowed
@@ -67,8 +99,8 @@ class Enricher:
             log.info("enrich: robots.txt disallows (or can't check) %s", urlsplit(it.url).netloc)
             return
         try:
-            r = self.http.get(it.url, timeout=self.timeout)
-            if r.status_code != 200 or "html" not in r.headers.get("content-type", ""):
+            r = self.safe_get(it.url)
+            if r is None or r.status_code != 200 or "html" not in r.headers.get("content-type", ""):
                 return
             if len(r.content) > MAX_BYTES:
                 return

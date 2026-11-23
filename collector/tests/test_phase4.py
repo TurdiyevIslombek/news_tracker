@@ -5,7 +5,7 @@ from datetime import datetime, timedelta, timezone
 import httpx
 
 from collector.dedupe import dedupe, same_title
-from collector.enrich import Enricher
+from collector.enrich import Enricher, is_public_url
 from collector.ids import canonical_id, normalize_url
 from collector.models import RawItem
 from collector.pipeline import select_top
@@ -96,7 +96,7 @@ def test_enrich_respects_robots():
         page = "<html><article><p>" + "Real article text about a model. " * 20 + "</p></article></html>"
         return httpx.Response(200, text=page, headers={"content-type": "text/html"})
 
-    e = Enricher(httpx.Client(transport=httpx.MockTransport(handler)), {})
+    e = Enricher(httpx.Client(transport=httpx.MockTransport(handler)), {}, url_check=lambda u: True)
     ok = RawItem(id="1", title="t", url="https://site.example/post", source="hn", published_at=NOW)
     no = RawItem(id="2", title="t", url="https://site.example/private/post", source="hn", published_at=NOW)
     e.enrich([ok, no])
@@ -117,3 +117,26 @@ def test_duplicate_arriving_next_run_merges_into_existing_item(repo):
     day = read_day(repo)
     assert [i["id"] for i in day["items"]] == ["web:aaa"]     # one item, never duplicated
     assert day["items"][0]["signals"]["hn_points"] == 500
+
+
+def test_ssrf_guard_rejects_private_and_odd_targets():
+    for url in ["http://169.254.169.254/latest/meta-data", "http://127.0.0.1:8080/", "http://localhost/",
+                "http://10.1.2.3/x", "http://[::1]/", "file:///etc/passwd", "ftp://example.com/", "http:///x"]:
+        assert not is_public_url(url), url
+    assert is_public_url("https://8.8.8.8/")
+
+
+def test_redirect_into_private_network_is_not_followed():
+    hits = []
+
+    def handler(req: httpx.Request):
+        hits.append(str(req.url))
+        if req.url.path == "/robots.txt":
+            return httpx.Response(404)
+        return httpx.Response(302, headers={"location": "http://10.0.0.5/admin"})
+
+    e = Enricher(httpx.Client(transport=httpx.MockTransport(handler)), {},
+                 url_check=lambda u: "10.0.0.5" not in u)
+    it = RawItem(id="1", title="t", url="https://public.example/post", source="hn", published_at=NOW)
+    e.enrich([it])
+    assert it.text == "" and not any("10.0.0.5" in h for h in hits)
