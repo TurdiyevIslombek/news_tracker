@@ -4,7 +4,8 @@ from datetime import datetime, timezone
 
 from collector.dedupe import dedupe
 from collector.models import RawItem
-from collector.sources.arxiv import arxiv_id_from_url, parse_feed
+from collector.ids import arxiv_id_from_url
+from collector.sources.arxiv import parse_feed
 from collector.sources.hf_papers import parse_entries
 
 ATOM = """<?xml version='1.0' encoding='UTF-8'?>
@@ -44,6 +45,6 @@ def test_dedupe_merges_same_paper_and_keeps_best_signals():
                 published_at=t, text="long abstract text", arxiv_id="1")
     b = RawItem(id="arxiv:1", title="X", url="https://huggingface.co/papers/1", source="hf_papers",
                 published_at=t, text="short", arxiv_id="1", signals={"hf_upvotes": 9})
-    [m] = dedupe([a, b])
+    [m], aliases = dedupe([a, b])
     assert m.source == "hf_papers" and m.signals["hf_upvotes"] == 9
     assert m.text == "long abstract text" and set(m.sources) == {"arxiv", "hf_papers"}

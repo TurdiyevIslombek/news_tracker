@@ -10,18 +10,13 @@ import time
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 
+from ..ids import arxiv_id_from_url
 from ..models import RawItem, parse_iso, utcnow
 from .base import Source
 
 log = logging.getLogger(__name__)
 API = "https://export.arxiv.org/api/query"
 NS = {"a": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/atom"}
-_VERSION = re.compile(r"v\d+$")
-
-
-def arxiv_id_from_url(url: str) -> str | None:
-    m = re.search(r"arxiv\.org/(?:abs|pdf)/([^\s?#]+?)(?:\.pdf)?(?:[?#]|$)", url)
-    return _VERSION.sub("", m.group(1)) if m else None
 
 
 def _clean(s: str | None) -> str:

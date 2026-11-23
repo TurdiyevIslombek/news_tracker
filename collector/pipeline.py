@@ -10,7 +10,8 @@ import httpx
 import yaml
 
 from . import publish
-from .dedupe import dedupe, merge
+from .dedupe import dedupe, merge, same_title
+from .enrich import Enricher
 from .chain import Chain
 from .llm import providers_from_config
 from .models import RawItem, iso, parse_iso, utcnow
@@ -66,6 +67,26 @@ class Summarizer:
             return None
         got = self.chain.call(lambda p: write_headline(p, entries, self.cfg, self.http))
         return (got[0], got[1].label) if got else None
+
+
+def source_group(source: str) -> str:
+    base = source.split(":")[0]
+    return "papers" if base in ("arxiv", "hf_papers") else base
+
+
+def select_top(ordered: list[RawItem], n: int, caps: dict[str, int]) -> list[RawItem]:
+    """Highest scores first, but at most caps[group] per source group so one kind of
+    item (usually papers) can't crowd out everything else. Back-fills if short."""
+    top, overflow, counts = [], [], {}
+    for it in ordered:
+        g = source_group(it.source)
+        if len(top) < n and counts.get(g, 0) < caps.get(g, n):
+            top.append(it)
+            counts[g] = counts.get(g, 0) + 1
+        else:
+            overflow.append(it)
+    top += overflow[: n - len(top)]
+    return sorted(top, key=lambda i: i.score, reverse=True)
 
 
 def _has_social(it: RawItem) -> bool:
@@ -127,6 +148,8 @@ class Pipeline:
         )
         self.summarizer = Summarizer(self.cfg["llm"], self.http, self.store,
                                      self.now.date().isoformat(), chain)
+        self.enricher = Enricher(self.http, self.cfg.get("enrich", {}))
+        self.labs = {x.lower() for x in self.cfg["ranking"].get("labs", [])}
 
     # ---- fetch -------------------------------------------------------------
     def fetch_all(self, since: datetime) -> list[RawItem]:
@@ -136,11 +159,15 @@ class Pipeline:
                 continue
             t0 = time.monotonic()
             try:
-                got = self.sources[name](scfg, self.http).fetch(since)
+                got = self.sources[name]({**scfg, "labs": sorted(self.labs)}, self.http).fetch(since)
                 items.extend(got)
                 log.info("source %s: %d items in %.1fs", name, len(got), time.monotonic() - t0)
             except Exception as e:  # one broken source must never kill the run
                 log.warning("source %s failed: %s: %s", name, type(e).__name__, str(e)[:200])
+        for it in items:
+            # Blog feeds are labs by definition; elsewhere only orgs on the list count.
+            if not it.source.startswith("blog:") and (it.lab or "").lower() not in self.labs:
+                it.lab = None
         return items
 
     # ---- assign ------------------------------------------------------------
@@ -148,15 +175,29 @@ class Pipeline:
         today = self.now.date().isoformat()
         touched = {today}
         featured = self.store.featured
+        alias = self.store.alias
+        # Live items on recent days, for fuzzy-title matching of brand-new ones.
+        live_titles = [(d, k, i.title, bool(i.arxiv_id)) for d, pool in pools.items() for k, i in pool.items()]
         for it in items:
+            it.id = alias.get(it.id, it.id)
             day = self.store.day_of(it.id)
+            if day is None:
+                match = next(((d, k) for d, k, t, ax in live_titles
+                              if not (ax and it.arxiv_id) and same_title(it.title, t)), None)
+                if match:
+                    day, kept = match
+                    alias[it.id] = kept
+                    it.id = kept
             live = day in pools and it.id in pools[day]
             if day is None:
                 pools[today][it.id] = it  # brand new
                 self.store.mark_seen(it.id, today)
+                live_titles.append((today, it.id, it.title, bool(it.arxiv_id)))
             elif live and (day == today or it.id in featured or _has_social(pools[day][it.id])
                            or not _has_social(it)):
-                pools[day][it.id] = merge(pools[day][it.id], it)  # refresh signals in place
+                m = merge(pools[day][it.id], it)  # refresh signals in place
+                m.id = it.id
+                pools[day][it.id] = m
                 touched.add(day)
             elif _has_social(it) and it.id not in featured:
                 # Seen earlier as a low-signal (arXiv-only) item and never featured, but
@@ -164,7 +205,9 @@ class Pipeline:
                 old = pools[day].pop(it.id) if live else None
                 if live:
                     touched.add(day)
-                pools[today][it.id] = merge(old, it) if old else it
+                m = merge(old, it) if old else it
+                m.id = it.id
+                pools[today][it.id] = m
                 self.store.mark_seen(it.id, today)
             # else: already handled on an earlier day — leave it there
         return touched
@@ -185,10 +228,13 @@ class Pipeline:
         for it in ordered[top_n + more_n + 20 :]:
             del pool[it.id]
 
-        top, more = ordered[:top_n], ordered[top_n : top_n + more_n]
+        top = select_top(ordered, top_n, out.get("top_caps", {}))
+        top_ids = {i.id for i in top}
+        more = [i for i in ordered if i.id not in top_ids][:more_n]
         for it in top:
             self.store.featured[it.id] = day
         cache = self.store.summaries
+        self.enricher.enrich([i for i in top if i.id not in cache])
         self.summarizer.summarize(top)
 
         items = [top_entry(i, cache) for i in top]
@@ -230,7 +276,8 @@ class Pipeline:
         since = (last - timedelta(minutes=30)) if last else self.now - lookback
         log.info("run: since %s", iso(since))
 
-        items = dedupe(self.fetch_all(since))
+        items, aliases = dedupe(self.fetch_all(since))
+        self.store.alias.update(aliases)
         days = recent_days(self.now.date(), self.store.pool_days)
         pools = {d: self.store.load_pool(d) for d in days}
         touched = self.assign(items, pools)

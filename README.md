@@ -20,3 +20,11 @@ echo 'GEMINI_API_KEY=...' > .env           # any one provider key is enough
 .venv/bin/python -m collector run         # writes docs/days/YYYY-MM-DD.json
 .venv/bin/python -m pytest collector/tests
 ```
+
+## Add a source
+
+1. Create `collector/sources/mysource.py` with a `Source` subclass whose `fetch(since)` returns `list[RawItem]`. Use `ids.canonical_id(url)` for the id, so the item dedupes with the other sources.
+2. Register it in `collector/sources/__init__.py` (`REGISTRY`).
+3. Add a `mysource:` block under `sources:` in `collector/config.yaml`. That block is passed to your class as `self.cfg`.
+
+A source that throws is logged and skipped, so it can't break the run. Ranking weights, per-source caps, the labs list and the LLM provider chain are all in `config.yaml`.

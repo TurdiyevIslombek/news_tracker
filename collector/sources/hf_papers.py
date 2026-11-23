@@ -30,6 +30,7 @@ def parse_entries(data: list[dict]) -> list[RawItem]:
                 arxiv_id=aid,
                 category_hint="Research",
                 signals={"hf_upvotes": int(p.get("upvotes") or 0)},
+                lab=((d.get("organization") or p.get("organization") or {}).get("name")),
             )
         )
     return items

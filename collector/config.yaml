@@ -11,6 +11,11 @@ output:
   more_n: 40                # lighter "more" items per day
   first_run_lookback_hours: 24
   pool_days: 7              # recent days that can still be re-ranked / re-summarized
+  top_caps:                 # max per source group in the top list (rest go to "more")
+    papers: 9               # arxiv + hf_papers
+    blog: 6
+    hn: 5
+    github: 3
 
 sources:
   arxiv:
@@ -23,6 +28,32 @@ sources:
   hf_papers:
     enabled: true
     url: https://huggingface.co/api/daily_papers
+  blogs:
+    enabled: true
+    lookback_hours: 48
+    # Every URL checked 2026-11-23. Anthropic publishes no RSS feed (404), so it's
+    # not here; Meta's ai.meta.com has none either, so Meta Engineering's AI feed is used.
+    feeds:
+      - {name: openai,          lab: OpenAI,           url: "https://openai.com/news/rss.xml"}
+      - {name: deepmind,        lab: Google DeepMind,  url: "https://deepmind.google/blog/rss.xml", category_hint: Research}
+      - {name: google_research, lab: Google Research,  url: "https://research.google/blog/rss/", category_hint: Research}
+      - {name: meta,            lab: Meta,             url: "https://engineering.fb.com/category/ai-research/feed/", category_hint: Research}
+      - {name: mistral,         lab: Mistral,          url: "https://mistral.ai/rss.xml"}
+      - {name: huggingface,     lab: Hugging Face,     url: "https://huggingface.co/blog/feed.xml"}
+      - {name: nvidia,          lab: NVIDIA,           url: "https://developer.nvidia.com/blog/category/generative-ai/feed/"}
+  hn:
+    enabled: true
+    min_points: 60
+    window_hours: 48        # stories keep gaining points; signals refresh on re-reads
+  github:
+    enabled: true
+    topics: [llm, large-language-models, machine-learning, deep-learning, generative-ai, ai-agents, ai]
+    created_within_days: 7
+    min_stars: 100
+    max_checked: 20         # candidates vetted (2 API calls each)
+    max_repos: 10
+    min_owner_age_days: 90  # star-farming filter
+    max_watcher_ratio: 0.15 # watchers/stars; organic repos are usually < 0.05
 
 ranking:
   # score = hf * log1p(upvotes) + hn * log1p(points) + gh * log1p(stars)
@@ -32,10 +63,21 @@ ranking:
     hf_upvotes: 1.0
     hn_points: 0.8
     github_stars: 0.6
-    lab_bonus: 2.0
+    lab_bonus: 1.0          # paper / repo from an org on the `labs` list
+    lab_blog_bonus: 3.0     # official lab blog post (no upvotes to rank by, so it needs more)
     multi_source: 1.0
     recency: 1.0
   recency_half_life_hours: 36
+  # Orgs that count as a "major lab" (HF paper organization or GitHub owner; blog
+  # feeds above always count). Case-insensitive.
+  labs: [openai, anthropic, google, google-deepmind, deepmind, google-research, meta, facebookresearch,
+         meta-llama, mistralai, nvidia, microsoft, apple, huggingface, deepseek-ai, qwen, alibaba,
+         moonshotai, zai-org, bytedance-seed, allenai, amazonscience, xai-org, tencent]
+
+enrich:                     # fetch fuller text for thin top items (robots.txt respected)
+  min_text_chars: 400
+  max_article_chars: 4000
+  timeout_seconds: 15
 
 llm:
   batch_size: 5             # items per summarization request (saves quota)

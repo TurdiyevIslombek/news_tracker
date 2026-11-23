@@ -36,6 +36,7 @@ class RawItem:
     category_hint: str | None = None
     sources: list[str] = field(default_factory=list)  # all sources after dedupe
     score: float = 0.0
+    enriched: bool = False           # tried fetching fuller text (article / abstract)
 
     def __post_init__(self) -> None:
         if not self.sources:

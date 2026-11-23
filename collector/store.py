@@ -56,8 +56,13 @@ class Store:
         self.state.setdefault("last_run", None)
         self.state.setdefault("seen", {})      # item id -> day it was assigned to
         self.state.setdefault("featured", {})  # item id -> day it made the top list
+        self.state.setdefault("alias", {})     # duplicate id -> id of the item it merged into
         self.summaries: dict[str, dict] = read_json(root / "summaries.json", {})
         self.headlines: dict[str, dict] = read_json(root / "headlines.json", {})
+
+    @property
+    def alias(self) -> dict[str, str]:
+        return self.state["alias"]
 
     @property
     def featured(self) -> dict[str, str]:
@@ -86,6 +91,7 @@ class Store:
         cutoff = (today - timedelta(days=self.seen_days)).isoformat()
         for key in ("seen", "featured"):
             self.state[key] = {k: v for k, v in self.state[key].items() if v >= cutoff}
+        self.state["alias"] = {k: v for k, v in self.state["alias"].items() if v in self.state["seen"]}
         self.summaries = {k: v for k, v in self.summaries.items() if v.get("day", "9999") >= cutoff}
         self.headlines = {k: v for k, v in self.headlines.items() if k >= cutoff}
         self.state["last_run"] = iso(now)
