@@ -95,10 +95,5 @@ llm:
       key_env: MISTRAL_API_KEY
       timeout_seconds: 60
       min_interval_seconds: 2
-    - name: github
-      base_url: https://models.github.ai/inference
-      model: openai/gpt-4.1-mini
-      key_env: GITHUB_TOKEN      # built into Actions; needs `permissions: models: read`
-      timeout_seconds: 60
-      min_interval_seconds: 5
-      max_requests_per_run: 20
+    # GitHub Models was removed: its inference API was reported retired on
+    # 2026-07-30 and now answers "OK" instead of JSON.

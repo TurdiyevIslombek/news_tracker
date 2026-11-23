@@ -19,7 +19,6 @@ permissions:
   contents: write   # commit docs/ + state/
   pages: write      # deploy GitHub Pages
   id-token: write   # required by deploy-pages
-  models: read      # GitHub Models (free LLM fallback via GITHUB_TOKEN)
   actions: write    # keepalive: re-enable this workflow so GitHub's 60-day rule never disables it
 
 jobs:
@@ -51,7 +50,6 @@ jobs:
           CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python -m collector run
 
       - name: Commit data

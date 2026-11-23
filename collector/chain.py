@@ -72,9 +72,10 @@ class Chain:
                     return fn(p), p
                 except ProviderError as e:
                     if not e.retryable:
-                        self._exhaust(p, f"HTTP {e.status}")
+                        self._exhaust(p, f"HTTP {e.status}: {str(e)[:120]}")
                         break
                     what = f"HTTP {e.status}" if e.status else "timeout"
+                    log.debug("llm: %s error detail: %s", p.label, str(e)[:200])
                     if attempt == 1:
                         wait = min(e.retry_after or self.backoff, 30.0)
                         log.info("llm: %s got %s, retrying in %.0fs", p.label, what, wait)

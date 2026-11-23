@@ -83,7 +83,7 @@ def chat(provider: Provider, messages: list[dict], temperature: float, http: htt
     try:
         return r.json()["choices"][0]["message"]["content"] or ""
     except (KeyError, IndexError, ValueError, TypeError):
-        raise ProviderError(provider.name, 502, "malformed response") from None
+        raise ProviderError(provider.name, 502, f"malformed response: {r.text[:80]!r}") from None
 
 
 def parse_json(text: str) -> dict:
