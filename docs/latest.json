@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T18:42:58Z",
+  "generated_at": "2026-11-23T18:45:20Z",
   "headline": "15 notable AI items today, led by “cmHC: Balancing Stream Mixing in Hyper-Connections via Geometric Contraction”.",
   "headline_status": "pending",
   "items": [
@@ -29,7 +29,7 @@
       "url": "https://huggingface.co/papers/2611.24636",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.178,
+      "score": 4.177,
       "signals": {
         "hf_upvotes": 35,
         "hn_points": 0,
@@ -65,7 +65,7 @@
       "url": "https://huggingface.co/papers/2611.15449",
       "source": "hf_papers",
       "category": "Research",
-      "score": 3.686,
+      "score": 3.685,
       "signals": {
         "hf_upvotes": 21,
         "hn_points": 0,
@@ -155,7 +155,7 @@
       "url": "https://huggingface.co/papers/2611.25252",
       "source": "hf_papers",
       "category": "Research",
-      "score": 2.204,
+      "score": 2.203,
       "signals": {
         "hf_upvotes": 4,
         "hn_points": 0,
@@ -173,7 +173,7 @@
       "url": "https://huggingface.co/papers/2611.24025",
       "source": "hf_papers",
       "category": "Research",
-      "score": 2.204,
+      "score": 2.203,
       "signals": {
         "hf_upvotes": 4,
         "hn_points": 0,
@@ -191,7 +191,7 @@
       "url": "https://huggingface.co/papers/2611.22343",
       "source": "hf_papers",
       "category": "Research",
-      "score": 2.204,
+      "score": 2.203,
       "signals": {
         "hf_upvotes": 4,
         "hn_points": 0,
@@ -245,7 +245,7 @@
       "url": "https://huggingface.co/papers/2611.22479",
       "source": "hf_papers",
       "category": "Research",
-      "score": 1.981,
+      "score": 1.98,
       "signals": {
         "hf_upvotes": 3,
         "hn_points": 0,
