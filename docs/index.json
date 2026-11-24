@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T10:02:20Z",
+  "generated_at": "2026-11-24T22:34:37Z",
   "latest": "2026-11-24",
   "days": [
     {
       "date": "2026-11-24",
-      "headline": "Today's updates feature new security tools, robotics models, and evaluation benchmarks for artificial intelligence.",
+      "headline": "OpenAI and Cisco release a security tool, Tidal bans AI-generated music, and Anthropic faces market and policy challenges.",
       "item_count": 15,
-      "generated_at": "2026-11-24T10:01:49Z"
+      "generated_at": "2026-11-24T22:34:05Z"
     },
     {
       "date": "2026-11-23",
       "headline": "AI security and efficiency updates: Data policy enforcement, new model architectures, and research on robotic tracking and quantum algorithms.",
       "item_count": 15,
-      "generated_at": "2026-11-24T10:01:49Z"
+      "generated_at": "2026-11-24T22:34:05Z"
     }
   ]
 }

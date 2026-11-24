@@ -13,14 +13,14 @@
     "status": "done"
   },
   "2026-11-24": {
-    "headline": "Today's updates feature new security tools, robotics models, and evaluation benchmarks for artificial intelligence.",
+    "headline": "OpenAI and Cisco release a security tool, Tidal bans AI-generated music, and Anthropic faces market and policy challenges.",
     "basis": [
       "arxiv:2611.29897",
-      "arxiv:2611.30013",
       "arxiv:2611.30662",
-      "arxiv:2611.30989",
-      "arxiv:2611.31201",
-      "web:1d0c151fefed0dea"
+      "web:1d0c151fefed0dea",
+      "web:e213ef04a8703146",
+      "web:e628c0b2649edc45",
+      "web:ef8096d74f5dfd33"
     ],
     "by": "gemini/gemini-3.5-flash-lite",
     "status": "done"

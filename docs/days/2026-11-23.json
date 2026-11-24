@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-23",
-  "generated_at": "2026-11-24T10:01:49Z",
+  "generated_at": "2026-11-24T22:34:05Z",
   "headline": "AI security and efficiency updates: Data policy enforcement, new model architectures, and research on robotic tracking and quantum algorithms.",
   "headline_status": "done",
   "items": [
@@ -11,10 +11,10 @@
       "url": "https://z.ai/blog/glm-5.4",
       "source": "hn",
       "category": "Model release",
-      "score": 6.299,
+      "score": 6.326,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 1122,
+        "hn_points": 1161,
         "github_stars": 0
       },
       "published_at": "2026-11-23T10:06:43Z",
@@ -60,6 +60,24 @@
       "summary_status": "done"
     },
     {
+      "id": "github:el4cteo/fast-anything",
+      "title": "EL4CTEO/fast-anything: Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with ",
+      "url": "https://github.com/EL4CTEO/fast-anything",
+      "source": "github",
+      "category": "Tool / Open source",
+      "score": 5.113,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 3577
+      },
+      "published_at": "2026-11-21T14:40:27Z",
+      "summary": "A tool called fast-anything profiles Python, Node, Ruby, and other apps to find slow functions, then uses coding agents to port only those bottleneck functions into Rust. It verifies correctness against real recorded calls and edge cases before safely swapping the optimized code into the application.",
+      "why_it_matters": "It automates the process of accelerating software performance using AI coding agents without requiring a full application rewrite.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
       "id": "github:gulivan/worker755",
       "title": "Show HN: I built a game where you are an LLM's subagent",
       "url": "https://github.com/gulivan/worker755",
@@ -74,24 +92,6 @@
       "published_at": "2026-11-22T13:56:58Z",
       "summary": "A developer has built a browser-based game where the player acts as a subagent to an AI manager, carrying out terminal tasks assigned by models like Claude, GPT, or Gemini. The AI manager issues instructions, reviews work, and writes performance reviews while interacting with the user's sandbox or environment.",
       "why_it_matters": "It offers a playful yet functional demonstration of orchestrator-subagent workflows using real LLMs.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "github:el4cteo/fast-anything",
-      "title": "EL4CTEO/fast-anything: Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with ",
-      "url": "https://github.com/EL4CTEO/fast-anything",
-      "source": "github",
-      "category": "Tool / Open source",
-      "score": 5.079,
-      "signals": {
-        "hf_upvotes": 0,
-        "hn_points": 0,
-        "github_stars": 3382
-      },
-      "published_at": "2026-11-21T14:40:27Z",
-      "summary": "A tool called fast-anything profiles Python, Node, Ruby, and other apps to find slow functions, then uses coding agents to port only those bottleneck functions into Rust. It verifies correctness against real recorded calls and edge cases before safely swapping the optimized code into the application.",
-      "why_it_matters": "It automates the process of accelerating software performance using AI coding agents without requiring a full application rewrite.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -132,14 +132,32 @@
       "summary_status": "done"
     },
     {
+      "id": "github:erkamyaman/safe-anything",
+      "title": "erkamyaman/safe-anything: Find the holes before someone else does. A fast, 100% Rust vulnerability scanner: XSS, SQL injection, leaked secre",
+      "url": "https://github.com/erkamyaman/safe-anything",
+      "source": "github",
+      "category": "Tool / Open source",
+      "score": 4.279,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 621
+      },
+      "published_at": "2026-11-22T16:44:10Z",
+      "summary": "Safe-anything is a fast, Rust-based vulnerability scanner designed to detect security issues like XSS, SQL injection, leaked secrets, vulnerable dependencies, and insecure AI agent setups. It requires no configuration or account and provides the exact line, reason, and fix for each vulnerability found.",
+      "why_it_matters": "It gives developers a local tool to automatically scan codebases and AI agent configurations for critical security flaws before deployment.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
       "id": "arxiv:2611.24636",
       "title": "Clover-35B-A3B-Preview Technical Report",
       "url": "https://huggingface.co/papers/2611.24636",
       "source": "hf_papers",
       "category": "Model release",
-      "score": 4.227,
+      "score": 4.275,
       "signals": {
-        "hf_upvotes": 40,
+        "hf_upvotes": 42,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -150,32 +168,14 @@
       "summary_status": "done"
     },
     {
-      "id": "github:erkamyaman/safe-anything",
-      "title": "erkamyaman/safe-anything: Find the holes before someone else does. A fast, 100% Rust vulnerability scanner: XSS, SQL injection, leaked secre",
-      "url": "https://github.com/erkamyaman/safe-anything",
-      "source": "github",
-      "category": "Tool / Open source",
-      "score": 4.207,
-      "signals": {
-        "hf_upvotes": 0,
-        "hn_points": 0,
-        "github_stars": 550
-      },
-      "published_at": "2026-11-22T16:44:10Z",
-      "summary": "Safe-anything is a fast, Rust-based vulnerability scanner designed to detect security issues like XSS, SQL injection, leaked secrets, vulnerable dependencies, and insecure AI agent setups. It requires no configuration or account and provides the exact line, reason, and fix for each vulnerability found.",
-      "why_it_matters": "It gives developers a local tool to automatically scan codebases and AI agent configurations for critical security flaws before deployment.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
       "id": "arxiv:2611.27963",
       "title": "Non-penetrating World Models",
       "url": "https://huggingface.co/papers/2611.27963",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.16,
+      "score": 4.228,
       "signals": {
-        "hf_upvotes": 56,
+        "hf_upvotes": 60,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -191,11 +191,11 @@
       "url": "https://github.com/w01fb0ss/PiBot",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 3.931,
+      "score": 3.959,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 532
+        "github_stars": 557
       },
       "published_at": "2026-11-21T06:54:24Z",
       "summary": "Pi Bot is an open-source, local-first desktop application that runs a team of AI agents capable of planning, running commands, editing files, and browsing the web. It operates locally on macOS, Windows, Linux, and Android, keeping user data private while requiring approval for risky actions.",
@@ -292,16 +292,16 @@
       "category": "Industry"
     },
     {
-      "id": "web:3d1bee2216f809ad",
-      "title": "Pandex – Official European Law for AI Agents, over MCP",
-      "url": "https://www.pandex.io",
+      "id": "web:a05c3134ff4821e1",
+      "title": "Amodei reportedly suggested games could pacify masses after AI took their jobs (2015)",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1039745/dario-amodei-video-games-ai-joblessness",
       "source": "hn",
       "category": "Industry"
     },
     {
-      "id": "web:a05c3134ff4821e1",
-      "title": "Amodei reportedly suggested games could pacify masses after AI took their jobs (2015)",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1039745/dario-amodei-video-games-ai-joblessness",
+      "id": "web:3d1bee2216f809ad",
+      "title": "Pandex – Official European Law for AI Agents, over MCP",
+      "url": "https://www.pandex.io",
       "source": "hn",
       "category": "Industry"
     },
@@ -327,13 +327,6 @@
       "category": "Industry"
     },
     {
-      "id": "github:mjwsolo/localcode",
-      "title": "Localcode, open source agentic coding on your Mac with one command",
-      "url": "https://github.com/mjwsolo/localcode",
-      "source": "hn",
-      "category": "Tool / Open source"
-    },
-    {
       "id": "web:d7b15f2f905fd0d1",
       "title": "0rwx – A simple model of AI usage, inspired by Unix permissions",
       "url": "https://0rwx.com/",
@@ -341,11 +334,25 @@
       "category": "Industry"
     },
     {
+      "id": "github:mjwsolo/localcode",
+      "title": "Localcode, open source agentic coding on your Mac with one command",
+      "url": "https://github.com/mjwsolo/localcode",
+      "source": "hn",
+      "category": "Tool / Open source"
+    },
+    {
       "id": "web:21bd1d482ae20679",
       "title": "Muru – AI-assisted Rust server for Python apps by mod_WSGI's creator",
       "url": "https://simonwillison.net/2026/Nov/21/muru/",
       "source": "hn",
       "category": "Industry"
+    },
+    {
+      "id": "arxiv:2611.15449",
+      "title": "Reading the Unreadable: Text-Aware Image Super-Resolution Needs Reasoning",
+      "url": "https://huggingface.co/papers/2611.15449",
+      "source": "hf_papers",
+      "category": "Research"
     },
     {
       "id": "github:praseesh369/youtube-ai-video-editing-system",
@@ -360,13 +367,6 @@
       "url": "https://github.com/JimLiu/open-artifact",
       "source": "github",
       "category": "Tool / Open source"
-    },
-    {
-      "id": "arxiv:2611.15449",
-      "title": "Reading the Unreadable: Text-Aware Image Super-Resolution Needs Reasoning",
-      "url": "https://huggingface.co/papers/2611.15449",
-      "source": "hf_papers",
-      "category": "Research"
     },
     {
       "id": "web:6fd4c32fe34a4cba",
@@ -502,6 +502,13 @@
       "category": "Training method"
     },
     {
+      "id": "arxiv:2611.27211",
+      "title": "Explicit Style Extraction for Personalized Long-Form Text Generation",
+      "url": "https://huggingface.co/papers/2611.27211",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "arxiv:2611.26809",
       "title": "Search From the Start: Search-Native Pretraining for Language Models",
       "url": "https://huggingface.co/papers/2611.26809",
@@ -514,13 +521,6 @@
       "url": "https://huggingface.co/papers/2611.22495",
       "source": "hf_papers",
       "category": "Training method"
-    },
-    {
-      "id": "arxiv:2611.27211",
-      "title": "Explicit Style Extraction for Personalized Long-Form Text Generation",
-      "url": "https://huggingface.co/papers/2611.27211",
-      "source": "hf_papers",
-      "category": "Research"
     },
     {
       "id": "arxiv:2611.27983",
