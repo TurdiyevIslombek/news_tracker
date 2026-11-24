@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T03:23:33Z",
+  "generated_at": "2026-11-24T04:01:59Z",
   "latest": "2026-11-24",
   "days": [
     {
       "date": "2026-11-24",
-      "headline": "Recent developments include new open-source tools for system security and AI agent testing, research on predicting dynamic 3D scenes and modifying neural network weights directly, and industry applications using AI for customer support automation.",
+      "headline": "Today's developments feature new open-source security tools like OpenAI and Cisco's Shirudo, alongside research in 3D world modeling, robotic manipulation training, and AI agents designed for gaming and customer support.",
       "item_count": 15,
-      "generated_at": "2026-11-24T03:23:14Z"
+      "generated_at": "2026-11-24T04:00:46Z"
     },
     {
       "date": "2026-11-23",
       "headline": "AI security and efficiency updates: Data policy enforcement, new model architectures, and research on robotic tracking and quantum algorithms.",
       "item_count": 15,
-      "generated_at": "2026-11-24T03:23:14Z"
+      "generated_at": "2026-11-24T04:00:46Z"
     }
   ]
 }

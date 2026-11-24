@@ -13,11 +13,11 @@
     "status": "done"
   },
   "2026-11-24": {
-    "headline": "Recent developments include new open-source tools for system security and AI agent testing, research on predicting dynamic 3D scenes and modifying neural network weights directly, and industry applications using AI for customer support automation.",
+    "headline": "Today's developments feature new open-source security tools like OpenAI and Cisco's Shirudo, alongside research in 3D world modeling, robotic manipulation training, and AI agents designed for gaming and customer support.",
     "basis": [
       "arxiv:2611.26516",
+      "arxiv:2611.29338",
       "github:developing-gamer/agent-sim",
-      "github:meetsaini/emulator",
       "web:1d0c151fefed0dea",
       "web:680b35173b971311",
       "web:f8a4e02f42124693"

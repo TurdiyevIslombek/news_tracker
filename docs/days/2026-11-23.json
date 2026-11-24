@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-23",
-  "generated_at": "2026-11-24T03:23:14Z",
+  "generated_at": "2026-11-24T04:00:46Z",
   "headline": "AI security and efficiency updates: Data policy enforcement, new model architectures, and research on robotic tracking and quantum algorithms.",
   "headline_status": "done",
   "items": [
@@ -11,15 +11,15 @@
       "url": "https://z.ai/blog/glm-5.4",
       "source": "hn",
       "category": "Model release",
-      "score": 6.266,
+      "score": 6.269,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 1077,
+        "hn_points": 1081,
         "github_stars": 0
       },
       "published_at": "2026-11-23T10:06:43Z",
       "summary": "Only a title is available, so details are unclear.",
-      "why_it_matters": "Details are unavailable to assess the impact of this release.",
+      "why_it_matters": "Details are unavailable to assess why it matters.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -36,8 +36,8 @@
         "github_stars": 0
       },
       "published_at": "2026-11-22T08:57:34Z",
-      "summary": "A recent analysis examines how AI data centers are increasingly securing direct, dedicated primary power generation rather than relying on utilities. Focusing on Anthropic as a case study, the report estimates that about 87% of the company's contracted U.S. power will come from gas and 11% from coal by 2028. The findings highlight a heavy reliance on fossil fuels to meet skyrocketing energy demands in the near term.",
-      "why_it_matters": "It highlights the massive fossil fuel infrastructure expansion being driven by AI data center electricity consumption.",
+      "summary": "An analysis of Anthropic's power commitments indicates that the company will rely heavily on fossil fuels, with gas and coal expected to make up the vast majority of its power sources by 2028. The report highlights that data center energy demands are increasingly leading companies to secure dedicated power generation and driving new fossil infrastructure on the grid.",
+      "why_it_matters": "It highlights the significant fossil fuel energy demands and infrastructure buildout driven by rapidly scaling AI data centers.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -47,15 +47,15 @@
       "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
       "source": "hn",
       "category": "Tool / Open source",
-      "score": 5.764,
+      "score": 5.767,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 745,
+        "hn_points": 747,
         "github_stars": 0
       },
       "published_at": "2026-11-22T21:01:16Z",
-      "summary": "A new beginner's guide explains how to set up a private, local AI chatbot on a Windows PC using tools like Unsloth Desktop and open-weight models such as Qwen. By running quantized models that fit onto consumer graphics cards, users can bypass cloud provider usage limits and subscription costs. The guide emphasizes simple installation without requiring command-line tools or complex Python environments.",
-      "why_it_matters": "It provides a practical roadmap for running powerful AI models locally on consumer hardware for privacy and cost savings.",
+      "summary": "A beginner's guide explains how to set up and run local AI models on consumer Windows hardware using tools like Unsloth Desktop and open-weight models like Qwen. This allows users to bypass cloud usage limits, costs, and privacy concerns by hosting their own private chatbot infrastructure at home.",
+      "why_it_matters": "It provides a practical walkthrough for individuals wanting to run private, capable AI models locally without relying on cloud providers.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -72,8 +72,8 @@
         "github_stars": 0
       },
       "published_at": "2026-11-22T13:56:58Z",
-      "summary": "Worker755 is a browser game where the player acts as a subagent to a real AI manager like Claude, GPT, or Gemini. The AI manager issues tasks through a terminal with strict timers, reviews the work, and files performance reports. Players can bring their own API keys or use server resources to complete shifts in a simulated sandbox environment.",
-      "why_it_matters": "It offers an interactive and experimental way to experience being managed by an AI orchestrator in a game setting.",
+      "summary": "A developer has built a browser-based game where the player acts as a subagent to an AI manager, carrying out terminal tasks assigned by models like Claude, GPT, or Gemini. The AI manager issues instructions, reviews work, and writes performance reviews while interacting with the user's sandbox or environment.",
+      "why_it_matters": "It offers a playful yet functional demonstration of orchestrator-subagent workflows using real LLMs.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -83,15 +83,15 @@
       "url": "https://github.com/EL4CTEO/fast-anything",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 5.048,
+      "score": 5.051,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 3210
+        "github_stars": 3227
       },
       "published_at": "2026-11-21T14:40:27Z",
-      "summary": "Fast-anything is a tool designed to profile Python, Node, Ruby, and other applications to find slow functions, which are then ported to Rust using a coding agent. It automatically records real calls, verifies that the Rust port behaves identically to the original code, and safely swaps it in for performance gains. The process is fully reversible and includes automated edge-case testing.",
-      "why_it_matters": "It streamlines the process of accelerating bottlenecks in existing applications with Rust without needing to rewrite the entire codebase.",
+      "summary": "A tool called fast-anything profiles Python, Node, Ruby, and other apps to find slow functions, then uses coding agents to port only those bottleneck functions into Rust. It verifies correctness against real recorded calls and edge cases before safely swapping the optimized code into the application.",
+      "why_it_matters": "It automates the process of accelerating software performance using AI coding agents without requiring a full application rewrite.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -108,9 +108,9 @@
         "github_stars": 0
       },
       "published_at": "2026-11-22T02:14:14Z",
-      "summary": "OpenRouter has investigated and off-boarded three inference providers after security researchers identified data policy violations. The company also removed 125 endpoints from its Zero Data Retention program as a precaution and notified affected customers. They are now implementing ongoing technical verification and stricter security requirements for all providers on their platform.",
-      "why_it_matters": "This highlights the ongoing security and privacy challenges in the AI inference ecosystem, where data handling policies may not always be consistently enforced by third-party providers.",
-      "summarized_by": "gemini/gemini-3.1-flash-lite",
+      "summary": "Following security reports about compromised data and broken privacy policies at certain third-party AI inference providers, OpenRouter has removed several providers and endpoints from its Zero Data Retention eligibility. They have also notified affected customers and are implementing ongoing testing techniques to verify network paths and enforce stricter data policies.",
+      "why_it_matters": "This highlights ongoing security and privacy vulnerabilities among third-party AI inference providers and shows how platform operators are stepping up enforcement.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
     {
@@ -118,7 +118,7 @@
       "title": "cmHC: Balancing Stream Mixing in Hyper-Connections via Geometric Contraction",
       "url": "https://huggingface.co/papers/2611.27193",
       "source": "hf_papers",
-      "category": "Research",
+      "category": "Training method",
       "score": 4.637,
       "signals": {
         "hf_upvotes": 94,
@@ -126,8 +126,8 @@
         "github_stars": 0
       },
       "published_at": "2026-11-20T06:26:11Z",
-      "summary": "This paper investigates how to properly mix residual streams in hyper-connection neural network architectures without causing streams to become either completely independent or indistinguishable. The authors propose a geometrical contraction method called cmHC that forces residual matrices to explore deeper into the mixing space while preventing over-mixing in shallow layers. Experiments show that this method improves scalability and reduces execution latency on Ascend NPUs.",
-      "why_it_matters": "It offers a mathematically grounded way to stabilize and speed up the pretraining of very large neural networks.",
+      "summary": "Researchers explore a mixing trade-off in manifold-constrained hyper-connections, identifying issues when residual matrices are either under-mixed or over-mixed. To fix this, they propose Contraction for Manifold-Constrained Hyper-Connections (cmHC), a method that geometrically contracts the Birkhoff polytope toward its interior to enable stable gradient propagation during large-scale model pretraining. They also developed fused operators for Ascend NPUs that reduce execution latency by up to 44.8%.",
+      "why_it_matters": "This method improves gradient stability and lowers execution latency during the pretraining of large dense and mixture-of-experts models.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -137,16 +137,16 @@
       "url": "https://github.com/erkamyaman/safe-anything",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 4.163,
+      "score": 4.164,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 511
+        "github_stars": 512
       },
       "published_at": "2026-11-22T16:44:10Z",
-      "summary": "Safe-anything is a vulnerability scanner written in Rust that identifies security issues like SQL injection, XSS, and leaked secrets in codebases. It also scans AI agent configurations, such as those for Claude Code or Cursor, to detect risky settings. The tool is designed to be used in CI/CD pipelines and provides specific lines and fixes for every finding.",
-      "why_it_matters": "As AI agents gain more control over development environments, this tool provides a way to audit the security of both the code they write and the agent setups themselves.",
-      "summarized_by": "gemini/gemini-3.1-flash-lite",
+      "summary": "Safe-anything is a fast, Rust-based vulnerability scanner designed to detect security issues like XSS, SQL injection, leaked secrets, vulnerable dependencies, and insecure AI agent setups. It requires no configuration or account and provides the exact line, reason, and fix for each vulnerability found.",
+      "why_it_matters": "It gives developers a local tool to automatically scan codebases and AI agent configurations for critical security flaws before deployment.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
     {
@@ -162,8 +162,8 @@
         "github_stars": 0
       },
       "published_at": "2026-11-20T18:44:57Z",
-      "summary": "The authors study how to prevent video world models from generating physics violations where objects penetrate obstacles. They introduce NoPeBench to test for this issue and discover that hidden states inside existing diffusion transformers can already predict when a collision will occur. Based on this, they build NoPeWorld, a lightweight prediction framework that intercepts and corrects unsafe actions.",
-      "why_it_matters": "It provides a simple, plug-in method to make video world models behave more physically realistically without retraining the underlying models.",
+      "summary": "Researchers introduce NoPeBench to evaluate how interactive video world models handle physical obstacles, finding that current open-source models fail to reliably prevent object penetration. To fix this, they developed NoPeWorld, a lightweight framework that trains a small prediction head on top of a frozen diffusion transformer's hidden states to filter out unsafe actions.",
+      "why_it_matters": "The approach substantially reduces physical violation rates in video world models without needing extensive retraining.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -180,8 +180,8 @@
         "github_stars": 0
       },
       "published_at": "2026-11-23T00:00:00Z",
-      "summary": "The developers introduce Clover-35B-A3B-Preview, a 35-billion-parameter language model using a mixture-of-experts design with 3 billion activated parameters. It supports thinking-mode generation and combines historical memory with bidirectional attention blocks. The model achieves strong performance on coding and agent benchmarks while maintaining high generation speeds.",
-      "why_it_matters": "It demonstrates an efficient mixture-of-experts model architecture capable of fast generation speeds and strong performance on software engineering benchmarks.",
+      "summary": "The technical report introduces Clover-35B-A3B-Preview, a mixture-of-experts diffusion language model with 35 billion total parameters and 3 billion activated parameters that supports thinking-mode generation. It uses Gated Delta Networks and achieves strong performance on agent benchmarks while delivering high token generation speeds on a single GPU.",
+      "why_it_matters": "It showcases a new mixture-of-experts diffusion model architecture optimized for agent workloads and fast inference generation speeds.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -191,16 +191,16 @@
       "url": "https://github.com/w01fb0ss/PiBot",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 3.903,
+      "score": 3.906,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 508
+        "github_stars": 510
       },
       "published_at": "2026-11-21T06:54:24Z",
-      "summary": "PiBot is an open-source desktop application that allows users to run teams of AI agents locally on their computers. These agents can perform tasks like editing files, running commands, and browsing the web, with a security feature that requires user approval for risky actions. The software supports various operating systems and allows users to choose their own AI models while keeping data like files and chat history on their local machine.",
-      "why_it_matters": "It provides a local-first environment for managing multiple AI agents that can interact with a user's computer while maintaining privacy and security controls.",
-      "summarized_by": "gemini/gemini-3.1-flash-lite",
+      "summary": "Pi Bot is an open-source, local-first desktop application that runs a team of AI agents capable of planning, running commands, editing files, and browsing the web. It operates locally on macOS, Windows, Linux, and Android, keeping user data private while requiring approval for risky actions.",
+      "why_it_matters": "It provides a desktop-based, privacy-focused tool for coordinating multiple AI agents to perform complex computer tasks.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
     {
@@ -216,9 +216,9 @@
         "github_stars": 0
       },
       "published_at": "2026-11-23T17:21:12Z",
-      "summary": "Google Research introduced DeepCrossAttention (DCA), an architecture that improves how transformer models handle information across layers. By using learnable weights to dynamically select and route features from previous layers, DCA avoids the information dilution common in standard residual connections. This allows models to achieve similar performance levels up to three times faster with minimal parameter increases.",
-      "why_it_matters": "This architectural improvement addresses a fundamental limitation in deep learning, potentially enabling more efficient training of very large models.",
-      "summarized_by": "gemini/gemini-3.1-flash-lite",
+      "summary": "Google Research introduced DeepCrossAttention (DCA), an architecture that enhances transformer residual connections by using learnable weights and cross-attention. This allows models to dynamically combine outputs from previous layers, avoiding information dilution and reaching the same quality up to three times faster.",
+      "why_it_matters": "It offers a way to train deep transformer networks faster and more efficiently without major parameter increases.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
     {
@@ -234,9 +234,9 @@
         "github_stars": 0
       },
       "published_at": "2026-11-23T17:20:37Z",
-      "summary": "RoboTrack is a new benchmark and training dataset designed to improve how robots track objects during manipulation tasks. It includes RoboTrack-Bench, which features 307 human-annotated videos of real-world robot interactions, and RoboTrack-15M, a large synthetic dataset generated through simulation. The researchers found that training on this synthetic data improves the performance of tracking models on real-world footage.",
-      "why_it_matters": "Reliable point tracking is essential for robots to interact with objects in cluttered, real-world environments, and this work provides the data needed to improve those capabilities.",
-      "summarized_by": "gemini/gemini-3.1-flash-lite",
+      "summary": "Researchers introduced RoboTrack, a benchmark and training data suite designed to improve point tracking for real-world robotic manipulation. The suite includes RoboTrack-Bench, which contains human-annotated real-world videos, and RoboTrack-15M, a synthetic dataset generated via simulation to help robots better track grippers and objects.",
+      "why_it_matters": "It helps bridge the gap between simulation and real-world robotics by providing better data and benchmarks for tracking objects during manipulation.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
     {
@@ -252,9 +252,9 @@
         "github_stars": 0
       },
       "published_at": "2026-11-23T16:59:40Z",
-      "summary": "DeepMind researchers used teams of Gemini 4 agents to optimize quantum algorithms for scientific simulations, such as fusion energy and drug design. The agents collaborated and debated to find more efficient quantum circuits, which were then mathematically verified using the Lean theorem prover. This process resulted in significant reductions in the computational resources required for these complex simulations.",
-      "why_it_matters": "By combining AI agents with formal mathematical verification, this approach makes it possible to optimize complex algorithms for future quantum hardware.",
-      "summarized_by": "gemini/gemini-3.1-flash-lite",
+      "summary": "Google DeepMind used teams of Gemini agents alongside a formal theorem prover called Lean to find faster, highly efficient quantum algorithms. The agent teams collaboratively optimized quantum circuits for applications like fusion energy and drug design, drastically reducing required computing costs and memory.",
+      "why_it_matters": "It demonstrates how AI agent teams combined with formal verification can solve complex scientific optimization problems.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
     {
@@ -263,15 +263,15 @@
       "url": "https://huggingface.co/papers/2611.26954",
       "source": "hf_papers",
       "category": "Training method",
-      "score": 3.683,
+      "score": 3.709,
       "signals": {
-        "hf_upvotes": 36,
+        "hf_upvotes": 37,
         "hn_points": 0,
         "github_stars": 0
       },
       "published_at": "2026-11-20T01:08:12Z",
-      "summary": "Researchers introduced Future-OPSD, a training framework that helps vision-language models anticipate future events in videos without needing external human annotations or large language model supervision. The method uses a special scoring system to focus the model on decision-relevant future information while ignoring irrelevant background context. This approach improves base model performance on open-ended prediction and closed-ended planning tasks by up to 15.9 points.",
-      "why_it_matters": "It provides a scalable way to train video-based AI models to anticipate future actions more effectively without relying on costly external data labels.",
+      "summary": "Researchers introduced Future-OPSD, an on-policy self-distillation framework that helps vision-language models learn video foresight reasoning from unlabeled videos without external annotations. The method uses a foresight score and a contrastive advantage to focus the model on decision-relevant future information while ignoring irrelevant context.",
+      "why_it_matters": "It improves how vision-language models anticipate future events in videos without relying on costly manual annotations or large external models.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     }
@@ -390,6 +390,13 @@
       "category": "Industry"
     },
     {
+      "id": "arxiv:2611.27973",
+      "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
+      "url": "https://huggingface.co/papers/2611.27973",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "github:liufelix2004/dsh-workbuddy",
       "title": "LIUFelix2004/dsh-workbuddy: Import WorkBuddy accounts into DeepSeek Harness as model providers: one route per account, full model list, per-",
       "url": "https://github.com/LIUFelix2004/dsh-workbuddy",
@@ -402,13 +409,6 @@
       "url": "https://github.com/nestjs/agent-skills",
       "source": "github",
       "category": "Tool / Open source"
-    },
-    {
-      "id": "arxiv:2611.27973",
-      "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
-      "url": "https://huggingface.co/papers/2611.27973",
-      "source": "hf_papers",
-      "category": "Research"
     },
     {
       "id": "github:ai4xe/ai4ai",
