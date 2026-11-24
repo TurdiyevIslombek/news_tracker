@@ -145,3 +145,30 @@ def test_summaries_are_cached_by_id(repo):
     first = router.calls["p1.test"]
     run_pipeline(repo, router, now=NOW + timedelta(hours=6))
     assert router.calls["p1.test"] == first  # same items + same top set: no new LLM calls
+
+
+def test_skipped_days_are_backfilled_by_publish_date(repo):
+    """GitHub skipped every run on 11-24; the 11-25 run files 11-24's news under 11-24."""
+    from collector.models import RawItem
+    from .conftest import FakeSource
+
+    run_pipeline(repo, Router({"p1.test": ok_reply, "p2.test": ok_reply}))          # 11-23 12:00
+    later = NOW + timedelta(days=2)                                                  # 11-25 12:00
+    FakeSource.items = [
+        RawItem(id="web:gap", title="Story from the skipped day", url="https://e.com/gap",
+                source="hn", published_at=NOW + timedelta(days=1), signals={"hn_points": 300}),
+        RawItem(id="web:new", title="Story from today", url="https://e.com/new",
+                source="hn", published_at=later, signals={"hn_points": 300}),
+    ]
+    run_pipeline(repo, Router({"p1.test": ok_reply, "p2.test": ok_reply}), now=later)
+    assert [i["id"] for i in read_day(repo, "2026-11-24")["items"]] == ["web:gap"]
+    assert [i["id"] for i in read_day(repo, "2026-11-25")["items"]] == ["web:new"]
+
+
+def test_skipped_day_with_nothing_published_still_gets_a_file(repo):
+    from .conftest import FakeSource
+
+    run_pipeline(repo, Router({"p1.test": ok_reply, "p2.test": ok_reply}))
+    FakeSource.items = []
+    run_pipeline(repo, Router({"p1.test": ok_reply, "p2.test": ok_reply}), now=NOW + timedelta(days=2))
+    assert read_day(repo, "2026-11-24")["items"] == []

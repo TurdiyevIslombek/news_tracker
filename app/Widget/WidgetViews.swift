@@ -1,8 +1,17 @@
 import SwiftUI
 import WidgetKit
 
-/// Opens the app (and its popover) from the widget header.
+/// Opens the app and its popover (tapping anywhere that isn't a story).
 let openAppURL = URL(string: "aipulse://open")!
+
+// Widgets can't scroll, and the exact size varies by Mac and display, so each layout
+// offers a few arrangements (most detailed first) and ViewThatFits picks the first
+// one that fits. Anything left over is one tap away in the popover ("+N more").
+
+private enum Metrics {
+    static let hPad: CGFloat = 16
+    static let vPad: CGFloat = 14
+}
 
 struct DigestWidgetView: View {
     let entry: DigestEntry
@@ -15,8 +24,8 @@ struct DigestWidgetView: View {
             if let digest = entry.digest {
                 switch family {
                 case .systemSmall: SmallView(digest: digest, now: entry.date)
-                case .systemLarge: ListView(digest: digest, now: entry.date, count: 6, showHeadline: true)
-                default: ListView(digest: digest, now: entry.date, count: 3, showHeadline: false)
+                case .systemLarge: LargeView(digest: digest, now: entry.date)
+                default: MediumView(digest: digest, now: entry.date)
                 }
             } else {
                 EmptyStateView()
@@ -27,60 +36,83 @@ struct DigestWidgetView: View {
     }
 }
 
-// MARK: Header
+// MARK: Header: "✦ AI PULSE · Today            +12 more"
 
 private struct Header: View {
     let digest: DayDigest
     let now: Date
-    var compact = false
+    let shown: Int
 
     var body: some View {
-        HStack(spacing: 5) {
-            Image(systemName: "sparkles")
-                .font(.system(size: 10, weight: .bold))
-                .foregroundStyle(Color.indigo)
-                .widgetAccentable()
-            Text("AI PULSE")
-                .font(.system(size: 10, weight: .bold))
-                .tracking(0.6)
-                .foregroundStyle(.secondary)
-            if !compact {
+        Link(destination: openAppURL) {
+            HStack(spacing: 5) {
+                Image(systemName: "sparkles")
+                    .font(.system(size: 10, weight: .bold))
+                    .foregroundStyle(Color.indigo)
+                    .widgetAccentable()
+                Text("AI PULSE")
+                    .font(.system(size: 10, weight: .bold))
+                    .tracking(0.6)
+                    .foregroundStyle(.secondary)
                 Text("·").foregroundStyle(.tertiary).font(.system(size: 10))
                 Text(Display.dayTitle(digest.date, now: now))
                     .font(.system(size: 10, weight: .semibold))
                     .foregroundStyle(.secondary)
+                Spacer(minLength: 4)
+                MoreBadge(remaining: digest.items.count - shown)
             }
-            Spacer(minLength: 4)
-            if !compact {
-                Text("\(digest.items.count) stories")
-                    .font(.system(size: 10))
-                    .foregroundStyle(.tertiary)
-            }
+            .lineLimit(1)
         }
-        .lineLimit(1)
+        .buttonStyle(.plain)
     }
 }
 
-// MARK: Small — headline + item count
+private struct MoreBadge: View {
+    let remaining: Int
+
+    var body: some View {
+        if remaining > 0 {
+            HStack(spacing: 2) {
+                Text("+\(remaining) more")
+                Image(systemName: "chevron.right").font(.system(size: 7, weight: .bold))
+            }
+            .font(.system(size: 10, weight: .medium))
+            .foregroundStyle(.secondary)
+            .padding(.horizontal, 6).padding(.vertical, 2)
+            .background(.quaternary.opacity(0.6), in: Capsule())
+        }
+    }
+}
+
+// MARK: Small: day + headline + story count. Whole widget opens the app.
 
 private struct SmallView: View {
     let digest: DayDigest
     let now: Date
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Header(digest: digest, now: now, compact: true)
+        VStack(alignment: .leading, spacing: 5) {
+            HStack(spacing: 5) {
+                Image(systemName: "sparkles")
+                    .font(.system(size: 10, weight: .bold))
+                    .foregroundStyle(Color.indigo)
+                    .widgetAccentable()
+                Text("AI PULSE")
+                    .font(.system(size: 10, weight: .bold)).tracking(0.6)
+                    .foregroundStyle(.secondary)
+            }
             Text(Display.dayTitle(digest.date, now: now))
                 .font(.system(size: 15, weight: .bold))
-            Text(digest.headline.isEmpty ? (digest.items.first?.title ?? "") : digest.headline)
-                .font(.system(size: 11.5))
-                .foregroundStyle(.primary.opacity(0.85))
-                .lineLimit(5)
-                .minimumScaleFactor(0.9)
+                .lineLimit(1)
+            ViewThatFits(in: .vertical) {
+                headline(lines: 5)
+                headline(lines: 4)
+                headline(lines: 3)
+            }
             Spacer(minLength: 0)
             HStack(spacing: 4) {
-                ForEach(categoryCounts, id: \.0) { cat, _ in
-                    Circle().fill(cat.color).frame(width: 6, height: 6).widgetAccentable()
+                ForEach(categories, id: \.self) { c in
+                    Circle().fill(c.color).frame(width: 6, height: 6).widgetAccentable()
                 }
                 Spacer(minLength: 2)
                 Text("\(digest.items.count) stories")
@@ -88,62 +120,108 @@ private struct SmallView: View {
                     .foregroundStyle(.secondary)
             }
         }
-        .padding(14)
+        .padding(.horizontal, Metrics.hPad)
+        .padding(.vertical, Metrics.vPad)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .widgetURL(openAppURL)
     }
 
-    private var categoryCounts: [(DigestCategory, Int)] {
-        DigestCategory.known.compactMap { c in
-            let n = digest.items.filter { $0.category == c }.count
-            return n > 0 ? (c, n) : nil
+    private func headline(lines: Int) -> some View {
+        Text(digest.headline.isEmpty ? (digest.items.first?.title ?? "") : digest.headline)
+            .font(.system(size: 11.5))
+            .foregroundStyle(.primary.opacity(0.85))
+            .lineLimit(lines)
+            .fixedSize(horizontal: false, vertical: true)
+    }
+
+    private var categories: [DigestCategory] {
+        DigestCategory.known.filter { c in digest.items.contains { $0.category == c } }
+    }
+}
+
+// MARK: Medium: top 3
+
+private struct MediumView: View {
+    let digest: DayDigest
+    let now: Date
+
+    var body: some View {
+        ViewThatFits(in: .vertical) {
+            layout(count: 3, twoLine: 3)
+            layout(count: 3, twoLine: 2)
+            layout(count: 3, twoLine: 1)
+            layout(count: 3, twoLine: 0)
+            layout(count: 2, twoLine: 0)
+        }
+        .padding(.horizontal, Metrics.hPad)
+        .padding(.vertical, Metrics.vPad)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+    }
+
+    private func layout(count: Int, twoLine: Int) -> some View {
+        let items = Array(digest.items.prefix(count))
+        return VStack(alignment: .leading, spacing: 7) {
+            Header(digest: digest, now: now, shown: items.count)
+            ForEach(Array(items.enumerated()), id: \.element.id) { i, item in
+                ItemLine(item: item, titleLines: i < twoLine ? 2 : 1)
+            }
         }
     }
 }
 
-// MARK: Medium (top 3) and Large (headline + top 6)
+// MARK: Large: headline + top 6
 
-private struct ListView: View {
+private struct LargeView: View {
     let digest: DayDigest
     let now: Date
-    let count: Int
-    let showHeadline: Bool
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Link(destination: openAppURL) {
-                Header(digest: digest, now: now)
+        // Top 6 always; the first n get two-line titles, n shrinking until it fits.
+        ViewThatFits(in: .vertical) {
+            layout(count: 6, twoLine: 6, headlineLines: 3)
+            ForEach(Array(stride(from: 6, through: 0, by: -1)), id: \.self) { n in
+                layout(count: 6, twoLine: n, headlineLines: 2)
             }
-            .buttonStyle(.plain)
-            .padding(.bottom, showHeadline ? 8 : 6)
+            layout(count: 5, twoLine: 0, headlineLines: 2)
+            layout(count: 4, twoLine: 0, headlineLines: 1)
+        }
+        .padding(.horizontal, Metrics.hPad)
+        .padding(.vertical, Metrics.vPad)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+    }
 
-            if showHeadline, !digest.headline.isEmpty {
+    private func layout(count: Int, twoLine: Int, headlineLines: Int) -> some View {
+        let items = Array(digest.items.prefix(count))
+        return VStack(alignment: .leading, spacing: 0) {
+            Header(digest: digest, now: now, shown: items.count)
+            if !digest.headline.isEmpty {
                 Link(destination: openAppURL) {
                     Text(digest.headline)
                         .font(.system(size: 12))
                         .foregroundStyle(.primary.opacity(0.85))
-                        .lineLimit(3)
+                        .lineLimit(headlineLines)
                         .multilineTextAlignment(.leading)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .buttonStyle(.plain)
-                Divider().padding(.vertical, 8)
+                .padding(.top, 8)
             }
-
-            VStack(alignment: .leading, spacing: showHeadline ? 9 : 7) {
-                ForEach(Array(digest.items.prefix(count))) { item in
-                    ItemLine(item: item)
+            Divider().padding(.vertical, 9)
+            VStack(alignment: .leading, spacing: 8) {
+                ForEach(Array(items.enumerated()), id: \.element.id) { i, item in
+                    ItemLine(item: item, titleLines: i < twoLine ? 2 : 1)
                 }
             }
-            Spacer(minLength: 0)
         }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 12)
     }
 }
 
+// MARK: One story: category bar, title, "Research · Hugging Face Papers · ▲ 84"
+
 private struct ItemLine: View {
     let item: DigestItem
+    var titleLines = 2
 
     var body: some View {
         Link(destination: item.link ?? openAppURL) {
@@ -155,9 +233,10 @@ private struct ItemLine: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(item.title)
                         .font(.system(size: 12, weight: .semibold))
-                        .lineLimit(2)
+                        .lineLimit(titleLines)
                         .multilineTextAlignment(.leading)
                         .foregroundStyle(.primary)
+                        .fixedSize(horizontal: false, vertical: true)
                     HStack(spacing: 4) {
                         Text(item.category.short)
                             .foregroundStyle(item.category.color)
@@ -190,7 +269,8 @@ private struct EmptyStateView: View {
             Text("Connect to the internet to load today's digest.")
                 .font(.system(size: 10.5)).foregroundStyle(.secondary).multilineTextAlignment(.center)
         }
-        .padding(14)
+        .padding(Metrics.hPad)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .widgetURL(openAppURL)
     }
 }

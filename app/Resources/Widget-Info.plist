@@ -18,6 +18,17 @@
 	<string>__BUILD__</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<!-- Platform keys Xcode normally stamps in; LaunchServices/WidgetKit look at them. -->
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
+	<key>DTSDKName</key>
+	<string>macosx__SDK__</string>
+	<key>DTPlatformVersion</key>
+	<string>__SDK__</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>14.0</string>
 	<key>NSExtension</key>

@@ -33,17 +33,22 @@ for arch in "${ARCHS[@]}"; do
     -module-name AIPulse "${SOURCES[@]}" -o "$BUILD/obj/AIPulse-$arch"
   bins+=("$BUILD/obj/AIPulse-$arch")
   echo "• compiling widget $arch"
+  # App extensions start in Foundation's _NSExtensionMain (as Xcode links them),
+  # not in the main() that @main WidgetBundle generates: with that, ExtensionFoundation
+  # traps on launch and the widget never reaches the gallery.
   xcrun swiftc "${OPT[@]}" -parse-as-library -application-extension -swift-version 6 \
     -target "$arch-apple-macosx$MIN_OS" -sdk "$SDK" \
+    -Xlinker -e -Xlinker _NSExtensionMain \
     -module-name AIPulseWidget "${WIDGET_SOURCES[@]}" -o "$BUILD/obj/AIPulseWidget-$arch"
   wbins+=("$BUILD/obj/AIPulseWidget-$arch")
 done
 lipo -create "${bins[@]}" -output "$APP/Contents/MacOS/AIPulse"
 lipo -create "${wbins[@]}" -output "$APPEX/Contents/MacOS/AIPulseWidget"
-sed -e "s/__VERSION__/$VERSION/" -e "s/__BUILD__/$BUILD_NUM/" \
+SDK_VER="$(xcrun --sdk macosx --show-sdk-version)"
+sed -e "s/__VERSION__/$VERSION/" -e "s/__BUILD__/$BUILD_NUM/" -e "s/__SDK__/$SDK_VER/g" \
   "$APP_DIR/Resources/Widget-Info.plist" > "$APPEX/Contents/Info.plist"
 
-sed -e "s/__VERSION__/$VERSION/" -e "s/__BUILD__/$BUILD_NUM/" \
+sed -e "s/__VERSION__/$VERSION/" -e "s/__BUILD__/$BUILD_NUM/" -e "s/__SDK__/$SDK_VER/g" \
   "$APP_DIR/Resources/Info.plist" > "$APP/Contents/Info.plist"
 [[ -f "$APP_DIR/Resources/AppIcon.icns" ]] && cp "$APP_DIR/Resources/AppIcon.icns" "$APP/Contents/Resources/"
 

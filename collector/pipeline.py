@@ -172,9 +172,24 @@ class Pipeline:
         return items
 
     # ---- assign ------------------------------------------------------------
-    def assign(self, items: list[RawItem], pools: dict[str, dict[str, RawItem]]) -> set[str]:
+    def gap_days(self) -> list[str]:
+        """UTC days with no run at all since the last one (GitHub delays or drops
+        scheduled runs), limited to days whose pools still exist."""
+        last = self.store.last_run
+        if last is None:
+            return []
+        today = self.now.date()
+        start = max(last.date() + timedelta(days=1), today - timedelta(days=self.store.pool_days - 1))
+        out, d = [], start
+        while d < today:
+            out.append(d.isoformat())
+            d += timedelta(days=1)
+        return out
+
+    def assign(self, items: list[RawItem], pools: dict[str, dict[str, RawItem]],
+               gaps: list[str] = ()) -> set[str]:
         today = self.now.date().isoformat()
-        touched = {today}
+        touched = {today, *gaps}
         featured = self.store.featured
         alias = self.store.alias
         # Live items on recent days, for fuzzy-title matching of brand-new ones.
@@ -193,9 +208,13 @@ class Pipeline:
                     it.id = kept
             live = day in pools and it.id in pools[day]
             if day is None:
-                pools[today][it.id] = it  # brand new
-                self.store.mark_seen(it.id, today)
-                live_titles.append((today, it.id, it.title, bool(it.arxiv_id)))
+                # Brand new. After skipped runs, file it under the skipped day it was
+                # published on, so no day ends up missing.
+                home = it.published_at.date().isoformat()
+                home = home if home in gaps else today
+                pools[home][it.id] = it
+                self.store.mark_seen(it.id, home)
+                live_titles.append((home, it.id, it.title, bool(it.arxiv_id)))
             elif live and (day == today or it.id in featured or _has_social(pools[day][it.id])
                            or not _has_social(it)):
                 m = merge(pools[day][it.id], it)  # refresh signals in place
@@ -266,7 +285,9 @@ class Pipeline:
         if prev and prev.get("status") == "done":
             return prev["headline"], "done"  # stale but real beats placeholder
         if not items:
-            return "No items collected yet today.", "pending"
+            today = self.now.date().isoformat()
+            return ("No items collected yet today." if day == today
+                    else "Nothing was collected for this day."), "pending"
         lead = items[0]["title"]
         return f"{len(items)} notable AI items today, led by “{lead}”.", "pending"
 
@@ -283,13 +304,16 @@ class Pipeline:
         self.store.alias.update(aliases)
         days = recent_days(self.now.date(), self.store.pool_days)
         pools = {d: self.store.load_pool(d) for d in days}
-        touched = self.assign(items, pools)
+        gaps = self.gap_days()
+        if gaps:
+            log.info("run: no runs happened on %s; backfilling them", ", ".join(gaps))
+        touched = self.assign(items, pools, gaps)
         touched |= {d for d in days if pools[d] and publish.day_has_pending(self.docs, d)}
 
         written = []
         today = self.now.date().isoformat()
         for day in sorted(touched, reverse=True):  # today first: it gets quota priority
-            if not pools[day] and day != today:
+            if not pools[day] and day != today and day not in gaps:
                 continue
             data = self.build_day(day, pools[day])
             if publish.write_day(self.docs, data):

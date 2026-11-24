@@ -76,20 +76,37 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     // MARK: aipulse:// links (the widget header opens the app)
 
-    func application(_ application: NSApplication, open urls: [URL]) {
-        guard urls.contains(where: { $0.scheme == "aipulse" }) else { return }
-        // Let the launch finish if the link is what started us, then show the popover.
+    // SwiftUI's scene machinery swallows URL events before the delegate's
+    // application(_:open:) sees them, so take the "open URL" Apple Event directly.
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        NSAppleEventManager.shared().setEventHandler(
+            self, andSelector: #selector(handleURLEvent(_:withReply:)),
+            forEventClass: AEEventClass(kInternetEventClass), andEventID: AEEventID(kAEGetURL))
+    }
+
+    @objc private func handleURLEvent(_ event: NSAppleEventDescriptor, withReply reply: NSAppleEventDescriptor) {
+        guard let s = event.paramDescriptor(forKeyword: AEKeyword(keyDirectObject))?.stringValue,
+              URL(string: s)?.scheme == "aipulse" else { return }
+        // If the link is what launched us, give the status item a moment to appear.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { Self.showPopover() }
     }
 
     /// SwiftUI's MenuBarExtra has no "open" API; clicking its status item does the same thing.
     static func showPopover() {
+        NSApp.activate(ignoringOtherApps: true)
         for window in NSApp.windows where window.className.contains("NSStatusBarWindow") {
-            if let button = window.contentView?.subviews.compactMap({ $0 as? NSStatusBarButton }).first
-                ?? window.contentView as? NSStatusBarButton {
+            if let button = Self.findStatusButton(in: window.contentView) {
                 button.performClick(nil)
                 return
             }
         }
+        NSLog("AIPulse: status item not found; windows=%@", NSApp.windows.map(\.className).joined(separator: ","))
+    }
+
+    private static func findStatusButton(in view: NSView?) -> NSStatusBarButton? {
+        guard let view else { return nil }
+        if let b = view as? NSStatusBarButton { return b }
+        for sub in view.subviews { if let b = findStatusButton(in: sub) { return b } }
+        return nil
     }
 }

@@ -11,10 +11,14 @@ struct WidgetSnapshotTool {
         let day = (try? Data(contentsOf: URL(fileURLWithPath: CommandLine.arguments[2])))
             .flatMap { try? FeedJSON.decoder().decode(DayDigest.self, from: $0) }
         let entry = DigestEntry(date: Display.parseISO("2026-11-23T20:00:00Z")!, digest: day)
+        // Widget sizes differ by Mac/display; check the big and the compact variants.
         let sizes: [(WidgetFamily, String, CGSize)] = [
             (.systemSmall, "small", CGSize(width: 170, height: 170)),
+            (.systemSmall, "small-compact", CGSize(width: 158, height: 158)),
             (.systemMedium, "medium", CGSize(width: 364, height: 170)),
+            (.systemMedium, "medium-compact", CGSize(width: 338, height: 158)),
             (.systemLarge, "large", CGSize(width: 364, height: 382)),
+            (.systemLarge, "large-compact", CGSize(width: 344, height: 344)),
         ]
         _ = NSApplication.shared
         for dark in [false, true] {
