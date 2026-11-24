@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-23",
-  "generated_at": "2026-11-24T03:20:20Z",
+  "generated_at": "2026-11-24T03:23:14Z",
   "headline": "AI security and efficiency updates: Data policy enforcement, new model architectures, and research on robotic tracking and quantum algorithms.",
   "headline_status": "done",
   "items": [
@@ -29,10 +29,10 @@
       "url": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/",
       "source": "hn",
       "category": "Industry",
-      "score": 5.887,
+      "score": 5.888,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 1028,
+        "hn_points": 1029,
         "github_stars": 0
       },
       "published_at": "2026-11-22T08:57:34Z",
@@ -87,7 +87,7 @@
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 3209
+        "github_stars": 3210
       },
       "published_at": "2026-11-21T14:40:27Z",
       "summary": "Fast-anything is a tool designed to profile Python, Node, Ruby, and other applications to find slow functions, which are then ported to Rust using a coding agent. It automatically records real calls, verifies that the Rust port behaves identically to the original code, and safely swaps it in for performance gains. The process is fully reversible and includes automated edge-case testing.",
@@ -263,9 +263,9 @@
       "url": "https://huggingface.co/papers/2611.26954",
       "source": "hf_papers",
       "category": "Training method",
-      "score": 3.655,
+      "score": 3.683,
       "signals": {
-        "hf_upvotes": 35,
+        "hf_upvotes": 36,
         "hn_points": 0,
         "github_stars": 0
       },

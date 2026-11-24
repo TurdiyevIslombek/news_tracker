@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T03:20:20Z",
+  "generated_at": "2026-11-24T03:23:14Z",
   "headline": "Recent developments include new open-source tools for system security and AI agent testing, research on predicting dynamic 3D scenes and modifying neural network weights directly, and industry applications using AI for customer support automation.",
   "headline_status": "done",
   "items": [
@@ -11,7 +11,7 @@
       "url": "https://github.com/Meetsaini/emulator",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 4.323,
+      "score": 4.322,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
@@ -29,9 +29,9 @@
       "url": "https://huggingface.co/papers/2611.26516",
       "source": "hf_papers",
       "category": "Research",
-      "score": 3.856,
+      "score": 3.906,
       "signals": {
-        "hf_upvotes": 18,
+        "hf_upvotes": 19,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -47,7 +47,7 @@
       "url": "https://openai.com/index/introducing-shirudo",
       "source": "blog:openai",
       "category": "Tool / Open source",
-      "score": 3.846,
+      "score": 3.845,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
@@ -114,12 +114,30 @@
       "summary_status": "done"
     },
     {
+      "id": "arxiv:2611.29338",
+      "title": "A Glimpse of Training VLMs as Foundation Models for Robotic Manipulation",
+      "url": "https://huggingface.co/papers/2611.29338",
+      "source": "hf_papers",
+      "category": "Training method",
+      "score": 3.107,
+      "signals": {
+        "hf_upvotes": 8,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-24T00:00:00Z",
+      "summary": "To help reproduce the robot control capabilities seen in models like GPT-6 Astra, researchers developed nanoAstra. This approach combines semantic action modeling with capability-preserving supervised fine-tuning to constrain manipulation outputs while keeping broader pretrained skills intact. Trained on thousands of hours of robot data, the model achieves strong zero-shot performance and reduces a robot's idle time during streaming execution.",
+      "why_it_matters": "It offers an open, reproducible recipe for training vision-language models to perform generalizable robot manipulation.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
       "id": "arxiv:2611.25476",
       "title": "WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming",
       "url": "https://huggingface.co/papers/2611.25476",
       "source": "hf_papers",
       "category": "Training method",
-      "score": 2.857,
+      "score": 2.856,
       "signals": {
         "hf_upvotes": 6,
         "hn_points": 0,
@@ -137,7 +155,7 @@
       "url": "https://huggingface.co/papers/2611.23417",
       "source": "hf_papers",
       "category": "Model release",
-      "score": 2.161,
+      "score": 2.16,
       "signals": {
         "hf_upvotes": 1,
         "hn_points": 0,
@@ -209,7 +227,7 @@
       "url": "https://huggingface.co/papers/2611.28202",
       "source": "hf_papers",
       "category": "Tool / Open source",
-      "score": 1.717,
+      "score": 1.716,
       "signals": {
         "hf_upvotes": 4,
         "hn_points": 0,
@@ -222,30 +240,12 @@
       "summary_status": "done"
     },
     {
-      "id": "arxiv:2611.29338",
-      "title": "A Glimpse of Training VLMs as Foundation Models for Robotic Manipulation",
-      "url": "https://huggingface.co/papers/2611.29338",
-      "source": "hf_papers",
-      "category": "Training method",
-      "score": 1.605,
-      "signals": {
-        "hf_upvotes": 1,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-24T00:00:00Z",
-      "summary": "To help reproduce the robot control capabilities seen in models like GPT-6 Astra, researchers developed nanoAstra. This approach combines semantic action modeling with capability-preserving supervised fine-tuning to constrain manipulation outputs while keeping broader pretrained skills intact. Trained on thousands of hours of robot data, the model achieves strong zero-shot performance and reduces a robot's idle time during streaming execution.",
-      "why_it_matters": "It offers an open, reproducible recipe for training vision-language models to perform generalizable robot manipulation.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
       "id": "arxiv:2611.28833",
       "title": "Self-WSP: Can Language Models Improve Themselves Through Weight-Space Programming?",
       "url": "https://huggingface.co/papers/2611.28833",
       "source": "hf_papers",
       "category": "Training method",
-      "score": 1.284,
+      "score": 1.283,
       "signals": {
         "hf_upvotes": 2,
         "hn_points": 0,
