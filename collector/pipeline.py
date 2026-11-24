@@ -46,7 +46,8 @@ class Summarizer:
         )
 
     def summarize(self, items: list[RawItem]) -> None:
-        todo = [i for i in items if i.id not in self.store.summaries]
+        # Re-ask for summaries cached before the relevance check existed (no "about_ai").
+        todo = [i for i in items if "about_ai" not in self.store.summaries.get(i.id, {})]
         n = self.cfg["batch_size"]
         for k in range(0, len(todo), n):
             batch = todo[k : k + n]
@@ -250,14 +251,25 @@ class Pipeline:
         for it in ordered[top_n + more_n + 20 :]:
             del pool[it.id]
 
-        top = select_top(ordered, top_n, out.get("top_caps", {}))
+        cache = self.store.summaries
+
+        def off_topic(it: RawItem) -> bool:
+            return cache.get(it.id, {}).get("about_ai") is False
+
+        # Summarizing also tells us whether an item is really about AI. Drop the ones
+        # that aren't and let the next-best items move up (a few rounds at most).
+        for _ in range(3):
+            candidates = [i for i in ordered if not off_topic(i)]
+            top = select_top(candidates, top_n, out.get("top_caps", {}))
+            self.enricher.enrich([i for i in top if i.id not in cache])
+            self.summarizer.summarize(top)
+            if not any(off_topic(i) for i in top):
+                break
+        top = [i for i in top if not off_topic(i)]
         top_ids = {i.id for i in top}
-        more = [i for i in ordered if i.id not in top_ids][:more_n]
+        more = [i for i in ordered if i.id not in top_ids and not off_topic(i)][:more_n]
         for it in top:
             self.store.featured[it.id] = day
-        cache = self.store.summaries
-        self.enricher.enrich([i for i in top if i.id not in cache])
-        self.summarizer.summarize(top)
 
         items = [top_entry(i, cache) for i in top]
         headline, status = self._headline(day, items)

@@ -47,7 +47,8 @@ sources:
     window_hours: 48        # stories keep gaining points; signals refresh on re-reads
   github:
     enabled: true
-    topics: [llm, large-language-models, machine-learning, deep-learning, generative-ai, ai-agents, ai]
+    # (The bare "ai" topic is left out: it's full of unrelated repos that just tag themselves "ai".)
+    topics: [llm, large-language-models, machine-learning, deep-learning, generative-ai, ai-agents]
     created_within_days: 7
     min_stars: 100
     max_checked: 20         # candidates vetted (2 API calls each)

@@ -172,3 +172,32 @@ def test_skipped_day_with_nothing_published_still_gets_a_file(repo):
     FakeSource.items = []
     run_pipeline(repo, Router({"p1.test": ok_reply, "p2.test": ok_reply}), now=NOW + timedelta(days=2))
     assert read_day(repo, "2026-11-24")["items"] == []
+
+
+def test_off_topic_items_are_dropped_and_replaced(repo):
+    """The model flags a non-AI item; it leaves the digest and the next item moves up."""
+    import json
+    import httpx
+    from .conftest import FakeSource, make_items
+
+    FakeSource.items = make_items(4)
+
+    def reply(request: httpx.Request) -> httpx.Response:
+        prompt = json.loads(request.content)["messages"][-1]["content"]
+        if "Items:\n" not in prompt:
+            return ok_reply(request)
+        items = json.loads(prompt.split("Items:\n", 1)[1])
+        content = {"items": [{"id": it["id"], "category": "Research", "summary": "S.", "why_it_matters": "W.",
+                              "about_ai": it["id"] != "arxiv:2611.00003"} for it in items]}
+        return httpx.Response(200, json={"choices": [{"message": {"content": json.dumps(content)}}]})
+
+    import yaml
+    cfg_path = repo / "collector" / "config.yaml"
+    cfg = yaml.safe_load(cfg_path.read_text())
+    cfg["output"]["top_n"] = 3
+    cfg_path.write_text(yaml.safe_dump(cfg))
+    run_pipeline(repo, Router({"p1.test": reply, "p2.test": reply}))
+    day = read_day(repo)
+    ids = [i["id"] for i in day["items"]]
+    assert "arxiv:2611.00003" not in ids and len(ids) == 3          # replaced by the 4th item
+    assert all(m["id"] != "arxiv:2611.00003" for m in day["more"])
