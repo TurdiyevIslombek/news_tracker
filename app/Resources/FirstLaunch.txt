@@ -1,0 +1,17 @@
+AI Pulse — first launch
+=======================
+
+1. Drag "AI Pulse" onto the Applications folder in this window.
+
+2. Open Applications and double-click AI Pulse.
+   macOS will say it "can't verify" the app, because AI Pulse is a free
+   open-source app without a paid Apple signature. That's expected.
+
+3. Open System Settings → Privacy & Security, scroll down, and click
+   "Open Anyway" next to AI Pulse. Confirm with your password or Touch ID.
+   (You only do this once.)
+
+The ✦ icon appears in your menu bar. To add the widget: right-click the
+desktop → Edit Widgets… → search "AI Pulse".
+
+Source code and help: https://github.com/TurdiyevIslombek/news_tracker

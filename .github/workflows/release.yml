@@ -1,0 +1,94 @@
+name: release
+
+# Builds the universal app + widget, packages a .dmg, and publishes it.
+#   • push a tag like v0.2.0  → GitHub Release with the .dmg attached
+#   • run it by hand          → just builds; the .dmg is a downloadable run artifact
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write   # create the release + bump the Homebrew cask
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Version
+        id: v
+        run: |
+          if [[ "$GITHUB_REF_TYPE" == "tag" ]]; then V="${GITHUB_REF_NAME#v}"; else V="0.0.0-dev.${GITHUB_RUN_NUMBER}"; fi
+          echo "version=$V" >> "$GITHUB_OUTPUT"
+          xcrun swiftc --version
+
+      - name: Test shared code
+        run: app/scripts/test.sh
+
+      - name: Build app + widget (universal, ad-hoc signed)
+        env:
+          VERSION: ${{ steps.v.outputs.version }}
+          BUILD_NUM: ${{ github.run_number }}
+        run: app/scripts/build.sh
+
+      - name: Check the bundle
+        run: |
+          APP="app/build/AI Pulse.app"
+          lipo -archs "$APP/Contents/MacOS/AIPulse"
+          lipo -archs "$APP/Contents/PlugIns/AIPulseWidget.appex/Contents/MacOS/AIPulseWidget"
+          codesign --verify --deep --strict --verbose=2 "$APP"
+          codesign -d --entitlements :- "$APP/Contents/PlugIns/AIPulseWidget.appex" | grep -q app-sandbox
+
+      - name: Package .dmg
+        id: dmg
+        env:
+          VERSION: ${{ steps.v.outputs.version }}
+        run: |
+          app/scripts/package-dmg.sh
+          DMG="app/build/AI-Pulse-$VERSION.dmg"
+          echo "path=$DMG" >> "$GITHUB_OUTPUT"
+          echo "sha256=$(cut -d' ' -f1 "$DMG.sha256")" >> "$GITHUB_OUTPUT"
+
+      - name: Upload artifact (manual runs)
+        if: github.ref_type != 'tag'
+        uses: actions/upload-artifact@v7
+        with:
+          name: AI-Pulse-${{ steps.v.outputs.version }}
+          path: ${{ steps.dmg.outputs.path }}
+
+      - name: Publish release
+        if: github.ref_type == 'tag'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.ref_name }}
+          DMG: ${{ steps.dmg.outputs.path }}
+          SHA: ${{ steps.dmg.outputs.sha256 }}
+        run: |
+          cat > notes.md <<EOF
+          **Install:** download the .dmg below, drag AI Pulse to Applications, open it once, then
+          System Settings → Privacy & Security → **Open Anyway** (it's free and unsigned, so macOS asks once).
+          Add the widget: right-click the desktop → Edit Widgets… → AI Pulse.
+
+          SHA-256: \`$SHA\`
+          EOF
+          gh release create "$TAG" "$DMG" --title "AI Pulse $TAG" --notes-file notes.md
+
+      - name: Bump Homebrew cask
+        if: github.ref_type == 'tag'
+        env:
+          VERSION: ${{ steps.v.outputs.version }}
+          SHA: ${{ steps.dmg.outputs.sha256 }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch -q origin main && git checkout -q -B main origin/main
+          sed -i '' -e "s/^  version \".*\"/  version \"$VERSION\"/" -e "s/^  sha256 \".*\"/  sha256 \"$SHA\"/" Casks/ai-pulse.rb
+          git add Casks/ai-pulse.rb
+          git diff --cached --quiet || { git commit -q -m "cask: ai-pulse $VERSION"; git push -q origin main; }
