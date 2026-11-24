@@ -1,4 +1,5 @@
 import AppKit
+import OSLog
 import SwiftUI
 import WidgetKit
 
@@ -6,17 +7,9 @@ import WidgetKit
 struct AIPulseApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
 
+    // The menu bar icon + popover live in StatusItemController (AppKit), so the
+    // widget can open them; SwiftUI only provides the Settings window.
     var body: some Scene {
-        MenuBarExtra {
-            PopoverView()
-                .environmentObject(appDelegate.store)
-                .environmentObject(appDelegate.settings)
-        } label: {
-            Image(systemName: "sparkles.rectangle.stack")
-                .accessibilityLabel("AI Pulse")
-        }
-        .menuBarExtraStyle(.window)
-
         Settings {
             SettingsView()
                 .environmentObject(appDelegate.store)
@@ -32,9 +25,15 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     lazy var store = FeedStore(feedURL: settings.feedURL)
     private var ticker: Timer?
     private var lastAttempt: Date?
+    private var statusItem: StatusItemController?
+    private var settingsWindow: SettingsWindowController?
+    private static weak var shared: AppDelegate?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         if Snapshot.requested { Snapshot.run(store: store, settings: settings); return }
+        Self.shared = self
+        statusItem = StatusItemController(store: store, settings: settings)
+        settingsWindow = SettingsWindowController(store: store, settings: settings)
         settings.onFeedURLChange = { [weak self] url in
             self?.store.feedURL = url
             WidgetCenter.shared.reloadAllTimelines()   // the widget reads the same setting
@@ -74,7 +73,14 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         await store.refresh()
     }
 
-    // MARK: aipulse:// links (the widget header opens the app)
+    // MARK: Links from the widget
+    //
+    // Third-party widgets don't open URLs themselves: WidgetKit hands every clicked
+    // URL (our aipulse:// links *and* the stories' https links) to the containing
+    // app. So the app opens story links in the browser and shows the popover for
+    // aipulse://open.
+
+    static let log = Logger(subsystem: "io.github.turdiyevislombek.aipulse", category: "links")
 
     // SwiftUI's scene machinery swallows URL events before the delegate's
     // application(_:open:) sees them, so take the "open URL" Apple Event directly.
@@ -85,28 +91,49 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc private func handleURLEvent(_ event: NSAppleEventDescriptor, withReply reply: NSAppleEventDescriptor) {
-        guard let s = event.paramDescriptor(forKeyword: AEKeyword(keyDirectObject))?.stringValue,
-              URL(string: s)?.scheme == "aipulse" else { return }
-        // If the link is what launched us, give the status item a moment to appear.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { Self.showPopover() }
+        let s = event.paramDescriptor(forKeyword: AEKeyword(keyDirectObject))?.stringValue ?? ""
+        Self.log.info("URL event: \(s, privacy: .public)")
+        if let url = URL(string: s) { handle(url) }
     }
 
-    /// SwiftUI's MenuBarExtra has no "open" API; clicking its status item does the same thing.
-    static func showPopover() {
-        NSApp.activate(ignoringOtherApps: true)
-        for window in NSApp.windows where window.className.contains("NSStatusBarWindow") {
-            if let button = Self.findStatusButton(in: window.contentView) {
-                button.performClick(nil)
-                return
-            }
+    func application(_ application: NSApplication, open urls: [URL]) {
+        Self.log.info("application(open:) \(urls.map(\.absoluteString).joined(separator: " "), privacy: .public)")
+        urls.forEach(handle)
+    }
+
+    func application(_ application: NSApplication, continue userActivity: NSUserActivity,
+                     restorationHandler: @escaping ([any NSUserActivityRestoring]) -> Void) -> Bool {
+        Self.log.info("user activity \(userActivity.activityType, privacy: .public) url=\(userActivity.webpageURL?.absoluteString ?? "-", privacy: .public)")
+        if let url = userActivity.webpageURL { handle(url); return true }
+        return false
+    }
+
+    private func handle(_ url: URL) {
+        if url.scheme == "aipulse", url.host == "settings" {
+            Self.openSettings()
+        } else if url.scheme == "aipulse" {
+            // If the link is what launched us, give the status item a moment to appear.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { Self.showPopover() }
+        } else if let web = FeedSafety.webURL(url.absoluteString) {
+            NSWorkspace.shared.open(web)   // a story link: open it in the default browser
         }
-        NSLog("AIPulse: status item not found; windows=%@", NSApp.windows.map(\.className).joined(separator: ","))
     }
 
-    private static func findStatusButton(in view: NSView?) -> NSStatusBarButton? {
-        guard let view else { return nil }
-        if let b = view as? NSStatusBarButton { return b }
-        for sub in view.subviews { if let b = findStatusButton(in: sub) { return b } }
-        return nil
+    static func openSettings() {
+        shared?.statusItem?.close()
+        shared?.settingsWindow?.show()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            let titles = NSApp.windows.filter { $0.isVisible && !$0.title.isEmpty && $0.className != "NSStatusBarWindow" }.map(\.title)
+            log.info("visible app windows: \(titles.joined(separator: ", "), privacy: .public)")
+        }
+    }
+
+    static func showPopover() {
+        guard let controller = shared?.statusItem else {
+            log.error("showPopover: no status item yet")
+            return
+        }
+        controller.show()
+        log.info("popover shown: \(controller.isShown, privacy: .public)")
     }
 }

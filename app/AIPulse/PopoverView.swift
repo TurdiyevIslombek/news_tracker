@@ -260,11 +260,7 @@ struct PopoverView: View {
             Spacer()
             FooterButton(symbol: "arrow.clockwise", help: "Refresh now") { Task { await store.refresh() } }
                 .disabled(store.isRefreshing)
-            SettingsLink {
-                Image(systemName: "gearshape").font(.system(size: 12, weight: .medium)).frame(width: 22, height: 22)
-            }
-            .buttonStyle(.borderless)
-            .help("Settings")
+            FooterButton(symbol: "gearshape", help: "Settings") { AppDelegate.openSettings() }
             FooterButton(symbol: "power", help: "Quit AI Pulse") { NSApp.terminate(nil) }
         }
         .font(.system(size: 11))
