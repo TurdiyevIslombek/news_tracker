@@ -11,5 +11,18 @@
     ],
     "by": "gemini/gemini-3.1-flash-lite",
     "status": "done"
+  },
+  "2026-11-24": {
+    "headline": "Recent developments include new open-source tools for system security and AI agent testing, research on predicting dynamic 3D scenes and modifying neural network weights directly, and industry applications using AI for customer support automation.",
+    "basis": [
+      "arxiv:2611.26516",
+      "github:developing-gamer/agent-sim",
+      "github:meetsaini/emulator",
+      "web:1d0c151fefed0dea",
+      "web:680b35173b971311",
+      "web:f8a4e02f42124693"
+    ],
+    "by": "gemini/gemini-3.5-flash-lite",
+    "status": "done"
   }
 }

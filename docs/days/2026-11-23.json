@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T19:10:30Z",
+  "generated_at": "2026-11-24T03:20:20Z",
   "headline": "AI security and efficiency updates: Data policy enforcement, new model architectures, and research on robotic tracking and quantum algorithms.",
   "headline_status": "done",
   "items": [
@@ -10,18 +10,18 @@
       "title": "GLM-5.4: Toward generalized coding with our first loop transformer",
       "url": "https://z.ai/blog/glm-5.4",
       "source": "hn",
-      "category": "Industry",
-      "score": 6.189,
+      "category": "Model release",
+      "score": 6.266,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 866,
+        "hn_points": 1077,
         "github_stars": 0
       },
       "published_at": "2026-11-23T10:06:43Z",
-      "summary": "No abstract available yet.",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "Only a title is available, so details are unclear.",
+      "why_it_matters": "Details are unavailable to assess the impact of this release.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "web:38c61351fe0dc3e7",
@@ -29,35 +29,35 @@
       "url": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/",
       "source": "hn",
       "category": "Industry",
-      "score": 5.927,
+      "score": 5.887,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 1017,
+        "hn_points": 1028,
         "github_stars": 0
       },
       "published_at": "2026-11-22T08:57:34Z",
-      "summary": "In The AI Gas Rush: Risks and Implications of “Bring Your Own Power”, we dug into how data centers are increasingly securing their own dedicated primary power generation rather than relying solely on utilities to procure power (“BYOP”). We identified 177 GW of planned BYOP gas capacity—enough to power 65% of all US…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "A recent analysis examines how AI data centers are increasingly securing direct, dedicated primary power generation rather than relying on utilities. Focusing on Anthropic as a case study, the report estimates that about 87% of the company's contracted U.S. power will come from gas and 11% from coal by 2028. The findings highlight a heavy reliance on fossil fuels to meet skyrocketing energy demands in the near term.",
+      "why_it_matters": "It highlights the massive fossil fuel infrastructure expansion being driven by AI data center electricity consumption.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "web:1ba4d31258de505f",
       "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
       "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
       "source": "hn",
-      "category": "Industry",
-      "score": 5.785,
+      "category": "Tool / Open source",
+      "score": 5.764,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 702,
+        "hn_points": 745,
         "github_stars": 0
       },
       "published_at": "2026-11-22T21:01:16Z",
-      "summary": "A beginner's guide to Local AI with Inkling, Qwen, and Unsloth We have AI at home! Set up your own free personal ChatGPT on your PC with Unsloth and Inkling or Qwen. It's private, and the whole house can use it. With the launch of open-weight models like Qwen, cloud-based LLM providers seem like they're more of…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "A new beginner's guide explains how to set up a private, local AI chatbot on a Windows PC using tools like Unsloth Desktop and open-weight models such as Qwen. By running quantized models that fit onto consumer graphics cards, users can bypass cloud provider usage limits and subscription costs. The guide emphasizes simple installation without requiring command-line tools or complex Python environments.",
+      "why_it_matters": "It provides a practical roadmap for running powerful AI models locally on consumer hardware for privacy and cost savings.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "github:gulivan/worker755",
@@ -65,17 +65,17 @@
       "url": "https://github.com/gulivan/worker755",
       "source": "hn",
       "category": "Tool / Open source",
-      "score": 5.146,
+      "score": 5.093,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 356,
+        "hn_points": 357,
         "github_stars": 0
       },
       "published_at": "2026-11-22T13:56:58Z",
-      "summary": "A browser game where your manager is an AI agent, and it believes you are its subagent. The manager (a real LLM: Claude, GPT, Gemini, DeepSeek, GLM, Kimi) is set up like any orchestrator. It has a task queue, read-only access to the machine, and a tool that \"spawns a subagent\". The subagent is you. Its instructions…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "Worker755 is a browser game where the player acts as a subagent to a real AI manager like Claude, GPT, or Gemini. The AI manager issues tasks through a terminal with strict timers, reviews the work, and files performance reports. Players can bring their own API keys or use server resources to complete shifts in a simulated sandbox environment.",
+      "why_it_matters": "It offers an interactive and experimental way to experience being managed by an AI orchestrator in a game setting.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "github:el4cteo/fast-anything",
@@ -83,17 +83,17 @@
       "url": "https://github.com/EL4CTEO/fast-anything",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 5.041,
+      "score": 5.048,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 3023
+        "github_stars": 3209
       },
       "published_at": "2026-11-21T14:40:27Z",
-      "summary": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with your coding agent, prove they behave the same.. Don't rewrite it in Rust. Rewrite the 5% that's slow. Rewriting a whole app in Rust costs months, minute-long compiles and gigabytes of target/. Most of…",
-      "why_it_matters": "",
-      "summarized_by": null,
-      "summary_status": "pending"
+      "summary": "Fast-anything is a tool designed to profile Python, Node, Ruby, and other applications to find slow functions, which are then ported to Rust using a coding agent. It automatically records real calls, verifies that the Rust port behaves identically to the original code, and safely swaps it in for performance gains. The process is fully reversible and includes automated edge-case testing.",
+      "why_it_matters": "It streamlines the process of accelerating bottlenecks in existing applications with Rust without needing to rewrite the entire codebase.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
     },
     {
       "id": "web:381628060ea95e20",
@@ -101,7 +101,7 @@
       "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
       "source": "hn",
       "category": "Industry",
-      "score": 4.862,
+      "score": 4.822,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 291,
@@ -119,9 +119,9 @@
       "url": "https://huggingface.co/papers/2611.27193",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.549,
+      "score": 4.637,
       "signals": {
-        "hf_upvotes": 85,
+        "hf_upvotes": 94,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -132,12 +132,48 @@
       "summary_status": "done"
     },
     {
+      "id": "github:erkamyaman/safe-anything",
+      "title": "erkamyaman/safe-anything: Find the holes before someone else does. A fast, 100% Rust vulnerability scanner: XSS, SQL injection, leaked secre",
+      "url": "https://github.com/erkamyaman/safe-anything",
+      "source": "github",
+      "category": "Tool / Open source",
+      "score": 4.163,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 511
+      },
+      "published_at": "2026-11-22T16:44:10Z",
+      "summary": "Safe-anything is a vulnerability scanner written in Rust that identifies security issues like SQL injection, XSS, and leaked secrets in codebases. It also scans AI agent configurations, such as those for Claude Code or Cursor, to detect risky settings. The tool is designed to be used in CI/CD pipelines and provides specific lines and fixes for every finding.",
+      "why_it_matters": "As AI agents gain more control over development environments, this tool provides a way to audit the security of both the code they write and the agent setups themselves.",
+      "summarized_by": "gemini/gemini-3.1-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.27963",
+      "title": "Non-penetrating World Models",
+      "url": "https://huggingface.co/papers/2611.27963",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 4.142,
+      "signals": {
+        "hf_upvotes": 55,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-20T18:44:57Z",
+      "summary": "The authors study how to prevent video world models from generating physics violations where objects penetrate obstacles. They introduce NoPeBench to test for this issue and discover that hidden states inside existing diffusion transformers can already predict when a collision will occur. Based on this, they build NoPeWorld, a lightweight prediction framework that intercepts and corrects unsafe actions.",
+      "why_it_matters": "It provides a simple, plug-in method to make video world models behave more physically realistically without retraining the underlying models.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
       "id": "arxiv:2611.24636",
       "title": "Clover-35B-A3B-Preview Technical Report",
       "url": "https://huggingface.co/papers/2611.24636",
       "source": "hf_papers",
       "category": "Model release",
-      "score": 4.198,
+      "score": 4.124,
       "signals": {
         "hf_upvotes": 36,
         "hn_points": 0,
@@ -150,38 +186,20 @@
       "summary_status": "done"
     },
     {
-      "id": "arxiv:2611.27963",
-      "title": "Non-penetrating World Models",
-      "url": "https://huggingface.co/papers/2611.27963",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 4.141,
-      "signals": {
-        "hf_upvotes": 54,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-20T18:44:57Z",
-      "summary": "The authors study how to prevent video world models from generating physics violations where objects penetrate obstacles. They introduce NoPeBench to test for this issue and discover that hidden states inside existing diffusion transformers can already predict when a collision will occur. Based on this, they build NoPeWorld, a lightweight prediction framework that intercepts and corrects unsafe actions.",
-      "why_it_matters": "It provides a simple, plug-in method to make video world models behave more physically realistically without retraining the underlying models.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "github:erkamyaman/safe-anything",
-      "title": "erkamyaman/safe-anything: Find the holes before someone else does. A fast, 100% Rust vulnerability scanner: XSS, SQL injection, leaked secre",
-      "url": "https://github.com/erkamyaman/safe-anything",
+      "id": "github:w01fb0ss/pibot",
+      "title": "w01fb0ss/PiBot: Open-source, local-first AI agent team for your desktop: multi-agent group chats, computer use, browser, MCP, routines and a",
+      "url": "https://github.com/w01fb0ss/PiBot",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 4.112,
+      "score": 3.903,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 425
+        "github_stars": 508
       },
-      "published_at": "2026-11-22T16:44:10Z",
-      "summary": "Safe-anything is a vulnerability scanner written in Rust that identifies security issues like SQL injection, XSS, and leaked secrets in codebases. It also scans AI agent configurations, such as those for Claude Code or Cursor, to detect risky settings. The tool is designed to be used in CI/CD pipelines and provides specific lines and fixes for every finding.",
-      "why_it_matters": "As AI agents gain more control over development environments, this tool provides a way to audit the security of both the code they write and the agent setups themselves.",
+      "published_at": "2026-11-21T06:54:24Z",
+      "summary": "PiBot is an open-source desktop application that allows users to run teams of AI agents locally on their computers. These agents can perform tasks like editing files, running commands, and browsing the web, with a security feature that requires user approval for risky actions. The software supports various operating systems and allows users to choose their own AI models while keeping data like files and chat history on their local machine.",
+      "why_it_matters": "It provides a local-first environment for managing multiple AI agents that can interact with a user's computer while maintaining privacy and security controls.",
       "summarized_by": "gemini/gemini-3.1-flash-lite",
       "summary_status": "done"
     },
@@ -191,7 +209,7 @@
       "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
       "source": "blog:google_research",
       "category": "Research",
-      "score": 3.951,
+      "score": 3.831,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
@@ -209,7 +227,7 @@
       "url": "https://huggingface.co/blog/allenai/robotrack",
       "source": "blog:huggingface",
       "category": "Research",
-      "score": 3.95,
+      "score": 3.831,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
@@ -227,7 +245,7 @@
       "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
       "source": "blog:deepmind",
       "category": "Research",
-      "score": 3.941,
+      "score": 3.823,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
@@ -240,38 +258,20 @@
       "summary_status": "done"
     },
     {
-      "id": "github:w01fb0ss/pibot",
-      "title": "w01fb0ss/PiBot: Open-source, local-first AI agent team for your desktop: multi-agent group chats, computer use, browser, MCP, routines and a",
-      "url": "https://github.com/w01fb0ss/PiBot",
-      "source": "github",
-      "category": "Tool / Open source",
-      "score": 3.91,
-      "signals": {
-        "hf_upvotes": 0,
-        "hn_points": 0,
-        "github_stars": 494
-      },
-      "published_at": "2026-11-21T06:54:24Z",
-      "summary": "PiBot is an open-source desktop application that allows users to run teams of AI agents locally on their computers. These agents can perform tasks like editing files, running commands, and browsing the web, with a security feature that requires user approval for risky actions. The software supports various operating systems and allows users to choose their own AI models while keeping data like files and chat history on their local machine.",
-      "why_it_matters": "It provides a local-first environment for managing multiple AI agents that can interact with a user's computer while maintaining privacy and security controls.",
-      "summarized_by": "gemini/gemini-3.1-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.15449",
-      "title": "Reading the Unreadable: Text-Aware Image Super-Resolution Needs Reasoning",
-      "url": "https://huggingface.co/papers/2611.15449",
+      "id": "arxiv:2611.26954",
+      "title": "Learning Video Foresight Reasoning from Unlabeled Videos via On-Policy Self-Distillation",
+      "url": "https://huggingface.co/papers/2611.26954",
       "source": "hf_papers",
-      "category": "Research",
-      "score": 3.678,
+      "category": "Training method",
+      "score": 3.655,
       "signals": {
-        "hf_upvotes": 21,
+        "hf_upvotes": 35,
         "hn_points": 0,
         "github_stars": 0
       },
-      "published_at": "2026-11-23T00:00:00Z",
-      "summary": "This paper explores text-aware image super-resolution, which attempts to recover readable text from low-resolution images. The authors introduce a benchmark and metric showing that existing models struggle significantly when text recovery requires logical reasoning rather than just visual clues. To fix this, they propose a training-free plugin that uses multimodal large language models to infer degraded text and guide the image restoration process.",
-      "why_it_matters": "It highlights a major blind spot in current image restoration tools and shows that combining them with language model reasoning drastically improves text recovery.",
+      "published_at": "2026-11-20T01:08:12Z",
+      "summary": "Researchers introduced Future-OPSD, a training framework that helps vision-language models anticipate future events in videos without needing external human annotations or large language model supervision. The method uses a special scoring system to focus the model on decision-relevant future information while ignoring irrelevant background context. This approach improves base model performance on open-ended prediction and closed-ended planning tasks by up to 15.9 points.",
+      "why_it_matters": "It provides a scalable way to train video-based AI models to anticipate future actions more effectively without relying on costly external data labels.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     }
@@ -362,32 +362,18 @@
       "category": "Tool / Open source"
     },
     {
+      "id": "arxiv:2611.15449",
+      "title": "Reading the Unreadable: Text-Aware Image Super-Resolution Needs Reasoning",
+      "url": "https://huggingface.co/papers/2611.15449",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "web:6fd4c32fe34a4cba",
       "title": "How to build and maintain an agentic evaluation",
       "url": "https://huggingface.co/blog/agentic-evals",
       "source": "blog:huggingface",
       "category": "Industry"
-    },
-    {
-      "id": "web:de5cd1a6d51dc917",
-      "title": "Perplexity and Intelligence",
-      "url": "https://openai.com/index/perplexity-and-intelligence",
-      "source": "blog:openai",
-      "category": "Industry"
-    },
-    {
-      "id": "github:nestjs/agent-skills",
-      "title": "nestjs/agent-skills: Agent skills for Nest framework (node.js) 🕵️‍♂️",
-      "url": "https://github.com/nestjs/agent-skills",
-      "source": "github",
-      "category": "Tool / Open source"
-    },
-    {
-      "id": "github:liufelix2004/dsh-workbuddy",
-      "title": "LIUFelix2004/dsh-workbuddy: Import WorkBuddy accounts into DeepSeek Harness as model providers: one route per account, full model list, per-",
-      "url": "https://github.com/LIUFelix2004/dsh-workbuddy",
-      "source": "github",
-      "category": "Tool / Open source"
     },
     {
       "id": "arxiv:2611.25773",
@@ -397,9 +383,23 @@
       "category": "Training method"
     },
     {
-      "id": "github:ai4xe/ai4ai",
-      "title": "AI4XE/ai4ai: Let AI manage itself — a cross-harness kit for runtime status, context renewal, self-duplication and more",
-      "url": "https://github.com/AI4XE/ai4ai",
+      "id": "web:de5cd1a6d51dc917",
+      "title": "Perplexity and Intelligence",
+      "url": "https://openai.com/index/perplexity-and-intelligence",
+      "source": "blog:openai",
+      "category": "Industry"
+    },
+    {
+      "id": "github:liufelix2004/dsh-workbuddy",
+      "title": "LIUFelix2004/dsh-workbuddy: Import WorkBuddy accounts into DeepSeek Harness as model providers: one route per account, full model list, per-",
+      "url": "https://github.com/LIUFelix2004/dsh-workbuddy",
+      "source": "github",
+      "category": "Tool / Open source"
+    },
+    {
+      "id": "github:nestjs/agent-skills",
+      "title": "nestjs/agent-skills: Agent skills for Nest framework (node.js) 🕵️‍♂️",
+      "url": "https://github.com/nestjs/agent-skills",
       "source": "github",
       "category": "Tool / Open source"
     },
@@ -409,6 +409,13 @@
       "url": "https://huggingface.co/papers/2611.27973",
       "source": "hf_papers",
       "category": "Research"
+    },
+    {
+      "id": "github:ai4xe/ai4ai",
+      "title": "AI4XE/ai4ai: Let AI manage itself — a cross-harness kit for runtime status, context renewal, self-duplication and more",
+      "url": "https://github.com/AI4XE/ai4ai",
+      "source": "github",
+      "category": "Tool / Open source"
     },
     {
       "id": "github:ccarter01011/traxagent-claude-plugin",
@@ -439,20 +446,6 @@
       "category": "Training method"
     },
     {
-      "id": "arxiv:2611.25252",
-      "title": "Moving Generality from Model to Modeler: LLM Agents for PHM on a Deployment-Style Benchmark",
-      "url": "https://huggingface.co/papers/2611.25252",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.24025",
-      "title": "Intent Contracts: Taking Tools Away from Agents",
-      "url": "https://huggingface.co/papers/2611.24025",
-      "source": "hf_papers",
-      "category": "Tool / Open source"
-    },
-    {
       "id": "arxiv:2611.22343",
       "title": "PURE: A Diagnostic Benchmark for Multi-Granularity Multimodal Identity Matching",
       "url": "https://huggingface.co/papers/2611.22343",
@@ -474,6 +467,20 @@
       "category": "Tool / Open source"
     },
     {
+      "id": "arxiv:2611.25252",
+      "title": "Moving Generality from Model to Modeler: LLM Agents for PHM on a Deployment-Style Benchmark",
+      "url": "https://huggingface.co/papers/2611.25252",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.24025",
+      "title": "Intent Contracts: Taking Tools Away from Agents",
+      "url": "https://huggingface.co/papers/2611.24025",
+      "source": "hf_papers",
+      "category": "Tool / Open source"
+    },
+    {
       "id": "arxiv:2611.22479",
       "title": "Exploited Before It Was Fixed? Vulnerability Timelines from Open, Machine-Readable Evidence",
       "url": "https://huggingface.co/papers/2611.22479",
@@ -481,9 +488,9 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.23417",
-      "title": "Autoregressive View Model",
-      "url": "https://huggingface.co/papers/2611.23417",
+      "id": "arxiv:2611.27398",
+      "title": "Taking Apart and Putting Together: Tracking Objects Through Physical Transformations",
+      "url": "https://huggingface.co/papers/2611.27398",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -495,25 +502,11 @@
       "category": "Training method"
     },
     {
-      "id": "arxiv:2611.26954",
-      "title": "Learning Video Foresight Reasoning from Unlabeled Videos via On-Policy Self-Distillation",
-      "url": "https://huggingface.co/papers/2611.26954",
-      "source": "hf_papers",
-      "category": "Training method"
-    },
-    {
       "id": "arxiv:2611.22495",
       "title": "Motion-Aware Reward Modeling for Instruction-Guided Video Editing",
       "url": "https://huggingface.co/papers/2611.22495",
       "source": "hf_papers",
       "category": "Training method"
-    },
-    {
-      "id": "arxiv:2611.27398",
-      "title": "Taking Apart and Putting Together: Tracking Objects Through Physical Transformations",
-      "url": "https://huggingface.co/papers/2611.27398",
-      "source": "hf_papers",
-      "category": "Research"
     },
     {
       "id": "arxiv:2611.27211",
@@ -554,6 +547,13 @@
       "id": "arxiv:2611.27962",
       "title": "Model Carving: Training Transformers That Optimize Their Own Topology",
       "url": "https://arxiv.org/abs/2611.27962",
+      "source": "arxiv",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27959",
+      "title": "Ranking-Preserving Coreset Selection for Efficient Evolutionary Hyperparameter Optimization",
+      "url": "https://arxiv.org/abs/2611.27959",
       "source": "arxiv",
       "category": "Research"
     }
