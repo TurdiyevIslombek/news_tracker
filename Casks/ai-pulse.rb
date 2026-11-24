@@ -4,7 +4,7 @@
 # version + sha256 are bumped automatically by .github/workflows/release.yml.
 cask "ai-pulse" do
   version "0.1.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "e07f9b7c1adcfcf043cbbdc8cb28630e181158e202a0f4248fa901a244cd70e0"
 
   url "https://github.com/TurdiyevIslombek/news_tracker/releases/download/v#{version}/AI-Pulse-#{version}.dmg"
   name "AI Pulse"
