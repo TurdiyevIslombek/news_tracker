@@ -92,18 +92,18 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc private func handleURLEvent(_ event: NSAppleEventDescriptor, withReply reply: NSAppleEventDescriptor) {
         let s = event.paramDescriptor(forKeyword: AEKeyword(keyDirectObject))?.stringValue ?? ""
-        Self.log.info("URL event: \(s, privacy: .public)")
+        Self.log.notice("URL event: \(s, privacy: .public)")
         if let url = URL(string: s) { handle(url) }
     }
 
     func application(_ application: NSApplication, open urls: [URL]) {
-        Self.log.info("application(open:) \(urls.map(\.absoluteString).joined(separator: " "), privacy: .public)")
+        Self.log.notice("application(open:) \(urls.map(\.absoluteString).joined(separator: " "), privacy: .public)")
         urls.forEach(handle)
     }
 
     func application(_ application: NSApplication, continue userActivity: NSUserActivity,
                      restorationHandler: @escaping ([any NSUserActivityRestoring]) -> Void) -> Bool {
-        Self.log.info("user activity \(userActivity.activityType, privacy: .public) url=\(userActivity.webpageURL?.absoluteString ?? "-", privacy: .public)")
+        Self.log.notice("user activity \(userActivity.activityType, privacy: .public) url=\(userActivity.webpageURL?.absoluteString ?? "-", privacy: .public)")
         if let url = userActivity.webpageURL { handle(url); return true }
         return false
     }
@@ -124,7 +124,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         shared?.settingsWindow?.show()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             let titles = NSApp.windows.filter { $0.isVisible && !$0.title.isEmpty && $0.className != "NSStatusBarWindow" }.map(\.title)
-            log.info("visible app windows: \(titles.joined(separator: ", "), privacy: .public)")
+            log.notice("visible app windows: \(titles.joined(separator: ", "), privacy: .public)")
         }
     }
 
@@ -134,6 +134,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             return
         }
         controller.show()
-        log.info("popover shown: \(controller.isShown, privacy: .public)")
+        log.notice("popover shown: \(controller.isShown, privacy: .public)")
     }
 }
