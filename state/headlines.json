@@ -13,14 +13,14 @@
     "status": "done"
   },
   "2026-11-24": {
-    "headline": "Today's developments feature new open-source security tools like OpenAI and Cisco's Shirudo, alongside research in 3D world modeling, robotic manipulation training, and AI agents designed for gaming and customer support.",
+    "headline": "Today's updates feature new security tools, robotics models, and evaluation benchmarks for artificial intelligence.",
     "basis": [
-      "arxiv:2611.26516",
-      "arxiv:2611.29338",
-      "github:developing-gamer/agent-sim",
-      "web:1d0c151fefed0dea",
-      "web:680b35173b971311",
-      "web:f8a4e02f42124693"
+      "arxiv:2611.29897",
+      "arxiv:2611.30013",
+      "arxiv:2611.30662",
+      "arxiv:2611.30989",
+      "arxiv:2611.31201",
+      "web:1d0c151fefed0dea"
     ],
     "by": "gemini/gemini-3.5-flash-lite",
     "status": "done"

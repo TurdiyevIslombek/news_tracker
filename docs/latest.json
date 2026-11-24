@@ -1,19 +1,145 @@
 {
   "schema_version": 1,
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T04:00:46Z",
-  "headline": "Today's developments feature new open-source security tools like OpenAI and Cisco's Shirudo, alongside research in 3D world modeling, robotic manipulation training, and AI agents designed for gaming and customer support.",
+  "generated_at": "2026-11-24T10:01:49Z",
+  "headline": "Today's updates feature new security tools, robotics models, and evaluation benchmarks for artificial intelligence.",
   "headline_status": "done",
   "items": [
+    {
+      "id": "web:1d0c151fefed0dea",
+      "title": "OpenAI and Cisco introduce Shirudo",
+      "url": "https://openai.com/index/introducing-shirudo",
+      "source": "blog:openai",
+      "category": "Tool / Open source",
+      "score": 8.113,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 70,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T21:20:00Z",
+      "summary": "OpenAI and Cisco introduced Shirudo, an open-source runtime that helps protect running Linux systems while patches are being deployed. It uses Linux eBPF technology and AI-generated shields to block exploits on active services without requiring system restarts.",
+      "why_it_matters": "It offers security teams a way to temporarily mitigate vulnerabilities in running systems without taking services offline.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.30662",
+      "title": "WeMM-Ecom: Advancing Multimodal Content Understanding for WeChat E-Commerce",
+      "url": "https://huggingface.co/papers/2611.30662",
+      "source": "hf_papers",
+      "category": "Model release",
+      "score": 5.37,
+      "signals": {
+        "hf_upvotes": 44,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T13:22:22Z",
+      "summary": "Researchers introduce WeMM-Ecom, a family of multimodal large language models designed for e-commerce and general-purpose tasks. The models range from 0.8B to 35B parameters and use a training pipeline combining continued pre-training with reinforcement learning and distillation. They outperform several existing open-source models on both specialized e-commerce benchmarks and general-purpose tests, and now power production features in WeChat.",
+      "why_it_matters": "It provides a publicly available family of domain-specialized multimodal models that surpass larger open-source alternatives in e-commerce applications.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.29897",
+      "title": "Motion Mamba 2.0: Autoregressive Diffusion Mamba for Long-Horizon Humanoid Control",
+      "url": "https://huggingface.co/papers/2611.29897",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 5.082,
+      "signals": {
+        "hf_upvotes": 106,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T01:51:57Z",
+      "summary": "Motion Mamba 2.0 is an autoregressive diffusion architecture designed for long-horizon, real-time controllable motion generation in humanoid robotics and animation. It combines local attention, recurrent states, and persistent content memory to handle instructions and spatial goals over extended periods. Real-world evaluations on the Unitree G1 robot demonstrate text-guided action composition and interactive locomotion.",
+      "why_it_matters": "It significantly reduces latency and improves long-horizon motion control for humanoid robots responding to dynamic instructions.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.31201",
+      "title": "Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness",
+      "url": "https://huggingface.co/papers/2611.31201",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 5.061,
+      "signals": {
+        "hf_upvotes": 73,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-24T00:00:00Z",
+      "summary": "The authors present Embo-Harness, a framework to study how frontier multimodal models can be used directly as policies within closed-loop robotic systems. By evaluating prompting, planning, action execution, and tool use, they establish a practical design recipe that prioritizes native visual reasoning over handcrafted plans. This approach achieved an 83.3% success rate on the RoboLab-120 benchmark and succeeded in zero-shot real-world manipulation tasks.",
+      "why_it_matters": "It offers a systematic framework and recipe for turning frontier multimodal models into effective robotic control policies.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.30013",
+      "title": "3AGameFactory-Motion: Agentic Rigging and Reliable Complex Motion Generation for Diverse 3D Assets",
+      "url": "https://huggingface.co/papers/2611.30013",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 4.244,
+      "signals": {
+        "hf_upvotes": 44,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T04:16:51Z",
+      "summary": "To address the limitations of existing 3D motion benchmarks, the authors introduce DivDynBench, which evaluates rigging and motion generation across six morphology categories. Using large language models, they compare different generation paradigms and propose an Agentic Motion Framework. In this framework, an agent writes compact parametric programs while a deterministic executor handles the physical rigging and motion solving.",
+      "why_it_matters": "It improves the reliability and efficiency of generating complex animations and movements for arbitrary 3D assets.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.30989",
+      "title": "WorldLeague: Benchmarking Physical Agency",
+      "url": "https://huggingface.co/papers/2611.30989",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 4.223,
+      "signals": {
+        "hf_upvotes": 31,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-24T00:00:00Z",
+      "summary": "WorldLeague is a new benchmark that compares AI systems across 60 simulated robot tasks requiring perception, memory, planning, and action. It measures progress and success rates to create a Physical Agency Profile for different models like vision-language models and vision-language-action models. Testing 13 representative AI systems revealed varying capabilities in autonomous physical goal completion and interactive scoring.",
+      "why_it_matters": "It establishes a standardized way to evaluate and compare the autonomous physical agency and goal-achieving capabilities of various AI systems.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.26389",
+      "title": "ViDecide: Teaching Video Diffusion Models to Reason and Plan Step by Step",
+      "url": "https://huggingface.co/papers/2611.26389",
+      "source": "hf_papers",
+      "category": "Training method",
+      "score": 4.158,
+      "signals": {
+        "hf_upvotes": 29,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-24T00:00:00Z",
+      "summary": "The authors introduce ViDecide, a training framework that treats video generation as a series of causal decisions rather than a fixed-length clip. It uses a decision-focused training schedule and a corrective fine-tuning method to improve how video diffusion models reason and plan. On various tasks and a robot planning benchmark, ViDecide achieved an average success rate of 83.8%, outperforming standard fine-tuning.",
+      "why_it_matters": "It improves video generation models so they can act as more reliable reasoners and planners for physical and logical tasks.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
     {
       "id": "arxiv:2611.26516",
       "title": "Plan4D: Generative Plannable 4D Worlds",
       "url": "https://huggingface.co/papers/2611.26516",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.073,
+      "score": 4.089,
       "signals": {
-        "hf_upvotes": 23,
+        "hf_upvotes": 27,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -24,20 +150,74 @@
       "summary_status": "done"
     },
     {
-      "id": "web:1d0c151fefed0dea",
-      "title": "OpenAI and Cisco introduce Shirudo",
-      "url": "https://openai.com/index/introducing-shirudo",
-      "source": "blog:openai",
-      "category": "Tool / Open source",
-      "score": 3.831,
+      "id": "arxiv:2611.29338",
+      "title": "A Glimpse of Training VLMs as Foundation Models for Robotic Manipulation",
+      "url": "https://huggingface.co/papers/2611.29338",
+      "source": "hf_papers",
+      "category": "Training method",
+      "score": 4.053,
       "signals": {
-        "hf_upvotes": 0,
+        "hf_upvotes": 26,
         "hn_points": 0,
         "github_stars": 0
       },
-      "published_at": "2026-11-23T21:20:00Z",
-      "summary": "OpenAI and Cisco introduced Shirudo, an open-source runtime that helps protect running Linux systems while patches are being deployed. It uses Linux eBPF technology and AI-generated shields to block exploits on active services without requiring system restarts.",
-      "why_it_matters": "It offers security teams a way to temporarily mitigate vulnerabilities in running systems without taking services offline.",
+      "published_at": "2026-11-24T00:00:00Z",
+      "summary": "Researchers introduce nanoAstra, a method for training vision-language models for robotic manipulation by combining semantic action modeling with capability-preserving supervised fine-tuning. The 9-billion parameter model outperforms existing baselines on a randomized benchmark and supports fast streaming execution.",
+      "why_it_matters": "It demonstrates a way to train generalizable robot control models that reduce a robot's idle time and improve zero-shot success rates.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "github:developing-gamer/agent-sim",
+      "title": "Developing-Gamer/agent-sim: iOS simulators for AI agents, on Linux",
+      "url": "https://github.com/Developing-Gamer/agent-sim",
+      "source": "github",
+      "category": "Tool / Open source",
+      "score": 3.649,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 323
+      },
+      "published_at": "2026-11-21T20:26:12Z",
+      "summary": "This project runs Apple's iOS simulator runtime on ordinary Linux machines without requiring a Mac or GPU. It provides tools for AI agents to test iOS apps by reading the screen, tapping, typing, and viewing the live stream in a browser.",
+      "why_it_matters": "It allows AI agents running on Linux to test and interact with iOS applications directly.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.30581",
+      "title": "A Pipeline-Parallel System for Depth-Recurrent Models",
+      "url": "https://huggingface.co/papers/2611.30581",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 3.549,
+      "signals": {
+        "hf_upvotes": 5,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-24T00:00:00Z",
+      "summary": "This paper presents Loop-PP, a system that handles the timetable and communication for pipeline-parallel depth-recurrent models, which apply a shared stack of blocks multiple times. By scheduling different iterations of the same stage separately, it avoids stalls and overlaps local compute with communication. On 8B to 60B Mixture-of-Experts models, Loop-PP reduces peak memory by up to 32.8% and increases throughput by 12.7%.",
+      "why_it_matters": "It makes training very large recurrent AI models more memory-efficient and faster.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.31115",
+      "title": "RUIBench: What Makes a Good Robot-Use Interface?",
+      "url": "https://huggingface.co/papers/2611.31115",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 3.529,
+      "signals": {
+        "hf_upvotes": 17,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T17:52:55Z",
+      "summary": "The paper studies how robot-use interfaces affect the execution of physical tasks by foundation models, introducing a benchmark called RUIBench and a framework called RUIKit. Testing across various action abstractions and interaction forms shows that changing the interface can dramatically alter success rates for both frontier agents and smaller fine-tuned models. The analysis also uncovers a verification gap where agents declare success despite observable failures.",
+      "why_it_matters": "It highlights interface design as a crucial factor in building reliable embodied AI agents.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -47,7 +227,7 @@
       "url": "https://openai.com/business/learn/connected-intelligence-for-in-house-legal",
       "source": "blog:openai",
       "category": "Industry",
-      "score": 3.574,
+      "score": 3.485,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
@@ -65,7 +245,7 @@
       "url": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
       "source": "blog:openai",
       "category": "Industry",
-      "score": 3.574,
+      "score": 3.485,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
@@ -78,483 +258,303 @@
       "summary_status": "done"
     },
     {
-      "id": "arxiv:2611.29338",
-      "title": "A Glimpse of Training VLMs as Foundation Models for Robotic Manipulation",
-      "url": "https://huggingface.co/papers/2611.29338",
-      "source": "hf_papers",
-      "category": "Training method",
-      "score": 3.292,
-      "signals": {
-        "hf_upvotes": 10,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-24T00:00:00Z",
-      "summary": "Researchers introduce nanoAstra, a method for training vision-language models for robotic manipulation by combining semantic action modeling with capability-preserving supervised fine-tuning. The 9-billion parameter model outperforms existing baselines on a randomized benchmark and supports fast streaming execution.",
-      "why_it_matters": "It demonstrates a way to train generalizable robot control models that reduce a robot's idle time and improve zero-shot success rates.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "github:developing-gamer/agent-sim",
-      "title": "Developing-Gamer/agent-sim: iOS simulators for AI agents, on Linux",
-      "url": "https://github.com/Developing-Gamer/agent-sim",
+      "id": "github:gf007/game-rebuild-kit",
+      "title": "GF007/game-rebuild-kit: AI-assisted game analysis and reconstruction, working toward one-click workflows for any game.",
+      "url": "https://github.com/GF007/game-rebuild-kit",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 3.284,
+      "score": 2.828,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 166
+        "github_stars": 100
       },
-      "published_at": "2026-11-21T20:26:12Z",
-      "summary": "This project runs Apple's iOS simulator runtime on ordinary Linux machines without requiring a Mac or GPU. It provides tools for AI agents to test iOS apps by reading the screen, tapping, typing, and viewing the live stream in a browser.",
-      "why_it_matters": "It allows AI agents running on Linux to test and interact with iOS applications directly.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.25476",
-      "title": "WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming",
-      "url": "https://huggingface.co/papers/2611.25476",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 2.84,
-      "signals": {
-        "hf_upvotes": 6,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-24T00:00:00Z",
-      "summary": "The paper explores Weight-Space Programming (WSP), where executable programs directly modify a neural network's weights to install new capabilities without gradient-based training. Using a frozen language model to write these weight programs, the framework achieves high success rates on command compositions and vision tasks while preserving original capabilities.",
-      "why_it_matters": "It introduces a new route to acquiring and accumulating capabilities in trained neural networks by writing directly to their weight space.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.28202",
-      "title": "AutoPILOT: A Visual Agent Harness for Real-Time Gameplay",
-      "url": "https://huggingface.co/papers/2611.28202",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 2.744,
-      "signals": {
-        "hf_upvotes": 13,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-20T18:56:49Z",
-      "summary": "The authors introduce AutoPILOT, a visual agent harness for real-time video games that allows models to output primitive actions, macros, or closed-loop controllers instead of just a single action per model call. Tested on a new benchmark of 120 browser games, AutoPILOT significantly improves success rates in real-time environments compared to existing harnesses.",
-      "why_it_matters": "It addresses the limitation of AI agents in real-time settings by changing how model outputs are converted into ongoing actions over time.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.28833",
-      "title": "Self-WSP: Can Language Models Improve Themselves Through Weight-Space Programming?",
-      "url": "https://huggingface.co/papers/2611.28833",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 2.261,
-      "signals": {
-        "hf_upvotes": 7,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-21T14:36:04Z",
-      "summary": "This paper investigates Self-WSP, an approach where a language model reads and edits its own weights using Weight-Space Programming to try to improve itself. While self-edits substantially raised accuracy on math benchmarks, further analysis showed the model lacked interpretability regarding the changes it made, as random search sometimes performed similarly.",
-      "why_it_matters": "It offers insight into recursive self-improvement for language models while highlighting current limitations in the interpretability of self-edited weights.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.23417",
-      "title": "Autoregressive View Model",
-      "url": "https://huggingface.co/papers/2611.23417",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 2.152,
-      "signals": {
-        "hf_upvotes": 1,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-23T00:00:00Z",
-      "summary": "Researchers present the Autoregressive View Model (AVM), which generates a scene as a stream of views without needing an explicit 3D representation. The model conditions on images or videos to generate short clips along a requested camera path, and uses a fine-tuned bidirectional video diffusion transformer scaled across roughly 8 million scenes. Results show that AVM adapts to various input and output settings through a single in-context interface.",
-      "why_it_matters": "It introduces a new way to handle scene generation and camera control without building an explicit 3D model first.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.28123",
-      "title": "Seeing the Invisible: How Vision-Language Models Read, Predict and Trace Radio Fields",
-      "url": "https://huggingface.co/papers/2611.28123",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 2.069,
-      "signals": {
-        "hf_upvotes": 4,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-23T00:00:00Z",
-      "summary": "This paper investigates whether vision-language models can infer invisible radio fields in a city based only on visible structures like buildings and streets. The authors built RadioVISTA, a label-free engine and benchmark to test this physical reasoning. Their evaluations reveal that while frontier models can judge where a radio field is strong, they struggle to trace specific underlying paths.",
-      "why_it_matters": "It highlights a gap in how vision-language models perform physical reasoning about invisible elements in the real world.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.24249",
-      "title": "From Points to Trajectories: Rethinking Multimodal Alignment for Physical Events",
-      "url": "https://huggingface.co/papers/2611.24249",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 2.069,
-      "signals": {
-        "hf_upvotes": 4,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-23T00:00:00Z",
-      "summary": "The authors examine physical artificial intelligence and how multimodal aligners capture real-world mechanics over time. They show that traditional temporal pooling averages out transient dynamics, making it impossible to distinguish between distinct physical executions under identical conditions. To fix this, they introduce CounterPoint, a plug-in module that scores frame-level cross-modal agreement.",
-      "why_it_matters": "It identifies a fundamental limitation in how multimodal models process physical events over time and proposes a fix for fine-grained alignment.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.25534",
-      "title": "How Feedback-Free Self-Evolution Reshapes Agent Skills: A Systematic Study",
-      "url": "https://huggingface.co/papers/2611.25534",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 1.846,
-      "signals": {
-        "hf_upvotes": 3,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-23T00:00:00Z",
-      "summary": "This study explores how agent skills—documents containing procedural knowledge—evolve when models rewrite them repeatedly without external task feedback. The experiments show that letting models rewrite expert skills without feedback causes the skills to lose value and erode expert knowledge over time. Based on this, the authors introduce a method called SkillDiff that preserves crucial expert knowledge and improves agent performance.",
-      "why_it_matters": "It uncovers a risk in letting AI agents autonomously update their own procedural knowledge without feedback and offers a way to retain expert insights.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.29238",
-      "title": "GameAnything: From Any Inspirations to Playable Game Worlds",
-      "url": "https://huggingface.co/papers/2611.29238",
-      "source": "hf_papers",
-      "category": "Tool / Open source",
-      "score": 1.659,
-      "signals": {
-        "hf_upvotes": 3,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-22T05:17:35Z",
-      "summary": "The authors introduce GameAnything, an open-source agentic platform that turns multimodal inspirations into playable extensions of existing games through iterative development. They also present GameAnything-Bench, a benchmark used to assess functional correctness and gameplay quality across diverse references and environments. Evaluations show that current coding agents can adapt reference content, but still struggle with playable interactions.",
-      "why_it_matters": "It provides an open-source platform and benchmark for AI-driven, inspiration-based game development.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.27490",
-      "title": "Which Dwarf Is This? Doppeldwarf-306 and Near-Identical Instance Retrieval",
-      "url": "https://huggingface.co/papers/2611.27490",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 1.184,
-      "signals": {
-        "hf_upvotes": 2,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-20T11:36:19Z",
-      "summary": "Researchers introduce Doppeldwarf-306, a benchmark of nearly 1,700 photographs of bronze dwarf statues in Poland to test how well visual retrieval systems can distinguish nearly identical objects. Using frozen image features without any training, a baseline search correctly identifies the right statue up to 94.7% of the time, and incorporating location data or learned feature matching further improves accuracy.",
-      "why_it_matters": "It provides a new way to test and improve how computer vision models tell apart very similar physical objects.",
+      "published_at": "2026-11-20T04:14:12Z",
+      "summary": "Game Rebuild Kit is an AI-assisted tool and agent skill designed to analyze game behavior and reconstruct its systems, such as logic, animation, physics, and rendering. The release includes a worked example tracing character resources into animation and rendering, alongside instructions for agents to investigate game builds. Full automated one-click workflows remain project goals.",
+      "why_it_matters": "It provides a framework for using AI agents to systematically analyze and reproduce software systems like video games.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     }
   ],
   "more": [
     {
-      "id": "arxiv:2611.29243",
-      "title": "Seeing Is Not Acting: WARD Diagnoses the Evidence-to-State-to-Action Gap in Longitudinal Clinical Agents",
-      "url": "https://arxiv.org/abs/2611.29243",
-      "source": "arxiv",
+      "id": "arxiv:2611.28202",
+      "title": "AutoPILOT: A Visual Agent Harness for Real-Time Gameplay",
+      "url": "https://huggingface.co/papers/2611.28202",
+      "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.29242",
-      "title": "Edit-Induced Dependency Mismatch: Propagation Omissions, Recovery, and Evaluation Blind Spots in Coding Agents",
-      "url": "https://arxiv.org/abs/2611.29242",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29241",
-      "title": "Fuzzy e-Means: Fuzzy c-Means on Large Data with Moving-Average Mini-Batch Updates",
-      "url": "https://arxiv.org/abs/2611.29241",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29236",
-      "title": "Complementary Geometry in Gaussian Splatting",
-      "url": "https://arxiv.org/abs/2611.29236",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29232",
-      "title": "Why Adaptive Optimizers Struggle with Large Convolution Kernels",
-      "url": "https://arxiv.org/abs/2611.29232",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29226",
-      "title": "Tenlai-TTS 2.0: Continuous-Representation LLM-Based TTS System with End-to-End Training",
-      "url": "https://arxiv.org/abs/2611.29226",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29225",
-      "title": "IteraSong: LLM-Guided Iterative Symbolic Music Creation in a Web DAW",
-      "url": "https://arxiv.org/abs/2611.29225",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29224",
-      "title": "Curvature Mismatch and Local Errors in Galaxy Property Estimation",
-      "url": "https://arxiv.org/abs/2611.29224",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29218",
-      "title": "Ego-HMB: Human Motion Bridging from Egocentric Images via A Motion Bridge Diffusion Model",
-      "url": "https://arxiv.org/abs/2611.29218",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29214",
-      "title": "NANO: Unifying Missingness and Input Uncertainty in Tabular Learning",
-      "url": "https://arxiv.org/abs/2611.29214",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29213",
-      "title": "PartPO: Part-Level Policy Optimization for Shape-to-Program Generation",
-      "url": "https://arxiv.org/abs/2611.29213",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29210",
-      "title": "THETA: Heat Diffusion as a Structural Prior for Cross-Domain Transfer in Graph Foundation Models",
-      "url": "https://arxiv.org/abs/2611.29210",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29207",
-      "title": "Deep Negative Binomial Autoregression for Sparse Spatio-Temporal Counts: Estimation and Predictive Distribution Bounds",
-      "url": "https://arxiv.org/abs/2611.29207",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29205",
-      "title": "DriveTTO: Understanding Search and Selection in Test-Time Trajectory Optimization for End-to-End Driving",
-      "url": "https://arxiv.org/abs/2611.29205",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29201",
-      "title": "Why flattening the P-value histogram works: a theory of the standard-deviation optimization in tensor-decomposition-based unsupervised feature extraction",
-      "url": "https://arxiv.org/abs/2611.29201",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29194",
-      "title": "Unleashing the Value of Raw Point Clouds for 3D Understanding with LLMs",
-      "url": "https://arxiv.org/abs/2611.29194",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29193",
-      "title": "Direct Feedback Policy Optimization for AI Coding Agents",
-      "url": "https://arxiv.org/abs/2611.29193",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29188",
-      "title": "Ziv Meets Sumcheck: Zero-Knowledge Proofs of Floating-Point LLM Inference",
-      "url": "https://arxiv.org/abs/2611.29188",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29184",
-      "title": "PhyCoVE: Benchmarking Physical Counterfactual Video Editing across Diverse Material Dynamics",
-      "url": "https://arxiv.org/abs/2611.29184",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29180",
-      "title": "loopxDINO: Dense Visual Prediction via Iterative Latent Reasoning",
-      "url": "https://arxiv.org/abs/2611.29180",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29178",
-      "title": "On Adaptive Step Sizes for Eligibility Traces in Deep Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2611.29178",
-      "source": "arxiv",
+      "id": "arxiv:2611.28618",
+      "title": "Distilling Visual Agents from Limited Interaction Experience",
+      "url": "https://huggingface.co/papers/2611.28618",
+      "source": "hf_papers",
       "category": "Training method"
     },
     {
-      "id": "arxiv:2611.29171",
-      "title": "What Makes Recurrence Generalize Across Lengths?",
-      "url": "https://arxiv.org/abs/2611.29171",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29168",
-      "title": "SpatialDuet: Bayesian task routing between a metric expert and a geometry expert for spatial intelligence",
-      "url": "https://arxiv.org/abs/2611.29168",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29167",
-      "title": "Decoupling Perception from Generation for Agentic 3D CT Report Generation",
-      "url": "https://arxiv.org/abs/2611.29167",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29165",
-      "title": "Training-Free 3D Editing via Feature-Divergence Localization and Trajectory Correction",
-      "url": "https://arxiv.org/abs/2611.29165",
-      "source": "arxiv",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29163",
-      "title": "Inclusive Hand Pose Estimation via Topology-Aware Distillation and Progressive Kinematic Reasoning",
-      "url": "https://arxiv.org/abs/2611.29163",
-      "source": "arxiv",
+      "id": "arxiv:2611.27376",
+      "title": "Composable Soft-Prompt Distillation of RL Experts: Toward Continual Post-Training",
+      "url": "https://huggingface.co/papers/2611.27376",
+      "source": "hf_papers",
       "category": "Training method"
     },
     {
-      "id": "arxiv:2611.29162",
-      "title": "Fixed or Deleted? External Feedback Lets Cheaper AI Coding Agents Repair Rule Violations",
-      "url": "https://arxiv.org/abs/2611.29162",
-      "source": "arxiv",
+      "id": "arxiv:2611.25419",
+      "title": "DiLE: Discrimination-Aware Latent-Space Learning for Universal Multimodal Embeddings",
+      "url": "https://huggingface.co/papers/2611.25419",
+      "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.29156",
-      "title": "ARC: Adaptive Rollout Control for Efficient Synchronous LLM Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2611.29156",
-      "source": "arxiv",
+      "id": "arxiv:2611.29355",
+      "title": "Polytropos: What Do Vision-Language Model Descriptions Make of a Cultural Object?",
+      "url": "https://huggingface.co/papers/2611.29355",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.30898",
+      "title": "World Models as Native Latent Action Models",
+      "url": "https://huggingface.co/papers/2611.30898",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.25476",
+      "title": "WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming",
+      "url": "https://huggingface.co/papers/2611.25476",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.30157",
+      "title": "UUBench: Understanding the Unspoken toward Full-Duplex Multimodal Interaction",
+      "url": "https://huggingface.co/papers/2611.30157",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.30813",
+      "title": "HIVE-Bench: Evaluating Patch-Level Visual Representations for Egocentric Robot Manipulation",
+      "url": "https://huggingface.co/papers/2611.30813",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.28489",
+      "title": "Open Vision Banana: An Open Framework for Unified Visual Perception through Generation in RGB Space",
+      "url": "https://huggingface.co/papers/2611.28489",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27689",
+      "title": "Embodied-Harness: Towards Recursive Self-Improvement for Robotic Manipulation",
+      "url": "https://huggingface.co/papers/2611.27689",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.29238",
+      "title": "GameAnything: From Any Inspirations to Playable Game Worlds",
+      "url": "https://huggingface.co/papers/2611.29238",
+      "source": "hf_papers",
+      "category": "Tool / Open source"
+    },
+    {
+      "id": "arxiv:2611.18639",
+      "title": "SynthDCB: World Distillation for Scalable Device Control Benchmarking",
+      "url": "https://huggingface.co/papers/2611.18639",
+      "source": "hf_papers",
       "category": "Training method"
     },
     {
-      "id": "arxiv:2611.29155",
-      "title": "ContextFact: Remembering Facts in Context for Long-Term Conversational Agents",
-      "url": "https://arxiv.org/abs/2611.29155",
-      "source": "arxiv",
+      "id": "arxiv:2611.26745",
+      "title": "MomentMem: Memorizing Key Moments for Robot Manipulation",
+      "url": "https://huggingface.co/papers/2611.26745",
+      "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.29154",
-      "title": "MVAgent: Per-Video Agents under Global Coordination for Multi-Video Understanding",
-      "url": "https://arxiv.org/abs/2611.29154",
-      "source": "arxiv",
+      "id": "arxiv:2611.28123",
+      "title": "Seeing the Invisible: How Vision-Language Models Read, Predict and Trace Radio Fields",
+      "url": "https://huggingface.co/papers/2611.28123",
+      "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.29152",
-      "title": "ATLAS: Autoregressive Trajectories for Longitudinal Analysis of Survival",
-      "url": "https://arxiv.org/abs/2611.29152",
-      "source": "arxiv",
+      "id": "arxiv:2611.24249",
+      "title": "From Points to Trajectories: Rethinking Multimodal Alignment for Physical Events",
+      "url": "https://huggingface.co/papers/2611.24249",
+      "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.29151",
-      "title": "Medical Specialty Prediction from Bangla Patient Narratives: A Comparative Study of ML, DL, Transformers, and LLMs",
-      "url": "https://arxiv.org/abs/2611.29151",
-      "source": "arxiv",
+      "id": "arxiv:2611.28833",
+      "title": "Self-WSP: Can Language Models Improve Themselves Through Weight-Space Programming?",
+      "url": "https://huggingface.co/papers/2611.28833",
+      "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.29150",
-      "title": "Can an Agent Trust Its Own Zoom? Cross-Magnification Provenance Verification for Whole-Slide Images",
-      "url": "https://arxiv.org/abs/2611.29150",
-      "source": "arxiv",
+      "id": "arxiv:2611.30207",
+      "title": "What Makes Good Data for Training Coding Agents? A Systematic Study on SWE-Gym",
+      "url": "https://huggingface.co/papers/2611.30207",
+      "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.29148",
-      "title": "ArborNet: Volume- and skeleton-aware completion of tree quantitative structure models from incomplete point clouds using anchor-conditioned graph learning",
-      "url": "https://arxiv.org/abs/2611.29148",
-      "source": "arxiv",
+      "id": "arxiv:2611.30771",
+      "title": "GameDojo: Benchmarking Real-Time Interactive Agents in Video Games",
+      "url": "https://huggingface.co/papers/2611.30771",
+      "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.29147",
-      "title": "VeriLogic: Reinforcement Learning over Verifiable Logical Reasoning Traces",
-      "url": "https://arxiv.org/abs/2611.29147",
-      "source": "arxiv",
+      "id": "arxiv:2611.31048",
+      "title": "Distill the Correction, Not the Rewrite: Hindsight Twins for Self-Improving Text-to-Image Models",
+      "url": "https://huggingface.co/papers/2611.31048",
+      "source": "hf_papers",
       "category": "Training method"
     },
     {
-      "id": "arxiv:2611.29146",
-      "title": "RVLM: Fewer Tokens, Better Resolution Scaling, Fine-Grained Spatial Grounding",
-      "url": "https://arxiv.org/abs/2611.29146",
-      "source": "arxiv",
+      "id": "arxiv:2611.30597",
+      "title": "ViDiHand2: Unifying Video Diffusion Priors and Hand Geometry for 3D Hand Motion Reconstruction in the Wild",
+      "url": "https://huggingface.co/papers/2611.30597",
+      "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.29143",
-      "title": "Towards Edge Artificial Intelligence for Predicting Antimicrobial Resistance in Mycobacterium tuberculosis",
-      "url": "https://arxiv.org/abs/2611.29143",
-      "source": "arxiv",
+      "id": "arxiv:2611.23417",
+      "title": "Autoregressive View Model",
+      "url": "https://huggingface.co/papers/2611.23417",
+      "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.29142",
-      "title": "RAVEC: Reward-Aligned Visual Evidence Correction",
-      "url": "https://arxiv.org/abs/2611.29142",
-      "source": "arxiv",
+      "id": "arxiv:2611.25534",
+      "title": "How Feedback-Free Self-Evolution Reshapes Agent Skills: A Systematic Study",
+      "url": "https://huggingface.co/papers/2611.25534",
+      "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.29138",
-      "title": "Supply the Global, Supervise the Local: Combining Representation Conditioning and Alignment in Diffusion Transformers",
-      "url": "https://arxiv.org/abs/2611.29138",
-      "source": "arxiv",
+      "id": "arxiv:2611.30573",
+      "title": "Write, Evolve, Read: Streaming Cameras into a Persistent World State for 4D Occupancy Forecasting",
+      "url": "https://huggingface.co/papers/2611.30573",
+      "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.29133",
-      "title": "The Retry Tax: Why Static Same-Task Retries Can Cost More per Completion",
-      "url": "https://arxiv.org/abs/2611.29133",
-      "source": "arxiv",
+      "id": "arxiv:2611.31053",
+      "title": "ReWeave: Emergent Physical Task Topologies for Embodied Harness Optimization and Cross-Task Meta-Distillation",
+      "url": "https://huggingface.co/papers/2611.31053",
+      "source": "hf_papers",
+      "category": "Training method"
+    },
+    {
+      "id": "arxiv:2611.27494",
+      "title": "Typhoon OCR 2: From Thai Document Transcription to Multilingual, Multi-Task OCR",
+      "url": "https://huggingface.co/papers/2611.27494",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27319",
+      "title": "SAVIOR: Sample-efficient Adaptation of Vision-Language Models for OCR Representation",
+      "url": "https://huggingface.co/papers/2611.27319",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.31126",
+      "title": "WeaveVLA: 3D Relational Grounding for Vision-Language-Action Models",
+      "url": "https://huggingface.co/papers/2611.31126",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.12164",
+      "title": "Let the Fixer Decide: Training a Code Localizer from the Fixer's Likelihood",
+      "url": "https://huggingface.co/papers/2611.12164",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.29006",
+      "title": "NoHairCache: Calibrate-Once KV Cache Eviction with One Power-Law Exponent",
+      "url": "https://huggingface.co/papers/2611.29006",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.28227",
+      "title": "Feedback Shortcut: Speculative Decoding for Latent Feedback Transformers",
+      "url": "https://huggingface.co/papers/2611.28227",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.26254",
+      "title": "Prism: Hierarchical Text Detection with Minimalist Design",
+      "url": "https://huggingface.co/papers/2611.26254",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.23946",
+      "title": "How Complete Must an Environment Be to Train a Capable GUI Agent?",
+      "url": "https://huggingface.co/papers/2611.23946",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.25927",
+      "title": "Fast-JEPA: Advancing the Success-Latency Frontier for Latent World Models",
+      "url": "https://huggingface.co/papers/2611.25927",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.29361",
+      "title": "Beyond Attention Maps: Understanding and Improving Medical MLLMs via Visual Values",
+      "url": "https://huggingface.co/papers/2611.29361",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.29619",
+      "title": "Wactorz: Self-Writing LLM Agents That Discover, Repair, and Migrate at the Edge",
+      "url": "https://huggingface.co/papers/2611.29619",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27490",
+      "title": "Which Dwarf Is This? Doppeldwarf-306 and Near-Identical Instance Retrieval",
+      "url": "https://huggingface.co/papers/2611.27490",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.30011",
+      "title": "MORSE: Optimizing Streaming Memory Design via Open-World Auto-Research",
+      "url": "https://huggingface.co/papers/2611.30011",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.29473",
+      "title": "The norm axiom and factor hyperfields",
+      "url": "https://huggingface.co/papers/2611.29473",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.13730",
+      "title": "Deterministic, Reproducible Inference in Exact Integer Arithmetic, and Verifiable Distributed Inference as Its Consequence",
+      "url": "https://huggingface.co/papers/2611.13730",
+      "source": "hf_papers",
       "category": "Research"
     }
   ]

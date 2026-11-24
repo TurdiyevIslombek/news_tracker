@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-23",
-  "generated_at": "2026-11-24T04:00:46Z",
+  "generated_at": "2026-11-24T10:01:49Z",
   "headline": "AI security and efficiency updates: Data policy enforcement, new model architectures, and research on robotic tracking and quantum algorithms.",
   "headline_status": "done",
   "items": [
@@ -11,10 +11,10 @@
       "url": "https://z.ai/blog/glm-5.4",
       "source": "hn",
       "category": "Model release",
-      "score": 6.269,
+      "score": 6.299,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 1081,
+        "hn_points": 1122,
         "github_stars": 0
       },
       "published_at": "2026-11-23T10:06:43Z",
@@ -47,10 +47,10 @@
       "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
       "source": "hn",
       "category": "Tool / Open source",
-      "score": 5.767,
+      "score": 5.778,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 747,
+        "hn_points": 758,
         "github_stars": 0
       },
       "published_at": "2026-11-22T21:01:16Z",
@@ -65,10 +65,10 @@
       "url": "https://github.com/gulivan/worker755",
       "source": "hn",
       "category": "Tool / Open source",
-      "score": 5.093,
+      "score": 5.095,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 357,
+        "hn_points": 358,
         "github_stars": 0
       },
       "published_at": "2026-11-22T13:56:58Z",
@@ -83,11 +83,11 @@
       "url": "https://github.com/EL4CTEO/fast-anything",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 5.051,
+      "score": 5.079,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 3227
+        "github_stars": 3382
       },
       "published_at": "2026-11-21T14:40:27Z",
       "summary": "A tool called fast-anything profiles Python, Node, Ruby, and other apps to find slow functions, then uses coding agents to port only those bottleneck functions into Rust. It verifies correctness against real recorded calls and edge cases before safely swapping the optimized code into the application.",
@@ -132,16 +132,34 @@
       "summary_status": "done"
     },
     {
+      "id": "arxiv:2611.24636",
+      "title": "Clover-35B-A3B-Preview Technical Report",
+      "url": "https://huggingface.co/papers/2611.24636",
+      "source": "hf_papers",
+      "category": "Model release",
+      "score": 4.227,
+      "signals": {
+        "hf_upvotes": 40,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-23T00:00:00Z",
+      "summary": "The technical report introduces Clover-35B-A3B-Preview, a mixture-of-experts diffusion language model with 35 billion total parameters and 3 billion activated parameters that supports thinking-mode generation. It uses Gated Delta Networks and achieves strong performance on agent benchmarks while delivering high token generation speeds on a single GPU.",
+      "why_it_matters": "It showcases a new mixture-of-experts diffusion model architecture optimized for agent workloads and fast inference generation speeds.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
       "id": "github:erkamyaman/safe-anything",
       "title": "erkamyaman/safe-anything: Find the holes before someone else does. A fast, 100% Rust vulnerability scanner: XSS, SQL injection, leaked secre",
       "url": "https://github.com/erkamyaman/safe-anything",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 4.164,
+      "score": 4.207,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 512
+        "github_stars": 550
       },
       "published_at": "2026-11-22T16:44:10Z",
       "summary": "Safe-anything is a fast, Rust-based vulnerability scanner designed to detect security issues like XSS, SQL injection, leaked secrets, vulnerable dependencies, and insecure AI agent setups. It requires no configuration or account and provides the exact line, reason, and fix for each vulnerability found.",
@@ -155,9 +173,9 @@
       "url": "https://huggingface.co/papers/2611.27963",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.142,
+      "score": 4.16,
       "signals": {
-        "hf_upvotes": 55,
+        "hf_upvotes": 56,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -168,38 +186,38 @@
       "summary_status": "done"
     },
     {
-      "id": "arxiv:2611.24636",
-      "title": "Clover-35B-A3B-Preview Technical Report",
-      "url": "https://huggingface.co/papers/2611.24636",
-      "source": "hf_papers",
-      "category": "Model release",
-      "score": 4.124,
-      "signals": {
-        "hf_upvotes": 36,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-23T00:00:00Z",
-      "summary": "The technical report introduces Clover-35B-A3B-Preview, a mixture-of-experts diffusion language model with 35 billion total parameters and 3 billion activated parameters that supports thinking-mode generation. It uses Gated Delta Networks and achieves strong performance on agent benchmarks while delivering high token generation speeds on a single GPU.",
-      "why_it_matters": "It showcases a new mixture-of-experts diffusion model architecture optimized for agent workloads and fast inference generation speeds.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
       "id": "github:w01fb0ss/pibot",
       "title": "w01fb0ss/PiBot: Open-source, local-first AI agent team for your desktop: multi-agent group chats, computer use, browser, MCP, routines and a",
       "url": "https://github.com/w01fb0ss/PiBot",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 3.906,
+      "score": 3.931,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 510
+        "github_stars": 532
       },
       "published_at": "2026-11-21T06:54:24Z",
       "summary": "Pi Bot is an open-source, local-first desktop application that runs a team of AI agents capable of planning, running commands, editing files, and browsing the web. It operates locally on macOS, Windows, Linux, and Android, keeping user data private while requiring approval for risky actions.",
       "why_it_matters": "It provides a desktop-based, privacy-focused tool for coordinating multiple AI agents to perform complex computer tasks.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.26954",
+      "title": "Learning Video Foresight Reasoning from Unlabeled Videos via On-Policy Self-Distillation",
+      "url": "https://huggingface.co/papers/2611.26954",
+      "source": "hf_papers",
+      "category": "Training method",
+      "score": 3.856,
+      "signals": {
+        "hf_upvotes": 43,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-20T01:08:12Z",
+      "summary": "Researchers introduced Future-OPSD, an on-policy self-distillation framework that helps vision-language models learn video foresight reasoning from unlabeled videos without external annotations. The method uses a foresight score and a contrastive advantage to focus the model on decision-relevant future information while ignoring irrelevant context.",
+      "why_it_matters": "It improves how vision-language models anticipate future events in videos without relying on costly manual annotations or large external models.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -256,24 +274,6 @@
       "why_it_matters": "It demonstrates how AI agent teams combined with formal verification can solve complex scientific optimization problems.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.26954",
-      "title": "Learning Video Foresight Reasoning from Unlabeled Videos via On-Policy Self-Distillation",
-      "url": "https://huggingface.co/papers/2611.26954",
-      "source": "hf_papers",
-      "category": "Training method",
-      "score": 3.709,
-      "signals": {
-        "hf_upvotes": 37,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-20T01:08:12Z",
-      "summary": "Researchers introduced Future-OPSD, an on-policy self-distillation framework that helps vision-language models learn video foresight reasoning from unlabeled videos without external annotations. The method uses a foresight score and a contrastive advantage to focus the model on decision-relevant future information while ignoring irrelevant context.",
-      "why_it_matters": "It improves how vision-language models anticipate future events in videos without relying on costly manual annotations or large external models.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
     }
   ],
   "more": [
@@ -327,18 +327,18 @@
       "category": "Industry"
     },
     {
-      "id": "web:d7b15f2f905fd0d1",
-      "title": "0rwx – A simple model of AI usage, inspired by Unix permissions",
-      "url": "https://0rwx.com/",
-      "source": "hn",
-      "category": "Industry"
-    },
-    {
       "id": "github:mjwsolo/localcode",
       "title": "Localcode, open source agentic coding on your Mac with one command",
       "url": "https://github.com/mjwsolo/localcode",
       "source": "hn",
       "category": "Tool / Open source"
+    },
+    {
+      "id": "web:d7b15f2f905fd0d1",
+      "title": "0rwx – A simple model of AI usage, inspired by Unix permissions",
+      "url": "https://0rwx.com/",
+      "source": "hn",
+      "category": "Industry"
     },
     {
       "id": "web:21bd1d482ae20679",
@@ -383,18 +383,18 @@
       "category": "Training method"
     },
     {
-      "id": "web:de5cd1a6d51dc917",
-      "title": "Perplexity and Intelligence",
-      "url": "https://openai.com/index/perplexity-and-intelligence",
-      "source": "blog:openai",
-      "category": "Industry"
-    },
-    {
       "id": "arxiv:2611.27973",
       "title": "MemOnce: A Scalable Memory Architecture for Large Language Models",
       "url": "https://huggingface.co/papers/2611.27973",
       "source": "hf_papers",
       "category": "Research"
+    },
+    {
+      "id": "web:de5cd1a6d51dc917",
+      "title": "Perplexity and Intelligence",
+      "url": "https://openai.com/index/perplexity-and-intelligence",
+      "source": "blog:openai",
+      "category": "Industry"
     },
     {
       "id": "github:liufelix2004/dsh-workbuddy",
@@ -409,6 +409,13 @@
       "url": "https://github.com/nestjs/agent-skills",
       "source": "github",
       "category": "Tool / Open source"
+    },
+    {
+      "id": "arxiv:2611.19247",
+      "title": "GameWM: Toward Next-Generation Video Games with Interaction-Centric World Models",
+      "url": "https://huggingface.co/papers/2611.19247",
+      "source": "hf_papers",
+      "category": "Research"
     },
     {
       "id": "github:ai4xe/ai4ai",
@@ -428,13 +435,6 @@
       "id": "arxiv:2611.21485",
       "title": "Lost in the Hallway: Benchmarking Persistent Spatial Memory Across Revisits",
       "url": "https://huggingface.co/papers/2611.21485",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.19247",
-      "title": "GameWM: Toward Next-Generation Video Games with Interaction-Centric World Models",
-      "url": "https://huggingface.co/papers/2611.19247",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -502,6 +502,13 @@
       "category": "Training method"
     },
     {
+      "id": "arxiv:2611.26809",
+      "title": "Search From the Start: Search-Native Pretraining for Language Models",
+      "url": "https://huggingface.co/papers/2611.26809",
+      "source": "hf_papers",
+      "category": "Training method"
+    },
+    {
       "id": "arxiv:2611.22495",
       "title": "Motion-Aware Reward Modeling for Instruction-Guided Video Editing",
       "url": "https://huggingface.co/papers/2611.22495",
@@ -514,13 +521,6 @@
       "url": "https://huggingface.co/papers/2611.27211",
       "source": "hf_papers",
       "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.26809",
-      "title": "Search From the Start: Search-Native Pretraining for Language Models",
-      "url": "https://huggingface.co/papers/2611.26809",
-      "source": "hf_papers",
-      "category": "Training method"
     },
     {
       "id": "arxiv:2611.27983",
