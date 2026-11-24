@@ -27,6 +27,17 @@
 	<!-- Menu bar app: no Dock icon, no main menu. -->
 	<key>LSUIElement</key>
 	<true/>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>io.github.turdiyevislombek.aipulse</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>aipulse</string>
+			</array>
+		</dict>
+	</array>
 	<key>NSHumanReadableCopyright</key>
 	<string>Open source. https://github.com/TurdiyevIslombek/news_tracker</string>
 	<key>NSSupportsAutomaticTermination</key>

@@ -19,18 +19,29 @@ ARCHS=(arm64 x86_64)
 if [[ "${1:-}" == "--debug" ]]; then OPT=(-Onone -g); ARCHS=("$(uname -m)"); fi
 
 SOURCES=("$APP_DIR"/Shared/*.swift "$APP_DIR"/AIPulse/*.swift)
+# The widget reuses the shared model/feed/cache/theme code, not the app's store.
+WIDGET_SOURCES=("$APP_DIR"/Shared/{Models,Display,FeedClient,DayCache,Theme}.swift "$APP_DIR"/Widget/*.swift)
 APP="$BUILD/AI Pulse.app"
-rm -rf "$APP" && mkdir -p "$BUILD/obj" "$APP/Contents/MacOS" "$APP/Contents/Resources"
+APPEX="$APP/Contents/PlugIns/AIPulseWidget.appex"
+rm -rf "$APP" && mkdir -p "$BUILD/obj" "$APP/Contents/MacOS" "$APP/Contents/Resources" "$APPEX/Contents/MacOS"
 
-bins=()
+bins=(); wbins=()
 for arch in "${ARCHS[@]}"; do
   echo "• compiling $arch"
   xcrun swiftc "${OPT[@]}" -parse-as-library -swift-version 6 \
     -target "$arch-apple-macosx$MIN_OS" -sdk "$SDK" \
     -module-name AIPulse "${SOURCES[@]}" -o "$BUILD/obj/AIPulse-$arch"
   bins+=("$BUILD/obj/AIPulse-$arch")
+  echo "• compiling widget $arch"
+  xcrun swiftc "${OPT[@]}" -parse-as-library -application-extension -swift-version 6 \
+    -target "$arch-apple-macosx$MIN_OS" -sdk "$SDK" \
+    -module-name AIPulseWidget "${WIDGET_SOURCES[@]}" -o "$BUILD/obj/AIPulseWidget-$arch"
+  wbins+=("$BUILD/obj/AIPulseWidget-$arch")
 done
 lipo -create "${bins[@]}" -output "$APP/Contents/MacOS/AIPulse"
+lipo -create "${wbins[@]}" -output "$APPEX/Contents/MacOS/AIPulseWidget"
+sed -e "s/__VERSION__/$VERSION/" -e "s/__BUILD__/$BUILD_NUM/" \
+  "$APP_DIR/Resources/Widget-Info.plist" > "$APPEX/Contents/Info.plist"
 
 sed -e "s/__VERSION__/$VERSION/" -e "s/__BUILD__/$BUILD_NUM/" \
   "$APP_DIR/Resources/Info.plist" > "$APP/Contents/Info.plist"
@@ -38,5 +49,9 @@ sed -e "s/__VERSION__/$VERSION/" -e "s/__BUILD__/$BUILD_NUM/" \
 
 # Ad-hoc signature (no Apple Developer account needed). Gatekeeper will still ask
 # downloaded copies to be opened via right-click → Open; see README.
+# Sign inside-out: the sandboxed widget first (with its entitlements), then the app.
+codesign --force --sign - --options runtime --timestamp=none \
+  --entitlements "$APP_DIR/Resources/Widget.entitlements" "$APPEX"
 codesign --force --sign - --options runtime --timestamp=none "$APP"
+codesign --verify --deep --strict "$APP"
 echo "✓ $APP ($(lipo -archs "$APP/Contents/MacOS/AIPulse"))"

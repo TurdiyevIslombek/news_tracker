@@ -52,6 +52,13 @@ struct FeedClient: Sendable {
         try await get("index.json", bust: String(Int(Date().timeIntervalSince1970 / 60)))
     }
 
+    /// The newest day in one request (what the widget uses).
+    func latest() async throws -> DayDigest {
+        let day: DayDigest = try await get("latest.json", bust: String(Int(Date().timeIntervalSince1970 / 60)))
+        guard FeedSafety.isDayKey(day.date) else { throw FeedError.badURL }
+        return day
+    }
+
     /// `version` is the day's generated_at from the index, so unchanged days stay cacheable.
     func day(_ date: String, version: String?) async throws -> DayDigest {
         guard FeedSafety.isDayKey(date) else { throw FeedError.badURL }

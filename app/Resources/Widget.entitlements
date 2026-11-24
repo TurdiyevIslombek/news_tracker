@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Widget extensions must be sandboxed. -->
+	<key>com.apple.security.app-sandbox</key>
+	<true/>
+	<!-- Downloads latest.json itself (no App Group without a paid developer account). -->
+	<key>com.apple.security.network.client</key>
+	<true/>
+	<!-- Read the app's feed URL setting. Temporary exceptions are fine outside the
+	     Mac App Store and work with ad-hoc signing. -->
+	<key>com.apple.security.temporary-exception.shared-preference.read-only</key>
+	<array>
+		<string>io.github.turdiyevislombek.aipulse</string>
+	</array>
+</dict>
+</plist>

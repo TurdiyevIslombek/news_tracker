@@ -1,5 +1,6 @@
 import AppKit
 import SwiftUI
+import WidgetKit
 
 @main
 struct AIPulseApp: App {
@@ -34,7 +35,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         if Snapshot.requested { Snapshot.run(store: store, settings: settings); return }
-        settings.onFeedURLChange = { [weak self] url in self?.store.feedURL = url }
+        settings.onFeedURLChange = { [weak self] url in
+            self?.store.feedURL = url
+            WidgetCenter.shared.reloadAllTimelines()   // the widget reads the same setting
+        }
+        // New or updated days: let the widget fetch them now instead of on its next hourly tick.
+        store.onDaysChanged = { WidgetCenter.shared.reloadAllTimelines() }
         Task { await refresh() }
 
         // Waking from sleep: give Wi-Fi a moment, then catch up on missed days.
@@ -66,5 +72,24 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func refresh() async {
         lastAttempt = Date()
         await store.refresh()
+    }
+
+    // MARK: aipulse:// links (the widget header opens the app)
+
+    func application(_ application: NSApplication, open urls: [URL]) {
+        guard urls.contains(where: { $0.scheme == "aipulse" }) else { return }
+        // Let the launch finish if the link is what started us, then show the popover.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { Self.showPopover() }
+    }
+
+    /// SwiftUI's MenuBarExtra has no "open" API; clicking its status item does the same thing.
+    static func showPopover() {
+        for window in NSApp.windows where window.className.contains("NSStatusBarWindow") {
+            if let button = window.contentView?.subviews.compactMap({ $0 as? NSStatusBarButton }).first
+                ?? window.contentView as? NSStatusBarButton {
+                button.performClick(nil)
+                return
+            }
+        }
     }
 }
