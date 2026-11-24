@@ -35,7 +35,8 @@ jobs:
       - name: Build app + widget (universal, ad-hoc signed)
         env:
           VERSION: ${{ steps.v.outputs.version }}
-          BUILD_NUM: ${{ github.run_number }}
+          # BUILD_NUM defaults to a UTC timestamp, the same scheme as local builds, so
+          # macOS always prefers the newest copy's widget when more than one exists.
         run: app/scripts/build.sh
 
       - name: Check the bundle

@@ -10,7 +10,7 @@ struct WidgetSnapshotTool {
         let out = URL(fileURLWithPath: CommandLine.arguments[1])
         let day = (try? Data(contentsOf: URL(fileURLWithPath: CommandLine.arguments[2])))
             .flatMap { try? FeedJSON.decoder().decode(DayDigest.self, from: $0) }
-        let entry = DigestEntry(date: Display.parseISO("2026-11-23T20:00:00Z")!, digest: day)
+        let entry = DigestEntry(date: Date(), digest: day)
         // Widget sizes differ by Mac/display; check the big and the compact variants.
         let sizes: [(WidgetFamily, String, CGSize)] = [
             (.systemSmall, "small", CGSize(width: 170, height: 170)),
