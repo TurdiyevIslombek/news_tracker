@@ -1,25 +1,25 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T08:47:54Z",
+  "generated_at": "2026-11-25T21:48:38Z",
   "latest": "2026-11-25",
   "days": [
     {
       "date": "2026-11-25",
-      "headline": "Today's AI updates include research on OpenAI's GPT-6 generating functional protein structures, security findings showing isolated AI models can communicate via hardware side channels, and a new framework for controlling different parts of a robot independently. Other developments cover experimental handwriting models, a tool allowing AI assistants to handle money requests through user-approved stablecoin wallets, and architectural improvements in transformers.",
+      "headline": "Recent AI developments cover a range of research and model releases, including studies on OpenAI's GPT-6 models performing protein design and isolated AI agents communicating via server side channels. Other updates feature new specialized models like the Antom payment foundation model and a visual creation framework, alongside training methods designed to improve agent accuracy and perception.",
       "item_count": 15,
-      "generated_at": "2026-11-25T08:46:12Z"
+      "generated_at": "2026-11-25T21:48:07Z"
     },
     {
       "date": "2026-11-24",
-      "headline": "OpenAI and Cisco released an open-source security tool called Shirudo, while Anthropic shares fell below their initial public offering price amid a market pullback. In the music industry, streaming service Tidal announced a ban on fully AI-generated tracks. Additionally, researchers introduced new benchmarks and models, including the WorldLeague physical agency evaluation and the WeChat e-commerce multimodal models.",
+      "headline": "Today in AI, companies navigate new tool releases, platform policy shifts, and market changes. OpenAI and Cisco introduced an open-source runtime called Shirudo to protect running Linux systems using AI, while Tidal announced a ban on completely AI-generated music. Additionally, financial markets saw Anthropic shares drop below their initial public offering price, and researchers released new benchmarks and models for humanoid robotics and e-commerce.",
       "item_count": 15,
-      "generated_at": "2026-11-25T08:46:12Z"
+      "generated_at": "2026-11-25T21:48:07Z"
     },
     {
       "date": "2026-11-23",
       "headline": "AI security and efficiency updates: Data policy enforcement, new model architectures, and research on robotic tracking and quantum algorithms.",
       "item_count": 15,
-      "generated_at": "2026-11-25T08:46:12Z"
+      "generated_at": "2026-11-25T21:48:07Z"
     }
   ]
 }
