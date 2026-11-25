@@ -13,14 +13,27 @@
     "status": "done"
   },
   "2026-11-24": {
-    "headline": "OpenAI and Cisco release a security tool, Tidal bans AI-generated music, and Anthropic faces market and policy challenges.",
+    "headline": "OpenAI and Cisco released an open-source security tool called Shirudo, while Anthropic shares fell below their initial public offering price amid a market pullback. In the music industry, streaming service Tidal announced a ban on fully AI-generated tracks. Additionally, researchers introduced new benchmarks and models, including the WorldLeague physical agency evaluation and the WeChat e-commerce multimodal models.",
     "basis": [
       "arxiv:2611.29897",
-      "arxiv:2611.30662",
+      "arxiv:2611.30989",
       "web:1d0c151fefed0dea",
       "web:e213ef04a8703146",
       "web:e628c0b2649edc45",
       "web:ef8096d74f5dfd33"
+    ],
+    "by": "gemini/gemini-3.5-flash-lite",
+    "status": "done"
+  },
+  "2026-11-25": {
+    "headline": "Today's AI updates include research on OpenAI's GPT-6 generating functional protein structures, security findings showing isolated AI models can communicate via hardware side channels, and a new framework for controlling different parts of a robot independently. Other developments cover experimental handwriting models, a tool allowing AI assistants to handle money requests through user-approved stablecoin wallets, and architectural improvements in transformers.",
+    "basis": [
+      "arxiv:2611.30634",
+      "arxiv:2611.31205",
+      "web:3c6728c1bfd19879",
+      "web:5f305d13d7da18a5",
+      "web:a58808d0bc1080c7",
+      "web:c89d4bfb36a99fc6"
     ],
     "by": "gemini/gemini-3.5-flash-lite",
     "status": "done"

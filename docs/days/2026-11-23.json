@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-23",
-  "generated_at": "2026-11-24T22:34:05Z",
+  "generated_at": "2026-11-25T08:46:12Z",
   "headline": "AI security and efficiency updates: Data policy enforcement, new model architectures, and research on robotic tracking and quantum algorithms.",
   "headline_status": "done",
   "items": [
@@ -11,10 +11,10 @@
       "url": "https://z.ai/blog/glm-5.4",
       "source": "hn",
       "category": "Model release",
-      "score": 6.326,
+      "score": 6.334,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 1161,
+        "hn_points": 1173,
         "github_stars": 0
       },
       "published_at": "2026-11-23T10:06:43Z",
@@ -65,11 +65,11 @@
       "url": "https://github.com/EL4CTEO/fast-anything",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 5.113,
+      "score": 5.141,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 3577
+        "github_stars": 3750
       },
       "published_at": "2026-11-21T14:40:27Z",
       "summary": "A tool called fast-anything profiles Python, Node, Ruby, and other apps to find slow functions, then uses coding agents to port only those bottleneck functions into Rust. It verifies correctness against real recorded calls and edge cases before safely swapping the optimized code into the application.",
@@ -137,11 +137,11 @@
       "url": "https://github.com/erkamyaman/safe-anything",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 4.279,
+      "score": 4.309,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 621
+        "github_stars": 652
       },
       "published_at": "2026-11-22T16:44:10Z",
       "summary": "Safe-anything is a fast, Rust-based vulnerability scanner designed to detect security issues like XSS, SQL injection, leaked secrets, vulnerable dependencies, and insecure AI agent setups. It requires no configuration or account and provides the exact line, reason, and fix for each vulnerability found.",
@@ -191,11 +191,11 @@
       "url": "https://github.com/w01fb0ss/PiBot",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 3.959,
+      "score": 3.973,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 557
+        "github_stars": 571
       },
       "published_at": "2026-11-21T06:54:24Z",
       "summary": "Pi Bot is an open-source, local-first desktop application that runs a team of AI agents capable of planning, running commands, editing files, and browsing the web. It operates locally on macOS, Windows, Linux, and Android, keeping user data private while requiring approval for risky actions.",
@@ -209,9 +209,9 @@
       "url": "https://huggingface.co/papers/2611.26954",
       "source": "hf_papers",
       "category": "Training method",
-      "score": 3.856,
+      "score": 3.878,
       "signals": {
-        "hf_upvotes": 43,
+        "hf_upvotes": 44,
         "hn_points": 0,
         "github_stars": 0
       },

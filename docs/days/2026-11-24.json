@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T22:34:05Z",
-  "headline": "OpenAI and Cisco release a security tool, Tidal bans AI-generated music, and Anthropic faces market and policy challenges.",
+  "generated_at": "2026-11-25T08:46:12Z",
+  "headline": "OpenAI and Cisco released an open-source security tool called Shirudo, while Anthropic shares fell below their initial public offering price amid a market pullback. In the music industry, streaming service Tidal announced a ban on fully AI-generated tracks. Additionally, researchers introduced new benchmarks and models, including the WorldLeague physical agency evaluation and the WeChat e-commerce multimodal models.",
   "headline_status": "done",
   "items": [
     {
@@ -11,10 +11,10 @@
       "url": "https://openai.com/index/introducing-shirudo",
       "source": "blog:openai",
       "category": "Tool / Open source",
-      "score": 8.041,
+      "score": 8.031,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 83,
+        "hn_points": 84,
         "github_stars": 0
       },
       "published_at": "2026-11-23T21:20:00Z",
@@ -29,10 +29,10 @@
       "url": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/",
       "source": "hn",
       "category": "Tool / Open source",
-      "score": 6.152,
+      "score": 6.229,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 845,
+        "hn_points": 966,
         "github_stars": 0
       },
       "published_at": "2026-11-24T12:40:15Z",
@@ -42,14 +42,32 @@
       "summary_status": "done"
     },
     {
+      "id": "web:e628c0b2649edc45",
+      "title": "Anthropic breaks below $83 IPO price",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-24/anthropic-breaks-below-83-ipo-price-in-premarket-trading",
+      "source": "hn",
+      "category": "Industry",
+      "score": 5.516,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 388,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-24T13:23:47Z",
+      "summary": "Anthropic shares dropped below their $83 initial public offering price, closing down 6.5% amid a broader market pullback. This erases initial gains from the artificial intelligence lab's market debut.",
+      "why_it_matters": "It marks a notable financial milestone for a major AI lab facing typical stock market fluctuations after a major public offering.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
       "id": "arxiv:2611.29897",
       "title": "Motion Mamba 2.0: Autoregressive Diffusion Mamba for Long-Horizon Humanoid Control",
       "url": "https://huggingface.co/papers/2611.29897",
       "source": "hf_papers",
       "category": "Research",
-      "score": 5.436,
+      "score": 5.514,
       "signals": {
-        "hf_upvotes": 171,
+        "hf_upvotes": 187,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -60,15 +78,33 @@
       "summary_status": "done"
     },
     {
+      "id": "arxiv:2611.30989",
+      "title": "WorldLeague: Benchmarking Physical Agency",
+      "url": "https://huggingface.co/papers/2611.30989",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 5.455,
+      "signals": {
+        "hf_upvotes": 139,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-24T00:00:00Z",
+      "summary": "WorldLeague is a new benchmark that compares AI systems across 60 simulated robot tasks requiring perception, memory, planning, and action. It measures progress and success rates to create a Physical Agency Profile for different models like vision-language models and vision-language-action models. Testing 13 representative AI systems revealed varying capabilities in autonomous physical goal completion and interactive scoring.",
+      "why_it_matters": "It establishes a standardized way to evaluate and compare the autonomous physical agency and goal-achieving capabilities of various AI systems.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
       "id": "web:e213ef04a8703146",
       "title": "Tidal bans AI-generated music",
       "url": "https://variety.com/2026/music/news/tidal-bans-ai-generated-music-1236956924/",
       "source": "hn",
       "category": "Industry",
-      "score": 5.43,
+      "score": 5.435,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 310,
+        "hn_points": 325,
         "github_stars": 0
       },
       "published_at": "2026-11-24T16:12:38Z",
@@ -83,9 +119,9 @@
       "url": "https://huggingface.co/papers/2611.30662",
       "source": "hf_papers",
       "category": "Model release",
-      "score": 5.368,
+      "score": 5.39,
       "signals": {
-        "hf_upvotes": 52,
+        "hf_upvotes": 54,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -96,33 +132,15 @@
       "summary_status": "done"
     },
     {
-      "id": "web:e628c0b2649edc45",
-      "title": "Anthropic breaks below $83 IPO price",
-      "url": "https://www.bloomberg.com/news/articles/2026-11-24/anthropic-breaks-below-83-ipo-price-in-premarket-trading",
-      "source": "hn",
-      "category": "Industry",
-      "score": 5.3,
-      "signals": {
-        "hf_upvotes": 0,
-        "hn_points": 285,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-24T13:23:47Z",
-      "summary": "Anthropic shares dropped below their $83 initial public offering price, closing down 6.5% amid a broader market pullback. This erases initial gains from the artificial intelligence lab's market debut.",
-      "why_it_matters": "It marks a notable financial milestone for a major AI lab facing typical stock market fluctuations after a major public offering.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
       "id": "hn:50630809",
       "title": "Ask HN: Anthropic is accusing my company of distilling. How can I prove I'm not?",
       "url": "https://news.ycombinator.com/item?id=50630809",
       "source": "hn",
       "category": "Industry",
-      "score": 5.098,
+      "score": 5.279,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 201,
+        "hn_points": 263,
         "github_stars": 0
       },
       "published_at": "2026-11-24T16:45:44Z",
@@ -137,10 +155,10 @@
       "url": "https://novaramedia.com/2026/11/24/anthropic-staff-openly-talk-about-taking-over-the-world-claims-top-mit-physicist/",
       "source": "hn",
       "category": "Industry",
-      "score": 5.063,
+      "score": 5.128,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 190,
+        "hn_points": 215,
         "github_stars": 0
       },
       "published_at": "2026-11-24T17:10:45Z",
@@ -155,9 +173,9 @@
       "url": "https://huggingface.co/papers/2611.31201",
       "source": "hf_papers",
       "category": "Research",
-      "score": 5.045,
+      "score": 5.109,
       "signals": {
-        "hf_upvotes": 90,
+        "hf_upvotes": 98,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -168,32 +186,14 @@
       "summary_status": "done"
     },
     {
-      "id": "arxiv:2611.30989",
-      "title": "WorldLeague: Benchmarking Physical Agency",
-      "url": "https://huggingface.co/papers/2611.30989",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 4.852,
-      "signals": {
-        "hf_upvotes": 74,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-24T00:00:00Z",
-      "summary": "WorldLeague is a new benchmark that compares AI systems across 60 simulated robot tasks requiring perception, memory, planning, and action. It measures progress and success rates to create a Physical Agency Profile for different models like vision-language models and vision-language-action models. Testing 13 representative AI systems revealed varying capabilities in autonomous physical goal completion and interactive scoring.",
-      "why_it_matters": "It establishes a standardized way to evaluate and compare the autonomous physical agency and goal-achieving capabilities of various AI systems.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
       "id": "arxiv:2611.29338",
       "title": "A Glimpse of Training VLMs as Foundation Models for Robotic Manipulation",
       "url": "https://huggingface.co/papers/2611.29338",
       "source": "hf_papers",
       "category": "Training method",
-      "score": 4.523,
+      "score": 4.539,
       "signals": {
-        "hf_upvotes": 53,
+        "hf_upvotes": 55,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -209,9 +209,9 @@
       "url": "https://huggingface.co/papers/2611.12164",
       "source": "hf_papers",
       "category": "Training method",
-      "score": 4.485,
+      "score": 4.484,
       "signals": {
-        "hf_upvotes": 51,
+        "hf_upvotes": 52,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -227,9 +227,9 @@
       "url": "https://huggingface.co/papers/2611.30013",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.369,
+      "score": 4.374,
       "signals": {
-        "hf_upvotes": 57,
+        "hf_upvotes": 58,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -245,9 +245,9 @@
       "url": "https://huggingface.co/papers/2611.26389",
       "source": "hf_papers",
       "category": "Training method",
-      "score": 4.145,
+      "score": 4.251,
       "signals": {
-        "hf_upvotes": 36,
+        "hf_upvotes": 41,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -258,20 +258,20 @@
       "summary_status": "done"
     },
     {
-      "id": "arxiv:2611.26516",
-      "title": "Plan4D: Generative Plannable 4D Worlds",
-      "url": "https://huggingface.co/papers/2611.26516",
+      "id": "arxiv:2611.30254",
+      "title": "Innata-0: A Native Embodied World System with Model-Agent Co-Design",
+      "url": "https://huggingface.co/papers/2611.30254",
       "source": "hf_papers",
       "category": "Research",
-      "score": 3.902,
+      "score": 4.069,
       "signals": {
-        "hf_upvotes": 28,
+        "hf_upvotes": 34,
         "hn_points": 0,
         "github_stars": 0
       },
       "published_at": "2026-11-24T00:00:00Z",
-      "summary": "Plan4D is a generative world model designed to predict future RGB videos along with dense 4D geometry, including depth, cameras, and point clouds. By combining foundational video generators and 3D reconstructors using a model-stitching architecture, it enables long-horizon action planning in dynamic 3D environments.",
-      "why_it_matters": "It improves the physical and geometric accuracy of AI-generated future video scenes.",
+      "summary": "Researchers introduce Innata-0, a system designed to improve how robots interact with the physical world by jointly developing a world-action model and an agent. The system uses a specialized architecture to handle scene understanding, environmental prediction, and action generation while coordinating long-term tasks with memory and recovery features.",
+      "why_it_matters": "It aims to bridge the gap between high-level task planning and physical robot control for more reliable robotic intelligence.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     }
@@ -313,11 +313,11 @@
       "category": "Industry"
     },
     {
-      "id": "arxiv:2602.20031",
-      "title": "Latent Introspection: LLMs Can Detect Prior Concept Injections",
-      "url": "https://arxiv.org/abs/2602.20031",
-      "source": "hn",
-      "category": "Research"
+      "id": "arxiv:2611.27376",
+      "title": "Composable Soft-Prompt Distillation of RL Experts: Toward Continual Post-Training",
+      "url": "https://huggingface.co/papers/2611.27376",
+      "source": "hf_papers",
+      "category": "Training method"
     },
     {
       "id": "github:developing-gamer/agent-sim",
@@ -327,18 +327,25 @@
       "category": "Tool / Open source"
     },
     {
+      "id": "arxiv:2602.20031",
+      "title": "Latent Introspection: LLMs Can Detect Prior Concept Injections",
+      "url": "https://arxiv.org/abs/2602.20031",
+      "source": "hn",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.26516",
+      "title": "Plan4D: Generative Plannable 4D Worlds",
+      "url": "https://huggingface.co/papers/2611.26516",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "web:def54c97ba9e3192",
       "title": "How to Run NVIDIA Cosmos 3 on Local AI Devices Using Hugging Face Diffusers",
       "url": "https://developer.nvidia.com/blog/how-to-run-nvidia-cosmos-3-on-local-ai-devices-using-hugging-face-diffusers/",
       "source": "blog:nvidia",
       "category": "Industry"
-    },
-    {
-      "id": "arxiv:2611.27376",
-      "title": "Composable Soft-Prompt Distillation of RL Experts: Toward Continual Post-Training",
-      "url": "https://huggingface.co/papers/2611.27376",
-      "source": "hf_papers",
-      "category": "Training method"
     },
     {
       "id": "web:16565a3f5dc091b0",
@@ -355,11 +362,18 @@
       "category": "Industry"
     },
     {
-      "id": "web:3c6728c1bfd19879",
-      "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
-      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
-      "source": "blog:openai",
-      "category": "Industry"
+      "id": "arxiv:2611.31209",
+      "title": "WorldLatent: A Unified 4D Latent Space for World Perception and Generation",
+      "url": "https://huggingface.co/papers/2611.31209",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.30898",
+      "title": "World Models as Native Latent Action Models",
+      "url": "https://huggingface.co/papers/2611.30898",
+      "source": "hf_papers",
+      "category": "Research"
     },
     {
       "id": "arxiv:2611.30581",
@@ -376,9 +390,16 @@
       "category": "Industry"
     },
     {
-      "id": "arxiv:2611.30898",
-      "title": "World Models as Native Latent Action Models",
-      "url": "https://huggingface.co/papers/2611.30898",
+      "id": "github:el4cteo/shrink-anything",
+      "title": "EL4CTEO/shrink-anything: Less code, same tests passing: delete the dead code, files, dependencies and assets in any codebase, and keep each ",
+      "url": "https://github.com/EL4CTEO/shrink-anything",
+      "source": "github",
+      "category": "Tool / Open source"
+    },
+    {
+      "id": "arxiv:2611.28202",
+      "title": "AutoPILOT: A Visual Agent Harness for Real-Time Gameplay",
+      "url": "https://huggingface.co/papers/2611.28202",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -390,11 +411,11 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.28202",
-      "title": "AutoPILOT: A Visual Agent Harness for Real-Time Gameplay",
-      "url": "https://huggingface.co/papers/2611.28202",
+      "id": "arxiv:2611.28618",
+      "title": "Distilling Visual Agents from Limited Interaction Experience",
+      "url": "https://huggingface.co/papers/2611.28618",
       "source": "hf_papers",
-      "category": "Research"
+      "category": "Training method"
     },
     {
       "id": "web:ec442b764e041cd2",
@@ -411,20 +432,6 @@
       "category": "Industry"
     },
     {
-      "id": "arxiv:2611.28618",
-      "title": "Distilling Visual Agents from Limited Interaction Experience",
-      "url": "https://huggingface.co/papers/2611.28618",
-      "source": "hf_papers",
-      "category": "Training method"
-    },
-    {
-      "id": "arxiv:2611.30597",
-      "title": "ViDiHand2: Unifying Video Diffusion Priors and Hand Geometry for 3D Hand Motion Reconstruction in the Wild",
-      "url": "https://huggingface.co/papers/2611.30597",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
       "id": "arxiv:2611.25419",
       "title": "DiLE: Discrimination-Aware Latent-Space Learning for Universal Multimodal Embeddings",
       "url": "https://huggingface.co/papers/2611.25419",
@@ -432,18 +439,11 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.31209",
-      "title": "WorldLatent: A Unified 4D Latent Space for World Perception and Generation",
-      "url": "https://huggingface.co/papers/2611.31209",
+      "id": "arxiv:2611.30597",
+      "title": "ViDiHand2: Unifying Video Diffusion Priors and Hand Geometry for 3D Hand Motion Reconstruction in the Wild",
+      "url": "https://huggingface.co/papers/2611.30597",
       "source": "hf_papers",
       "category": "Research"
-    },
-    {
-      "id": "github:el4cteo/shrink-anything",
-      "title": "EL4CTEO/shrink-anything: Less code, same tests passing: delete the dead code, files, dependencies and assets in any codebase, and keep each ",
-      "url": "https://github.com/EL4CTEO/shrink-anything",
-      "source": "github",
-      "category": "Tool / Open source"
     },
     {
       "id": "arxiv:2611.29355",
@@ -474,13 +474,6 @@
       "category": "Industry"
     },
     {
-      "id": "arxiv:2611.25476",
-      "title": "WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming",
-      "url": "https://huggingface.co/papers/2611.25476",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
       "id": "arxiv:2611.26358",
       "title": "Beam Model Technical Report",
       "url": "https://huggingface.co/papers/2611.26358",
@@ -488,16 +481,23 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.30495",
-      "title": "DexDuet: Learning Contact-Preserving Bimanual Dexterity from Human Demonstrations",
-      "url": "https://huggingface.co/papers/2611.30495",
+      "id": "arxiv:2611.29064",
+      "title": "Single-Transformer Latent Diffusion",
+      "url": "https://huggingface.co/papers/2611.29064",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.29064",
-      "title": "Single-Transformer Latent Diffusion",
-      "url": "https://huggingface.co/papers/2611.29064",
+      "id": "arxiv:2611.25476",
+      "title": "WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming",
+      "url": "https://huggingface.co/papers/2611.25476",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.30495",
+      "title": "DexDuet: Learning Contact-Preserving Bimanual Dexterity from Human Demonstrations",
+      "url": "https://huggingface.co/papers/2611.30495",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -516,6 +516,34 @@
       "category": "Research"
     },
     {
+      "id": "arxiv:2611.31198",
+      "title": "ToolSmith: An Automatic Tool-Generation Framework for Multimodal Search Agents",
+      "url": "https://huggingface.co/papers/2611.31198",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27319",
+      "title": "SAVIOR: Sample-efficient Adaptation of Vision-Language Models for OCR Representation",
+      "url": "https://huggingface.co/papers/2611.27319",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.31094",
+      "title": "Unlocking the Power of Loops in Pretrained LLMs with Loop Residuals",
+      "url": "https://huggingface.co/papers/2611.31094",
+      "source": "hf_papers",
+      "category": "Training method"
+    },
+    {
+      "id": "arxiv:2611.31015",
+      "title": "Can Latent Reasoning Drive LLM Outputs Without a Trace?",
+      "url": "https://huggingface.co/papers/2611.31015",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "github:w1ccc/sap-data-mcp",
       "title": "w1ccc/sap-data-mcp: Read-only MCP servers that let AI assistants query SAP S/4HANA through RFC/BAPI, private-cloud OData and public-cloud re",
       "url": "https://github.com/w1ccc/sap-data-mcp",
@@ -528,34 +556,6 @@
       "url": "https://huggingface.co/papers/2611.29238",
       "source": "hf_papers",
       "category": "Tool / Open source"
-    },
-    {
-      "id": "arxiv:2611.31015",
-      "title": "Can Latent Reasoning Drive LLM Outputs Without a Trace?",
-      "url": "https://huggingface.co/papers/2611.31015",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.30813",
-      "title": "HIVE-Bench: Evaluating Patch-Level Visual Representations for Egocentric Robot Manipulation",
-      "url": "https://huggingface.co/papers/2611.30813",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "github:gf007/game-rebuild-kit",
-      "title": "GF007/game-rebuild-kit: AI-assisted game analysis and reconstruction, working toward one-click workflows for any game.",
-      "url": "https://github.com/GF007/game-rebuild-kit",
-      "source": "github",
-      "category": "Tool / Open source"
-    },
-    {
-      "id": "arxiv:2611.31198",
-      "title": "ToolSmith: An Automatic Tool-Generation Framework for Multimodal Search Agents",
-      "url": "https://huggingface.co/papers/2611.31198",
-      "source": "hf_papers",
-      "category": "Research"
     }
   ]
 }

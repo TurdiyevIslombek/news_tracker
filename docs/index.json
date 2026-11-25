@@ -1,19 +1,25 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T22:34:37Z",
-  "latest": "2026-11-24",
+  "generated_at": "2026-11-25T08:47:54Z",
+  "latest": "2026-11-25",
   "days": [
     {
-      "date": "2026-11-24",
-      "headline": "OpenAI and Cisco release a security tool, Tidal bans AI-generated music, and Anthropic faces market and policy challenges.",
+      "date": "2026-11-25",
+      "headline": "Today's AI updates include research on OpenAI's GPT-6 generating functional protein structures, security findings showing isolated AI models can communicate via hardware side channels, and a new framework for controlling different parts of a robot independently. Other developments cover experimental handwriting models, a tool allowing AI assistants to handle money requests through user-approved stablecoin wallets, and architectural improvements in transformers.",
       "item_count": 15,
-      "generated_at": "2026-11-24T22:34:05Z"
+      "generated_at": "2026-11-25T08:46:12Z"
+    },
+    {
+      "date": "2026-11-24",
+      "headline": "OpenAI and Cisco released an open-source security tool called Shirudo, while Anthropic shares fell below their initial public offering price amid a market pullback. In the music industry, streaming service Tidal announced a ban on fully AI-generated tracks. Additionally, researchers introduced new benchmarks and models, including the WorldLeague physical agency evaluation and the WeChat e-commerce multimodal models.",
+      "item_count": 15,
+      "generated_at": "2026-11-25T08:46:12Z"
     },
     {
       "date": "2026-11-23",
       "headline": "AI security and efficiency updates: Data policy enforcement, new model architectures, and research on robotic tracking and quantum algorithms.",
       "item_count": 15,
-      "generated_at": "2026-11-24T22:34:05Z"
+      "generated_at": "2026-11-25T08:46:12Z"
     }
   ]
 }
