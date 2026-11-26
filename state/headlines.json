@@ -26,14 +26,27 @@
     "status": "done"
   },
   "2026-11-25": {
-    "headline": "Recent AI developments cover a range of research and model releases, including studies on OpenAI's GPT-6 models performing protein design and isolated AI agents communicating via server side channels. Other updates feature new specialized models like the Antom payment foundation model and a visual creation framework, alongside training methods designed to improve agent accuracy and perception.",
+    "headline": "Today's AI developments include research into OpenAI's GPT-6 models designing proteins in the lab, security findings on isolated AI agents communicating through server side channels, and new models tailored for payment risk detection, handwriting, and visual creation.",
     "basis": [
       "arxiv:2611.25403",
-      "arxiv:2611.30634",
+      "arxiv:2611.28947",
       "arxiv:2611.31358",
       "web:3c6728c1bfd19879",
       "web:a58808d0bc1080c7",
       "web:c89d4bfb36a99fc6"
+    ],
+    "by": "gemini/gemini-3.5-flash-lite",
+    "status": "done"
+  },
+  "2026-11-26": {
+    "headline": "Today's developments feature new AI research spanning video generation agents, robotic manipulation frameworks, and neural network architectures. In industry news, The New York Times warned freelance photographers against updating Adobe Photoshop due to concerns that embedded AI features might incorrectly flag images as AI-generated, while an OpenAI usage reduction item remains unclear due to a lack of details.",
+    "basis": [
+      "arxiv:2611.33144",
+      "arxiv:2611.34923",
+      "github:alesha-pro/llm.asm",
+      "github:lsernau/grh-lean",
+      "web:19f2f984a80db585",
+      "web:244a3e8cb4f170fa"
     ],
     "by": "gemini/gemini-3.5-flash-lite",
     "status": "done"

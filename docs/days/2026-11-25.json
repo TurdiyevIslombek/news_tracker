@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "date": "2026-11-25",
-  "generated_at": "2026-11-25T21:48:07Z",
-  "headline": "Recent AI developments cover a range of research and model releases, including studies on OpenAI's GPT-6 models performing protein design and isolated AI agents communicating via server side channels. Other updates feature new specialized models like the Antom payment foundation model and a visual creation framework, alongside training methods designed to improve agent accuracy and perception.",
+  "generated_at": "2026-11-26T08:31:23Z",
+  "headline": "Today's AI developments include research into OpenAI's GPT-6 models designing proteins in the lab, security findings on isolated AI agents communicating through server side channels, and new models tailored for payment risk detection, handwriting, and visual creation.",
   "headline_status": "done",
   "items": [
     {
@@ -11,10 +11,10 @@
       "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
       "source": "blog:openai",
       "category": "Research",
-      "score": 9.084,
+      "score": 9.076,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 347,
+        "hn_points": 354,
         "github_stars": 0
       },
       "published_at": "2026-11-24T13:00:00Z",
@@ -29,10 +29,10 @@
       "url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being",
       "source": "hn",
       "category": "Research",
-      "score": 5.435,
+      "score": 5.453,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 428,
+        "hn_points": 457,
         "github_stars": 0
       },
       "published_at": "2026-11-25T02:34:21Z",
@@ -47,10 +47,10 @@
       "url": "https://greydanus.github.io/2026/11/12/pengpt/",
       "source": "hn",
       "category": "Research",
-      "score": 5.318,
+      "score": 5.32,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 382,
+        "hn_points": 399,
         "github_stars": 0
       },
       "published_at": "2026-11-25T00:54:49Z",
@@ -65,7 +65,7 @@
       "url": "https://huggingface.co/papers/2611.31358",
       "source": "hf_papers",
       "category": "Model release",
-      "score": 5.231,
+      "score": 5.215,
       "signals": {
         "hf_upvotes": 51,
         "hn_points": 0,
@@ -83,9 +83,9 @@
       "url": "https://huggingface.co/papers/2611.25403",
       "source": "hf_papers",
       "category": "Model release",
-      "score": 5.151,
+      "score": 5.177,
       "signals": {
-        "hf_upvotes": 99,
+        "hf_upvotes": 105,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -96,32 +96,14 @@
       "summary_status": "done"
     },
     {
-      "id": "arxiv:2611.30634",
-      "title": "Rewirable Circuits in Transformers with Loom Attention",
-      "url": "https://huggingface.co/papers/2611.30634",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 4.988,
-      "signals": {
-        "hf_upvotes": 84,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-25T00:00:00Z",
-      "summary": "Researchers introduce loom attention, a mechanism that lets a Transformer dynamically rewire its circuits at every token by combining vertical and horizontal attention. This forms a dual-stream architecture called LoomFormer, which splits control and content between vector and matrix streams. Experiments show that LoomFormer matches standard Transformers trained with significantly more compute.",
-      "why_it_matters": "This new architecture improves language modeling efficiency, achieving strong performance gains while using only a fraction of extra compute.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
       "id": "arxiv:2611.28947",
       "title": "Don't Sleep, Keep Watch: Proactive Perception for Computer-Use Agents",
       "url": "https://huggingface.co/papers/2611.28947",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.988,
+      "score": 5.119,
       "signals": {
-        "hf_upvotes": 84,
+        "hf_upvotes": 99,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -132,14 +114,32 @@
       "summary_status": "done"
     },
     {
+      "id": "arxiv:2611.30634",
+      "title": "Rewirable Circuits in Transformers with Loom Attention",
+      "url": "https://huggingface.co/papers/2611.30634",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 5.024,
+      "signals": {
+        "hf_upvotes": 90,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-25T00:00:00Z",
+      "summary": "Researchers introduce loom attention, a mechanism that lets a Transformer dynamically rewire its circuits at every token by combining vertical and horizontal attention. This forms a dual-stream architecture called LoomFormer, which splits control and content between vector and matrix streams. Experiments show that LoomFormer matches standard Transformers trained with significantly more compute.",
+      "why_it_matters": "This new architecture improves language modeling efficiency, achieving strong performance gains while using only a fraction of extra compute.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
       "id": "arxiv:2611.32884",
       "title": "Lazy Agents Answer Against Their Own Beliefs: Reinforcement Learning with Verifiable Beliefs Teaches Them to Act on What They Believe",
       "url": "https://huggingface.co/papers/2611.32884",
       "source": "hf_papers",
       "category": "Training method",
-      "score": 4.918,
+      "score": 5.01,
       "signals": {
-        "hf_upvotes": 87,
+        "hf_upvotes": 98,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -155,10 +155,10 @@
       "url": "https://www.comentr.com/technology/01M88DWQ0R4NCMYR17AFEWRG1F",
       "source": "hn",
       "category": "Industry",
-      "score": 4.9,
+      "score": 4.882,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 212,
+        "hn_points": 217,
         "github_stars": 0
       },
       "published_at": "2026-11-25T04:03:33Z",
@@ -173,9 +173,9 @@
       "url": "https://huggingface.co/papers/2611.31205",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.673,
+      "score": 4.672,
       "signals": {
-        "hf_upvotes": 61,
+        "hf_upvotes": 63,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -191,10 +191,10 @@
       "url": "https://noahbuilt.it/writing/qwen-on-5600-lambdas",
       "source": "hn",
       "category": "Industry",
-      "score": 4.483,
+      "score": 4.478,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 127,
+        "hn_points": 132,
         "github_stars": 0
       },
       "published_at": "2026-11-25T03:28:06Z",
@@ -209,7 +209,7 @@
       "url": "https://jayd.ml/2026/11/14/rockbox-on-yp3.html",
       "source": "hn",
       "category": "Tool / Open source",
-      "score": 4.466,
+      "score": 4.447,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 174,
@@ -227,9 +227,9 @@
       "url": "https://huggingface.co/papers/2611.30962",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.374,
+      "score": 4.425,
       "signals": {
-        "hf_upvotes": 45,
+        "hf_upvotes": 49,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -245,7 +245,7 @@
       "url": "https://huggingface.co/papers/2611.28649",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.283,
+      "score": 4.251,
       "signals": {
         "hf_upvotes": 41,
         "hn_points": 0,
@@ -263,7 +263,7 @@
       "url": "https://huggingface.co/papers/2611.25509",
       "source": "hf_papers",
       "category": "Model release",
-      "score": 3.98,
+      "score": 3.947,
       "signals": {
         "hf_upvotes": 30,
         "hn_points": 0,
@@ -299,18 +299,25 @@
       "category": "Industry"
     },
     {
-      "id": "web:59b73359242c586e",
-      "title": "How to Optimize NVFP4 Attention on NVIDIA RTX Blackwell Through Register Recycling",
-      "url": "https://developer.nvidia.com/blog/how-to-optimize-nvfp4-attention-on-nvidia-rtx-blackwell-through-register-recycling/",
-      "source": "blog:nvidia",
-      "category": "Industry"
-    },
-    {
       "id": "arxiv:2611.32554",
       "title": "PartAgent: Agentic 3D Part Segmentation via Expert Integration and Closed-Loop Refinement",
       "url": "https://huggingface.co/papers/2611.32554",
       "source": "hf_papers",
       "category": "Tool / Open source"
+    },
+    {
+      "id": "arxiv:2611.33010",
+      "title": "Embodied AI Fails the Mirror Test: How a Simple Mirror Breaks Robot Policies",
+      "url": "https://huggingface.co/papers/2611.33010",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "web:59b73359242c586e",
+      "title": "How to Optimize NVFP4 Attention on NVIDIA RTX Blackwell Through Register Recycling",
+      "url": "https://developer.nvidia.com/blog/how-to-optimize-nvfp4-attention-on-nvidia-rtx-blackwell-through-register-recycling/",
+      "source": "blog:nvidia",
+      "category": "Industry"
     },
     {
       "id": "web:37b5c9ba93266751",
@@ -327,9 +334,9 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.33010",
-      "title": "Embodied AI Fails the Mirror Test: How a Simple Mirror Breaks Robot Policies",
-      "url": "https://huggingface.co/papers/2611.33010",
+      "id": "arxiv:2611.32617",
+      "title": "VenusOCR2.0: Towards Efficient and Effective Document Parsing",
+      "url": "https://huggingface.co/papers/2611.32617",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -341,25 +348,11 @@
       "category": "Industry"
     },
     {
-      "id": "arxiv:2611.32617",
-      "title": "VenusOCR2.0: Towards Efficient and Effective Document Parsing",
-      "url": "https://huggingface.co/papers/2611.32617",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
       "id": "github:matheusmongarde/garimpo",
       "title": "matheusmongarde/garimpo: Prospecção open source do Google Maps ao Pix: acha negócios no Maps, gera um site-prévia com o nome de cada um, con",
       "url": "https://github.com/matheusmongarde/garimpo",
       "source": "github",
       "category": "Tool / Open source"
-    },
-    {
-      "id": "web:d8d6777ecf090783",
-      "title": "Hill-climbing Inkling 2 Mini inference on one RTX PRO 6000",
-      "url": "https://huggingface.co/blog/inkling-2-mini-inference-hillclimb",
-      "source": "blog:huggingface",
-      "category": "Industry"
     },
     {
       "id": "arxiv:2611.28719",
@@ -369,16 +362,23 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.32183",
-      "title": "ThinkMorph-SSL: Scaling Interleaved Multimodal Reasoning with Pretext Tasks",
-      "url": "https://huggingface.co/papers/2611.32183",
+      "id": "arxiv:2611.32736",
+      "title": "Qwen-Image-HD: Autoregressive Diffusion for High Definition Image Generation",
+      "url": "https://huggingface.co/papers/2611.32736",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.32736",
-      "title": "Qwen-Image-HD: Autoregressive Diffusion for High Definition Image Generation",
-      "url": "https://huggingface.co/papers/2611.32736",
+      "id": "web:d8d6777ecf090783",
+      "title": "Hill-climbing Inkling 2 Mini inference on one RTX PRO 6000",
+      "url": "https://huggingface.co/blog/inkling-2-mini-inference-hillclimb",
+      "source": "blog:huggingface",
+      "category": "Industry"
+    },
+    {
+      "id": "arxiv:2611.32183",
+      "title": "ThinkMorph-SSL: Scaling Interleaved Multimodal Reasoning with Pretext Tasks",
+      "url": "https://huggingface.co/papers/2611.32183",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -404,18 +404,18 @@
       "category": "Research"
     },
     {
-      "id": "web:99b93f3e10984935",
-      "title": "Clay helps sales teams win with Codex and ChatGPT",
-      "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
-      "source": "blog:openai",
-      "category": "Industry"
-    },
-    {
       "id": "arxiv:2611.30986",
       "title": "Reinforcing Diffusion Models by Instantaneous Trajectory Distribution Matching",
       "url": "https://huggingface.co/papers/2611.30986",
       "source": "hf_papers",
       "category": "Research"
+    },
+    {
+      "id": "web:99b93f3e10984935",
+      "title": "Clay helps sales teams win with Codex and ChatGPT",
+      "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+      "source": "blog:openai",
+      "category": "Industry"
     },
     {
       "id": "arxiv:2611.33148",
@@ -425,16 +425,16 @@
       "category": "Training method"
     },
     {
-      "id": "arxiv:2611.30149",
-      "title": "LeadVLA: Learning Follower-Aware Route Execution for Robot Leading",
-      "url": "https://huggingface.co/papers/2611.30149",
+      "id": "arxiv:2611.32973",
+      "title": "SpecEngineeringBench: Evaluating Coding Agents as Autonomous Specification Engineers",
+      "url": "https://huggingface.co/papers/2611.32973",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.30219",
-      "title": "RoomTokens: Masked Diffusion over Structured Tokens for Indoor Scene Synthesis",
-      "url": "https://huggingface.co/papers/2611.30219",
+      "id": "arxiv:2611.30149",
+      "title": "LeadVLA: Learning Follower-Aware Route Execution for Robot Leading",
+      "url": "https://huggingface.co/papers/2611.30149",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -453,9 +453,9 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.32973",
-      "title": "SpecEngineeringBench: Evaluating Coding Agents as Autonomous Specification Engineers",
-      "url": "https://huggingface.co/papers/2611.32973",
+      "id": "arxiv:2611.30219",
+      "title": "RoomTokens: Masked Diffusion over Structured Tokens for Indoor Scene Synthesis",
+      "url": "https://huggingface.co/papers/2611.30219",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -463,6 +463,20 @@
       "id": "arxiv:2611.31974",
       "title": "Coding4Games: Can Modern Coding Agents Play Modern Video Games?",
       "url": "https://huggingface.co/papers/2611.31974",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2510.22622",
+      "title": "Mega-MMDF and DeepfakeBench-MM: Benchmarking Multimodal Deepfake Detection Across Diverse Forgery Pipelines",
+      "url": "https://huggingface.co/papers/2510.22622",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.32820",
+      "title": "Residual Guidance for Real-Time Interactive Video Generation",
+      "url": "https://huggingface.co/papers/2611.32820",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -481,16 +495,9 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.32820",
-      "title": "Residual Guidance for Real-Time Interactive Video Generation",
-      "url": "https://huggingface.co/papers/2611.32820",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2510.22622",
-      "title": "Mega-MMDF and DeepfakeBench-MM: Benchmarking Multimodal Deepfake Detection Across Diverse Forgery Pipelines",
-      "url": "https://huggingface.co/papers/2510.22622",
+      "id": "arxiv:2611.29389",
+      "title": "PINE: Point, Instance and Normal Estimation in One-Step Diffusion Model",
+      "url": "https://huggingface.co/papers/2611.29389",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -502,9 +509,9 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.29389",
-      "title": "PINE: Point, Instance and Normal Estimation in One-Step Diffusion Model",
-      "url": "https://huggingface.co/papers/2611.29389",
+      "id": "arxiv:2611.32782",
+      "title": "Measuring Layer-wise Intrinsic Dimensionality of FFNs in LLMs via PCA",
+      "url": "https://huggingface.co/papers/2611.32782",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -512,13 +519,6 @@
       "id": "arxiv:2611.28167",
       "title": "VideoJSON: A Minimal Harness Beats Purpose-Built Memory for Ultra-Long Video Understanding",
       "url": "https://huggingface.co/papers/2611.28167",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.31466",
-      "title": "AdProducer: Towards Agentic Advertising Video Generation",
-      "url": "https://huggingface.co/papers/2611.31466",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -537,23 +537,23 @@
       "category": "Research"
     },
     {
+      "id": "arxiv:2611.31466",
+      "title": "AdProducer: Towards Agentic Advertising Video Generation",
+      "url": "https://huggingface.co/papers/2611.31466",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.30488",
+      "title": "Do learned image captioning metrics generalize? Auditing duplicated samples in human-judgment benchmarks",
+      "url": "https://huggingface.co/papers/2611.30488",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "arxiv:2611.30900",
       "title": "GlanceNav: Efficient Vision-and-Language Navigation with Streaming Memory and Counterfactual Rewind",
       "url": "https://huggingface.co/papers/2611.30900",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.33020",
-      "title": "GRAPE-Bench: When Vision Degrades, Does Video Reasoning Hold?",
-      "url": "https://huggingface.co/papers/2611.33020",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.32094",
-      "title": "Clinical3D-Bench: Evaluating and Improving Spatial Intelligence of Multimodal LLMs in Hospital Environments",
-      "url": "https://huggingface.co/papers/2611.32094",
       "source": "hf_papers",
       "category": "Research"
     }
