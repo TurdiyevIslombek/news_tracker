@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-24",
-  "generated_at": "2026-11-26T08:31:23Z",
+  "generated_at": "2026-11-26T21:40:44Z",
   "headline": "Today in AI, companies navigate new tool releases, platform policy shifts, and market changes. OpenAI and Cisco introduced an open-source runtime called Shirudo to protect running Linux systems using AI, while Tidal announced a ban on completely AI-generated music. Additionally, financial markets saw Anthropic shares drop below their initial public offering price, and researchers released new benchmarks and models for humanoid robotics and e-commerce.",
   "headline_status": "done",
   "items": [
@@ -348,18 +348,18 @@
       "category": "Research"
     },
     {
-      "id": "web:def54c97ba9e3192",
-      "title": "How to Run NVIDIA Cosmos 3 on Local AI Devices Using Hugging Face Diffusers",
-      "url": "https://developer.nvidia.com/blog/how-to-run-nvidia-cosmos-3-on-local-ai-devices-using-hugging-face-diffusers/",
-      "source": "blog:nvidia",
-      "category": "Industry"
-    },
-    {
       "id": "github:el4cteo/shrink-anything",
       "title": "EL4CTEO/shrink-anything: Less code, same tests passing: delete the dead code, files, dependencies and assets in any codebase, and keep each ",
       "url": "https://github.com/EL4CTEO/shrink-anything",
       "source": "github",
       "category": "Tool / Open source"
+    },
+    {
+      "id": "web:def54c97ba9e3192",
+      "title": "How to Run NVIDIA Cosmos 3 on Local AI Devices Using Hugging Face Diffusers",
+      "url": "https://developer.nvidia.com/blog/how-to-run-nvidia-cosmos-3-on-local-ai-devices-using-hugging-face-diffusers/",
+      "source": "blog:nvidia",
+      "category": "Industry"
     },
     {
       "id": "arxiv:2611.30581",

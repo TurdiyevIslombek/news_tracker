@@ -39,14 +39,14 @@
     "status": "done"
   },
   "2026-11-26": {
-    "headline": "Today's developments feature new AI research spanning video generation agents, robotic manipulation frameworks, and neural network architectures. In industry news, The New York Times warned freelance photographers against updating Adobe Photoshop due to concerns that embedded AI features might incorrectly flag images as AI-generated, while an OpenAI usage reduction item remains unclear due to a lack of details.",
+    "headline": "Today's AI updates include a New York Times warning to photographers over Photoshop's AI metadata features, new clinical progress for AI-discovered medical treatments, and open-source releases ranging from an assembly-language AI project to a standardized simulation evaluation platform.",
     "basis": [
-      "arxiv:2611.33144",
       "arxiv:2611.34923",
       "github:alesha-pro/llm.asm",
       "github:lsernau/grh-lean",
       "web:19f2f984a80db585",
-      "web:244a3e8cb4f170fa"
+      "web:244a3e8cb4f170fa",
+      "web:280fc6b8ee711812"
     ],
     "by": "gemini/gemini-3.5-flash-lite",
     "status": "done"

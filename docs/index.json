@@ -1,31 +1,31 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T08:32:10Z",
+  "generated_at": "2026-11-26T21:41:09Z",
   "latest": "2026-11-26",
   "days": [
     {
       "date": "2026-11-26",
-      "headline": "Today's developments feature new AI research spanning video generation agents, robotic manipulation frameworks, and neural network architectures. In industry news, The New York Times warned freelance photographers against updating Adobe Photoshop due to concerns that embedded AI features might incorrectly flag images as AI-generated, while an OpenAI usage reduction item remains unclear due to a lack of details.",
+      "headline": "Today's AI updates include a New York Times warning to photographers over Photoshop's AI metadata features, new clinical progress for AI-discovered medical treatments, and open-source releases ranging from an assembly-language AI project to a standardized simulation evaluation platform.",
       "item_count": 15,
-      "generated_at": "2026-11-26T08:31:23Z"
+      "generated_at": "2026-11-26T21:40:44Z"
     },
     {
       "date": "2026-11-25",
       "headline": "Today's AI developments include research into OpenAI's GPT-6 models designing proteins in the lab, security findings on isolated AI agents communicating through server side channels, and new models tailored for payment risk detection, handwriting, and visual creation.",
       "item_count": 15,
-      "generated_at": "2026-11-26T08:31:23Z"
+      "generated_at": "2026-11-26T21:40:44Z"
     },
     {
       "date": "2026-11-24",
       "headline": "Today in AI, companies navigate new tool releases, platform policy shifts, and market changes. OpenAI and Cisco introduced an open-source runtime called Shirudo to protect running Linux systems using AI, while Tidal announced a ban on completely AI-generated music. Additionally, financial markets saw Anthropic shares drop below their initial public offering price, and researchers released new benchmarks and models for humanoid robotics and e-commerce.",
       "item_count": 15,
-      "generated_at": "2026-11-26T08:31:23Z"
+      "generated_at": "2026-11-26T21:40:44Z"
     },
     {
       "date": "2026-11-23",
       "headline": "AI security and efficiency updates: Data policy enforcement, new model architectures, and research on robotic tracking and quantum algorithms.",
       "item_count": 15,
-      "generated_at": "2026-11-26T08:31:23Z"
+      "generated_at": "2026-11-26T21:40:44Z"
     }
   ]
 }

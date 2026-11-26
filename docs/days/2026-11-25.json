@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-25",
-  "generated_at": "2026-11-26T08:31:23Z",
+  "generated_at": "2026-11-26T21:40:44Z",
   "headline": "Today's AI developments include research into OpenAI's GPT-6 models designing proteins in the lab, security findings on isolated AI agents communicating through server side channels, and new models tailored for payment risk detection, handwriting, and visual creation.",
   "headline_status": "done",
   "items": [
@@ -29,10 +29,10 @@
       "url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being",
       "source": "hn",
       "category": "Research",
-      "score": 5.453,
+      "score": 5.463,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 457,
+        "hn_points": 463,
         "github_stars": 0
       },
       "published_at": "2026-11-25T02:34:21Z",
@@ -47,10 +47,10 @@
       "url": "https://greydanus.github.io/2026/11/12/pengpt/",
       "source": "hn",
       "category": "Research",
-      "score": 5.32,
+      "score": 5.324,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 399,
+        "hn_points": 401,
         "github_stars": 0
       },
       "published_at": "2026-11-25T00:54:49Z",
@@ -83,9 +83,9 @@
       "url": "https://huggingface.co/papers/2611.25403",
       "source": "hf_papers",
       "category": "Model release",
-      "score": 5.177,
+      "score": 5.186,
       "signals": {
-        "hf_upvotes": 105,
+        "hf_upvotes": 106,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -101,9 +101,9 @@
       "url": "https://huggingface.co/papers/2611.28947",
       "source": "hf_papers",
       "category": "Research",
-      "score": 5.119,
+      "score": 5.148,
       "signals": {
-        "hf_upvotes": 99,
+        "hf_upvotes": 102,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -119,9 +119,9 @@
       "url": "https://huggingface.co/papers/2611.30634",
       "source": "hf_papers",
       "category": "Research",
-      "score": 5.024,
+      "score": 5.046,
       "signals": {
-        "hf_upvotes": 90,
+        "hf_upvotes": 92,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -155,10 +155,10 @@
       "url": "https://www.comentr.com/technology/01M88DWQ0R4NCMYR17AFEWRG1F",
       "source": "hn",
       "category": "Industry",
-      "score": 4.882,
+      "score": 4.897,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 217,
+        "hn_points": 221,
         "github_stars": 0
       },
       "published_at": "2026-11-25T04:03:33Z",
@@ -173,9 +173,9 @@
       "url": "https://huggingface.co/papers/2611.31205",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.672,
+      "score": 4.688,
       "signals": {
-        "hf_upvotes": 63,
+        "hf_upvotes": 64,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -204,6 +204,24 @@
       "summary_status": "done"
     },
     {
+      "id": "arxiv:2611.30962",
+      "title": "Self-Evolving Evaluation Environments for Computer-Use Agents",
+      "url": "https://huggingface.co/papers/2611.30962",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 4.465,
+      "signals": {
+        "hf_upvotes": 51,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-25T00:00:00Z",
+      "summary": "The authors present CUA-SEE, a closed-loop evaluation environment designed to test computer-use agents by co-evolving tasks and executable verifiers. The system dynamically expands evaluation scope, tests specific capability boundaries, and improves precision using state-grounded checkpoints. This approach aims to provide adaptive and scalable measurement of agent progress over time.",
+      "why_it_matters": "It offers a dynamic way to evaluate computer-use agents as they improve, avoiding the limitations of static benchmarks.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
       "id": "web:8ee50572f79b5048",
       "title": "Porting Rockbox to an undocumented $9 AliExpress 'YP3' MP3 player with LLMs",
       "url": "https://jayd.ml/2026/11/14/rockbox-on-yp3.html",
@@ -218,24 +236,6 @@
       "published_at": "2026-11-24T06:22:36Z",
       "summary": "A developer used an LLM (Claude) to help reverse engineer and port the Rockbox custom firmware to an undocumented, inexpensive $9 MP3 player. The AI helped build a reusable porting toolkit that successfully got the firmware running on another device in just a few hours.",
       "why_it_matters": "It shows how AI models can assist with complex software reverse engineering tasks like embedded device firmware ports.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.30962",
-      "title": "Self-Evolving Evaluation Environments for Computer-Use Agents",
-      "url": "https://huggingface.co/papers/2611.30962",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 4.425,
-      "signals": {
-        "hf_upvotes": 49,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-25T00:00:00Z",
-      "summary": "The authors present CUA-SEE, a closed-loop evaluation environment designed to test computer-use agents by co-evolving tasks and executable verifiers. The system dynamically expands evaluation scope, tests specific capability boundaries, and improves precision using state-grounded checkpoints. This approach aims to provide adaptive and scalable measurement of agent progress over time.",
-      "why_it_matters": "It offers a dynamic way to evaluate computer-use agents as they improve, avoiding the limitations of static benchmarks.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -263,9 +263,9 @@
       "url": "https://huggingface.co/papers/2611.25509",
       "source": "hf_papers",
       "category": "Model release",
-      "score": 3.947,
+      "score": 4.04,
       "signals": {
-        "hf_upvotes": 30,
+        "hf_upvotes": 33,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -334,20 +334,6 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.32617",
-      "title": "VenusOCR2.0: Towards Efficient and Effective Document Parsing",
-      "url": "https://huggingface.co/papers/2611.32617",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "web:d0a3a7f662b58965",
-      "title": "An Indic Voice Agent with CUGA",
-      "url": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
-      "source": "blog:huggingface",
-      "category": "Industry"
-    },
-    {
       "id": "github:matheusmongarde/garimpo",
       "title": "matheusmongarde/garimpo: Prospecção open source do Google Maps ao Pix: acha negócios no Maps, gera um site-prévia com o nome de cada um, con",
       "url": "https://github.com/matheusmongarde/garimpo",
@@ -360,6 +346,20 @@
       "url": "https://huggingface.co/papers/2611.28719",
       "source": "hf_papers",
       "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.32617",
+      "title": "VenusOCR2.0: Towards Efficient and Effective Document Parsing",
+      "url": "https://huggingface.co/papers/2611.32617",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "web:d0a3a7f662b58965",
+      "title": "An Indic Voice Agent with CUGA",
+      "url": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
+      "source": "blog:huggingface",
+      "category": "Industry"
     },
     {
       "id": "arxiv:2611.32736",
@@ -383,17 +383,17 @@
       "category": "Research"
     },
     {
-      "id": "web:f14a6f6dfd19f4ca",
-      "title": "From spectrum to structure: Identifying molecules with Mass Spec Skills for Google Antigravity",
-      "url": "https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/",
-      "source": "blog:deepmind",
-      "category": "Research"
-    },
-    {
       "id": "arxiv:2611.32649",
       "title": "ICLWorld: Benchmarking In-Context Learning of Agents from Digital to Physical Worlds",
       "url": "https://huggingface.co/papers/2611.32649",
       "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "web:f14a6f6dfd19f4ca",
+      "title": "From spectrum to structure: Identifying molecules with Mass Spec Skills for Google Antigravity",
+      "url": "https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/",
+      "source": "blog:deepmind",
       "category": "Research"
     },
     {
@@ -407,6 +407,13 @@
       "id": "arxiv:2611.30986",
       "title": "Reinforcing Diffusion Models by Instantaneous Trajectory Distribution Matching",
       "url": "https://huggingface.co/papers/2611.30986",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.32973",
+      "title": "SpecEngineeringBench: Evaluating Coding Agents as Autonomous Specification Engineers",
+      "url": "https://huggingface.co/papers/2611.32973",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -425,9 +432,16 @@
       "category": "Training method"
     },
     {
-      "id": "arxiv:2611.32973",
-      "title": "SpecEngineeringBench: Evaluating Coding Agents as Autonomous Specification Engineers",
-      "url": "https://huggingface.co/papers/2611.32973",
+      "id": "arxiv:2611.31184",
+      "title": "On-Policy Codec Distillation for Efficient All-in-One Video Generation",
+      "url": "https://huggingface.co/papers/2611.31184",
+      "source": "hf_papers",
+      "category": "Training method"
+    },
+    {
+      "id": "arxiv:2611.31237",
+      "title": "Let Vision-Language Models Generate Images through Their Representations",
+      "url": "https://huggingface.co/papers/2611.31237",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -439,11 +453,11 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.31184",
-      "title": "On-Policy Codec Distillation for Efficient All-in-One Video Generation",
-      "url": "https://huggingface.co/papers/2611.31184",
+      "id": "arxiv:2611.31974",
+      "title": "Coding4Games: Can Modern Coding Agents Play Modern Video Games?",
+      "url": "https://huggingface.co/papers/2611.31974",
       "source": "hf_papers",
-      "category": "Training method"
+      "category": "Research"
     },
     {
       "id": "arxiv:2611.32462",
@@ -460,9 +474,9 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.31974",
-      "title": "Coding4Games: Can Modern Coding Agents Play Modern Video Games?",
-      "url": "https://huggingface.co/papers/2611.31974",
+      "id": "arxiv:2611.32067",
+      "title": "LoopDVR: Looped Transformer for Efficient Dense Visual Recognition",
+      "url": "https://huggingface.co/papers/2611.32067",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -488,9 +502,9 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.32067",
-      "title": "LoopDVR: Looped Transformer for Efficient Dense Visual Recognition",
-      "url": "https://huggingface.co/papers/2611.32067",
+      "id": "arxiv:2611.32782",
+      "title": "Measuring Layer-wise Intrinsic Dimensionality of FFNs in LLMs via PCA",
+      "url": "https://huggingface.co/papers/2611.32782",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -498,20 +512,6 @@
       "id": "arxiv:2611.29389",
       "title": "PINE: Point, Instance and Normal Estimation in One-Step Diffusion Model",
       "url": "https://huggingface.co/papers/2611.29389",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.31237",
-      "title": "Let Vision-Language Models Generate Images through Their Representations",
-      "url": "https://huggingface.co/papers/2611.31237",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.32782",
-      "title": "Measuring Layer-wise Intrinsic Dimensionality of FFNs in LLMs via PCA",
-      "url": "https://huggingface.co/papers/2611.32782",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -537,6 +537,13 @@
       "category": "Research"
     },
     {
+      "id": "arxiv:2611.32918",
+      "title": "InstructReplay: Replaying Assistant Turns to Preserve General Behavior During Factual Fine-Tuning",
+      "url": "https://huggingface.co/papers/2611.32918",
+      "source": "hf_papers",
+      "category": "Training method"
+    },
+    {
       "id": "arxiv:2611.31466",
       "title": "AdProducer: Towards Agentic Advertising Video Generation",
       "url": "https://huggingface.co/papers/2611.31466",
@@ -544,16 +551,9 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.30488",
-      "title": "Do learned image captioning metrics generalize? Auditing duplicated samples in human-judgment benchmarks",
-      "url": "https://huggingface.co/papers/2611.30488",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.30900",
-      "title": "GlanceNav: Efficient Vision-and-Language Navigation with Streaming Memory and Counterfactual Rewind",
-      "url": "https://huggingface.co/papers/2611.30900",
+      "id": "arxiv:2611.29150",
+      "title": "Can an Agent Trust Its Own Zoom? Cross-Magnification Provenance Verification for Whole-Slide Images",
+      "url": "https://huggingface.co/papers/2611.29150",
       "source": "hf_papers",
       "category": "Research"
     }
