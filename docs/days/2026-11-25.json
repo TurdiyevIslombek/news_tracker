@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-25",
-  "generated_at": "2026-11-26T21:40:44Z",
+  "generated_at": "2026-11-27T08:45:18Z",
   "headline": "Today's AI developments include research into OpenAI's GPT-6 models designing proteins in the lab, security findings on isolated AI agents communicating through server side channels, and new models tailored for payment risk detection, handwriting, and visual creation.",
   "headline_status": "done",
   "items": [
@@ -101,9 +101,9 @@
       "url": "https://huggingface.co/papers/2611.28947",
       "source": "hf_papers",
       "category": "Research",
-      "score": 5.148,
+      "score": 5.158,
       "signals": {
-        "hf_upvotes": 102,
+        "hf_upvotes": 103,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -114,38 +114,38 @@
       "summary_status": "done"
     },
     {
-      "id": "arxiv:2611.30634",
-      "title": "Rewirable Circuits in Transformers with Loom Attention",
-      "url": "https://huggingface.co/papers/2611.30634",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 5.046,
-      "signals": {
-        "hf_upvotes": 92,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-25T00:00:00Z",
-      "summary": "Researchers introduce loom attention, a mechanism that lets a Transformer dynamically rewire its circuits at every token by combining vertical and horizontal attention. This forms a dual-stream architecture called LoomFormer, which splits control and content between vector and matrix streams. Experiments show that LoomFormer matches standard Transformers trained with significantly more compute.",
-      "why_it_matters": "This new architecture improves language modeling efficiency, achieving strong performance gains while using only a fraction of extra compute.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
       "id": "arxiv:2611.32884",
       "title": "Lazy Agents Answer Against Their Own Beliefs: Reinforcement Learning with Verifiable Beliefs Teaches Them to Act on What They Believe",
       "url": "https://huggingface.co/papers/2611.32884",
       "source": "hf_papers",
       "category": "Training method",
-      "score": 5.01,
+      "score": 5.106,
       "signals": {
-        "hf_upvotes": 98,
+        "hf_upvotes": 108,
         "hn_points": 0,
         "github_stars": 0
       },
       "published_at": "2026-11-24T16:17:51Z",
       "summary": "To address the problem of AI agents making premature guesses on long tasks, researchers propose Reinforcement Learning with Verifiable Beliefs (RLVB). This training method rewards agents for gathering more evidence when uncertainty is high and committing only when sufficient proof is available. Tested across visual puzzle benchmarks, RLVB consistently improves model accuracy compared to standard outcome rewards.",
       "why_it_matters": "It teaches AI agents to avoid guessing and instead act based on verified evidence during multi-step tasks.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.30634",
+      "title": "Rewirable Circuits in Transformers with Loom Attention",
+      "url": "https://huggingface.co/papers/2611.30634",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 5.057,
+      "signals": {
+        "hf_upvotes": 93,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-25T00:00:00Z",
+      "summary": "Researchers introduce loom attention, a mechanism that lets a Transformer dynamically rewire its circuits at every token by combining vertical and horizontal attention. This forms a dual-stream architecture called LoomFormer, which splits control and content between vector and matrix streams. Experiments show that LoomFormer matches standard Transformers trained with significantly more compute.",
+      "why_it_matters": "This new architecture improves language modeling efficiency, achieving strong performance gains while using only a fraction of extra compute.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -173,9 +173,9 @@
       "url": "https://huggingface.co/papers/2611.31205",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.688,
+      "score": 4.718,
       "signals": {
-        "hf_upvotes": 64,
+        "hf_upvotes": 66,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -313,6 +313,13 @@
       "category": "Research"
     },
     {
+      "id": "arxiv:2611.28719",
+      "title": "KMed-31B Technical Report",
+      "url": "https://huggingface.co/papers/2611.28719",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "web:59b73359242c586e",
       "title": "How to Optimize NVFP4 Attention on NVIDIA RTX Blackwell Through Register Recycling",
       "url": "https://developer.nvidia.com/blog/how-to-optimize-nvfp4-attention-on-nvidia-rtx-blackwell-through-register-recycling/",
@@ -339,13 +346,6 @@
       "url": "https://github.com/matheusmongarde/garimpo",
       "source": "github",
       "category": "Tool / Open source"
-    },
-    {
-      "id": "arxiv:2611.28719",
-      "title": "KMed-31B Technical Report",
-      "url": "https://huggingface.co/papers/2611.28719",
-      "source": "hf_papers",
-      "category": "Research"
     },
     {
       "id": "arxiv:2611.32617",
@@ -425,6 +425,13 @@
       "category": "Industry"
     },
     {
+      "id": "arxiv:2611.31237",
+      "title": "Let Vision-Language Models Generate Images through Their Representations",
+      "url": "https://huggingface.co/papers/2611.31237",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "arxiv:2611.33148",
       "title": "CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies",
       "url": "https://huggingface.co/papers/2611.33148",
@@ -437,13 +444,6 @@
       "url": "https://huggingface.co/papers/2611.31184",
       "source": "hf_papers",
       "category": "Training method"
-    },
-    {
-      "id": "arxiv:2611.31237",
-      "title": "Let Vision-Language Models Generate Images through Their Representations",
-      "url": "https://huggingface.co/papers/2611.31237",
-      "source": "hf_papers",
-      "category": "Research"
     },
     {
       "id": "arxiv:2611.30149",
@@ -474,6 +474,13 @@
       "category": "Research"
     },
     {
+      "id": "arxiv:2611.32820",
+      "title": "Residual Guidance for Real-Time Interactive Video Generation",
+      "url": "https://huggingface.co/papers/2611.32820",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "arxiv:2611.32067",
       "title": "LoopDVR: Looped Transformer for Efficient Dense Visual Recognition",
       "url": "https://huggingface.co/papers/2611.32067",
@@ -484,13 +491,6 @@
       "id": "arxiv:2510.22622",
       "title": "Mega-MMDF and DeepfakeBench-MM: Benchmarking Multimodal Deepfake Detection Across Diverse Forgery Pipelines",
       "url": "https://huggingface.co/papers/2510.22622",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.32820",
-      "title": "Residual Guidance for Real-Time Interactive Video Generation",
-      "url": "https://huggingface.co/papers/2611.32820",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -523,6 +523,13 @@
       "category": "Research"
     },
     {
+      "id": "arxiv:2611.31466",
+      "title": "AdProducer: Towards Agentic Advertising Video Generation",
+      "url": "https://huggingface.co/papers/2611.31466",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "arxiv:2611.25595",
       "title": "LoopedWAM: Looped World Action Models for Elastic Inference",
       "url": "https://huggingface.co/papers/2611.25595",
@@ -537,25 +544,18 @@
       "category": "Research"
     },
     {
+      "id": "arxiv:2611.33020",
+      "title": "GRAPE-Bench: When Vision Degrades, Does Video Reasoning Hold?",
+      "url": "https://huggingface.co/papers/2611.33020",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "arxiv:2611.32918",
       "title": "InstructReplay: Replaying Assistant Turns to Preserve General Behavior During Factual Fine-Tuning",
       "url": "https://huggingface.co/papers/2611.32918",
       "source": "hf_papers",
       "category": "Training method"
-    },
-    {
-      "id": "arxiv:2611.31466",
-      "title": "AdProducer: Towards Agentic Advertising Video Generation",
-      "url": "https://huggingface.co/papers/2611.31466",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.29150",
-      "title": "Can an Agent Trust Its Own Zoom? Cross-Magnification Provenance Verification for Whole-Slide Images",
-      "url": "https://huggingface.co/papers/2611.29150",
-      "source": "hf_papers",
-      "category": "Research"
     }
   ]
 }

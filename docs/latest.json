@@ -1,561 +1,428 @@
 {
   "schema_version": 1,
-  "date": "2026-11-26",
-  "generated_at": "2026-11-26T21:40:44Z",
-  "headline": "Today's AI updates include a New York Times warning to photographers over Photoshop's AI metadata features, new clinical progress for AI-discovered medical treatments, and open-source releases ranging from an assembly-language AI project to a standardized simulation evaluation platform.",
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T08:45:18Z",
+  "headline": "Today's AI developments include new benchmarks for video generation and cross-platform computer agents, alongside research into training stability and machine learning uncertainty. Other updates explore playful experiments, such as AI assistants gossiping in a simulated group chat or being assigned animal subculture characters.",
   "headline_status": "done",
   "items": [
     {
-      "id": "github:alesha-pro/llm.asm",
-      "title": "alesha-pro/llm.asm: Qwen3-0.6B inference (12 KB), bare-metal bootable OS (22 KB), and from-scratch Mini-GPT trainer with live Braille TUI (3",
-      "url": "https://github.com/alesha-pro/llm.asm",
-      "source": "github",
-      "category": "Tool / Open source",
-      "score": 10.038,
-      "signals": {
-        "hf_upvotes": 0,
-        "hn_points": 225,
-        "github_stars": 1419
-      },
-      "published_at": "2026-11-25T07:28:51Z",
-      "summary": "This repository provides three complete language model projects written entirely in pure x86-64 assembly language, requiring no C, C++, Rust, or external libraries. It includes a static Linux ELF binary for running Qwen3-0.6B inference, a bootable bare-metal OS, and a from-scratch Mini-GPT trainer.",
-      "why_it_matters": "It demonstrates that complex LLM inference, operating systems, and training routines can be implemented entirely in raw assembly language with zero dependencies.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "web:19f2f984a80db585",
-      "title": "The New York Times warns photographers not to update Photoshop over AI features",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+      "id": "web:19dd4641586dbe86",
+      "title": "AI made self-hosting fun again",
+      "url": "https://janlukas.blog/posts/ai-self-hosting",
       "source": "hn",
       "category": "Industry",
-      "score": 5.673,
+      "score": 5.893,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 636,
+        "hn_points": 628,
         "github_stars": 0
       },
-      "published_at": "2026-11-25T21:18:02Z",
-      "summary": "The New York Times has asked freelance photographers not to use the latest version of Adobe Photoshop due to its embedded AI features. The newsroom is concerned that automated tools and background post-processing will insert C2PA metadata flagging the images as AI-generated, violating editorial standards.",
-      "why_it_matters": "It highlights the friction news organizations face as AI editing capabilities become silently integrated into standard creative software.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "github:lsernau/grh-lean",
-      "title": "Much shorter version of GRH Lean verification from Anthropic",
-      "url": "https://github.com/lsernau/grh-lean",
-      "source": "hn",
-      "category": "Research",
-      "score": 5.553,
-      "signals": {
-        "hf_upvotes": 0,
-        "hn_points": 542,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-25T21:48:10Z",
-      "summary": "Researchers produced a shorter version of a Lean 4 formal proof for the Riemann Hypothesis and the Generalized Riemann Hypothesis, built in collaboration with Anthropic and Claude. The repository contains two editions of the proof that take between one to two hours to build and have passed machine checks.",
-      "why_it_matters": "It represents a significant automated mathematical verification effort assisted by AI, though the proof has not yet been manually reviewed by human mathematicians.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.34923",
-      "title": "Mixture-of-Loops Transformer",
-      "url": "https://huggingface.co/papers/2611.34923",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 5.537,
-      "signals": {
-        "hf_upvotes": 57,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-25T18:58:53Z",
-      "summary": "Researchers introduce the Mixture-of-Loops Transformer (MoLT), an architecture that reuses shared layers across loops to boost expressivity while maintaining efficiency through selective memory reuse. Pretraining experiments show that a U-shaped variant outperforms baseline models in token efficiency, perplexity, and task accuracy.",
-      "why_it_matters": "This architecture improves the efficiency and performance tradeoffs of looped transformer models, which reuse layers to increase capability.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "web:244a3e8cb4f170fa",
-      "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
-      "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
-      "source": "hn",
-      "category": "Industry",
-      "score": 5.488,
-      "signals": {
-        "hf_upvotes": 0,
-        "hn_points": 446,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-26T03:36:58Z",
+      "published_at": "2026-11-26T21:47:45Z",
       "summary": "Only a title is available, so details are unclear.",
-      "why_it_matters": "No conclusion can be drawn from the available text.",
+      "why_it_matters": "The context is missing, so its significance cannot be determined.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
     {
-      "id": "web:280fc6b8ee711812",
-      "title": "Tracking Diseases Cured by AI",
-      "url": "https://diseasescuredbyai.com/",
+      "id": "web:48b0d8d3f8cacbd3",
+      "title": "The group chat where your AI talks behind your back",
+      "url": "https://construct22.com/",
+      "source": "hn",
+      "category": "Tool / Open source",
+      "score": 4.905,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 140,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-27T06:44:34Z",
+      "summary": "A prompt makes ChatGPT and other AI assistants generate a fictional WhatsApp group chat where the models gossip about the user based on accumulated chat history. The author notes that the output is humorous because much of it feels true to the user's interactions.",
+      "why_it_matters": "It demonstrates a playful prompt technique that exposes how much personal information and context chat models retain from past conversations.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.34457",
+      "title": "ProxyGenBench: Benchmarking Proxy-Guided Video Generation",
+      "url": "https://huggingface.co/papers/2611.34457",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 4.893,
+      "signals": {
+        "hf_upvotes": 35,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-25T14:31:23Z",
+      "summary": "Researchers introduce ProxyGenBench, a benchmark with 312 evaluation cases to study how structural proxies like 3D blockouts guide video generation. Testing five video generators revealed that while structural proxies improve scene control, higher proxy detail can worsen missing content completion.",
+      "why_it_matters": "It provides a systematic way to evaluate how well video generation models maintain structural control, structure completion, and multimodal condition binding.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.34232",
+      "title": "OS-Omni: Benchmarking Generalist Computer-Using Agents on Long-Horizon Workflows Across Platforms",
+      "url": "https://huggingface.co/papers/2611.34232",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 4.788,
+      "signals": {
+        "hf_upvotes": 89,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-25T11:55:12Z",
+      "summary": "The authors introduce OS-Omni, a live cross-platform benchmark for evaluating computer-using AI agents on long-horizon workflows across Windows, Ubuntu, macOS, iOS, Android, and Web environments. Testing showed that top agents struggle with multi-step workflows compared to humans, especially on mobile and macOS platforms.",
+      "why_it_matters": "It highlights current limitations in cross-platform, long-term task execution for AI assistants, pointing to gaps in state tracking and durable final-state changes.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.34051",
+      "title": "Stable Gated DeltaNet-2: Understanding and Mitigating Recurrent State Instability",
+      "url": "https://huggingface.co/papers/2611.34051",
+      "source": "hf_papers",
+      "category": "Training method",
+      "score": 4.664,
+      "signals": {
+        "hf_upvotes": 80,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-25T09:30:49Z",
+      "summary": "Researchers investigate training instability in Gated DeltaNet-2 linear attention models, tracing the issue to exponential state growth caused by asymmetric erasure. To fix this, they introduce a modified approach using symmetric erasure and decay-regulated residual writing to ensure stable training and better long-context retrieval.",
+      "why_it_matters": "It solves long-context training failure modes in linear attention models, improving both training stability and benchmark scores on 128K context tasks.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "web:0256b11e8366a051",
+      "title": "\"What's Claude's Fursona?\" and Other Questions",
+      "url": "https://herecomesthemoon.net/2026/11/whats-claudes-fursona/",
       "source": "hn",
       "category": "Industry",
-      "score": 5.407,
+      "score": 4.405,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 284,
+        "hn_points": 79,
         "github_stars": 0
       },
-      "published_at": "2026-11-26T17:16:41Z",
-      "summary": "An overview of several medical treatments involving AI highlights different stages of clinical progress. Insilico Medicine's rentosertib has advanced to Phase III trials for idiopathic pulmonary fibrosis after AI helped select both the target and molecule. Meanwhile, other candidates like Takeda's zasocitinib and Alphabet spinout Isomorphic Labs sit at different points in FDA review and human testing.",
-      "why_it_matters": "It tracks how AI-discovered and AI-modeled drugs are actually performing in clinical trials and regulatory reviews.",
+      "published_at": "2026-11-27T04:56:18Z",
+      "summary": "An experiment queried various AI models 50 times to see what animal subculture characters, or \"fursonas,\" they naturally associated with. The results showed distinct preferences, with Claude models choosing corvids or octopuses, and Gemini models frequently favoring cybernetic dogs known as protogens.",
+      "why_it_matters": "It offers a lighthearted look at the implicit stylistic and aesthetic leanings built into different commercial AI models during their training.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
     {
-      "id": "web:1d45997e4997625f",
-      "title": "AMD Specific Patches for Llama.cpp",
-      "url": "https://devnull.land/amd-specific-llama-cpp",
+      "id": "arxiv:2611.31619",
+      "title": "What a Forecasting Leaderboard Can Establish: Resolution Reporting for Zero-Shot Time-Series Models",
+      "url": "https://huggingface.co/papers/2611.31619",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 4.185,
+      "signals": {
+        "hf_upvotes": 29,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-27T00:00:00Z",
+      "summary": "This paper examines time-series forecasting leaderboards and introduces a tool called Vernier to measure how reliably these boards can separate different models' scores. The findings show that many popular leaderboards have high resolution limits, meaning small score differences between models may be random rather than meaningful.",
+      "why_it_matters": "It highlights flaws in how AI forecasting models are currently evaluated and ranked against one another.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "web:82bab66344c7406e",
+      "title": "An introduction to uncertainty in machine learning",
+      "url": "https://chrhenning.com/blog/2026/introduction-to-uncertainty/",
       "source": "hn",
-      "category": "Tool / Open source",
-      "score": 5.16,
+      "category": "Research",
+      "score": 4.127,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 209,
+        "hn_points": 73,
         "github_stars": 0
       },
-      "published_at": "2026-11-26T17:11:29Z",
-      "summary": "A developer reviews how the explosion of specialized AI inference engines has improved text-generation speeds, though some new engines compromise accuracy by aggressively prioritizing certain model experts over others. To get reliable performance on AMD graphics cards, the author recommends an open-source repository called llama-cpp-rdna-boosts, which applies minimal patches to llama.cpp for significant speed gains.",
-      "why_it_matters": "It offers practical advice for running large language models efficiently on AMD hardware without sacrificing software stability.",
+      "published_at": "2026-11-26T19:04:50Z",
+      "summary": "This post provides an intuitive introduction to how machine learning models handle uncertainty, breaking it down into epistemic uncertainty (which can be reduced with more data) and aleatoric uncertainty (which stems from unobservable factors). It explains how understanding these concepts helps in choosing proper modeling assumptions for decision-making.",
+      "why_it_matters": "It clarifies core statistical principles that dictate how reliable and useful machine learning predictions can be.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
     {
-      "id": "arxiv:2611.34849",
-      "title": "Real2SimLab: A Unified Platform for Real-to-Simulation Transfer",
-      "url": "https://huggingface.co/papers/2611.34849",
+      "id": "arxiv:2611.34290",
+      "title": "StateWeaver: Multi-Agent Coordination of Story-State Transitions for Long-Horizon Video Generation",
+      "url": "https://huggingface.co/papers/2611.34290",
       "source": "hf_papers",
       "category": "Research",
-      "score": 5.094,
+      "score": 3.385,
       "signals": {
-        "hf_upvotes": 101,
+        "hf_upvotes": 21,
         "hn_points": 0,
         "github_stars": 0
       },
-      "published_at": "2026-11-25T18:23:41Z",
-      "summary": "Researchers introduce Real2SimLab, a unified platform designed to standardize how real-to-simulation transfer methods are evaluated. The platform runs programs generated by coding agents and scores the resulting simulations using original benchmark criteria while avoiding data contamination. Both the evaluation platform and a comprehensive research map containing nearly 300 papers have been released as open source.",
-      "why_it_matters": "It streamlines the evaluation and training data creation process for converting real-world video observations into functional simulations.",
+      "published_at": "2026-11-25T12:43:37Z",
+      "summary": "The authors introduce StateWeaver, a multi-agent framework designed to improve consistency across long-form video generation. By combining active state tracking with hierarchical collaboration, the system manages visual references and state changes across multiple shots.",
+      "why_it_matters": "It addresses the common problem of visual drift and inconsistency in AI-generated videos over extended durations.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
     {
-      "id": "arxiv:2611.34575",
-      "title": "Sage-Med: Scaling Medical Multimodal Intelligence",
-      "url": "https://huggingface.co/papers/2611.34575",
+      "id": "arxiv:2611.34693",
+      "title": "ShowNow: Fine-Grained Speculative Streaming for Responsive World Models",
+      "url": "https://huggingface.co/papers/2611.34693",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.877,
+      "score": 3.326,
       "signals": {
-        "hf_upvotes": 84,
+        "hf_upvotes": 19,
         "hn_points": 0,
         "github_stars": 0
       },
-      "published_at": "2026-11-25T15:39:45Z",
-      "summary": "The paper introduces Sage-Med-Preview, a 35-parameter medical multimodal model built using a progressive training curriculum from pretraining to reinforcement learning. Evaluated across numerous clinical tasks and benchmarks, the model outperforms existing open-source medical models and approaches the performance of advanced proprietary systems. The authors share empirical evidence and training recipes to help advance scalable medical AI.",
-      "why_it_matters": "It provides valuable data and training strategies for scaling multimodal AI in the medical domain, where general models often fall short.",
+      "published_at": "2026-11-25T16:52:46Z",
+      "summary": "This paper presents ShowNow, a framework that uses speculative streaming to make interactive world models more responsive to user actions. By preparing potential future video streams ahead of time during playback, the system reduces input-to-display latency.",
+      "why_it_matters": "It significantly lowers latency for real-time interactive AI video applications like simulations and games.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
     {
-      "id": "arxiv:2611.30844",
-      "title": "DyLoMo-DiT: Dynamic Looped Mixture-of-Experts Diffusion Transformers",
-      "url": "https://huggingface.co/papers/2611.30844",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 4.555,
-      "signals": {
-        "hf_upvotes": 54,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-26T00:00:00Z",
-      "summary": "This paper presents Dynamic Looped MoE DiT (DyLoMo-DiT), an architecture that reuses network parameters via a weight-shared loop instead of adding more parameters. By dynamically allocating compute across noise levels, the model deepens the network without increasing its parameter count. Experiments show it achieves better generation scores and lower error rates than standard diffusion models while using a fraction of the active parameters.",
-      "why_it_matters": "It demonstrates a more efficient way to scale model capacity and compute for image and text-to-image generation.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.34237",
-      "title": "VibeVideoAgent: Closing the Perceptual Loop for Code-Driven Video Generation",
-      "url": "https://huggingface.co/papers/2611.34237",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 4.4,
-      "signals": {
-        "hf_upvotes": 54,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-25T11:59:44Z",
-      "summary": "The paper presents VibeVideoAgent, a training-free framework that allows code-driven video generation agents to inspect their media drafts during production. By running multimodal perception in short-lived, separate contexts, the agent evaluates drafts through a set of perception primitives before final rendering. Experiments show that this feedback loop improves audiovisual quality and synchronization across several leading foundation models.",
-      "why_it_matters": "It offers a systematic way for code-writing video agents to catch design errors and synchronization issues early, avoiding costly full-resolution rewrites.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.34907",
-      "title": "Agentic LongLive: Asynchronous Agentic Memory for Long Video Generation",
-      "url": "https://huggingface.co/papers/2611.34907",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 4.366,
-      "signals": {
-        "hf_upvotes": 17,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-25T18:54:03Z",
-      "summary": "The authors introduce Agentic LongLive, an asynchronous memory system designed for real-time, long-video generation models. A separate memory agent tracks characters, objects, and scenes using text and image states, feeding contextual data to the video generator ahead of time without slowing down the stream. The system successfully maintains visual consistency over 14-minute stories while operating in real time.",
-      "why_it_matters": "It solves the long-standing problem of maintaining narrative and identity consistency in real-time interactive video streaming without introducing latency.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.33144",
-      "title": "PyRUA-Dex: Learning Programmatic Policies for Dexterous Bimanual Manipulation with Coding Agents",
-      "url": "https://huggingface.co/papers/2611.33144",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 4.332,
-      "signals": {
-        "hf_upvotes": 43,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-26T00:00:00Z",
-      "summary": "Researchers introduce PyRUA-Dex, a framework that uses coding agents to develop programmatic policies for dexterous robotic manipulation without requiring human demonstrations. The method involves parallel exploration, code distillation into a task library, and randomized refinement for robustness. In simulation and real-world tests, it achieves top performance on complex bimanual tasks like playing piano and writing calligraphy.",
-      "why_it_matters": "It demonstrates a scalable way for coding agents to teach robots fine-grained manipulation skills entirely from scratch, bypassing the need for scarce human training data.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "github:nexu-io/opengame",
-      "title": "nexu-io/opengame: The Super Game Agent — the Unity & Unreal for AI agents, with 100+ viral games to remix. Turn 20+ coding agents (Claude Co",
-      "url": "https://github.com/nexu-io/opengame",
+      "id": "github:langchain-samples/persistent-agent",
+      "title": "langchain-samples/Persistent-Agent: Persistent Agent is a proactive, always-on, goal-oriented agent. Think Muse or Instinct, but for the ent",
+      "url": "https://github.com/langchain-samples/Persistent-Agent",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 4.328,
+      "score": 3.216,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 723
+        "github_stars": 158
       },
-      "published_at": "2026-11-25T10:35:45Z",
-      "summary": "OpenGame is an open-source platform that turns coding agents like Claude Code, Codex, and DeepSeek into full-stack game development studios. It provides templates, automated logic checks, and publishing tools to help users build and monetize 3D games and viral mini-games from simple prompts. The project supports various local agents and integrates multiple game craft and QA reference handbooks.",
-      "why_it_matters": "It allows developers to use everyday coding assistants to handle end-to-end 3D game creation, asset styling, and publishing.",
+      "published_at": "2026-11-24T17:52:40Z",
+      "summary": "Persistent Agent is a proactive, goal-oriented Slack bot assistant built on Managed Deep Agents. It features personal user memory, nightly memory cleanup, watch mode for channels, and integrations with tools like GitHub and Gmail.",
+      "why_it_matters": "It provides teams with an always-on, autonomous assistant that runs background tasks and manages workflows directly inside Slack.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
     {
-      "id": "arxiv:2611.34347",
-      "title": "AIRIS: Benchmarking Social Embodied Intelligence in Egocentric Streaming Videos",
-      "url": "https://huggingface.co/papers/2611.34347",
+      "id": "arxiv:2611.34852",
+      "title": "DRBench Pro: A Knowledge-Centric Benchmark for Professional Deep Research Agents",
+      "url": "https://huggingface.co/papers/2611.34852",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.297,
+      "score": 3.117,
       "signals": {
-        "hf_upvotes": 17,
+        "hf_upvotes": 15,
         "hn_points": 0,
         "github_stars": 0
       },
-      "published_at": "2026-11-25T13:18:30Z",
-      "summary": "Researchers present AIRIS, a streaming benchmark designed to evaluate social embodied intelligence through egocentric videos based on Attention, Intention, Reaction, and Interaction. Testing 45 different models, the evaluation reveals that current systems struggle to jointly time their interventions and often guess human intents prematurely. The benchmark provides a diagnostic foundation for improving how AI agents interact socially in real time.",
-      "why_it_matters": "It highlights critical timing and social reasoning flaws in current AI models, helping researchers build safer embodied agents for human environments.",
+      "published_at": "2026-11-25T18:25:30Z",
+      "summary": "Researchers introduced DRBench Pro, a benchmark designed to evaluate how deeply and broadly deep research agents cover structured knowledge. The benchmark uses Wikipedia-based knowledge trees to test agents across 144 cases and 24 domains.",
+      "why_it_matters": "It allows developers to rigorously measure the breadth and depth of information gathered by autonomous research agents.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.32238",
+      "title": "Boundary-Aware Policy Learning for Agent-Orchestrated Robot Manipulation",
+      "url": "https://huggingface.co/papers/2611.32238",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 2.73,
+      "signals": {
+        "hf_upvotes": 6,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-27T00:00:00Z",
+      "summary": "Boundary-Aware Policy Learning is a new method that shapes and expands the handoff region where a multimodal agent hands tasks over to a robot manipulation policy. The approach combines explicit boundary training and self-improvement to improve robot coordination.",
+      "why_it_matters": "It significantly boosts the reliability and success rate of combined agent and robot systems by smoothing out handoffs.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.34813",
+      "title": "Solve Vision with Code: Coding Agents Are Stronger Visual Reasoners Than Video Models",
+      "url": "https://huggingface.co/papers/2611.34813",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 2.538,
+      "signals": {
+        "hf_upvotes": 8,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-25T18:01:22Z",
+      "summary": "This study tests whether coding agents are better visual reasoners than video generation models by having them write programs that render answer videos. Across tests, coding agents substantially outperformed video generation models in visual reasoning tasks.",
+      "why_it_matters": "It demonstrates that program synthesis is currently a more reliable route to visual reasoning than native video generation.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.30483",
+      "title": "When an AI agent makes a mistake in a database, what decides the damage?",
+      "url": "https://huggingface.co/papers/2611.30483",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 2.17,
+      "signals": {
+        "hf_upvotes": 3,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-27T00:00:00Z",
+      "summary": "Researchers investigated what determines the severity of damage when AI agents make mistakes in production databases. Testing various database engines and small open-weight models, they found that databases differ primarily in what recovery options they allow rather than what a mistake destroys.",
+      "why_it_matters": "It highlights the safety risks of letting AI agents interact directly with production databases and analyzes how different database engines handle errors.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     }
   ],
   "more": [
     {
-      "id": "web:6f6a6b07f17a726f",
-      "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
-      "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
-      "source": "hn",
-      "category": "Industry"
+      "id": "arxiv:2611.34750",
+      "title": "SOLVE: Sparse, Ordered Keyposes Make LLM Agents Versatile and Efficient Robot Manipulator",
+      "url": "https://huggingface.co/papers/2611.34750",
+      "source": "hf_papers",
+      "category": "Research"
     },
     {
-      "id": "web:82a13b62ffcbeb2a",
-      "title": "OpenAI may be in cost control mode",
-      "url": "https://micjm.com/blog/openai-is-in-cost-control-mode/",
-      "source": "hn",
-      "category": "Industry"
+      "id": "arxiv:2611.28231",
+      "title": "Evaluating Memanto on DolphinBench for AI Agents",
+      "url": "https://huggingface.co/papers/2611.28231",
+      "source": "hf_papers",
+      "category": "Research"
     },
     {
-      "id": "arxiv:2611.34941",
-      "title": "Improving and Expanding Video Editing Capabilities Without Videos",
-      "url": "https://huggingface.co/papers/2611.34941",
+      "id": "arxiv:2611.28849",
+      "title": "Guarding with Judgment: Learning to Intervene for Multimodal Safety",
+      "url": "https://huggingface.co/papers/2611.28849",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.32993",
+      "title": "Decision-Native Multimodal Clinical Modeling via Anatomical Grounding and Confidence Calibration",
+      "url": "https://huggingface.co/papers/2611.32993",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.34719",
+      "title": "Reading, Not Adapting: Unlocking Frozen Visual Knowledge for AI-Generated Image Detection",
+      "url": "https://huggingface.co/papers/2611.34719",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.27962",
+      "title": "Model Carving: Training Transformers That Optimize Their Own Topology",
+      "url": "https://huggingface.co/papers/2611.27962",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.32639",
+      "title": "ReFocus: Progress-Guided Adaptive Practice for Long-Horizon Robotic Manipulation Reinforcement Learning",
+      "url": "https://huggingface.co/papers/2611.32639",
       "source": "hf_papers",
       "category": "Training method"
     },
     {
-      "id": "web:02a088434703556c",
-      "title": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
-      "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
-      "source": "blog:huggingface",
-      "category": "Model release"
-    },
-    {
-      "id": "arxiv:2611.34420",
-      "title": "DocSEAM: Bidirectional Cross-Page Encoding for Multi-Page Document Understanding",
-      "url": "https://huggingface.co/papers/2611.34420",
+      "id": "arxiv:2611.20844",
+      "title": "DetourBench: Trajectory-Level Evaluation of Interactive Agents with Exact Minimum-Action Bounds",
+      "url": "https://huggingface.co/papers/2611.20844",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "web:d3aa48daa62df585",
-      "title": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
-      "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
-      "source": "blog:huggingface",
-      "category": "Tool / Open source"
-    },
-    {
-      "id": "arxiv:2611.34811",
-      "title": "HOG-WAM: Improving Visual Robustness through Future Gradient Prediction",
-      "url": "https://huggingface.co/papers/2611.34811",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "web:c01600d4160315a4",
-      "title": "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems",
-      "url": "https://huggingface.co/blog/training-swarms",
-      "source": "blog:huggingface",
-      "category": "Industry"
-    },
-    {
-      "id": "arxiv:2611.34466",
-      "title": "EgoUseBench: Benchmarking Computer-Use Agents under Evolving First-Person Contexts",
-      "url": "https://huggingface.co/papers/2611.34466",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.34929",
-      "title": "High-Fidelity Image Matting with Pixel-Space Diffusion Transformers",
-      "url": "https://huggingface.co/papers/2611.34929",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.34147",
-      "title": "Letting Models Manage Their Own Context: Where We Stand",
-      "url": "https://huggingface.co/papers/2611.34147",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.34128",
-      "title": "FoundSurface: Feedforward Ray-Based 3D Scene Surface Reconstruction from Unposed Images",
-      "url": "https://huggingface.co/papers/2611.34128",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.30472",
-      "title": "Target-Part Preference Optimization for Part-Aware 3D Generation",
-      "url": "https://huggingface.co/papers/2611.30472",
+      "id": "arxiv:2611.29969",
+      "title": "CARE-3D: Reinforcement Learning for Evidence Grounded Agentic Reasoning in Situated 3D Scenes",
+      "url": "https://huggingface.co/papers/2611.29969",
       "source": "hf_papers",
       "category": "Training method"
     },
     {
-      "id": "arxiv:2611.30965",
-      "title": "Beyond Self-Consistency: Recursive Self-Improvement at Test Time",
-      "url": "https://huggingface.co/papers/2611.30965",
+      "id": "arxiv:2611.32335",
+      "title": "GOLD-SLAM: Gaussian-splatting Omnidirectional LiDAR-Depth SLAM",
+      "url": "https://huggingface.co/papers/2611.32335",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.33457",
-      "title": "Playfulness as Feedback for Agentic Game Development",
-      "url": "https://huggingface.co/papers/2611.33457",
+      "id": "arxiv:2611.32786",
+      "title": "Simulator-as-Proxy World Model for Robot Manipulation",
+      "url": "https://huggingface.co/papers/2611.32786",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.33143",
-      "title": "ROAM-Bench: Evaluating Embodied Active Spatial Intelligence through Evidence Verification",
-      "url": "https://huggingface.co/papers/2611.33143",
+      "id": "arxiv:2611.34939",
+      "title": "A Mesh for Every Moment",
+      "url": "https://huggingface.co/papers/2611.34939",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.33636",
-      "title": "What Is Redundant at High Resolution? Efficient Attention and Feed-Forward Design for All-in-One Image Restoration",
-      "url": "https://huggingface.co/papers/2611.33636",
+      "id": "arxiv:2611.34782",
+      "title": "Generation as Reverse Encoding",
+      "url": "https://huggingface.co/papers/2611.34782",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.33925",
-      "title": "Beyond the Happy Path: Generalizing Robot World Models from Simulated Failures",
-      "url": "https://huggingface.co/papers/2611.33925",
+      "id": "arxiv:2611.30564",
+      "title": "Seeing Is Locating: Spatial Awareness and Geographic Bias in Decision Language Models",
+      "url": "https://huggingface.co/papers/2611.30564",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.28010",
-      "title": "Beyond Code and Pixels: Co-Generating Editable and Visually Rich Presentations",
-      "url": "https://huggingface.co/papers/2611.28010",
+      "id": "arxiv:2611.27404",
+      "title": "Degradation of Language Models under Controlled Load: Synchronization, Rule Execution and Misfires on the Background",
+      "url": "https://huggingface.co/papers/2611.27404",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.34675",
-      "title": "RoboEvo^2: Recursive Robot Self-Improvement via Harness-Policy Co-Evolution",
-      "url": "https://huggingface.co/papers/2611.34675",
+      "id": "arxiv:2611.30963",
+      "title": "Foresight Forcing: Learning Spatial Foresight for Robotic Manipulation",
+      "url": "https://huggingface.co/papers/2611.30963",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.33915",
-      "title": "SEEK: Self-Evolution through Execution Knowledge for Agentic Robot Manipulation",
-      "url": "https://huggingface.co/papers/2611.33915",
+      "id": "arxiv:2611.31442",
+      "title": "Small Learned Projections for Semantic-Reversal-Aware Retrieval with Spectral Acceleration: A Four-Domain Empirical Study",
+      "url": "https://huggingface.co/papers/2611.31442",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.31895",
-      "title": "Loupe: Reinforcing Knowledge-Intensive Video Generation Agents",
-      "url": "https://huggingface.co/papers/2611.31895",
+      "id": "arxiv:2611.31766",
+      "title": "RoMo Hands: A Large Scale Richly Organized Text to Hand Motion Dataset",
+      "url": "https://huggingface.co/papers/2611.31766",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.33922",
-      "title": "iMFPO: Improving Mean Flow Policy Optimization with Drift-Aware Velocity Alignment for Embodied Control",
-      "url": "https://huggingface.co/papers/2611.33922",
+      "id": "arxiv:2611.32100",
+      "title": "EEGJev: A System One Decision Model and Benchmark for Multi-Task EEG Question Answering",
+      "url": "https://huggingface.co/papers/2611.32100",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.32199",
-      "title": "Steerable by Design: Conditional Pretraining for Robust Control of Language Models",
-      "url": "https://huggingface.co/papers/2611.32199",
+      "id": "arxiv:2611.31155",
+      "title": "So Many Ways to Multiply 3times3 Matrices: A Large Dataset of Rank-23 Schemes",
+      "url": "https://huggingface.co/papers/2611.31155",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.31491",
+      "title": "Pretrained Tabular Features and the Measurement of Financial Proximity",
+      "url": "https://huggingface.co/papers/2611.31491",
       "source": "hf_papers",
       "category": "Training method"
-    },
-    {
-      "id": "arxiv:2611.28244",
-      "title": "Demystifying the Autoresearch Harness: How Context and Skills Shape Self-Evolving Agents",
-      "url": "https://huggingface.co/papers/2611.28244",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.34064",
-      "title": "SPARC: Geometry-Guided Attention Pruning for Long-Horizon Camera-Controlled Video Generation",
-      "url": "https://huggingface.co/papers/2611.34064",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.34331",
-      "title": "Puzzling-Bench: Evaluating Language Models on 23,777 Human-Written Puzzles with Community-Verified Answers",
-      "url": "https://huggingface.co/papers/2611.34331",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.30460",
-      "title": "CONCOR: Benchmarking Contrastive Decoding for Visual Hallucination Mitigation Beyond Final-Output Performance",
-      "url": "https://huggingface.co/papers/2611.30460",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.30895",
-      "title": "Speak When You See It: Proactive Task Assistants Should Wait for Evidence, Not the Clock",
-      "url": "https://huggingface.co/papers/2611.30895",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.17287",
-      "title": "Negative-Only Policy Optimization for One-Sided Verifiable Rewards",
-      "url": "https://huggingface.co/papers/2611.17287",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.28732",
-      "title": "Entangle: Scaling Human-Video In-Context World-Action Models across Unseen Tasks and Contexts",
-      "url": "https://huggingface.co/papers/2611.28732",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.21056",
-      "title": "Evaluation-Free Recursive Self-Improvement for Coding Agents",
-      "url": "https://huggingface.co/papers/2611.21056",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.33307",
-      "title": "Lost in Translation, Not in Confidence: Benchmarking and Calibrating Multilingual Decision Models",
-      "url": "https://huggingface.co/papers/2611.33307",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.33579",
-      "title": "DexEngine: Scaling Human Demonstrations into Physically Executable Whole-Robot Data",
-      "url": "https://huggingface.co/papers/2611.33579",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.32002",
-      "title": "Change the Base, Change the Game: Rethinking Pan-sharpening",
-      "url": "https://huggingface.co/papers/2611.32002",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.32473",
-      "title": "OmniPersist: Persistent Dynamic World Modeling via Coupled Panoramic Evolution",
-      "url": "https://huggingface.co/papers/2611.32473",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.33093",
-      "title": "AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design",
-      "url": "https://huggingface.co/papers/2611.33093",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.21155",
-      "title": "Edit Recommendation: Can LLMs Anticipate Edit Requests from Users, and When?",
-      "url": "https://huggingface.co/papers/2611.21155",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.30334",
-      "title": "When Does Reasoning Help Entity Disambiguation? Small LLMs In-Domain and Under Shift",
-      "url": "https://huggingface.co/papers/2611.30334",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.34912",
-      "title": "LiveVAE: Causal Window Attention Makes Efficient Streaming Video VAE",
-      "url": "https://huggingface.co/papers/2611.34912",
-      "source": "hf_papers",
-      "category": "Research"
     }
   ]
 }

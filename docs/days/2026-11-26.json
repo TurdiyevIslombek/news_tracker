@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "date": "2026-11-26",
-  "generated_at": "2026-11-26T21:40:44Z",
-  "headline": "Today's AI updates include a New York Times warning to photographers over Photoshop's AI metadata features, new clinical progress for AI-discovered medical treatments, and open-source releases ranging from an assembly-language AI project to a standardized simulation evaluation platform.",
+  "generated_at": "2026-11-27T08:45:18Z",
+  "headline": "Today's developments feature new AI applications in medicine, software developments including an AMD-focused performance patch, and editorial policy updates regarding AI-generated image metadata. Researchers also shared new architectural and verification tools, such as the Mixture-of-Loops Transformer and a shorter automated proof for the Riemann Hypothesis.",
   "headline_status": "done",
   "items": [
     {
@@ -11,15 +11,33 @@
       "url": "https://github.com/alesha-pro/llm.asm",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 10.038,
+      "score": 10.166,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 225,
-        "github_stars": 1419
+        "hn_points": 230,
+        "github_stars": 1771
       },
       "published_at": "2026-11-25T07:28:51Z",
       "summary": "This repository provides three complete language model projects written entirely in pure x86-64 assembly language, requiring no C, C++, Rust, or external libraries. It includes a static Linux ELF binary for running Qwen3-0.6B inference, a bootable bare-metal OS, and a from-scratch Mini-GPT trainer.",
       "why_it_matters": "It demonstrates that complex LLM inference, operating systems, and training routines can be implemented entirely in raw assembly language with zero dependencies.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.34923",
+      "title": "Mixture-of-Loops Transformer",
+      "url": "https://huggingface.co/papers/2611.34923",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 5.709,
+      "signals": {
+        "hf_upvotes": 70,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-25T18:58:53Z",
+      "summary": "Researchers introduce the Mixture-of-Loops Transformer (MoLT), an architecture that reuses shared layers across loops to boost expressivity while maintaining efficiency through selective memory reuse. Pretraining experiments show that a U-shaped variant outperforms baseline models in token efficiency, perplexity, and task accuracy.",
+      "why_it_matters": "This architecture improves the efficiency and performance tradeoffs of looped transformer models, which reuse layers to increase capability.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -29,10 +47,10 @@
       "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
       "source": "hn",
       "category": "Industry",
-      "score": 5.673,
+      "score": 5.685,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 636,
+        "hn_points": 671,
         "github_stars": 0
       },
       "published_at": "2026-11-25T21:18:02Z",
@@ -47,10 +65,10 @@
       "url": "https://github.com/lsernau/grh-lean",
       "source": "hn",
       "category": "Research",
-      "score": 5.553,
+      "score": 5.54,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 542,
+        "hn_points": 555,
         "github_stars": 0
       },
       "published_at": "2026-11-25T21:48:10Z",
@@ -60,33 +78,15 @@
       "summary_status": "done"
     },
     {
-      "id": "arxiv:2611.34923",
-      "title": "Mixture-of-Loops Transformer",
-      "url": "https://huggingface.co/papers/2611.34923",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 5.537,
-      "signals": {
-        "hf_upvotes": 57,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-25T18:58:53Z",
-      "summary": "Researchers introduce the Mixture-of-Loops Transformer (MoLT), an architecture that reuses shared layers across loops to boost expressivity while maintaining efficiency through selective memory reuse. Pretraining experiments show that a U-shaped variant outperforms baseline models in token efficiency, perplexity, and task accuracy.",
-      "why_it_matters": "This architecture improves the efficiency and performance tradeoffs of looped transformer models, which reuse layers to increase capability.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
       "id": "web:244a3e8cb4f170fa",
       "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
       "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
       "source": "hn",
       "category": "Industry",
-      "score": 5.488,
+      "score": 5.513,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 446,
+        "hn_points": 483,
         "github_stars": 0
       },
       "published_at": "2026-11-26T03:36:58Z",
@@ -96,33 +96,15 @@
       "summary_status": "done"
     },
     {
-      "id": "web:280fc6b8ee711812",
-      "title": "Tracking Diseases Cured by AI",
-      "url": "https://diseasescuredbyai.com/",
-      "source": "hn",
-      "category": "Industry",
-      "score": 5.407,
-      "signals": {
-        "hf_upvotes": 0,
-        "hn_points": 284,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-26T17:16:41Z",
-      "summary": "An overview of several medical treatments involving AI highlights different stages of clinical progress. Insilico Medicine's rentosertib has advanced to Phase III trials for idiopathic pulmonary fibrosis after AI helped select both the target and molecule. Meanwhile, other candidates like Takeda's zasocitinib and Alphabet spinout Isomorphic Labs sit at different points in FDA review and human testing.",
-      "why_it_matters": "It tracks how AI-discovered and AI-modeled drugs are actually performing in clinical trials and regulatory reviews.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
       "id": "web:1d45997e4997625f",
       "title": "AMD Specific Patches for Llama.cpp",
       "url": "https://devnull.land/amd-specific-llama-cpp",
       "source": "hn",
       "category": "Tool / Open source",
-      "score": 5.16,
+      "score": 5.5,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 209,
+        "hn_points": 343,
         "github_stars": 0
       },
       "published_at": "2026-11-26T17:11:29Z",
@@ -132,14 +114,32 @@
       "summary_status": "done"
     },
     {
+      "id": "web:280fc6b8ee711812",
+      "title": "Tracking Diseases Cured by AI",
+      "url": "https://diseasescuredbyai.com/",
+      "source": "hn",
+      "category": "Industry",
+      "score": 5.419,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 309,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-26T17:16:41Z",
+      "summary": "An overview of several medical treatments involving AI highlights different stages of clinical progress. Insilico Medicine's rentosertib has advanced to Phase III trials for idiopathic pulmonary fibrosis after AI helped select both the target and molecule. Meanwhile, other candidates like Takeda's zasocitinib and Alphabet spinout Isomorphic Labs sit at different points in FDA review and human testing.",
+      "why_it_matters": "It tracks how AI-discovered and AI-modeled drugs are actually performing in clinical trials and regulatory reviews.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
       "id": "arxiv:2611.34849",
       "title": "Real2SimLab: A Unified Platform for Real-to-Simulation Transfer",
       "url": "https://huggingface.co/papers/2611.34849",
       "source": "hf_papers",
       "category": "Research",
-      "score": 5.094,
+      "score": 5.131,
       "signals": {
-        "hf_upvotes": 101,
+        "hf_upvotes": 108,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -155,9 +155,9 @@
       "url": "https://huggingface.co/papers/2611.34575",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.877,
+      "score": 4.907,
       "signals": {
-        "hf_upvotes": 84,
+        "hf_upvotes": 89,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -168,14 +168,32 @@
       "summary_status": "done"
     },
     {
+      "id": "github:nexu-io/opengame",
+      "title": "nexu-io/opengame: The Super Game Agent — the Unity & Unreal for AI agents, with 100+ viral games to remix. Turn 20+ coding agents (Claude Co",
+      "url": "https://github.com/nexu-io/opengame",
+      "source": "github",
+      "category": "Tool / Open source",
+      "score": 4.771,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 1575
+      },
+      "published_at": "2026-11-25T10:35:45Z",
+      "summary": "OpenGame is an open-source platform that turns coding agents like Claude Code, Codex, and DeepSeek into full-stack game development studios. It provides templates, automated logic checks, and publishing tools to help users build and monetize 3D games and viral mini-games from simple prompts. The project supports various local agents and integrates multiple game craft and QA reference handbooks.",
+      "why_it_matters": "It allows developers to use everyday coding assistants to handle end-to-end 3D game creation, asset styling, and publishing.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
       "id": "arxiv:2611.30844",
       "title": "DyLoMo-DiT: Dynamic Looped Mixture-of-Experts Diffusion Transformers",
       "url": "https://huggingface.co/papers/2611.30844",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.555,
+      "score": 4.574,
       "signals": {
-        "hf_upvotes": 54,
+        "hf_upvotes": 57,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -191,9 +209,9 @@
       "url": "https://huggingface.co/papers/2611.34237",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.4,
+      "score": 4.393,
       "signals": {
-        "hf_upvotes": 54,
+        "hf_upvotes": 55,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -209,9 +227,9 @@
       "url": "https://huggingface.co/papers/2611.34907",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.366,
+      "score": 4.39,
       "signals": {
-        "hf_upvotes": 17,
+        "hf_upvotes": 18,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -227,9 +245,9 @@
       "url": "https://huggingface.co/papers/2611.33144",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.332,
+      "score": 4.32,
       "signals": {
-        "hf_upvotes": 43,
+        "hf_upvotes": 44,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -240,30 +258,12 @@
       "summary_status": "done"
     },
     {
-      "id": "github:nexu-io/opengame",
-      "title": "nexu-io/opengame: The Super Game Agent — the Unity & Unreal for AI agents, with 100+ viral games to remix. Turn 20+ coding agents (Claude Co",
-      "url": "https://github.com/nexu-io/opengame",
-      "source": "github",
-      "category": "Tool / Open source",
-      "score": 4.328,
-      "signals": {
-        "hf_upvotes": 0,
-        "hn_points": 0,
-        "github_stars": 723
-      },
-      "published_at": "2026-11-25T10:35:45Z",
-      "summary": "OpenGame is an open-source platform that turns coding agents like Claude Code, Codex, and DeepSeek into full-stack game development studios. It provides templates, automated logic checks, and publishing tools to help users build and monetize 3D games and viral mini-games from simple prompts. The project supports various local agents and integrates multiple game craft and QA reference handbooks.",
-      "why_it_matters": "It allows developers to use everyday coding assistants to handle end-to-end 3D game creation, asset styling, and publishing.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
       "id": "arxiv:2611.34347",
       "title": "AIRIS: Benchmarking Social Embodied Intelligence in Egocentric Streaming Videos",
       "url": "https://huggingface.co/papers/2611.34347",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.297,
+      "score": 4.272,
       "signals": {
         "hf_upvotes": 17,
         "hn_points": 0,
@@ -299,6 +299,20 @@
       "category": "Training method"
     },
     {
+      "id": "arxiv:2611.28732",
+      "title": "Entangle: Scaling Human-Video In-Context World-Action Models across Unseen Tasks and Contexts",
+      "url": "https://huggingface.co/papers/2611.28732",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.34420",
+      "title": "DocSEAM: Bidirectional Cross-Page Encoding for Multi-Page Document Understanding",
+      "url": "https://huggingface.co/papers/2611.34420",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "web:02a088434703556c",
       "title": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
       "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
@@ -306,9 +320,9 @@
       "category": "Model release"
     },
     {
-      "id": "arxiv:2611.34420",
-      "title": "DocSEAM: Bidirectional Cross-Page Encoding for Multi-Page Document Understanding",
-      "url": "https://huggingface.co/papers/2611.34420",
+      "id": "arxiv:2611.34147",
+      "title": "Letting Models Manage Their Own Context: Where We Stand",
+      "url": "https://huggingface.co/papers/2611.34147",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -334,13 +348,6 @@
       "category": "Industry"
     },
     {
-      "id": "arxiv:2611.34466",
-      "title": "EgoUseBench: Benchmarking Computer-Use Agents under Evolving First-Person Contexts",
-      "url": "https://huggingface.co/papers/2611.34466",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
       "id": "arxiv:2611.34929",
       "title": "High-Fidelity Image Matting with Pixel-Space Diffusion Transformers",
       "url": "https://huggingface.co/papers/2611.34929",
@@ -348,16 +355,9 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.34147",
-      "title": "Letting Models Manage Their Own Context: Where We Stand",
-      "url": "https://huggingface.co/papers/2611.34147",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.34128",
-      "title": "FoundSurface: Feedforward Ray-Based 3D Scene Surface Reconstruction from Unposed Images",
-      "url": "https://huggingface.co/papers/2611.34128",
+      "id": "arxiv:2611.34466",
+      "title": "EgoUseBench: Benchmarking Computer-Use Agents under Evolving First-Person Contexts",
+      "url": "https://huggingface.co/papers/2611.34466",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -369,13 +369,6 @@
       "category": "Training method"
     },
     {
-      "id": "arxiv:2611.30965",
-      "title": "Beyond Self-Consistency: Recursive Self-Improvement at Test Time",
-      "url": "https://huggingface.co/papers/2611.30965",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
       "id": "arxiv:2611.33457",
       "title": "Playfulness as Feedback for Agentic Game Development",
       "url": "https://huggingface.co/papers/2611.33457",
@@ -383,9 +376,23 @@
       "category": "Research"
     },
     {
+      "id": "arxiv:2611.30965",
+      "title": "Beyond Self-Consistency: Recursive Self-Improvement at Test Time",
+      "url": "https://huggingface.co/papers/2611.30965",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "arxiv:2611.33143",
       "title": "ROAM-Bench: Evaluating Embodied Active Spatial Intelligence through Evidence Verification",
       "url": "https://huggingface.co/papers/2611.33143",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.34128",
+      "title": "FoundSurface: Feedforward Ray-Based 3D Scene Surface Reconstruction from Unposed Images",
+      "url": "https://huggingface.co/papers/2611.34128",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -411,23 +418,9 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.34675",
-      "title": "RoboEvo^2: Recursive Robot Self-Improvement via Harness-Policy Co-Evolution",
-      "url": "https://huggingface.co/papers/2611.34675",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
       "id": "arxiv:2611.33915",
       "title": "SEEK: Self-Evolution through Execution Knowledge for Agentic Robot Manipulation",
       "url": "https://huggingface.co/papers/2611.33915",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.31895",
-      "title": "Loupe: Reinforcing Knowledge-Intensive Video Generation Agents",
-      "url": "https://huggingface.co/papers/2611.31895",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -439,18 +432,32 @@
       "category": "Research"
     },
     {
+      "id": "arxiv:2611.34675",
+      "title": "RoboEvo^2: Recursive Robot Self-Improvement via Harness-Policy Co-Evolution",
+      "url": "https://huggingface.co/papers/2611.34675",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.31895",
+      "title": "Loupe: Reinforcing Knowledge-Intensive Video Generation Agents",
+      "url": "https://huggingface.co/papers/2611.31895",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.34079",
+      "title": "WorldBridge: Bridging Scattered Views for Coherent 3D World Generation",
+      "url": "https://huggingface.co/papers/2611.34079",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "arxiv:2611.32199",
       "title": "Steerable by Design: Conditional Pretraining for Robust Control of Language Models",
       "url": "https://huggingface.co/papers/2611.32199",
       "source": "hf_papers",
       "category": "Training method"
-    },
-    {
-      "id": "arxiv:2611.28244",
-      "title": "Demystifying the Autoresearch Harness: How Context and Skills Shape Self-Evolving Agents",
-      "url": "https://huggingface.co/papers/2611.28244",
-      "source": "hf_papers",
-      "category": "Research"
     },
     {
       "id": "arxiv:2611.34064",
@@ -460,9 +467,9 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.34331",
-      "title": "Puzzling-Bench: Evaluating Language Models on 23,777 Human-Written Puzzles with Community-Verified Answers",
-      "url": "https://huggingface.co/papers/2611.34331",
+      "id": "arxiv:2611.28244",
+      "title": "Demystifying the Autoresearch Harness: How Context and Skills Shape Self-Evolving Agents",
+      "url": "https://huggingface.co/papers/2611.28244",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -481,20 +488,6 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.17287",
-      "title": "Negative-Only Policy Optimization for One-Sided Verifiable Rewards",
-      "url": "https://huggingface.co/papers/2611.17287",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.28732",
-      "title": "Entangle: Scaling Human-Video In-Context World-Action Models across Unseen Tasks and Contexts",
-      "url": "https://huggingface.co/papers/2611.28732",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
       "id": "arxiv:2611.21056",
       "title": "Evaluation-Free Recursive Self-Improvement for Coding Agents",
       "url": "https://huggingface.co/papers/2611.21056",
@@ -509,23 +502,16 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.33579",
-      "title": "DexEngine: Scaling Human Demonstrations into Physically Executable Whole-Robot Data",
-      "url": "https://huggingface.co/papers/2611.33579",
+      "id": "arxiv:2611.34331",
+      "title": "Puzzling-Bench: Evaluating Language Models on 23,777 Human-Written Puzzles with Community-Verified Answers",
+      "url": "https://huggingface.co/papers/2611.34331",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.32002",
-      "title": "Change the Base, Change the Game: Rethinking Pan-sharpening",
-      "url": "https://huggingface.co/papers/2611.32002",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.32473",
-      "title": "OmniPersist: Persistent Dynamic World Modeling via Coupled Panoramic Evolution",
-      "url": "https://huggingface.co/papers/2611.32473",
+      "id": "arxiv:2611.17287",
+      "title": "Negative-Only Policy Optimization for One-Sided Verifiable Rewards",
+      "url": "https://huggingface.co/papers/2611.17287",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -551,9 +537,23 @@
       "category": "Research"
     },
     {
+      "id": "arxiv:2611.33579",
+      "title": "DexEngine: Scaling Human Demonstrations into Physically Executable Whole-Robot Data",
+      "url": "https://huggingface.co/papers/2611.33579",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "arxiv:2611.34912",
       "title": "LiveVAE: Causal Window Attention Makes Efficient Streaming Video VAE",
       "url": "https://huggingface.co/papers/2611.34912",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.32002",
+      "title": "Change the Base, Change the Game: Rethinking Pan-sharpening",
+      "url": "https://huggingface.co/papers/2611.32002",
       "source": "hf_papers",
       "category": "Research"
     }

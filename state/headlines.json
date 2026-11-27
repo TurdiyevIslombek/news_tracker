@@ -39,14 +39,27 @@
     "status": "done"
   },
   "2026-11-26": {
-    "headline": "Today's AI updates include a New York Times warning to photographers over Photoshop's AI metadata features, new clinical progress for AI-discovered medical treatments, and open-source releases ranging from an assembly-language AI project to a standardized simulation evaluation platform.",
+    "headline": "Today's developments feature new AI applications in medicine, software developments including an AMD-focused performance patch, and editorial policy updates regarding AI-generated image metadata. Researchers also shared new architectural and verification tools, such as the Mixture-of-Loops Transformer and a shorter automated proof for the Riemann Hypothesis.",
     "basis": [
       "arxiv:2611.34923",
       "github:alesha-pro/llm.asm",
       "github:lsernau/grh-lean",
       "web:19f2f984a80db585",
-      "web:244a3e8cb4f170fa",
-      "web:280fc6b8ee711812"
+      "web:1d45997e4997625f",
+      "web:244a3e8cb4f170fa"
+    ],
+    "by": "gemini/gemini-3.5-flash-lite",
+    "status": "done"
+  },
+  "2026-11-27": {
+    "headline": "Today's AI developments include new benchmarks for video generation and cross-platform computer agents, alongside research into training stability and machine learning uncertainty. Other updates explore playful experiments, such as AI assistants gossiping in a simulated group chat or being assigned animal subculture characters.",
+    "basis": [
+      "arxiv:2611.34051",
+      "arxiv:2611.34232",
+      "arxiv:2611.34457",
+      "web:0256b11e8366a051",
+      "web:19dd4641586dbe86",
+      "web:48b0d8d3f8cacbd3"
     ],
     "by": "gemini/gemini-3.5-flash-lite",
     "status": "done"
