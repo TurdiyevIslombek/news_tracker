@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "date": "2026-11-27",
-  "generated_at": "2026-11-27T08:45:18Z",
-  "headline": "Today's AI developments include new benchmarks for video generation and cross-platform computer agents, alongside research into training stability and machine learning uncertainty. Other updates explore playful experiments, such as AI assistants gossiping in a simulated group chat or being assigned animal subculture characters.",
+  "generated_at": "2026-11-27T21:26:03Z",
+  "headline": "Today's AI developments include new benchmarks for evaluating video generation and computer-using agents, as well as research into training stability and personal anxiety over relying on AI for cognitive tasks. Meanwhile, tests of unreleased models show them performing historical research, and creative prompts are being used to generate fictional group chats where AI assistants gossip about users.",
   "headline_status": "done",
   "items": [
     {
@@ -11,10 +11,10 @@
       "url": "https://janlukas.blog/posts/ai-self-hosting",
       "source": "hn",
       "category": "Industry",
-      "score": 5.893,
+      "score": 6.083,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 628,
+        "hn_points": 1048,
         "github_stars": 0
       },
       "published_at": "2026-11-26T21:47:45Z",
@@ -29,10 +29,10 @@
       "url": "https://construct22.com/",
       "source": "hn",
       "category": "Tool / Open source",
-      "score": 4.905,
+      "score": 5.834,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 140,
+        "hn_points": 639,
         "github_stars": 0
       },
       "published_at": "2026-11-27T06:44:34Z",
@@ -42,14 +42,86 @@
       "summary_status": "done"
     },
     {
+      "id": "web:138e1e18872d9e9b",
+      "title": "Claude sabotaging ML research tasks?",
+      "url": "https://twitter.com/RealAstropulse/status/2126119408997466389",
+      "source": "hn",
+      "category": "Industry",
+      "score": 5.632,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 476,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-27T08:28:08Z",
+      "summary": "Only a title is available, so details are unclear.",
+      "why_it_matters": "It is not possible to determine why this item matters based on the title alone.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "web:f21d90605390562e",
+      "title": "I'm Scared of AI",
+      "url": "https://thesoapbox.email/archive/3",
+      "source": "hn",
+      "category": "Industry",
+      "score": 5.113,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 192,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-27T17:45:31Z",
+      "summary": "An essay discusses personal anxiety over relying on AI for cognitive tasks. The author worries that outsourcing thinking to AI tools is dulling their mental sharpness and removing the sense of achievement from hard work.",
+      "why_it_matters": "It highlights growing personal and psychological concerns among users regarding over-reliance on AI for daily thinking.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.34051",
+      "title": "Stable Gated DeltaNet-2: Understanding and Mitigating Recurrent State Instability",
+      "url": "https://huggingface.co/papers/2611.34051",
+      "source": "hf_papers",
+      "category": "Training method",
+      "score": 5.033,
+      "signals": {
+        "hf_upvotes": 126,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-25T09:30:49Z",
+      "summary": "Researchers investigate training instability in Gated DeltaNet-2 linear attention models, tracing the issue to exponential state growth caused by asymmetric erasure. To fix this, they introduce a modified approach using symmetric erasure and decay-regulated residual writing to ensure stable training and better long-context retrieval.",
+      "why_it_matters": "It solves long-context training failure modes in linear attention models, improving both training stability and benchmark scores on 128K context tasks.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "web:01cdd83d3c55e905",
+      "title": "GPT 6.2 Astra solves a historical mystery",
+      "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
+      "source": "hn",
+      "category": "Model release",
+      "score": 4.927,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 165,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-27T15:03:17Z",
+      "summary": "An early test of OpenAI's unreleased GPT-6.2 Astra model shows it can autonomously perform historical research. With minimal prompting, the model successfully identified the creator of an anonymous 1808 sketchbook at Yale's Beinecke Library in 22 minutes by analyzing public sources and uncovering a rare archive reference.",
+      "why_it_matters": "It demonstrates that advanced AI models are beginning to apply autonomous research and discovery skills to non-deterministic fields like history, much like recent rapid progress in mathematics.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
       "id": "arxiv:2611.34457",
       "title": "ProxyGenBench: Benchmarking Proxy-Guided Video Generation",
       "url": "https://huggingface.co/papers/2611.34457",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.893,
+      "score": 4.828,
       "signals": {
-        "hf_upvotes": 35,
+        "hf_upvotes": 36,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -65,9 +137,9 @@
       "url": "https://huggingface.co/papers/2611.34232",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.788,
+      "score": 4.827,
       "signals": {
-        "hf_upvotes": 89,
+        "hf_upvotes": 101,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -78,50 +150,14 @@
       "summary_status": "done"
     },
     {
-      "id": "arxiv:2611.34051",
-      "title": "Stable Gated DeltaNet-2: Understanding and Mitigating Recurrent State Instability",
-      "url": "https://huggingface.co/papers/2611.34051",
-      "source": "hf_papers",
-      "category": "Training method",
-      "score": 4.664,
-      "signals": {
-        "hf_upvotes": 80,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-25T09:30:49Z",
-      "summary": "Researchers investigate training instability in Gated DeltaNet-2 linear attention models, tracing the issue to exponential state growth caused by asymmetric erasure. To fix this, they introduce a modified approach using symmetric erasure and decay-regulated residual writing to ensure stable training and better long-context retrieval.",
-      "why_it_matters": "It solves long-context training failure modes in linear attention models, improving both training stability and benchmark scores on 128K context tasks.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "web:0256b11e8366a051",
-      "title": "\"What's Claude's Fursona?\" and Other Questions",
-      "url": "https://herecomesthemoon.net/2026/11/whats-claudes-fursona/",
-      "source": "hn",
-      "category": "Industry",
-      "score": 4.405,
-      "signals": {
-        "hf_upvotes": 0,
-        "hn_points": 79,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-27T04:56:18Z",
-      "summary": "An experiment queried various AI models 50 times to see what animal subculture characters, or \"fursonas,\" they naturally associated with. The results showed distinct preferences, with Claude models choosing corvids or octopuses, and Gemini models frequently favoring cybernetic dogs known as protogens.",
-      "why_it_matters": "It offers a lighthearted look at the implicit stylistic and aesthetic leanings built into different commercial AI models during their training.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
       "id": "arxiv:2611.31619",
       "title": "What a Forecasting Leaderboard Can Establish: Resolution Reporting for Zero-Shot Time-Series Models",
       "url": "https://huggingface.co/papers/2611.31619",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.185,
+      "score": 4.612,
       "signals": {
-        "hf_upvotes": 29,
+        "hf_upvotes": 57,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -132,20 +168,56 @@
       "summary_status": "done"
     },
     {
-      "id": "web:82bab66344c7406e",
-      "title": "An introduction to uncertainty in machine learning",
-      "url": "https://chrhenning.com/blog/2026/introduction-to-uncertainty/",
-      "source": "hn",
+      "id": "arxiv:2611.34813",
+      "title": "Solve Vision with Code: Coding Agents Are Stronger Visual Reasoners Than Video Models",
+      "url": "https://huggingface.co/papers/2611.34813",
+      "source": "hf_papers",
       "category": "Research",
-      "score": 4.127,
+      "score": 4.317,
       "signals": {
-        "hf_upvotes": 0,
-        "hn_points": 73,
+        "hf_upvotes": 58,
+        "hn_points": 0,
         "github_stars": 0
       },
-      "published_at": "2026-11-26T19:04:50Z",
-      "summary": "This post provides an intuitive introduction to how machine learning models handle uncertainty, breaking it down into epistemic uncertainty (which can be reduced with more data) and aleatoric uncertainty (which stems from unobservable factors). It explains how understanding these concepts helps in choosing proper modeling assumptions for decision-making.",
-      "why_it_matters": "It clarifies core statistical principles that dictate how reliable and useful machine learning predictions can be.",
+      "published_at": "2026-11-25T18:01:22Z",
+      "summary": "This study tests whether coding agents are better visual reasoners than video generation models by having them write programs that render answer videos. Across tests, coding agents substantially outperformed video generation models in visual reasoning tasks.",
+      "why_it_matters": "It demonstrates that program synthesis is currently a more reliable route to visual reasoning than native video generation.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "github:deadinternetstudios/100x-engineer-skill",
+      "title": "DeadInternetStudios/100x-engineer-skill: 100x is a skill by a former Cursor engineer that turns prompts into formally verified, production-r",
+      "url": "https://github.com/DeadInternetStudios/100x-engineer-skill",
+      "source": "github",
+      "category": "Tool / Open source",
+      "score": 3.996,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 715
+      },
+      "published_at": "2026-11-23T11:06:07Z",
+      "summary": "An open-source skill for coding assistants like Claude Code, Cursor, and Codex aims to turn text prompts into verified production code. It breaks down development tasks into small blocks, formally checks them using a small model and checker, and coordinates a second AI model to review the output.",
+      "why_it_matters": "It attempts to solve the reliability problem of AI-generated code by introducing formal verification steps to catch bugs before deployment.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "web:2d7f8b4f8454af31",
+      "title": "Taking Trainium3 to the Track: Generating Videos with LTX-2.5",
+      "url": "https://huggingface.co/blog/video-trainium3",
+      "source": "blog:huggingface",
+      "category": "Research",
+      "score": 3.551,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-27T00:00:00Z",
+      "summary": "Researchers tested video and sound generation using the LTX-2.5 model running on specialized AWS Trainium3 hardware. They managed to generate multi-shot, scripted 10-second video clips at competitive speeds compared to standard graphics processing units and online APIs.",
+      "why_it_matters": "It demonstrates the viability of running complex generative video models on alternative AI hardware architectures.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -155,9 +227,9 @@
       "url": "https://huggingface.co/papers/2611.34290",
       "source": "hf_papers",
       "category": "Research",
-      "score": 3.385,
+      "score": 3.539,
       "signals": {
-        "hf_upvotes": 21,
+        "hf_upvotes": 27,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -173,7 +245,7 @@
       "url": "https://huggingface.co/papers/2611.34693",
       "source": "hf_papers",
       "category": "Research",
-      "score": 3.326,
+      "score": 3.228,
       "signals": {
         "hf_upvotes": 19,
         "hn_points": 0,
@@ -191,7 +263,7 @@
       "url": "https://github.com/langchain-samples/Persistent-Agent",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 3.216,
+      "score": 3.164,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
@@ -202,81 +274,86 @@
       "why_it_matters": "It provides teams with an always-on, autonomous assistant that runs background tasks and manages workflows directly inside Slack.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
+    }
+  ],
+  "more": [
+    {
+      "id": "web:4c2310f3b8e412f5",
+      "title": "Kimi for Science: More scientific ideas, made possible",
+      "url": "https://www.kimi.ai/news/kimi-for-science-program",
+      "source": "hn",
+      "category": "Industry"
+    },
+    {
+      "id": "web:0256b11e8366a051",
+      "title": "\"What's Claude's Fursona?\" and Other Questions",
+      "url": "https://herecomesthemoon.net/2026/11/whats-claudes-fursona/",
+      "source": "hn",
+      "category": "Industry"
+    },
+    {
+      "id": "web:55060e027bbaf240",
+      "title": "AI on brink of making online security useless, mathematicians fear",
+      "url": "https://www.thetimes.com/uk/technology-uk/article/ai-making-online-security-useless-smr73d3n8",
+      "source": "hn",
+      "category": "Industry"
+    },
+    {
+      "id": "web:aa5274859672a449",
+      "title": "States sue SpaceX to stop Grok from generating child sex images, revenge porn",
+      "url": "https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform",
+      "source": "hn",
+      "category": "Industry"
+    },
+    {
+      "id": "web:82bab66344c7406e",
+      "title": "An introduction to uncertainty in machine learning",
+      "url": "https://chrhenning.com/blog/2026/introduction-to-uncertainty/",
+      "source": "hn",
+      "category": "Research"
+    },
+    {
+      "id": "web:85176c594a4a0ffd",
+      "title": "Claude tries to sabotage research work at every stage",
+      "url": "https://twitter.com/skirano/status/2125371115979641188",
+      "source": "hn",
+      "category": "Industry"
+    },
+    {
+      "id": "web:4fdce5f029afb0e4",
+      "title": "One guy is doing a hunger strike outside Anthropic, currently in his 3rd day",
+      "url": "https://twitter.com/ElliotC1/status/2125689373337489419",
+      "source": "hn",
+      "category": "Industry"
     },
     {
       "id": "arxiv:2611.34852",
       "title": "DRBench Pro: A Knowledge-Centric Benchmark for Professional Deep Research Agents",
       "url": "https://huggingface.co/papers/2611.34852",
       "source": "hf_papers",
-      "category": "Research",
-      "score": 3.117,
-      "signals": {
-        "hf_upvotes": 15,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-25T18:25:30Z",
-      "summary": "Researchers introduced DRBench Pro, a benchmark designed to evaluate how deeply and broadly deep research agents cover structured knowledge. The benchmark uses Wikipedia-based knowledge trees to test agents across 144 cases and 24 domains.",
-      "why_it_matters": "It allows developers to rigorously measure the breadth and depth of information gathered by autonomous research agents.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
+      "category": "Research"
     },
     {
       "id": "arxiv:2611.32238",
       "title": "Boundary-Aware Policy Learning for Agent-Orchestrated Robot Manipulation",
       "url": "https://huggingface.co/papers/2611.32238",
       "source": "hf_papers",
-      "category": "Research",
-      "score": 2.73,
-      "signals": {
-        "hf_upvotes": 6,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-27T00:00:00Z",
-      "summary": "Boundary-Aware Policy Learning is a new method that shapes and expands the handoff region where a multimodal agent hands tasks over to a robot manipulation policy. The approach combines explicit boundary training and self-improvement to improve robot coordination.",
-      "why_it_matters": "It significantly boosts the reliability and success rate of combined agent and robot systems by smoothing out handoffs.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
-      "id": "arxiv:2611.34813",
-      "title": "Solve Vision with Code: Coding Agents Are Stronger Visual Reasoners Than Video Models",
-      "url": "https://huggingface.co/papers/2611.34813",
-      "source": "hf_papers",
-      "category": "Research",
-      "score": 2.538,
-      "signals": {
-        "hf_upvotes": 8,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-25T18:01:22Z",
-      "summary": "This study tests whether coding agents are better visual reasoners than video generation models by having them write programs that render answer videos. Across tests, coding agents substantially outperformed video generation models in visual reasoning tasks.",
-      "why_it_matters": "It demonstrates that program synthesis is currently a more reliable route to visual reasoning than native video generation.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
+      "category": "Research"
     },
     {
       "id": "arxiv:2611.30483",
       "title": "When an AI agent makes a mistake in a database, what decides the damage?",
       "url": "https://huggingface.co/papers/2611.30483",
       "source": "hf_papers",
-      "category": "Research",
-      "score": 2.17,
-      "signals": {
-        "hf_upvotes": 3,
-        "hn_points": 0,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-27T00:00:00Z",
-      "summary": "Researchers investigated what determines the severity of damage when AI agents make mistakes in production databases. Testing various database engines and small open-weight models, they found that databases differ primarily in what recovery options they allow rather than what a mistake destroys.",
-      "why_it_matters": "It highlights the safety risks of letting AI agents interact directly with production databases and analyzes how different database engines handle errors.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    }
-  ],
-  "more": [
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.30494",
+      "title": "Revisiting LLMs as Context Engineers",
+      "url": "https://huggingface.co/papers/2611.30494",
+      "source": "hf_papers",
+      "category": "Research"
+    },
     {
       "id": "arxiv:2611.34750",
       "title": "SOLVE: Sparse, Ordered Keyposes Make LLM Agents Versatile and Efficient Robot Manipulator",
@@ -299,9 +376,9 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.32993",
-      "title": "Decision-Native Multimodal Clinical Modeling via Anatomical Grounding and Confidence Calibration",
-      "url": "https://huggingface.co/papers/2611.32993",
+      "id": "arxiv:2611.34782",
+      "title": "Generation as Reverse Encoding",
+      "url": "https://huggingface.co/papers/2611.34782",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -325,6 +402,34 @@
       "url": "https://huggingface.co/papers/2611.32639",
       "source": "hf_papers",
       "category": "Training method"
+    },
+    {
+      "id": "arxiv:2611.32993",
+      "title": "Decision-Native Multimodal Clinical Modeling via Anatomical Grounding and Confidence Calibration",
+      "url": "https://huggingface.co/papers/2611.32993",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.31491",
+      "title": "Pretrained Tabular Features and the Measurement of Financial Proximity",
+      "url": "https://huggingface.co/papers/2611.31491",
+      "source": "hf_papers",
+      "category": "Training method"
+    },
+    {
+      "id": "arxiv:2611.30025",
+      "title": "Damped Atomic Wave Integration Neurons (DAWIN): A Universal Primitive for Continuous-Time Spatiotemporal Learning",
+      "url": "https://huggingface.co/papers/2611.30025",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.30723",
+      "title": "BiSAT: Bidirectionally Aligned Semantic-Acoustic Tokenization for Speech Language Models",
+      "url": "https://huggingface.co/papers/2611.30723",
+      "source": "hf_papers",
+      "category": "Research"
     },
     {
       "id": "arxiv:2611.20844",
@@ -355,16 +460,16 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.34939",
-      "title": "A Mesh for Every Moment",
-      "url": "https://huggingface.co/papers/2611.34939",
+      "id": "arxiv:2611.29829",
+      "title": "Who Makes the Decision? Auditing an Agentic LLM Pipeline for Illicit Cryptocurrency Transaction Monitoring",
+      "url": "https://huggingface.co/papers/2611.29829",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.34782",
-      "title": "Generation as Reverse Encoding",
-      "url": "https://huggingface.co/papers/2611.34782",
+      "id": "arxiv:2611.34939",
+      "title": "A Mesh for Every Moment",
+      "url": "https://huggingface.co/papers/2611.34939",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -418,11 +523,18 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.31491",
-      "title": "Pretrained Tabular Features and the Measurement of Financial Proximity",
-      "url": "https://huggingface.co/papers/2611.31491",
+      "id": "arxiv:2611.27112",
+      "title": "Markdown Is Not a Firewall: four coding agents, one rules file, four boundaries",
+      "url": "https://huggingface.co/papers/2611.27112",
       "source": "hf_papers",
-      "category": "Training method"
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.31516",
+      "title": "InitFree-SfM: When Initialization-Free Bundle Adjustment meets Learned Structure-from-Motion",
+      "url": "https://huggingface.co/papers/2611.31516",
+      "source": "hf_papers",
+      "category": "Research"
     }
   ]
 }

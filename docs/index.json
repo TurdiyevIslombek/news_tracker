@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T08:45:55Z",
+  "generated_at": "2026-11-27T21:26:34Z",
   "latest": "2026-11-27",
   "days": [
     {
       "date": "2026-11-27",
-      "headline": "Today's AI developments include new benchmarks for video generation and cross-platform computer agents, alongside research into training stability and machine learning uncertainty. Other updates explore playful experiments, such as AI assistants gossiping in a simulated group chat or being assigned animal subculture characters.",
+      "headline": "Today's AI developments include new benchmarks for evaluating video generation and computer-using agents, as well as research into training stability and personal anxiety over relying on AI for cognitive tasks. Meanwhile, tests of unreleased models show them performing historical research, and creative prompts are being used to generate fictional group chats where AI assistants gossip about users.",
       "item_count": 15,
-      "generated_at": "2026-11-27T08:45:18Z"
+      "generated_at": "2026-11-27T21:26:03Z"
     },
     {
       "date": "2026-11-26",
       "headline": "Today's developments feature new AI applications in medicine, software developments including an AMD-focused performance patch, and editorial policy updates regarding AI-generated image metadata. Researchers also shared new architectural and verification tools, such as the Mixture-of-Loops Transformer and a shorter automated proof for the Riemann Hypothesis.",
       "item_count": 15,
-      "generated_at": "2026-11-27T08:45:18Z"
+      "generated_at": "2026-11-27T21:26:03Z"
     },
     {
       "date": "2026-11-25",
@@ -25,13 +25,13 @@
       "date": "2026-11-24",
       "headline": "Today in AI, companies navigate new tool releases, platform policy shifts, and market changes. OpenAI and Cisco introduced an open-source runtime called Shirudo to protect running Linux systems using AI, while Tidal announced a ban on completely AI-generated music. Additionally, financial markets saw Anthropic shares drop below their initial public offering price, and researchers released new benchmarks and models for humanoid robotics and e-commerce.",
       "item_count": 15,
-      "generated_at": "2026-11-27T08:45:18Z"
+      "generated_at": "2026-11-27T21:26:03Z"
     },
     {
       "date": "2026-11-23",
       "headline": "AI security and efficiency updates: Data policy enforcement, new model architectures, and research on robotic tracking and quantum algorithms.",
       "item_count": 15,
-      "generated_at": "2026-11-27T08:45:18Z"
+      "generated_at": "2026-11-27T21:26:03Z"
     }
   ]
 }

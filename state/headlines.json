@@ -52,14 +52,14 @@
     "status": "done"
   },
   "2026-11-27": {
-    "headline": "Today's AI developments include new benchmarks for video generation and cross-platform computer agents, alongside research into training stability and machine learning uncertainty. Other updates explore playful experiments, such as AI assistants gossiping in a simulated group chat or being assigned animal subculture characters.",
+    "headline": "Today's AI developments include new benchmarks for evaluating video generation and computer-using agents, as well as research into training stability and personal anxiety over relying on AI for cognitive tasks. Meanwhile, tests of unreleased models show them performing historical research, and creative prompts are being used to generate fictional group chats where AI assistants gossip about users.",
     "basis": [
       "arxiv:2611.34051",
-      "arxiv:2611.34232",
-      "arxiv:2611.34457",
-      "web:0256b11e8366a051",
+      "web:01cdd83d3c55e905",
+      "web:138e1e18872d9e9b",
       "web:19dd4641586dbe86",
-      "web:48b0d8d3f8cacbd3"
+      "web:48b0d8d3f8cacbd3",
+      "web:f21d90605390562e"
     ],
     "by": "gemini/gemini-3.5-flash-lite",
     "status": "done"

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-26",
-  "generated_at": "2026-11-27T08:45:18Z",
+  "generated_at": "2026-11-27T21:26:03Z",
   "headline": "Today's developments feature new AI applications in medicine, software developments including an AMD-focused performance patch, and editorial policy updates regarding AI-generated image metadata. Researchers also shared new architectural and verification tools, such as the Mixture-of-Loops Transformer and a shorter automated proof for the Riemann Hypothesis.",
   "headline_status": "done",
   "items": [
@@ -11,11 +11,11 @@
       "url": "https://github.com/alesha-pro/llm.asm",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 10.166,
+      "score": 10.281,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 230,
-        "github_stars": 1771
+        "hn_points": 233,
+        "github_stars": 2107
       },
       "published_at": "2026-11-25T07:28:51Z",
       "summary": "This repository provides three complete language model projects written entirely in pure x86-64 assembly language, requiring no C, C++, Rust, or external libraries. It includes a static Linux ELF binary for running Qwen3-0.6B inference, a bootable bare-metal OS, and a from-scratch Mini-GPT trainer.",
@@ -29,15 +29,33 @@
       "url": "https://huggingface.co/papers/2611.34923",
       "source": "hf_papers",
       "category": "Research",
-      "score": 5.709,
+      "score": 5.764,
       "signals": {
-        "hf_upvotes": 70,
+        "hf_upvotes": 74,
         "hn_points": 0,
         "github_stars": 0
       },
       "published_at": "2026-11-25T18:58:53Z",
       "summary": "Researchers introduce the Mixture-of-Loops Transformer (MoLT), an architecture that reuses shared layers across loops to boost expressivity while maintaining efficiency through selective memory reuse. Pretraining experiments show that a U-shaped variant outperforms baseline models in token efficiency, perplexity, and task accuracy.",
       "why_it_matters": "This architecture improves the efficiency and performance tradeoffs of looped transformer models, which reuse layers to increase capability.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "web:1d45997e4997625f",
+      "title": "AMD Specific Patches for Llama.cpp",
+      "url": "https://devnull.land/amd-specific-llama-cpp",
+      "source": "hn",
+      "category": "Tool / Open source",
+      "score": 5.686,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 433,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-26T17:11:29Z",
+      "summary": "A developer reviews how the explosion of specialized AI inference engines has improved text-generation speeds, though some new engines compromise accuracy by aggressively prioritizing certain model experts over others. To get reliable performance on AMD graphics cards, the author recommends an open-source repository called llama-cpp-rdna-boosts, which applies minimal patches to llama.cpp for significant speed gains.",
+      "why_it_matters": "It offers practical advice for running large language models efficiently on AMD hardware without sacrificing software stability.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -60,33 +78,15 @@
       "summary_status": "done"
     },
     {
-      "id": "github:lsernau/grh-lean",
-      "title": "Much shorter version of GRH Lean verification from Anthropic",
-      "url": "https://github.com/lsernau/grh-lean",
-      "source": "hn",
-      "category": "Research",
-      "score": 5.54,
-      "signals": {
-        "hf_upvotes": 0,
-        "hn_points": 555,
-        "github_stars": 0
-      },
-      "published_at": "2026-11-25T21:48:10Z",
-      "summary": "Researchers produced a shorter version of a Lean 4 formal proof for the Riemann Hypothesis and the Generalized Riemann Hypothesis, built in collaboration with Anthropic and Claude. The repository contains two editions of the proof that take between one to two hours to build and have passed machine checks.",
-      "why_it_matters": "It represents a significant automated mathematical verification effort assisted by AI, though the proof has not yet been manually reviewed by human mathematicians.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
       "id": "web:244a3e8cb4f170fa",
       "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
       "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
       "source": "hn",
       "category": "Industry",
-      "score": 5.513,
+      "score": 5.55,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 483,
+        "hn_points": 506,
         "github_stars": 0
       },
       "published_at": "2026-11-26T03:36:58Z",
@@ -96,38 +96,38 @@
       "summary_status": "done"
     },
     {
-      "id": "web:1d45997e4997625f",
-      "title": "AMD Specific Patches for Llama.cpp",
-      "url": "https://devnull.land/amd-specific-llama-cpp",
+      "id": "github:lsernau/grh-lean",
+      "title": "Much shorter version of GRH Lean verification from Anthropic",
+      "url": "https://github.com/lsernau/grh-lean",
       "source": "hn",
-      "category": "Tool / Open source",
-      "score": 5.5,
+      "category": "Research",
+      "score": 5.547,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 343,
+        "hn_points": 560,
         "github_stars": 0
       },
-      "published_at": "2026-11-26T17:11:29Z",
-      "summary": "A developer reviews how the explosion of specialized AI inference engines has improved text-generation speeds, though some new engines compromise accuracy by aggressively prioritizing certain model experts over others. To get reliable performance on AMD graphics cards, the author recommends an open-source repository called llama-cpp-rdna-boosts, which applies minimal patches to llama.cpp for significant speed gains.",
-      "why_it_matters": "It offers practical advice for running large language models efficiently on AMD hardware without sacrificing software stability.",
+      "published_at": "2026-11-25T21:48:10Z",
+      "summary": "Researchers produced a shorter version of a Lean 4 formal proof for the Riemann Hypothesis and the Generalized Riemann Hypothesis, built in collaboration with Anthropic and Claude. The repository contains two editions of the proof that take between one to two hours to build and have passed machine checks.",
+      "why_it_matters": "It represents a significant automated mathematical verification effort assisted by AI, though the proof has not yet been manually reviewed by human mathematicians.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
     {
-      "id": "web:280fc6b8ee711812",
-      "title": "Tracking Diseases Cured by AI",
-      "url": "https://diseasescuredbyai.com/",
+      "id": "web:6f6a6b07f17a726f",
+      "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+      "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
       "source": "hn",
       "category": "Industry",
-      "score": 5.419,
+      "score": 5.501,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 309,
+        "hn_points": 417,
         "github_stars": 0
       },
-      "published_at": "2026-11-26T17:16:41Z",
-      "summary": "An overview of several medical treatments involving AI highlights different stages of clinical progress. Insilico Medicine's rentosertib has advanced to Phase III trials for idiopathic pulmonary fibrosis after AI helped select both the target and molecule. Meanwhile, other candidates like Takeda's zasocitinib and Alphabet spinout Isomorphic Labs sit at different points in FDA review and human testing.",
-      "why_it_matters": "It tracks how AI-discovered and AI-modeled drugs are actually performing in clinical trials and regulatory reviews.",
+      "published_at": "2026-11-26T09:44:23Z",
+      "summary": "Google has made its Workspace servers generally available and updated its API terms to require that any tool driven by an AI agent must access services like Gmail and Drive through these specific servers starting in February 2027. The new rules also restrict how agent memory and data can be processed, banning the use of Workspace data for training or fine-tuning and capping technical information retention at 30 days. Additionally, the current Gmail server tools allow searching and drafting emails, but lack the ability to send or reply without restricted partner access.",
+      "why_it_matters": "This policy change forces developers building AI assistants for Google Workspace to alter how their agents connect to APIs, manage user data, and handle long-term memory.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     },
@@ -150,6 +150,24 @@
       "summary_status": "done"
     },
     {
+      "id": "github:nexu-io/opengame",
+      "title": "nexu-io/opengame: The Super Game Agent — the Unity & Unreal for AI agents, with 100+ viral games to remix. Turn 20+ coding agents (Claude Co",
+      "url": "https://github.com/nexu-io/opengame",
+      "source": "github",
+      "category": "Tool / Open source",
+      "score": 4.958,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 2151
+      },
+      "published_at": "2026-11-25T10:35:45Z",
+      "summary": "OpenGame is an open-source platform that turns coding agents like Claude Code, Codex, and DeepSeek into full-stack game development studios. It provides templates, automated logic checks, and publishing tools to help users build and monetize 3D games and viral mini-games from simple prompts. The project supports various local agents and integrates multiple game craft and QA reference handbooks.",
+      "why_it_matters": "It allows developers to use everyday coding assistants to handle end-to-end 3D game creation, asset styling, and publishing.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
       "id": "arxiv:2611.34575",
       "title": "Sage-Med: Scaling Medical Multimodal Intelligence",
       "url": "https://huggingface.co/papers/2611.34575",
@@ -168,32 +186,14 @@
       "summary_status": "done"
     },
     {
-      "id": "github:nexu-io/opengame",
-      "title": "nexu-io/opengame: The Super Game Agent — the Unity & Unreal for AI agents, with 100+ viral games to remix. Turn 20+ coding agents (Claude Co",
-      "url": "https://github.com/nexu-io/opengame",
-      "source": "github",
-      "category": "Tool / Open source",
-      "score": 4.771,
-      "signals": {
-        "hf_upvotes": 0,
-        "hn_points": 0,
-        "github_stars": 1575
-      },
-      "published_at": "2026-11-25T10:35:45Z",
-      "summary": "OpenGame is an open-source platform that turns coding agents like Claude Code, Codex, and DeepSeek into full-stack game development studios. It provides templates, automated logic checks, and publishing tools to help users build and monetize 3D games and viral mini-games from simple prompts. The project supports various local agents and integrates multiple game craft and QA reference handbooks.",
-      "why_it_matters": "It allows developers to use everyday coding assistants to handle end-to-end 3D game creation, asset styling, and publishing.",
-      "summarized_by": "gemini/gemini-3.5-flash-lite",
-      "summary_status": "done"
-    },
-    {
       "id": "arxiv:2611.30844",
       "title": "DyLoMo-DiT: Dynamic Looped Mixture-of-Experts Diffusion Transformers",
       "url": "https://huggingface.co/papers/2611.30844",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.574,
+      "score": 4.762,
       "signals": {
-        "hf_upvotes": 57,
+        "hf_upvotes": 69,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -209,9 +209,9 @@
       "url": "https://huggingface.co/papers/2611.34237",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.393,
+      "score": 4.445,
       "signals": {
-        "hf_upvotes": 55,
+        "hf_upvotes": 58,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -227,9 +227,9 @@
       "url": "https://huggingface.co/papers/2611.34907",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.39,
+      "score": 4.441,
       "signals": {
-        "hf_upvotes": 18,
+        "hf_upvotes": 19,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -258,29 +258,29 @@
       "summary_status": "done"
     },
     {
-      "id": "arxiv:2611.34347",
-      "title": "AIRIS: Benchmarking Social Embodied Intelligence in Egocentric Streaming Videos",
-      "url": "https://huggingface.co/papers/2611.34347",
+      "id": "arxiv:2611.34941",
+      "title": "Improving and Expanding Video Editing Capabilities Without Videos",
+      "url": "https://huggingface.co/papers/2611.34941",
       "source": "hf_papers",
-      "category": "Research",
-      "score": 4.272,
+      "category": "Training method",
+      "score": 4.297,
       "signals": {
-        "hf_upvotes": 17,
+        "hf_upvotes": 46,
         "hn_points": 0,
         "github_stars": 0
       },
-      "published_at": "2026-11-25T13:18:30Z",
-      "summary": "Researchers present AIRIS, a streaming benchmark designed to evaluate social embodied intelligence through egocentric videos based on Attention, Intention, Reaction, and Interaction. Testing 45 different models, the evaluation reveals that current systems struggle to jointly time their interventions and often guess human intents prematurely. The benchmark provides a diagnostic foundation for improving how AI agents interact socially in real time.",
-      "why_it_matters": "It highlights critical timing and social reasoning flaws in current AI models, helping researchers build safer embodied agents for human environments.",
+      "published_at": "2026-11-25T18:59:55Z",
+      "summary": "Researchers introduce Image-to-Video Transfer (I2VT), a method that transfers advanced image editing capabilities to video editors without needing new paired training videos. The technique lets a video editor role-play as an image editor during training by treating single images as one-frame videos. The approach allows models to handle new tasks like action and expression changes on full video clips at test time.",
+      "why_it_matters": "It improves video editing models and expands their capabilities using only individual images, eliminating the need to collect difficult paired video datasets.",
       "summarized_by": "gemini/gemini-3.5-flash-lite",
       "summary_status": "done"
     }
   ],
   "more": [
     {
-      "id": "web:6f6a6b07f17a726f",
-      "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
-      "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+      "id": "web:280fc6b8ee711812",
+      "title": "Tracking Diseases Cured by AI",
+      "url": "https://diseasescuredbyai.com/",
       "source": "hn",
       "category": "Industry"
     },
@@ -292,16 +292,23 @@
       "category": "Industry"
     },
     {
-      "id": "arxiv:2611.34941",
-      "title": "Improving and Expanding Video Editing Capabilities Without Videos",
-      "url": "https://huggingface.co/papers/2611.34941",
+      "id": "arxiv:2611.34347",
+      "title": "AIRIS: Benchmarking Social Embodied Intelligence in Egocentric Streaming Videos",
+      "url": "https://huggingface.co/papers/2611.34347",
       "source": "hf_papers",
-      "category": "Training method"
+      "category": "Research"
     },
     {
       "id": "arxiv:2611.28732",
       "title": "Entangle: Scaling Human-Video In-Context World-Action Models across Unseen Tasks and Contexts",
       "url": "https://huggingface.co/papers/2611.28732",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.34147",
+      "title": "Letting Models Manage Their Own Context: Where We Stand",
+      "url": "https://huggingface.co/papers/2611.34147",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -318,13 +325,6 @@
       "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
       "source": "blog:huggingface",
       "category": "Model release"
-    },
-    {
-      "id": "arxiv:2611.34147",
-      "title": "Letting Models Manage Their Own Context: Where We Stand",
-      "url": "https://huggingface.co/papers/2611.34147",
-      "source": "hf_papers",
-      "category": "Research"
     },
     {
       "id": "web:d3aa48daa62df585",
@@ -425,13 +425,6 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.33922",
-      "title": "iMFPO: Improving Mean Flow Policy Optimization with Drift-Aware Velocity Alignment for Embodied Control",
-      "url": "https://huggingface.co/papers/2611.33922",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
       "id": "arxiv:2611.34675",
       "title": "RoboEvo^2: Recursive Robot Self-Improvement via Harness-Policy Co-Evolution",
       "url": "https://huggingface.co/papers/2611.34675",
@@ -439,16 +432,23 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.31895",
-      "title": "Loupe: Reinforcing Knowledge-Intensive Video Generation Agents",
-      "url": "https://huggingface.co/papers/2611.31895",
+      "id": "arxiv:2611.34079",
+      "title": "WorldBridge: Bridging Scattered Views for Coherent 3D World Generation",
+      "url": "https://huggingface.co/papers/2611.34079",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.34079",
-      "title": "WorldBridge: Bridging Scattered Views for Coherent 3D World Generation",
-      "url": "https://huggingface.co/papers/2611.34079",
+      "id": "arxiv:2611.33922",
+      "title": "iMFPO: Improving Mean Flow Policy Optimization with Drift-Aware Velocity Alignment for Embodied Control",
+      "url": "https://huggingface.co/papers/2611.33922",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
+      "id": "arxiv:2611.31895",
+      "title": "Loupe: Reinforcing Knowledge-Intensive Video Generation Agents",
+      "url": "https://huggingface.co/papers/2611.31895",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -474,6 +474,13 @@
       "category": "Research"
     },
     {
+      "id": "arxiv:2611.33307",
+      "title": "Lost in Translation, Not in Confidence: Benchmarking and Calibrating Multilingual Decision Models",
+      "url": "https://huggingface.co/papers/2611.33307",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "arxiv:2611.30460",
       "title": "CONCOR: Benchmarking Contrastive Decoding for Visual Hallucination Mitigation Beyond Final-Output Performance",
       "url": "https://huggingface.co/papers/2611.30460",
@@ -495,9 +502,9 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.33307",
-      "title": "Lost in Translation, Not in Confidence: Benchmarking and Calibrating Multilingual Decision Models",
-      "url": "https://huggingface.co/papers/2611.33307",
+      "id": "arxiv:2611.33093",
+      "title": "AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design",
+      "url": "https://huggingface.co/papers/2611.33093",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -512,13 +519,6 @@
       "id": "arxiv:2611.17287",
       "title": "Negative-Only Policy Optimization for One-Sided Verifiable Rewards",
       "url": "https://huggingface.co/papers/2611.17287",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.33093",
-      "title": "AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design",
-      "url": "https://huggingface.co/papers/2611.33093",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -551,9 +551,9 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.32002",
-      "title": "Change the Base, Change the Game: Rethinking Pan-sharpening",
-      "url": "https://huggingface.co/papers/2611.32002",
+      "id": "arxiv:2611.34671",
+      "title": "DemoFoundry: Toward Scalable Photorealistic Robot Data with Coding Agents and Generative Rendering",
+      "url": "https://huggingface.co/papers/2611.34671",
       "source": "hf_papers",
       "category": "Research"
     }
