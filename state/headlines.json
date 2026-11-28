@@ -52,14 +52,26 @@
     "status": "done"
   },
   "2026-11-27": {
-    "headline": "Today's AI developments include new benchmarks for evaluating video generation and computer-using agents, as well as research into training stability and personal anxiety over relying on AI for cognitive tasks. Meanwhile, tests of unreleased models show them performing historical research, and creative prompts are being used to generate fictional group chats where AI assistants gossip about users.",
+    "headline": "Attorneys General in Virginia and Oregon have filed lawsuits against the operators of the Grok AI tool over allegations involving the generation of non-consensual sexualized images and child sexual abuse material. In other developments, researchers introduced new benchmarks for evaluating computer-using AI agents and video generation models, while new studies explored stability fixes for recurrent attention models. Meanwhile, opinion essays and user experiments highlighted ongoing personal concerns about relying on AI for cognitive tasks and everyday interactions.",
     "basis": [
       "arxiv:2611.34051",
-      "web:01cdd83d3c55e905",
       "web:138e1e18872d9e9b",
       "web:19dd4641586dbe86",
       "web:48b0d8d3f8cacbd3",
+      "web:aa5274859672a449",
       "web:f21d90605390562e"
+    ],
+    "by": "gemini/gemini-3.5-flash-lite",
+    "status": "done"
+  },
+  "2026-11-28": {
+    "headline": "Today's developments feature new local-first tools for interview coaching, coding agent management, and visual prompt consistency, alongside research on preserving image appearance during 3D edits.",
+    "basis": [
+      "arxiv:2611.33885",
+      "github:duzhenxun/pop-agent",
+      "github:senpaispide664/ai-visual-prompt-cookbook",
+      "github:thebodytheory01-commits/final-round-ai-desktop",
+      "web:4e825df2be8b9455"
     ],
     "by": "gemini/gemini-3.5-flash-lite",
     "status": "done"

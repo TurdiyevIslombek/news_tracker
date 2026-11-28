@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-23",
-  "generated_at": "2026-11-27T21:26:03Z",
+  "generated_at": "2026-11-28T07:58:15Z",
   "headline": "AI security and efficiency updates: Data policy enforcement, new model architectures, and research on robotic tracking and quantum algorithms.",
   "headline_status": "done",
   "items": [
@@ -137,11 +137,11 @@
       "url": "https://github.com/erkamyaman/safe-anything",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 4.45,
+      "score": 4.46,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 826
+        "github_stars": 840
       },
       "published_at": "2026-11-22T16:44:10Z",
       "summary": "Safe-anything is a fast, Rust-based vulnerability scanner designed to detect security issues like XSS, SQL injection, leaked secrets, vulnerable dependencies, and insecure AI agent setups. It requires no configuration or account and provides the exact line, reason, and fix for each vulnerability found.",

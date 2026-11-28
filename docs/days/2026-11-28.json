@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-28",
+  "generated_at": "2026-11-28T07:58:15Z",
+  "headline": "Today's developments feature new local-first tools for interview coaching, coding agent management, and visual prompt consistency, alongside research on preserving image appearance during 3D edits.",
+  "headline_status": "done",
+  "items": [
+    {
+      "id": "web:4e825df2be8b9455",
+      "title": "Woman evicted after landlord's AI assistant told her she could delay rent",
+      "url": "https://drmahfouz.substack.com/p/woman-evicted-after-landlords-ai",
+      "source": "hn",
+      "category": "Industry",
+      "score": 4.902,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 160,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-28T01:32:56Z",
+      "summary": "Only a title is available, so details are unclear.",
+      "why_it_matters": "The specific context and impact cannot be determined from the title alone.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "github:thebodytheory01-commits/final-round-ai-desktop",
+      "title": "thebodytheory01-commits/final-round-ai-desktop: Final Round AI Desktop: Real-Time Interview Coaching, Speech Transcription, and Response Sug",
+      "url": "https://github.com/thebodytheory01-commits/final-round-ai-desktop",
+      "source": "github",
+      "category": "Tool / Open source",
+      "score": 3.367,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 143
+      },
+      "published_at": "2026-11-26T21:37:37Z",
+      "summary": "Final Round AI Desktop is a Windows application designed to provide real-time interview coaching, live speech transcription, and suggested responses during video calls. It runs local-first speech-to-text inference and features a concealed overlay window that remains hidden from shared meeting feeds. Users can connect it to interchangeable language-model providers through a unified settings panel.",
+      "why_it_matters": "It offers job seekers a private, local-first tool for real-time AI assistance during video interviews.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "github:senpaispide664/ai-visual-prompt-cookbook",
+      "title": "SenpaiSpide664/ai-visual-prompt-cookbook: AI Visual Prompt Cookbook: Reusable JSON Style Prompts for Consistent Image Generation",
+      "url": "https://github.com/SenpaiSpide664/ai-visual-prompt-cookbook",
+      "source": "github",
+      "category": "Tool / Open source",
+      "score": 3.353,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 144
+      },
+      "published_at": "2026-11-26T19:49:58Z",
+      "summary": "The AI Visual Prompt Cookbook is a structured dataset of reusable style definitions for AI image generation, formatted as JSON templates compatible with tools like Midjourney, GPT Image, and Nano Banana Pro. Each package contains a parameterized prompt specification alongside preview assets to ensure consistent visual styles across different subjects. It is openly accessible and updated weekly for researchers and practitioners.",
+      "why_it_matters": "It provides a standardized dataset of reusable styles to help maintain visual consistency across various image synthesis workflows.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "github:duzhenxun/pop-agent",
+      "title": "duzhenxun/pop-agent: PopAgent local web UI for your coding agents: watch the reasoning stream, cut in with a correction mid-turn, manage mod",
+      "url": "https://github.com/duzhenxun/pop-agent",
+      "source": "github",
+      "category": "Tool / Open source",
+      "score": 3.07,
+      "signals": {
+        "hf_upvotes": 0,
+        "hn_points": 0,
+        "github_stars": 153
+      },
+      "published_at": "2026-11-23T18:46:31Z",
+      "summary": "PopAgent is a local web user interface designed for coding agents, allowing users to watch reasoning streams, manage models and tools, and make corrections mid-turn. It operates directly on the engine's local JSONL files without requiring a cloud database or separate user accounts. The platform also integrates features like live voice transcription, quick commands, and response text-to-speech.",
+      "why_it_matters": "It gives developers a transparent, local-first web interface to monitor and interact with various coding agent engines.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    },
+    {
+      "id": "arxiv:2611.33885",
+      "title": "LayoutRecall: Preserving Appearance in Multi-Round 3D Layout-Controlled Image Editing",
+      "url": "https://huggingface.co/papers/2611.33885",
+      "source": "hf_papers",
+      "category": "Research",
+      "score": 1.518,
+      "signals": {
+        "hf_upvotes": 3,
+        "hn_points": 0,
+        "github_stars": 0
+      },
+      "published_at": "2026-11-25T07:00:51Z",
+      "summary": "The authors introduce LayoutRecall, a multi-round 3D layout-controlled image editor designed to preserve an object's appearance when it reappears after being occluded or moving out of view. The method uses Box-Surface Latent Memory to store image latents on 3D box faces and Geometry-Aligned Memory Conditioning to supply retrieved tokens to a FLUX.2 editor. Additionally, they introduce LayoutLoop, a new benchmark with calibrated layouts for testing multi-round 3D edits.",
+      "why_it_matters": "It improves the consistency of object appearances across multi-round 3D layout-controlled image editing tasks.",
+      "summarized_by": "gemini/gemini-3.5-flash-lite",
+      "summary_status": "done"
+    }
+  ],
+  "more": []
+}

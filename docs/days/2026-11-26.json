@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-26",
-  "generated_at": "2026-11-27T21:26:03Z",
+  "generated_at": "2026-11-28T07:58:15Z",
   "headline": "Today's developments feature new AI applications in medicine, software developments including an AMD-focused performance patch, and editorial policy updates regarding AI-generated image metadata. Researchers also shared new architectural and verification tools, such as the Mixture-of-Loops Transformer and a shorter automated proof for the Riemann Hypothesis.",
   "headline_status": "done",
   "items": [
@@ -11,11 +11,11 @@
       "url": "https://github.com/alesha-pro/llm.asm",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 10.281,
+      "score": 10.355,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 233,
-        "github_stars": 2107
+        "github_stars": 2383
       },
       "published_at": "2026-11-25T07:28:51Z",
       "summary": "This repository provides three complete language model projects written entirely in pure x86-64 assembly language, requiring no C, C++, Rust, or external libraries. It includes a static Linux ELF binary for running Qwen3-0.6B inference, a bootable bare-metal OS, and a from-scratch Mini-GPT trainer.",
@@ -29,9 +29,9 @@
       "url": "https://huggingface.co/papers/2611.34923",
       "source": "hf_papers",
       "category": "Research",
-      "score": 5.764,
+      "score": 5.777,
       "signals": {
-        "hf_upvotes": 74,
+        "hf_upvotes": 75,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -47,10 +47,10 @@
       "url": "https://devnull.land/amd-specific-llama-cpp",
       "source": "hn",
       "category": "Tool / Open source",
-      "score": 5.686,
+      "score": 5.703,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 433,
+        "hn_points": 442,
         "github_stars": 0
       },
       "published_at": "2026-11-26T17:11:29Z",
@@ -119,10 +119,10 @@
       "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
       "source": "hn",
       "category": "Industry",
-      "score": 5.501,
+      "score": 5.507,
       "signals": {
         "hf_upvotes": 0,
-        "hn_points": 417,
+        "hn_points": 420,
         "github_stars": 0
       },
       "published_at": "2026-11-26T09:44:23Z",
@@ -155,11 +155,11 @@
       "url": "https://github.com/nexu-io/opengame",
       "source": "github",
       "category": "Tool / Open source",
-      "score": 4.958,
+      "score": 5.049,
       "signals": {
         "hf_upvotes": 0,
         "hn_points": 0,
-        "github_stars": 2151
+        "github_stars": 2501
       },
       "published_at": "2026-11-25T10:35:45Z",
       "summary": "OpenGame is an open-source platform that turns coding agents like Claude Code, Codex, and DeepSeek into full-stack game development studios. It provides templates, automated logic checks, and publishing tools to help users build and monetize 3D games and viral mini-games from simple prompts. The project supports various local agents and integrates multiple game craft and QA reference handbooks.",
@@ -191,9 +191,9 @@
       "url": "https://huggingface.co/papers/2611.30844",
       "source": "hf_papers",
       "category": "Research",
-      "score": 4.762,
+      "score": 4.817,
       "signals": {
-        "hf_upvotes": 69,
+        "hf_upvotes": 73,
         "hn_points": 0,
         "github_stars": 0
       },
@@ -327,18 +327,18 @@
       "category": "Model release"
     },
     {
-      "id": "web:d3aa48daa62df585",
-      "title": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
-      "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
-      "source": "blog:huggingface",
-      "category": "Tool / Open source"
-    },
-    {
       "id": "arxiv:2611.34811",
       "title": "HOG-WAM: Improving Visual Robustness through Future Gradient Prediction",
       "url": "https://huggingface.co/papers/2611.34811",
       "source": "hf_papers",
       "category": "Research"
+    },
+    {
+      "id": "web:d3aa48daa62df585",
+      "title": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+      "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+      "source": "blog:huggingface",
+      "category": "Tool / Open source"
     },
     {
       "id": "web:c01600d4160315a4",
@@ -376,16 +376,16 @@
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.30965",
-      "title": "Beyond Self-Consistency: Recursive Self-Improvement at Test Time",
-      "url": "https://huggingface.co/papers/2611.30965",
+      "id": "arxiv:2611.33143",
+      "title": "ROAM-Bench: Evaluating Embodied Active Spatial Intelligence through Evidence Verification",
+      "url": "https://huggingface.co/papers/2611.33143",
       "source": "hf_papers",
       "category": "Research"
     },
     {
-      "id": "arxiv:2611.33143",
-      "title": "ROAM-Bench: Evaluating Embodied Active Spatial Intelligence through Evidence Verification",
-      "url": "https://huggingface.co/papers/2611.33143",
+      "id": "arxiv:2611.30965",
+      "title": "Beyond Self-Consistency: Recursive Self-Improvement at Test Time",
+      "url": "https://huggingface.co/papers/2611.30965",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -432,6 +432,13 @@
       "category": "Research"
     },
     {
+      "id": "arxiv:2611.31895",
+      "title": "Loupe: Reinforcing Knowledge-Intensive Video Generation Agents",
+      "url": "https://huggingface.co/papers/2611.31895",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "arxiv:2611.34079",
       "title": "WorldBridge: Bridging Scattered Views for Coherent 3D World Generation",
       "url": "https://huggingface.co/papers/2611.34079",
@@ -442,13 +449,6 @@
       "id": "arxiv:2611.33922",
       "title": "iMFPO: Improving Mean Flow Policy Optimization with Drift-Aware Velocity Alignment for Embodied Control",
       "url": "https://huggingface.co/papers/2611.33922",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.31895",
-      "title": "Loupe: Reinforcing Knowledge-Intensive Video Generation Agents",
-      "url": "https://huggingface.co/papers/2611.31895",
       "source": "hf_papers",
       "category": "Research"
     },
@@ -474,6 +474,13 @@
       "category": "Research"
     },
     {
+      "id": "arxiv:2611.21056",
+      "title": "Evaluation-Free Recursive Self-Improvement for Coding Agents",
+      "url": "https://huggingface.co/papers/2611.21056",
+      "source": "hf_papers",
+      "category": "Research"
+    },
+    {
       "id": "arxiv:2611.33307",
       "title": "Lost in Translation, Not in Confidence: Benchmarking and Calibrating Multilingual Decision Models",
       "url": "https://huggingface.co/papers/2611.33307",
@@ -491,13 +498,6 @@
       "id": "arxiv:2611.30895",
       "title": "Speak When You See It: Proactive Task Assistants Should Wait for Evidence, Not the Clock",
       "url": "https://huggingface.co/papers/2611.30895",
-      "source": "hf_papers",
-      "category": "Research"
-    },
-    {
-      "id": "arxiv:2611.21056",
-      "title": "Evaluation-Free Recursive Self-Improvement for Coding Agents",
-      "url": "https://huggingface.co/papers/2611.21056",
       "source": "hf_papers",
       "category": "Research"
     },
